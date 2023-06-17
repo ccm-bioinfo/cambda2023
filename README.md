@@ -1,19 +1,26 @@
 # Camda 2023
 
 ## Data 
-Here we need to fix the links ! 
+Here we need to fix the links! 
 Taxonomical data tables  
-- [OTU table from reads]()  
-- [OTU table with assemblies]()  
-- OTU table split by taxonomy
+- [OTU table from reads]()
   
 |   |Bacteria-Archaea | Virus   | Eukarya  | All   |  
 |---|---|---|---|---|  
-|Phylum   | [Bacteria-Phylum]()  | Virus-Phylum   | Eukarya-Phylum  | All-Phylum   |   
-|Family|  Bacteria-Family | Virus-Family  |  Eukarya-Family |   |    
-|Order | Bacteria-Order  | Virus-Order  | Eukarya-Order  |   |    
+|Phylum   | [Bacteria-Phylum]()  | [Virus-Phylum]()   | [Eukarya-Phylum]()  | [All-Phylum]()   |   
+|Family|  [Bacteria-Family]() | [Virus-Family]()  |  [Eukarya-Family]() | [All-Family]()  |    
+|Order | [Bacteria-Order]()  | [Virus-Order]()  | [Eukarya-Order]()  |  [All-Order]() |    
 
-Functional table  
+- [OTU table with assemblies]()  
+  
+|   |Bacteria-Archaea | Virus   | Eukarya  | All   |  
+|---|---|---|---|---|  
+|Phylum   | [Bacteria-Phylum]()  | [Virus-Phylum]()   | [Eukarya-Phylum]()  | [All-Phylum]()   |   
+|Family|  [Bacteria-Family]() | [Virus-Family]()  |  [Eukarya-Family]() | [All-Family]()  |    
+|Order | [Bacteria-Order]()  | [Virus-Order]()  | [Eukarya-Order]()  |  [All-Order]() |    
+
+Functional table 
+
 Resistance Table  
 
 Welcome to Cambda 2023! 
