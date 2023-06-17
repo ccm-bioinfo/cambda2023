@@ -6,11 +6,12 @@ Taxonomical data tables
 - [OTU table from reads]()  
 - [OTU table with assemblies]()  
 - OTU table split by taxonomy
-|   |Bacteria-Archaea | Virus   | Eukarya  | All   |
-|---|---|---|---|---|
-|Phylum   | Bacteria-Phylum  | Virus-Phylum   | Eukarya-Phylum  | All-Phylum   |  
-|Family|   |   |   |   |  
-|Order |   |   |   |   |  
+  
+|   |Bacteria-Archaea | Virus   | Eukarya  | All   |  
+|---|---|---|---|---|  
+|Phylum   | Bacteria-Phylum  | Virus-Phylum   | Eukarya-Phylum  | All-Phylum   |   
+|Family|  Bacteria-Family | Virus-Family  |  Eukarya-Family |   |    
+|Order | Bacteria-Order  | Virus-Order  | Eukarya-Order  |   |    
 
 Functional table  
 Resistance Table  
