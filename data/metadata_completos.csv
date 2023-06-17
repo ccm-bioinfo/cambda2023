@@ -1,0 +1,290 @@
+sample_id,Experiment,Assay Type,seq_type,Organism,plant_part,host_name,latitude,longitude,state,country,continent
+SRR10127267,SRX6855687,WGS,Shotgun,plant metagenome,Phylosphere,Agave Tequilana,21.7658 ,-100.163,Jalisco,Mexico,North America
+SRR10127271,SRX6855691,WGS,Shotgun,plant metagenome,Phylosphere,Myrtillocactus Geometrizans,21.7658 ,-100.163,Guanajuato,Mexico,North America
+SRR10591223,SRX7271075,WGA,16S,rhizosphere metagenome,Rhizosphere,Cephalocereus polylophus,20.59 ,-100.38,Queretaro,Mexico,North America
+SRR10591224,SRX7271074,WGA,16S,rhizosphere metagenome,Rhizosphere,Cephalocereus polylophus,20.59 ,-100.38,Queretaro,Mexico,North America
+SRR10591225,SRX7271073,WGA,16S,rhizosphere metagenome,Rhizosphere,Cephalocereus polylophus,20.59 ,-100.38,Queretaro,Mexico,North America
+SRR10591226,SRX7271072,WGA,16S,rhizosphere metagenome,Rhizosphere,Cephalocereus polylophus,20.59 ,-100.38,Queretaro,Mexico,North America
+SRR10591227,SRX7271071,WGA,16S,rhizosphere metagenome,Rhizosphere,Echinocactus Platyacanthus,20.90 ,-99.93,Queretaro,Mexico,North America
+SRR10591228,SRX7271070,WGA,16S,rhizosphere metagenome,Rhizosphere,Echinocactus Platyacanthus,20.90 ,-99.93,Queretaro,Mexico,North America
+SRR10591229,SRX7271069,WGA,16S,rhizosphere metagenome,Rhizosphere,Echinocactus Platyacanthus,20.90 ,-99.93,Queretaro,Mexico,North America
+SRR10591230,SRX7271068,WGA,16S,rhizosphere metagenome,Rhizosphere,Echinocactus Platyacanthus,20.90 ,-99.93,Queretaro,Mexico,North America
+SRR10591231,SRX7271067,WGA,16S,rhizosphere metagenome,Rhizosphere,Cephalocereus polylophus,20.59 ,-100.38,Queretaro,Mexico,North America
+SRR10591232,SRX7271066,WGA,16S,rhizosphere metagenome,Rhizosphere,Cephalocereus polylophus,20.59 ,-100.38,Queretaro,Mexico,North America
+SRR10591233,SRX7271065,WGA,16S,rhizosphere metagenome,Rhizosphere,Echinocactus Platyacanthus,20.90 ,-99.93,Queretaro,Mexico,North America
+SRR10591234,SRX7271064,WGA,16S,rhizosphere metagenome,Rhizosphere,Echinocactus Platyacanthus,20.90 ,-99.93,Queretaro,Mexico,North America
+SRR11092496,SRX7731335,WGS,Shotgun,rhizosphere metagenome,Rhizosphere,Fagales,21.8363 ,-105.0829,Nayarit,Mexico,North America
+SRR11092498,SRX7731333,WGS,Shotgun,rhizosphere metagenome,Rhizosphere,Asteraceae,21.1790 ,-104.5403,Jalisco,Mexico,North America
+SRR11092499,SRX7731332,WGS,Shotgun,rhizosphere metagenome,Rhizosphere,Solanum Lycopersicum,19.3211 ,-99.1944,Jalisco,Mexico,North America
+SRR11092501,SRX7731330,WGS,Shotgun,rhizosphere metagenome,Rhizosphere,Poaceae,24.0062 ,-104.3847,Durango,Mexico,North America
+SRR11092502,SRX7731329,WGS,Shotgun,rhizosphere metagenome,Rhizosphere,Solanum Lycopersicum,19.3211 ,-99.1944,Durango,Mexico,North America
+SRR11092505,SRX7731326,WGS,Shotgun,rhizosphere metagenome,Rhizosphere,Poaceae,21.9878 ,-101.2767,San Luis Potosi,Mexico,North America
+SRR11092506,SRX7731325,WGS,Shotgun,rhizosphere metagenome,Rhizosphere,Solanum Lycopersicum,19.3211 ,-99.1944,San Luis Potosi,Mexico,North America
+SRR11092508,SRX7731323,WGS,Shotgun,rhizosphere metagenome,Rhizosphere,Poaceae,23.2927 ,-106.4787,Sinaloa,Mexico,North America
+SRR11092509,SRX7731322,WGS,Shotgun,rhizosphere metagenome,Rhizosphere,Solanum Lycopersicum,19.3211 ,-99.1944,Sinaloa,Mexico,North America
+SRR11092511,SRX7731320,WGS,Shotgun,rhizosphere metagenome,Rhizosphere,Poaceae,21.8275 ,-102.1208,Aguascalientes,Mexico,North America
+SRR11092512,SRX7731319,WGS,Shotgun,rhizosphere metagenome,Rhizosphere,Solanum Lycopersicum,19.3211 ,-99.1944,Aguascalientes,Mexico,North America
+SRR4140275,SRX2122695,WGS,Shotgun,plant metagenome,Rhizosphere,Agave Salmiana,21.0936 ,-100.2988,Guanajuato,Mexico,North America
+SRR4140276,SRX2122696,WGS,Shotgun,plant metagenome,Rhizosphere,Agave Salmiana,21.7658 ,-100.163,Guanajuato,Mexico,North America
+SRR4140277,SRX2122697,WGS,Shotgun,plant metagenome,Rhizosphere,Agave Tequilana,20.6863 ,-101.8747,Guanajuato,Mexico,North America
+SRR4140278,SRX2122698,WGS,Shotgun,plant metagenome,Rhizosphere,Agave Tequilana,21.0411 ,-103.9083,Jalisco,Mexico,North America
+SRR4141180,SRX2124701,WGS,Shotgun,plant metagenome,Rhizosphere,Myrtillocactus Geometrizans,21.0936 ,-100.2988,Guanajuato,Mexico,North America
+SRR4142282,SRX2124702,WGS,Shotgun,plant metagenome,Phylosphere,Agave Salmiana,21.7658 ,-100.163,Guanajuato,Mexico,North America
+SRR4142283,SRX2124703,WGS,Shotgun,plant metagenome,Rhizosphere,Opuntia Robusta,21.7658 ,-100.163,Guanajuato,Mexico,North America
+SRR4142417,SRX2124704,WGS,Shotgun,plant metagenome,Rhizosphere,Opuntia Robusta,21.0936 ,-100.2988,Guanajuato,Mexico,North America
+SRR4142418,SRX2124705,WGS,Shotgun,plant metagenome,Rhizosphere,Myrtillocactus Geometrizans,21.7658 ,-100.163,Guanajuato,Mexico,North America
+SRR4142430,SRX2124717,WGS,Shotgun,plant metagenome,Phylosphere,Agave Salmiana,21.7658 ,-100.163,Guanajuato,Mexico,North America
+SRR4142433,SRX2124720,WGS,Shotgun,plant metagenome,Phylosphere,Agave Tequilana,20.6863 ,-101.8747,Guanajuato,Mexico,North America
+SRR4142459,SRX2124746,WGS,Shotgun,plant metagenome,Phylosphere,Opuntia Robusta,21.7658 ,-100.163,Guanajuato,Mexico,North America
+SRR4142460,SRX2124747,WGS,Shotgun,plant metagenome,Phylosphere,Myrtillocactus Geometrizans,21.7658 ,-100.163,Guanajuato,Mexico,North America
+SRR5166355,SRX2483315,WGS,Shotgun,plant metagenome,Phylosphere,Opuntia Robusta,21.0936 ,-100.2988,Guanajuato,Mexico,North America
+SRR5240833,SRX2547689,WGS,16S,root metagenome,Rhizosphere,Dioon Merolae,16.655 ,-92.39972222,Chiapas,Mexico,North America
+SRR5240836,SRX2547692,WGS,16S,root metagenome,Rhizosphere,Dioon Merolae,16.655 ,-92.39972222,Chiapas,Mexico,North America
+SRR5240837,SRX2547693,WGS,16S,root metagenome,Rhizosphere,Dioon Merolae,16.655 ,-92.39972222,Chiapas,Mexico,North America
+SRR5240884,SRX2547740,WGS,16S,root metagenome,Rhizosphere,Dioon Merolae,16.02611 ,-93.5991666,Chiapas,Mexico,North America
+SRR5240885,SRX2547741,WGS,16S,root metagenome,Rhizosphere,Dioon Merolae,16.02611 ,-93.5991666,Chiapas,Mexico,North America
+SRR5240886,SRX2547742,WGS,16S,root metagenome,Rhizosphere,Dioon Merolae,16.02611 ,-93.5991666,Chiapas,Mexico,North America
+SRR5240887,SRX2547743,WGS,16S,root metagenome,Rhizosphere,Dioon Merolae,16.655 ,-92.39972222,Chiapas,Mexico,North America
+SRR5240888,SRX2547744,WGS,16S,root metagenome,Rhizosphere,Dioon Merolae,16.02611 ,-93.5991666,Chiapas,Mexico,North America
+SRR5829600,SRX3006943,WGS,NA,root metagenome,Rhizosphere,Macroptilium Atropurpureum,19.09098 ,-98.87936,Edo. Mex.,Mexico,North America
+SRR5829603,SRX3006946,WGS,NA,root metagenome,Rhizosphere,Phaseolus Vulgaris,19.09098 ,-98.87936,Edo. Mex.,Mexico,North America
+SRR5829609,SRX3006952,WGS,NA,root metagenome,Rhizosphere,Phaseolus Vulgaris,19.09098 ,-98.87936,Edo. Mex.,Mexico,North America
+SRR6295873,SRX3396929,WCS,16S,root metagenome,,Solanum tuberosum,32.03 , 118.46,Nanjing,China,Asia
+SRR6295875,SRX3396927,WCS,16S,root metagenome,,Solanum tuberosum,32.03 , 118.46,Nanjing,China,Asia
+SRR6295876,SRX3396926,WCS,16S,root metagenome,,Solanum tuberosum,32.03 , 118.46,Nanjing,China,Asia
+SRR7445499,SRX4316076,AMPLICON,16S,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445500,SRX4316075,AMPLICON,16S,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445501,SRX4316074,AMPLICON,16S,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445502,SRX4316073,AMPLICON,16S,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445503,SRX4316072,AMPLICON,16S,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445504,SRX4316071,AMPLICON,16S,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445505,SRX4316070,AMPLICON,16S,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445506,SRX4316069,AMPLICON,16S,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445507,SRX4316068,AMPLICON,16S,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445508,SRX4316067,AMPLICON,16S,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445509,SRX4316066,AMPLICON,16S,soil metagenome,furrow,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445510,SRX4316065,AMPLICON,16S,soil metagenome,furrow,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445511,SRX4316064,AMPLICON,16S,soil metagenome,furrow,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445512,SRX4316063,AMPLICON,16S,soil metagenome,furrow,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445513,SRX4316062,AMPLICON,16S,soil metagenome,furrow,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445514,SRX4316061,AMPLICON,16S,soil metagenome,furrow,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445515,SRX4316060,AMPLICON,16S,soil metagenome,furrow,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445516,SRX4316059,AMPLICON,16S,soil metagenome,furrow,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445517,SRX4316058,AMPLICON,16S,soil metagenome,furrow,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445518,SRX4316057,AMPLICON,16S,soil metagenome,rhizosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445519,SRX4316056,AMPLICON,16S,soil metagenome,rhizosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445520,SRX4316055,AMPLICON,16S,soil metagenome,rhizosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445521,SRX4316054,AMPLICON,16S,soil metagenome,rhizosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445522,SRX4316053,AMPLICON,16S,soil metagenome,rhizosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445523,SRX4316052,AMPLICON,16S,soil metagenome,rhizosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445524,SRX4316051,AMPLICON,16S,soil metagenome,rhizosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445525,SRX4316050,AMPLICON,16S,soil metagenome,rhizosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445526,SRX4316049,AMPLICON,16S,soil metagenome,rhizosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445527,SRX4316048,AMPLICON,16S,soil metagenome,rhizosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445528,SRX4316047,AMPLICON,16S,soil metagenome,root-zone,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445529,SRX4316046,AMPLICON,16S,soil metagenome,root-zone,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445530,SRX4316045,AMPLICON,16S,soil metagenome,root-zone,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445531,SRX4316044,AMPLICON,16S,soil metagenome,root-zone,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445532,SRX4316043,AMPLICON,16S,soil metagenome,root-zone,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445533,SRX4316042,AMPLICON,16S,soil metagenome,root-zone,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445534,SRX4316041,AMPLICON,16S,soil metagenome,root-zone,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445535,SRX4316040,AMPLICON,16S,soil metagenome,root-zone,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445536,SRX4316039,AMPLICON,16S,soil metagenome,root-zone,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7445537,SRX4316038,AMPLICON,16S,soil metagenome,root-zone,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR15081048,SRX11391109,WGS,16S,metagenome,,Zea mays,36.59 , 113.52,Xingtai City,China,Asia
+SRR15081049,SRX11391108,WGS,16S,metagenome,,Zea mays,36.58 , 113.52,Xingtai City,China,Asia
+SRR15081050,SRX11391107,WGS,16S,metagenome,,Zea mays,36.57 , 113.52,Xingtai City,China,Asia
+SRR15081051,SRX11391106,WGS,16S,metagenome,,Zea mays,36.56 , 113.52,Xingtai City,China,Asia
+SRR15081052,SRX11391105,WGS,16S,metagenome,,Zea mays,36.55 , 113.52,Xingtai City,China,Asia
+SRR15081053,SRX11391104,WGS,16S,metagenome,,Medicago sativa,37.24 , 115.10,Hengshui City,China,Asia
+SRR15081054,SRX11391103,WGS,16S,metagenome,,Medicago sativa,37.23 , 115.10,Hengshui City,China,Asia
+SRR15081055,SRX11391102,WGS,16S,metagenome,,Zea mays,36.54 , 113.52,Xingtai City,China,Asia
+SRR15081056,SRX11391101,WGS,16S,metagenome,,Medicago sativa,37.22 , 115.10,Hengshui City,China,Asia
+SRR15081057,SRX11391100,WGS,16S,metagenome,,Medicago sativa,37.21 , 115.10,Hengshui City,China,Asia
+SRR15081058,SRX11391099,WGS,16S,metagenome,,Medicago sativa,37.20 , 115.10,Hengshui City,China,Asia
+SRR15081059,SRX11391098,WGS,16S,metagenome,,Medicago sativa,37.19 , 115.10,Hengshui City,China,Asia
+SRR15081060,SRX11391097,WGS,16S,metagenome,,Medicago sativa,37.18 , 115.10,Hengshui City,China,Asia
+SRR15081061,SRX11391096,WGS,16S,metagenome,,Medicago sativa,37.17 , 115.10,Hengshui City,China,Asia
+SRR15081062,SRX11391095,WGS,16S,metagenome,,Medicago sativa,37.16 , 115.10,Hengshui City,China,Asia
+SRR15081063,SRX11391094,WGS,16S,metagenome,,Zea mays,37.15 , 115.10,Hengshui City,China,Asia
+SRR15081064,SRX11391093,WGS,16S,metagenome,,Zea mays,37.14 , 115.10,Hengshui City,China,Asia
+SRR15081065,SRX11391092,WGS,16S,metagenome,,Zea mays,37.13 , 115.10,Hengshui City,China,Asia
+SRR15081066,SRX11391091,WGS,16S,metagenome,,Zea mays,36.53 , 113.52,Xingtai City,China,Asia
+SRR15081067,SRX11391090,WGS,16S,metagenome,,Zea mays,37.12 , 115.10,Hengshui City,China,Asia
+SRR15081068,SRX11391089,WGS,16S,metagenome,,Zea mays,37.11 , 115.10,Hengshui City,China,Asia
+SRR15081069,SRX11391088,WGS,16S,metagenome,,Zea mays,37.10 , 115.10,Hengshui City,China,Asia
+SRR15081070,SRX11391087,WGS,16S,metagenome,,Zea mays,37.09 , 115.10,Hengshui City,China,Asia
+SRR15081071,SRX11391086,WGS,16S,metagenome,,Zea mays,37.08 , 115.10,Hengshui City,China,Asia
+SRR15081072,SRX11391085,WGS,16S,metagenome,,Zea mays,37.07 , 115.10,Hengshui City,China,Asia
+SRR15081073,SRX11391084,WGS,16S,metagenome,,Zea mays,37.06 , 115.10,Hengshui City,China,Asia
+SRR15081074,SRX11391083,WGS,16S,metagenome,,Zea mays,37.05 , 115.10,Hengshui City,China,Asia
+SRR15081075,SRX11391082,WGS,16S,metagenome,,Zea mays,37.04 , 115.10,Hengshui City,China,Asia
+SRR15081076,SRX11391081,WGS,16S,metagenome,,Medicago sativa,36.70 , 113.52,Hengshui City,China,Asia
+SRR15081077,SRX11391080,WGS,16S,metagenome,,Zea mays,36.52 , 113.52,Xingtai City,China,Asia
+SRR15081078,SRX11391079,WGS,16S,metagenome,,Medicago sativa,36.69 , 113.52,Xingtai City,China,Asia
+SRR15081079,SRX11391078,WGS,16S,metagenome,,Medicago sativa,36.68 , 113.52,Xingtai City,China,Asia
+SRR15081080,SRX11391077,WGS,16S,metagenome,,Medicago sativa,36.67 , 113.52,Xingtai City,China,Asia
+SRR15081081,SRX11391076,WGS,16S,metagenome,,Medicago sativa,36.66 , 113.52,Xingtai City,China,Asia
+SRR15081082,SRX11391075,WGS,16S,metagenome,,Medicago sativa,36.65 , 113.52,Xingtai City,China,Asia
+SRR15081083,SRX11391074,WGS,16S,metagenome,,Medicago sativa,36.64 , 113.52,Xingtai City,China,Asia
+SRR15081084,SRX11391073,WGS,16S,metagenome,,Medicago sativa,36.63 , 113.52,Xingtai City,China,Asia
+SRR15081085,SRX11391072,WGS,16S,metagenome,,Medicago sativa,36.62 , 113.52,Xingtai City,China,Asia
+SRR15081086,SRX11391071,WGS,16S,metagenome,,Zea mays,36.61 , 113.52,Xingtai City,China,Asia
+SRR15081087,SRX11391070,WGS,16S,metagenome,,Zea mays,36.60 , 113.52,Xingtai City,China,Asia
+SRR15081088,SRX11391069,WGS,16S,metagenome,,Zea mays,36.51 , 113.52,Xingtai City,China,Asia
+SRR15081089,SRX11391068,WGS,16S,metagenome,,Zea mays,36.50 , 113.52,Xingtai City,China,Asia
+SRR12778013,SRX9247618,OTHER,Shotgun,plant metagenome,,Capsicum,26.1328999,106.6567,Huishui,China,Asia
+SRR12778014,SRX9247617,OTHER,Shotgun,plant metagenome,,Capsicum,26.1328999,106.6567,Huishui,China,Asia
+SRR12778015,SRX9247616,OTHER,Shotgun,plant metagenome,,Capsicum,26.1328999,106.6567,Huishui,China,Asia
+SRR12778016,SRX9247615,OTHER,Shotgun,plant metagenome,,Capsicum,26.1328999,106.6567,Huishui,China,Asia
+SRR12778017,SRX9247614,OTHER,Shotgun,plant metagenome,,Capsicum,26.1328999,106.6567,Huishui,China,Asia
+SRR12778018,SRX9247613,OTHER,Shotgun,plant metagenome,,Capsicum,26.1328999,106.6567,Huishui,China,Asia
+SRR12778019,SRX9247612,OTHER,Shotgun,plant metagenome,,Capsicum,26.1328999,106.6567,Huishui,China,Asia
+SRR12778020,SRX9247611,OTHER,Shotgun,plant metagenome,,Capsicum,26.1328999,106.6567,Huishui,China,Asia
+SRR12778021,SRX9247610,OTHER,Shotgun,plant metagenome,,Capsicum,26.1328999,106.6567,Huishui,China,Asia
+SRR12778022,SRX9247609,OTHER,Shotgun,plant metagenome,,Capsicum,26.1328999,106.6567,Huishui,China,Asia
+SRR12778023,SRX9247608,OTHER,Shotgun,plant metagenome,,Capsicum,26.1328999,106.6567,Huishui,China,Asia
+SRR12778024,SRX9247607,OTHER,Shotgun,plant metagenome,,Capsicum,26.1328999,106.6567,Huishui,China,Asia
+SRR13319509,SRX9746988,WGS,Shotgun,plant metagenome,,Capsicum annuum var. annuum,37.47 , 127.97,Hoengseong,Korea,Asia
+SRR13319510,SRX9746987,WGS,Shotgun,plant metagenome,,Capsicum annuum var. annuum,37.47 , 127.97,Hoengseong,Korea,Asia
+SRR13319511,SRX9746986,WGS,Shotgun,plant metagenome,,Capsicum annuum var. annuum,37.47 , 127.97,Hoengseong,Korea,Asia
+ERR5639101,ERX5355241,WGS,Shotgun,plant metagenome,,Capsicum annuum,56,10,NA,Denmark,Europe
+SRR10527387,SRX7211879,WGS,Shotgun,Xanthomonas euvesicatoria,phyllosphere,Capsicum annuum,32.601389 ,-85.353611,Alabama,USA,North America
+SRR10527388,SRX7211878,WGS,Shotgun,Xanthomonas euvesicatoria,phyllosphere,Capsicum annuum,32.601389 ,-85.353611,Alabama,USA,North America
+SRR10527389,SRX7211877,WGS,Shotgun,Xanthomonas euvesicatoria,phyllosphere,Capsicum annuum,33.20654 ,-87.534607,Alabama,USA,North America
+SRR11092497,SRX7731334,WGS,Shotgun,soil metagenome,,Soil,21.1790 ,-104.5403,Jalisco,Mexico,North America
+SRR11092500,SRX7731331,WGS,Shotgun,soil metagenome,,Soil,24.0062 ,-104.3847,Durango,Mexico,North America
+SRR11092503,SRX7731328,WGS,Shotgun,soil metagenome,,Soil,21.8275 ,-102.1208,Aguascalientes,Mexico,North America
+SRR11092504,SRX7731327,WGS,Shotgun,soil metagenome,,not applicable,21.9878 ,-101.2767,San Luis Potosi,Mexico,North America
+SRR11092507,SRX7731324,WGS,Shotgun,soil metagenome,,Soil,23.2927 ,-106.4787,Sinaloa,Mexico,North America
+SRR10527383,SRX7211883,WGS,Shotgun,Xanthomonas perforans,phyllosphere,Solanum lycopersicum,32.385278 ,-85.693611,Alabama,USA,North America
+SRR10527384,SRX7211882,WGS,Shotgun,Xanthomonas perforans,phyllosphere,Solanum lycopersicum,32.385278 ,-85.693611,Alabama,USA,North America
+SRR10527386,SRX7211880,WGS,Shotgun,Xanthomonas perforans,phyllosphere,Solanum lycopersicum,32.601389 ,-85.353611,Alabama,USA,North America
+SRR10527390,SRX7211876,WGS,Shotgun,Xanthomonas perforans,phyllosphere,Solanum lycopersicum,33.20654 ,-87.534607,Alabama,USA,North America
+SRR10527391,SRX7211875,WGS,Shotgun,Xanthomonas perforans,phyllosphere,Solanum lycopersicum,34.457222 ,-85.806667,Alabama,USA,North America
+SRR10527392,SRX7211874,WGS,Shotgun,Xanthomonas perforans,phyllosphere,Solanum lycopersicum,34.05 ,-86.033333,Alabama,USA,North America
+SRR10527393,SRX7211873,WGS,Shotgun,Xanthomonas perforans,phyllosphere,Solanum lycopersicum,30.733056 ,-87.720278,Alabama,USA,North America
+SRR7448200,SRX4317501,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7448260,SRX4317502,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7448267,SRX4317503,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7448268,SRX4317504,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7448274,SRX4317505,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7448275,SRX4317506,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7448276,SRX4317507,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7448277,SRX4317508,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7448278,SRX4317509,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7457704,SRX4328209,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7457705,SRX4328208,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7457706,SRX4328207,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7457707,SRX4328206,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7457708,SRX4328205,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7457709,SRX4328204,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7457710,SRX4328203,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7457711,SRX4328202,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR7457713,SRX4328200,WGA,Shotgun,soil metagenome,geocaulosphere,Solanum tuberosum,34.2487 , 119.8167,Jiaozhou,China,Asia
+SRR12192801,SRX8706638,WGS,Shotgun,soil metagenome,,Zea mays,-25.59, 26.31,Lichtenburg,South Africa,Africa
+SRR12192802,SRX8706637,WGS,Shotgun,soil metagenome,,Zea mays,-25.59, 26.31,Lichtenburg,South Africa,Africa
+SRR12192803,SRX8706636,WGS,Shotgun,soil metagenome,,Zea mays,-25.59, 26.31,Lichtenburg,South Africa,Africa
+SRR12192804,SRX8706635,WGS,Shotgun,soil metagenome,,Zea mays,-25.59, 26.31,Lichtenburg,South Africa,Africa
+SRR12192805,SRX8706634,WGS,Shotgun,soil metagenome,,Zea mays,-25.59, 26.31,Lichtenburg,South Africa,Africa
+SRR11041069,SRX7692846,WGA,Shotgun,NA,NA,Zea mays,37.09024,-95.712891,NA,USA,North America
+SRR11041070,SRX7692845,WGA,Shotgun,NA,NA,Zea mays,37.09024,-95.712891,NA,USA,North America
+SRR11041072,SRX7692843,WGA,Shotgun,NA,NA,Zea mays,37.09024,-95.712891,NA,USA,North America
+SRR11041071,SRX7692844,WGA,Shotgun,NA,NA,Zea mays,37.09024,-95.712891,NA,USA,North America
+SRR9021691,SRX5799614,WGS,Shotgun,rhizosphere metagenome,rhizosphere,Zea mays,38.5 ,-121.7,California,USA,North America
+SRR9021703,SRX5799626,WGS,Shotgun,rhizosphere metagenome,rhizosphere,Zea mays,38.5 ,-121.7,California,USA,North America
+SRR9021704,SRX5799627,WGS,Shotgun,rhizosphere metagenome,rhizosphere,Zea mays,38.5 ,-121.7,California,USA,North America
+SRR9021705,SRX5799628,WGS,Shotgun,rhizosphere metagenome,rhizosphere,Zea mays,38.5 ,-121.7,California,USA,North America
+SRR9021707,SRX5799630,WGS,Shotgun,rhizosphere metagenome,rhizosphere,Zea mays,38.5 ,-121.7,California,USA,North America
+SRR9021708,SRX5799631,WGS,Shotgun,rhizosphere metagenome,rhizosphere,Zea mays,38.5 ,-121.7,California,USA,North America
+SRR9021711,SRX5799634,WGS,Shotgun,rhizosphere metagenome,rhizosphere,Zea mays,38.5 ,-121.7,California,USA,North America
+SRR9023236,SRX5801130,WGS,Shotgun,rhizosphere metagenome,rhizosphere,Zea mays,38.5 ,-121.7,California,USA,North America
+SRR8554882,SRX5356659,WGS,Shotgun,rhizosphere metagenome,rhizosphere,Zea mays,38.5 ,-121.7,California,USA,North America
+SRR8554884,SRX5356661,WGS,Shotgun,rhizosphere metagenome,rhizosphere,Zea mays,38.5 ,-121.7,California,USA,North America
+SRR8197394,SRX5016770,WGS,Shotgun,rhizosphere metagenome,rhizosphere,Zea mays,51.991111 , 5.661972,Wageningen,Netherlands,Europe
+SRR8197395,SRX5016769,WGS,Shotgun,rhizosphere metagenome,rhizosphere,Zea mays,51.991111 , 5.661972,Wageningen,Netherlands,Europe
+SRR2924453,SRX1437849,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,37.53128 ,-122.7598,California,USA,North America
+SRR2924454,SRX1437850,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,35.998744 ,-101.988583,Texas,USA,North America
+SRR2924460,SRX1437856,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,37.53128 ,-122.7598,California,USA,North America
+SRR2924461,SRX1437857,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,37.53128 ,-122.7598,California,USA,North America
+SRR2924462,SRX1437858,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,35.998744 ,-101.988583,Texas,USA,North America
+SRR2924464,SRX1437861,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,35.998744 ,-101.988583,Texas,USA,North America
+SRR2924465,SRX1437862,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,34.184136 ,-101.943636,Texas,USA,North America
+SRR2924469,SRX1437864,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,34.184136 ,-101.943636,Texas,USA,North America
+SRR2924470,SRX1437865,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,34.184136 ,-101.943636,Texas,USA,North America
+SRR2924445,SRX1437841,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,34.184136 ,-101.943636,Texas,USA,North America
+SRR2924446,SRX1437842,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,35.998744 ,-101.988583,Texas,USA,North America
+SRR2924447,SRX1437843,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,37.53128 ,-122.7598,California,USA,North America
+SRR2924450,SRX1437846,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,37.53128 ,-122.7598,California,USA,North America
+SRR2924452,SRX1437848,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,37.53128 ,-122.7598,California,USA,North America
+SRR2924455,SRX1437851,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,35.998744 ,-101.988583,Texas,USA,North America
+SRR2924456,SRX1437852,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,37.53128 ,-122.7598,California,USA,North America
+SRR2924457,SRX1437853,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,37.53128 ,-122.7598,California,USA,North America
+SRR2924458,SRX1437854,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,35.998744 ,-101.988583,Texas,USA,North America
+SRR2924459,SRX1437855,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,37.53128 ,-122.7598,California,USA,North America
+SRR2924463,SRX1437860,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,35.998744 ,-101.988583,Texas,USA,North America
+SRR2924468,SRX1437863,WGS,Shotgun,phyllosphere metagenome,phyllosphere,Zea mays,34.184136 ,-101.943636,Texas,USA,North America
+SRR12192848,SRX8706685,WGS,Shotgun,soil metagenome,,Zea mays,-26.11, 27.33,Randfontein,South Africa,Africa
+SRR12192849,SRX8706684,WGS,Shotgun,soil metagenome,,Zea mays,-26.11, 27.33,Randfontein,South Africa,Africa
+SRR12192850,SRX8706683,WGS,Shotgun,soil metagenome,,Zea mays,-26.11, 27.33,Randfontein,South Africa,Africa
+SRR12192851,SRX8706682,WGS,Shotgun,soil metagenome,,Zea mays,-26.11, 27.33,Randfontein,South Africa,Africa
+SRR12192852,SRX8706681,WGS,Shotgun,soil metagenome,,Zea mays,-26.11, 27.33,Randfontein,South Africa,Africa
+SRR14027267,SRX10403898,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.1,NA,China,Asia
+SRR14027268,SRX10403897,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.4,NA,China,Asia
+SRR14027269,SRX10403896,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.1,NA,China,Asia
+SRR14027270,SRX10403895,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.1,NA,China,Asia
+SRR14027271,SRX10403894,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.1,NA,China,Asia
+SRR14027272,SRX10403893,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.1,NA,China,Asia
+SRR14027273,SRX10403892,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.3,NA,China,Asia
+SRR14027274,SRX10403891,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.5,NA,China,Asia
+SRR14027275,SRX10403890,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.6,NA,China,Asia
+SRR14027276,SRX10403889,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.8,NA,China,Asia
+SRR14027277,SRX10403888,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.7,NA,China,Asia
+SRR14027278,SRX10403887,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.1,NA,China,Asia
+SRR14027279,SRX10403886,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.1,NA,China,Asia
+SRR14027280,SRX10403885,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.0,NA,China,Asia
+SRR14027281,SRX10403884,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.0,NA,China,Asia
+SRR14027282,SRX10403883,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.3,NA,China,Asia
+SRR14027283,SRX10403882,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.5,NA,China,Asia
+SRR14027285,SRX10403880,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.2,NA,China,Asia
+SRR14027286,SRX10403879,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.0,NA,China,Asia
+SRR14027288,SRX10403877,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.0,NA,China,Asia
+SRR14027290,SRX10403875,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.8 , 115.2,NA,China,Asia
+SRR14027292,SRX10403873,CLONE,Shotgun,soil metagenome,,Soil of Zea mays and Triticum rotation,36.9 , 115.10,NA,China,Asia
+t-Ia7iM2MAIPOOB100245,,,,,,Zea mays,NA,NA,NA,NA,NA
+t-P0ZQM2MAIPOOA100240,,,,,,Zea mays,NA,NA,NA,NA,NA
+t-qU3SM2MAIPOOM070605,,,,,,Zea mays,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-B7zTM2MAIPOOA070610,,,,,,Zea mays,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-c5isM2MAIPOOA070615,,,,,,Zea mays,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-TgLUM2MAIPOOM070620,,,,,,Zea mays,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-pse1M2MAIPOOA100685,,,,,,Zea mays,21.8852562,-102.2915677,Aguascalientes,Mexico,North America
+t-AJwcM2MAIPOOA100700,,,,,,Zea mays,21.8852562,-102.2915677,Aguascalientes,Mexico,North America
+t-1ayWM2CHIPOOB100705,,,,,,Capsicum,21.8852562,-102.2915677,Aguascalientes,Mexico,North America
+t-oAVVM2CHIPOOB051360,,,,,,Capsicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-3xfYM2CHIPOOA051365,,,,,,Capsicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-vcXtM2TOMPOOB050180,,,,,,Solanum lycopersicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-iYASM2TOMPOOA050195,,,,,,Solanum lycopersicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-XR8LM2TOMPOOB051125,,,,,,Solanum lycopersicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-TECcM2TOMPOOA051310,,,,,,Solanum lycopersicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-FvY2M2TOMPOOB051329,,,,,,Solanum lycopersicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-abKIM2TOMPOOA051320,,,,,,Solanum lycopersicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-cuu6M2TOMPOOB051315,,,,,,Solanum lycopersicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-jYxWM2CHIPOOB051110,,,,,,Capsicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-hoQoM2CHIPOOA051115,,,,,,Capsicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-s9OmM2TOMPOOB051285,,,,,,Solanum lycopersicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-Nm8MM2TOMPOOA051300,,,,,,Solanum lycopersicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-IGpcM2TOMPOOB051290,,,,,,Solanum lycopersicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-a50wM2TOMPOOB051350,,,,,,Solanum lycopersicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-OeS0M2TOMPOOA051355,,,,,,Solanum lycopersicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-dSz8M2TOMPOOA051340,,,,,,Solanum lycopersicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-aFJgM2TOMPOOM090325,,,,,,Solanum lycopersicum,-9.189967,-75.015152,Peru,Peru,South America
+t-cSObM2TOMPOOM080315,,,,,,Solanum lycopersicum,-9.189967,-75.015152,Peru,Peru,South America
+t-wQqUM2TOMPOOA080335,,,,,,Solanum lycopersicum,-9.189967,-75.015152,Peru,Peru,South America
+t-0n7bM2TOMPOOA100365,,,,,,Solanum lycopersicum,21.0190145,-101.2573586,Guanajuato,Mexico,North America
+t-1qGgM2TOMPOOM080340,,,,,,Solanum lycopersicum,-9.189967,-75.015152,Peru,Peru,South America
+t-9JUZM2TOMPOOB100355,,,,,,Solanum lycopersicum,21.0190145,-101.2573586,Guanajuato,Mexico,North America
+t-AYtCM2TOMPOOA100360,,,,,,Solanum lycopersicum,21.0190145,-101.2573586,Guanajuato,Mexico,North America
+t-DYZgM2TOMPOOB100370,,,,,,Solanum lycopersicum,21.0190145,-101.2573586,Guanajuato,Mexico,North America
+t-eBCjM2CHIPOOBXX1180,,,,,,Capsicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-j1iWM2CHIPOOBXX1561,,,,,,Capsicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
+t-nG3jM2TOMPOOA051345,,,,,,Solanum lycopersicum,25.1721091,-107.4795173,Sinaloa,Mexico,North America
