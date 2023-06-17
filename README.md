@@ -1,3 +1,20 @@
+# Camda 2023
+
+## Data 
+Here we need to fix the links ! 
+Taxonomical data tables  
+- [OTU table from reads]()  
+- [OTU table with assemblies]()  
+- OTU table split by taxonomy
+|   |Bacteria-Archaea | Virus   | Eukarya  | All   |
+|---|---|---|---|---|
+|Phylum   | Bacteria-Phylum  | Virus-Phylum   | Eukarya-Phylum  | All-Phylum   |  
+|Family|   |   |   |   |  
+|Order |   |   |   |   |  
+
+Functional table  
+Resistance Table  
+
 Welcome to Cambda 2023! 
 
 [Link a la presentación](https://docs.google.com/presentation/d/1AM7f3khAGLN8pXDnDs9BOYrUh56jCmPwoc2MRLTkfgg/edit#slide=id.g24bcac0919d_0_1109)  
