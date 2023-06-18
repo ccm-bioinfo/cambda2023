@@ -3,7 +3,7 @@
 ## Data 
 Here we need to fix the links! 
 Taxonomical data tables  
-- [OTU table from reads]()
+- [OTU table from reads](https://github.com/ccm-bioinfo/cambda2023/blob/main/preprocessing/taxonomy/read-biom.tsv.gz)
   
 |   |Bacteria-Archaea | Virus   | Eukarya  | All   |  
 |---|---|---|---|---|  
@@ -11,7 +11,7 @@ Taxonomical data tables
 |Family|  [Bacteria-Family]() | [Virus-Family]()  |  [Eukarya-Family]() | [All-Family]()  |    
 |Order | [Bacteria-Order]()  | [Virus-Order]()  | [Eukarya-Order]()  |  [All-Order]() |    
 
-- [OTU table with assemblies]()  
+- [OTU table with assemblies](https://github.com/ccm-bioinfo/cambda2023/blob/main/preprocessing/taxonomy/assembly-biom.tsv.gz)  
   
 |   |Bacteria-Archaea | Virus   | Eukarya  | All   |  
 |---|---|---|---|---|  
