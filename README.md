@@ -30,7 +30,7 @@ Functional table
 [Reads-Kraken-Extraction-Assembly]()
 Upload table
 
-### Genomes Csv
+### [Genomes Csv](https://github.com/ccm-bioinfo/cambda2023/blob/main/genome-metadata.csv)
 Genome Table  
 
 Welcome to Cambda 2023! 
