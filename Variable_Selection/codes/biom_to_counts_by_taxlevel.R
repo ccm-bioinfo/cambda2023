@@ -1,5 +1,22 @@
+#!/usr/bin/env Rscript
+library("optparse")
+
+option_list = list(
+    make_option(c("-I", "--inputdir"), type = "character", default = "~/c23/taxonomy/", 
+                help = "input directory [default= %default]", metavar = "character"),
+    make_option(c("-O", "--outdir"), type = "character", default = "~/c23/taxonomy-levels/", 
+                help = "output directory [default= %default]", metavar = "character"),
+    make_option(c("-r", "--reads"), type = "logical", default = TRUE,
+                help = "reads or assembly [default= %default]", metavar = "logical")
+); 
+
+opt_parser = OptionParser(option_list = option_list);
+opt = parse_args(opt_parser);
+
 # 03 june 2023
 # jose maria ibarra / Nelly Sélem  
+# 19 june 2023
+# Imanol Nuñez
 
 # -------------------------------------------------------------------------
 # count tables of each taxonomical level
@@ -7,13 +24,15 @@
 # libraries ---------------------------------------------------------------
 library("phyloseq") 
 # paths ---------------
-inputdir="/home/nelly/camda2023/c23/taxonomy/"
+inputdir <- opt$inputdir
 setwd(inputdir)
-outdir="/home/nelly/camda2023/c23/taxonomy-levels/"
+outdir <- opt$outdir
 dir.create(outdir, recursive = TRUE)
 
 # Variable string
-filename <- "camda.biom"
+filename <- ifelse(opt$reads,
+                   "read-biom.json",
+                   "assembly-biom.json")
 # Concatenate variable and path
 inpath <- paste(inputdir, filename, sep = "")
 
@@ -32,15 +51,15 @@ inpath <- paste(inputdir, filename, sep = "")
 
 # Esto nos da una tabla biom que ya podemos cortar en phyloseq
 
-#################  Read data ###############################33
+#################  Read data #################################
 # read biom from reads level
 reads_biom <- import_biom(inpath)
 ## Correct names in taxonomic table
 # assign new names
 colnames(reads_biom@tax_table@.Data) <- c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
-# eliminate extra characters in the beggining of each entry
+# eliminate extra characters in the beginning of each entry
 reads_biom@tax_table@.Data <- substring(reads_biom@tax_table@.Data, 4)
-View(reads_biom@tax_table@.Data)
+#View(reads_biom@tax_table@.Data)
 
 
 ################ Function to Extract  by taxonomic levels --------------------------------------------
@@ -79,23 +98,28 @@ agglomerate <- function(phobject,outdir,leveling,prefix) {
 tax_levels <- list("Phylum", "Class", "Order", "Family", "Genus")
 
 # Concatenate variable and path
-prefix0<-"reads"  # label to relate files to filename
-lapply(tax_levels,function(x) agglomerate(reads_biom,outdir,x,prefix0))
+prefix0 <- ifelse(opt$reads, "reads", "assembly")  # label to relate files to filename
+cat(sprintf("Working with %s data\n", prefix0))
+cat(sprintf("Using all data\n"))
+lapply(tax_levels, function(x) agglomerate(reads_biom, outdir, x, prefix0))
 
 ###  Archaea and Bacteria ----------------------------------------------------
-readsArchaeaBacteria = subset_taxa(reads_biom, Kingdom %in% c("Archaea","Bacteria"))
-prefix<- paste0(prefix0,"AB")
-lapply(tax_levels,function(x) agglomerate(readsArchaeaBacteria,outdir,x,prefix))
+cat(sprintf("Using AB data\n"))
+readsArchaeaBacteria <- subset_taxa(reads_biom, Kingdom %in% c("Archaea", "Bacteria"))
+prefix <- paste0(prefix0, "AB")
+lapply(tax_levels, function(x) agglomerate(readsArchaeaBacteria, outdir, x, prefix))
 
 #### ---------
-readsEukaryota = subset_taxa(reads_biom, Kingdom =="Eukaryota")
-prefix<- paste0(prefix0,"Eukarya")
-lapply(tax_levels,function(x) agglomerate(readsEukaryota,outdir,x,prefix))
+cat(sprintf("Using Eukaryota data\n"))
+readsEukaryota <- subset_taxa(reads_biom, Kingdom == "Eukaryota")
+prefix <- paste0(prefix0, "Eukarya")
+lapply(tax_levels, function(x) agglomerate(readsEukaryota, outdir, x, prefix))
 
 ###  Viruses ----------------------------------------------------
-readsViruses = subset_taxa(reads_biom, Kingdom =="Viruses")
-prefix<- paste0(prefix0,"Viruses")
-lapply(tax_levels,function(x) agglomerate(readsViruses,outdir,x,prefix))
+cat(sprintf("Using Viruses data\n"))
+readsViruses <- subset_taxa(reads_biom, Kingdom == "Viruses")
+prefix <- paste0(prefix0, "Viruses")
+lapply(tax_levels, function(x) agglomerate(readsViruses, outdir, x, prefix))
 
 
 ### OPTIONAL PREPROCESSING
