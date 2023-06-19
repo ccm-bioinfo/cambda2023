@@ -1,0 +1,107 @@
+accession,date,city,species
+GCF_002214205.1,2016,New York,Escherichia coli
+GCF_013423565.1,2017,Minneapolis,Escherichia coli
+GCF_013423645.1,2017,Minneapolis,Escherichia coli
+GCF_022569415.1,2018,New York,Escherichia coli
+GCF_022812305.1,2018,New York,Escherichia coli
+GCF_022812315.1,2018,New York,Escherichia coli
+GCF_027584315.1,2015,New York,Escherichia coli
+GCF_027584335.1,2015,New York,Escherichia coli
+GCF_020783935.1,2016,New York,Enterobacter hormaechei
+GCF_029069505.1,2015,New York,Enterobacter hormaechei
+GCF_029069575.1,2015,New York,Enterobacter hormaechei
+GCF_029069675.1,2015,New York,Enterobacter hormaechei
+GCF_029069745.1,2016,New York,Enterobacter hormaechei
+GCF_029069825.1,2015,New York,Enterobacter hormaechei
+GCF_029070195.1,2015,New York,Enterobacter hormaechei
+GCF_029075245.1,2015,New York,Enterobacter hormaechei
+GCF_002833425.1,2016,New York,Klebsiella pneumoniae
+GCF_002833445.1,2016,New York,Klebsiella pneumoniae
+GCF_002833465.1,2016,New York,Klebsiella pneumoniae
+GCF_002855815.1,2017,New York,Klebsiella pneumoniae
+GCF_002855825.1,2017,New York,Klebsiella pneumoniae
+GCF_002855915.1,2017,New York,Klebsiella pneumoniae
+GCF_002855955.1,2017,New York,Klebsiella pneumoniae
+GCF_002855985.1,2017,New York,Klebsiella pneumoniae
+GCF_002856015.1,2017,New York,Klebsiella pneumoniae
+GCF_002856025.1,2017,New York,Klebsiella pneumoniae
+GCF_002856075.1,2017,New York,Klebsiella pneumoniae
+GCF_002856155.1,2017,New York,Klebsiella pneumoniae
+GCF_002856185.1,2017,New York,Klebsiella pneumoniae
+GCF_002856235.1,2016,New York,Klebsiella pneumoniae
+GCF_002856315.1,2017,New York,Klebsiella pneumoniae
+GCF_002856325.1,2017,New York,Klebsiella pneumoniae
+GCF_002856385.1,2017,New York,Klebsiella pneumoniae
+GCF_002856395.1,2017,New York,Klebsiella pneumoniae
+GCF_002856415.1,2017,New York,Klebsiella pneumoniae
+GCF_002856455.1,2017,New York,Klebsiella pneumoniae
+GCF_002856535.1,2017,New York,Klebsiella pneumoniae
+GCF_002856565.1,2017,New York,Klebsiella pneumoniae
+GCF_002856575.1,2017,New York,Klebsiella pneumoniae
+GCF_002856615.1,2017,New York,Klebsiella pneumoniae
+GCF_002856635.1,2017,New York,Klebsiella pneumoniae
+GCF_002856675.1,2017,New York,Klebsiella pneumoniae
+GCF_002856705.1,2016,New York,Klebsiella pneumoniae
+GCF_002856765.1,2016,New York,Klebsiella pneumoniae
+GCF_002856885.1,2017,New York,Klebsiella pneumoniae
+GCF_002856905.1,2017,New York,Klebsiella pneumoniae
+GCF_002856915.1,2017,New York,Klebsiella pneumoniae
+GCF_002856945.1,2017,New York,Klebsiella pneumoniae
+GCF_002856995.1,2017,New York,Klebsiella pneumoniae
+GCF_002857005.1,2017,New York,Klebsiella pneumoniae
+GCF_002857035.1,2017,New York,Klebsiella pneumoniae
+GCF_002857065.1,2017,New York,Klebsiella pneumoniae
+GCF_002857085.1,2017,New York,Klebsiella pneumoniae
+GCF_002857115.1,2017,New York,Klebsiella pneumoniae
+GCF_002857125.1,2017,New York,Klebsiella pneumoniae
+GCF_002857135.1,2017,New York,Klebsiella pneumoniae
+GCF_002857205.1,2017,New York,Klebsiella pneumoniae
+GCF_002857235.1,2017,New York,Klebsiella pneumoniae
+GCF_002857315.1,2017,New York,Klebsiella pneumoniae
+GCF_002857345.1,2016,New York,Klebsiella pneumoniae
+GCF_003334885.1,2015,Baltimore,Klebsiella pneumoniae
+GCF_003334895.1,2015,Baltimore,Klebsiella pneumoniae
+GCF_003334925.1,2015,Baltimore,Klebsiella pneumoniae
+GCF_003334945.1,2015,Baltimore,Klebsiella pneumoniae
+GCF_003334955.1,2015,Baltimore,Klebsiella pneumoniae
+GCF_003334965.1,2015,Baltimore,Klebsiella pneumoniae
+GCF_003335005.1,2015,Baltimore,Klebsiella pneumoniae
+GCF_003335025.1,2015,Baltimore,Klebsiella pneumoniae
+GCF_003335065.1,2015,Baltimore,Klebsiella pneumoniae
+GCF_003345685.1,2015,Baltimore,Klebsiella pneumoniae
+GCF_003345715.1,2015,Baltimore,Klebsiella pneumoniae
+GCF_003345765.1,2015,Baltimore,Klebsiella pneumoniae
+GCF_003860845.1,2017,Baltimore,Klebsiella pneumoniae
+GCF_003860885.1,2017,Baltimore,Klebsiella pneumoniae
+GCF_003860895.1,2017,Baltimore,Klebsiella pneumoniae
+GCF_003860985.1,2017,Baltimore,Klebsiella pneumoniae
+GCF_003860995.1,2017,Baltimore,Klebsiella pneumoniae
+GCF_003861035.1,2017,Baltimore,Klebsiella pneumoniae
+GCF_003861085.1,2017,Baltimore,Klebsiella pneumoniae
+GCF_003861135.1,2017,Baltimore,Klebsiella pneumoniae
+GCF_003861255.1,2017,Baltimore,Klebsiella pneumoniae
+GCF_003861365.1,2017,Baltimore,Klebsiella pneumoniae
+GCF_003861425.1,2017,Baltimore,Klebsiella pneumoniae
+GCF_003861435.1,2017,Baltimore,Klebsiella pneumoniae
+GCF_003861475.1,2017,Baltimore,Klebsiella pneumoniae
+GCF_003861575.1,2017,Baltimore,Klebsiella pneumoniae
+GCF_019927725.1,2018,San Antonio,Klebsiella pneumoniae
+GCF_019927885.1,2018,San Antonio,Klebsiella pneumoniae
+GCF_019927925.1,2017,San Antonio,Klebsiella pneumoniae
+GCF_019928325.1,2016,San Antonio,Klebsiella pneumoniae
+GCF_027584255.1,2015,New York,Klebsiella pneumoniae
+GCF_027584275.1,2015,New York,Klebsiella pneumoniae
+GCF_027584375.1,2015,New York,Klebsiella pneumoniae
+GCF_027584385.1,2015,New York,Klebsiella pneumoniae
+GCF_027584415.1,2015,New York,Klebsiella pneumoniae
+GCF_027584435.1,2015,New York,Klebsiella pneumoniae
+GCF_027584455.1,2015,New York,Klebsiella pneumoniae
+GCF_027584485.1,2015,New York,Klebsiella pneumoniae
+GCF_027584495.1,2015,New York,Klebsiella pneumoniae
+GCF_027584535.1,2015,New York,Klebsiella pneumoniae
+GCF_027584585.1,2015,New York,Klebsiella pneumoniae
+GCF_027584695.1,2015,New York,Klebsiella pneumoniae
+GCF_027585065.1,2015,New York,Klebsiella pneumoniae
+GCF_027585115.1,2015,New York,Klebsiella pneumoniae
+GCF_027585155.1,2015,New York,Klebsiella pneumoniae
+GCF_027585165.1,2015,New York,Klebsiella pneumoniae
