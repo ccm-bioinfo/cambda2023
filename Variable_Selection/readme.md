@@ -35,8 +35,8 @@ We run machine learning models (Victor's code) in the original reads-OTU table.
 We propose a method to select OTUs that help us differentiate at least two of the cities. 
 The proposed selection uses negative binomial regression to account for overdispersion of absolute abundance, caused both by zeros and high level counts. 
 To select the differentiating OTUs we compute p-values and for every pair of cities we select a fixed number of OTUs with the best (lowest) p-values. 
-This selection is mostly automatized in the script [variable_selection.R](https://github.com/nselem/ccm-bioinfomatica-lab/blob/main/Hackaton_junio2023/team1/variable_selection.R). 
+This selection is mostly automatized in the script [variable_selection.R](./codes/variable_selection.R). 
 The method works at both assembly and reads levels, for every subset of kindoms obtained previously.
 
 We also propose a method to select the variable but considering the model that fits best the count data, for each OTU, among the Poisson (P), Negative Binomial (NB), Zero Inflated (ZI) Poisson and (ZINB). 
-This method is found in the script [variable_selection_with_model_selection.R](https://github.com/nselem/ccm-bioinfomatica-lab/blob/main/Hackaton_junio2023/team1/variable_selection_with_model_selection.R).
+This method is found in the script [variable_selection_with_model_selection.R](./codes/variable_selection_with_model_selection.R).
