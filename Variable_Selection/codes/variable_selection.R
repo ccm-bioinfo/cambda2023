@@ -1,34 +1,125 @@
+#!/usr/bin/env Rscript
+library("optparse")
+
+option_list = list(
+    make_option(c("-I", "--input_dir"), type = "character", default = "../data/", 
+                help = "input directory [default= %default]", metavar = "character"),
+    make_option(c("-O", "--out_dir"), type = "character", default = "../results/", 
+                help = "output directory [default= %default]", metavar = "character"),
+    make_option(c("-r", "--reads"), type = "logical", default = TRUE,
+                help = "reads (TRUE) or assembly (FALSE) [default= %default]", 
+                metavar = "logical"),
+    make_option(c("-a", "--all"), type = "logical", default = TRUE, 
+                help = "run with all (TRUE) kingdoms or separated (FALSE) by AB, Eu & Vi",
+                metavar = "logical"),
+    make_option(c("-k", "--best_k"), type = "integer", default = 5, 
+                help = "number of significant OTUs", metavar = "integer"),
+    make_option(c("-m", "--model"), type = "character", default = "nb",
+                help = "model to adjust: Poisson (p), Negative Binomial (nb), Zero Inflated Poisson (zip) or Zero Inflated Negative Binomial (zinb) [default= %default]",
+                metavar = "integer")
+); 
+
+opt_parser = OptionParser(option_list = option_list);
+opt = parse_args(opt_parser);
+
+# 19 june 2023
+# Imanol Nuñez
+
 #-------------------------------------------------------------------------------
 # Load libraries via pacman
 pacman::p_load(ggplot2, ggthemes,                       # Plots
-    dplyr, tibble, tidyr, purrr, broom)                 # Data frame manipulation 
+    dplyr, tibble, tidyr, purrr, broom, pscl)                 # Data frame manipulation 
 # library(ggplot2)
 # library(ggthemes)
 # library(dplyr)
 # library(tibble)
-# library(DESeq2)
-# library(fdrtool)
+# library(tidyr)
+# library(purrr)
+# library(broom)
+# library(pscl)
 
 #-------------------------------------------------------------------------------
-# Working directory
-setwd("~/camda/variable_selection/")
+# Safety functions to keep differentialOtusPvalues running even if certain 
+# fits cannot be achieved by numerical errors
+poss_glm <- possibly(.f = glm, otherwise = NULL)
+poss_glm.nb <- possibly(.f = MASS::glm.nb, otherwise = NULL)
+poss_zinfl <- possibly(.f = pscl::zeroinfl, otherwise = NULL)
+poss_AIC <- possibly(.f = AIC, otherwise = Inf)
+poss_BIC <- possibly(.f = BIC, otherwise = Inf)
+
+#-------------------------------------------------------------------------------
+# Compute the AIC score for a list of models
+modelCountsScore <- function(models, method = "AIC") {
+    if (method == "AIC") {
+        scores <- poss_AIC(models)
+    } else {
+        scores <- poss_BIC(models)
+    } 
+    return(scores)
+}
 
 #-------------------------------------------------------------------------------
 # Extract the p-value for a non-constant term in a regression model of the 
-# form y ~ 1 + x
-pValueFromSummary <- function(fit) {
+# form y ~ 1 + x if it is not zero inflated, and a regression of the form 
+# y ~ (1 + x | x) if a model is zero inflated
+pValueFromSummary <- function(fit, zi = FALSE) {
     if (is.null(fit)) {
         pValue <- NA
     } else {
-        pValue <- summary(fit)$coefficients[,4][2]
+        if (zi) {
+            pValue <- summary(fit)$coefficients$count[,4][2]
+        } else {
+            pValue <- summary(fit)$coefficients[,4][2]
+        }
     }
     return(pValue)
 }
 
 #-------------------------------------------------------------------------------
-# A safety function to keep differentialOtusPvalues running even if certain 
-# fits cannot be achieved by numerical errors
-poss_glm.nb <- possibly(.f = MASS::glm.nb, otherwise = NULL)
+# Select the best model for the counts of an OTU
+# and return the associated p-value and name of the selected model
+modelFitting <- function(db, formula, model, method = "AIC") {
+    # Fit Poisson, Negative Binomial, Zero Inflated Poisson and 
+    # Zero Inflated Negative Binomial models
+    if (model == "p") {
+        modelFit <- poss_glm(
+            formula = formula, 
+            family = "poisson", 
+            data = db
+        )
+        zi_mod <- FALSE
+    } else if (model == "nb") {
+        modelFit <- poss_glm.nb(
+            formula = formula, 
+            data = db
+        )
+        zi_mod <- FALSE
+    } else if (model == "zip") {
+        modelFit <- poss_zinfl(
+            formula = formula, 
+            dist = "poisson", 
+            data = db
+        )
+        zi_mod <- TRUE
+    } else if (model == "zinb") {
+        modelFit <- poss_zinfl(
+            formula = formula, 
+            dist = "negbin", 
+            data = db
+        )
+        zi_mod <- TRUE
+    }
+    # Compute the scores according to a method (AIC by default)
+    scores <- modelCountsScore(models = modelFit, method = method)
+    # Compute the p-value
+    pValueModel <- pValueFromSummary(
+        fit = modelFit, 
+        zi = zi_mod
+    )
+    return(
+        list(pvalues = pValueModel, model = model, score = scores)
+    )
+}
 
 #-------------------------------------------------------------------------------
 # differentialOtusPvalues calculates the p-values according to log2-fold change 
@@ -36,9 +127,9 @@ poss_glm.nb <- possibly(.f = MASS::glm.nb, otherwise = NULL)
 # This allows us to decide if an OTU is differentially abundant
 # This only works correctly at all hierarchical levels for reads 
 
-differentialOtusPvalues <- function(db) {
+differentialOtusPvalues <- function(db, model) {
     #####
-    # Negative Binomial model without DESeq2
+    # Get pvalues fitting a count model to db
     
     # We assume that the data is given by columns, where the first column 
     # corresponds to the OTU ID and the others to the samples
@@ -69,11 +160,18 @@ differentialOtusPvalues <- function(db) {
     # As we will be adjusting a model for each OTU, and each pair of 
     # city-year, this IDs will also be stored
     pValues <- data.frame(
-        OTU = integer(), pvalues = double(), loc1 = character(), 
+        OTU = integer(), pvalues = double(), model = character(), 
+        score = double(), loc1 = character(), 
         loc2 = character(), locs = character(), adj_pvalues = double()
     )
     pb <- txtProgressBar(min = 0, max = nLocs * (nLocs - 1) / 2, style = 3)
     k <- 1
+    # Construct the formula for the models
+    if (model %in% c("zip", "zinb")) {
+        formulaModels <- formula(counts ~ offset(logNreads) + sample_loc | sample_loc)
+    } else {
+        formulaModels <- formula(counts ~ offset(logNreads) + sample_loc)
+    }
     for (i in 1:(nLocs - 1)) {
         for (j in (i+1):nLocs) {
             # Given two city-year classes, we first filter the data that 
@@ -100,20 +198,22 @@ differentialOtusPvalues <- function(db) {
                 filter(otuReads > 0) %>% 
                 select(-otuReads) %>%
                 nest(-X) %>% 
-                mutate(nb.fit = map(data, ~ poss_glm.nb(
-                    counts ~ 1 + offset(logNreads) + sample_loc, 
-                    data = .
-                ))) %>% 
                 mutate(
-                    pvalues = map(nb.fit, ~ pValueFromSummary(.))
-                ) %>% unnest(pvalues) %>% 
-                select(c("X", "pvalues")) %>% 
+                    modelFit = map(data, ~modelFitting(
+                        formula = formulaModels, 
+                        model = model, 
+                        db = .
+                    ))
+                ) %>% 
+                unnest_wider(modelFit) %>% 
+                select(c("X", "pvalues", "model", "score")) %>% 
                 mutate(
                     loc1 = locations[i], 
                     loc2 = locations[j], 
                     locs = paste0(loc1, "_vs_", loc2)
                 ) %>% 
                 filter(!is.na(pvalues)) %>% 
+                filter(is.finite(score)) %>% 
                 rename("OTU" = "X") %>% 
                 mutate(
                     adj_pvalues = p.adjust(pvalues, method = "fdr")
@@ -122,7 +222,7 @@ differentialOtusPvalues <- function(db) {
             # the computed p-values in previos iterations
             pValues <- pValues %>% 
                 full_join(tempPvalues, by = c(
-                    "OTU", "pvalues", "loc1", "loc2", "locs", "adj_pvalues"
+                    "OTU", "pvalues", "model", "score", "loc1", "loc2", "locs", "adj_pvalues"
                 ))
             setTxtProgressBar(pb, k)
             k <- k + 1
@@ -138,7 +238,7 @@ differentialOtusPvalues <- function(db) {
 # reads for the hierarchical level hLevel
 # This function may take into account a set of indices for training 
 computePvaluesLevel <- function(hLevel, path_to_counts, reads = TRUE, train = NULL, 
-                                path_to_pvalues = NULL) {
+                                path_to_pvalues = NULL, model = "nb") {
     # Test if the count data is for reads or for assembly data
     if (reads) {
         db <- read.csv(paste0(path_to_counts, "reads", 
@@ -158,7 +258,7 @@ computePvaluesLevel <- function(hLevel, path_to_counts, reads = TRUE, train = NU
         train_db <- db[, train]
     }
     # compute p-values
-    tempPvalues <- differentialOtusPvalues(train_db)
+    tempPvalues <- differentialOtusPvalues(train_db, model)
     # Save p-values for further exploratory analysis
     #write.csv(
     #    tempPvalues, 
@@ -187,7 +287,8 @@ getKOtus <- function(db, k) {
     # Initialize the data frame for the k most significant OTUs per 
     # city vs city contrast
     reducedK <- data.frame(
-        OTU = integer(), pvalues = double(), loc1 = character(), 
+        OTU = integer(), pvalues = double(), model = character(), 
+        score = double(), loc1 = character(), 
         loc2 = character(), locs = character(), adj_pvalues = double(),  
         hlevel = character(), sign_rank = integer()
     )
@@ -200,7 +301,7 @@ getKOtus <- function(db, k) {
             mutate(sign_rank = 1:k)
         reducedK <- reducedK %>% 
             full_join(tempData, by = c(
-                "OTU", "pvalues", "loc1", "loc2", "locs", "adj_pvalues",
+                "OTU", "pvalues", "model", "score", "loc1", "loc2", "locs", "adj_pvalues",
                 "hlevel", "sign_rank"
             ))
     }
@@ -266,7 +367,8 @@ constructIntegratedData <- function(sign_otus, path_to_counts, reads = TRUE) {
 # The function variableSelection implements all of the steps to select a subset 
 # of OTUs that allow us to differentiate between cities
 variableSelection <- function(hlevels = c("_Phylum", "_Class", "_Order", "_Family", "_Genus"), 
-                              path_to_counts, train_cols = NULL, kpvalues = 5, reads = TRUE) {
+                              path_to_counts, train_cols = NULL, kpvalues = 5, reads = TRUE, 
+                              model = "nb") {
     # Initialize a list to save the matrices of p-values for every run
     pValuesList <- vector("list", length = length(hlevels))
     for (i in 1:length(hlevels)) {
@@ -275,7 +377,8 @@ variableSelection <- function(hlevels = c("_Phylum", "_Class", "_Order", "_Famil
             hLevel = hlevels[i], 
             path_to_counts = path_to_counts, 
             train = train_cols, 
-            reads = reads
+            reads = reads,
+            model = model
         )
         cat(sprintf("\n%d of %d done\n", i, length(hlevels)))
     }
@@ -299,23 +402,53 @@ variableSelection <- function(hlevels = c("_Phylum", "_Class", "_Order", "_Famil
 
 #-------------------------------------------------------------------------------
 # Test
-path_to_counts <- "~/camda/variable_selection/reads/"
-train_test_set <- read.csv("./Train_Test.csv", row.names = 1)
-train_cols <- train_test_set$Num_Col[train_test_set$Train == 1]
-kpvalues <- 5
-hlevels <- c("_Phylum", "_Class", "_Order", "_Family", 
-             "AB_Phylum", "AB_Class", "AB_Order", "AB_Family", 
-             "Eukarya_Phylum", "Eukarya_Class", "Eukarya_Order", "Eukarya_Family",
-             "Viruses_Phylum", "Viruses_Class", "Viruses_Order", "Viruses_Family")
+prefix0 <- ifelse(opt$reads, "reads", "assembly")
+prefix1 <- ifelse(opt$all, "", "kingdoms")
+path_to_counts <- paste0(opt$input_dir, prefix0, "/")
+# train_test_set <- read.csv("./Train_Test.csv", row.names = 1)
+# train_cols <- train_test_set$Num_Col[train_test_set$Train == 1]
+kpvalues <- opt$best_k
+if (opt$all) {
+    hlevels <- c("_Phylum", "_Class", "_Order", "_Family", "_Genus")
+} else {
+    hlevels <- c(
+        "AB_Phylum", #"AB_Class", "AB_Order", "AB_Family", "AB_Genus",
+        "Eukarya_Phylum", #"Eukarya_Class", "Eukarya_Order", "Eukarya_Family", "Eukarya_Genus",
+        "Viruses_Phylum"#, "Viruses_Class", "Viruses_Order", "Viruses_Family", "Viruses_Genus"
+    )
+}
 
 smth <- variableSelection(path_to_counts = path_to_counts, 
-                          train_cols = train_cols, kpvalues = kpvalues, 
-                          hlevels = hlevels)
+                          train_cols = NULL, kpvalues = kpvalues, 
+                          hlevels = hlevels, model = opt$model,
+                          reads = opt$reads)
 
-smth[[1]] %>% 
+write.csv(
+    smth[[1]],  
+    file = paste0(
+        opt$out_dir, "pValues/", prefix0, "_", prefix1, "_", opt$model, "_", "pvalues.csv"
+    ),
+    row.names = FALSE
+)
+write.csv(
+    smth[[2]],  
+    file = paste0(
+        opt$out_dir, "significant_otus/", prefix0, "_", prefix1, "_", opt$model, "_", "signif.csv"
+    ),
+    row.names = FALSE
+)
+write.csv(
+    smth[[3]],  
+    file = paste0(
+        opt$out_dir, "integrated_tables/", prefix0, "_", prefix1, "_", opt$model, "_", "integrated.csv"
+    ),
+    row.names = FALSE
+)
+
+pplot1 <- smth[[1]] %>% 
     ggplot(aes(x = locs, y = -log(adj_pvalues), colour = hlevel)) + 
     geom_hline(yintercept = -log(1e-3), colour = "hotpink") + 
-    geom_point(alpha = 0.1, size = 1) + 
+    geom_point(alpha = 0.5, size = 1) + 
     theme_few() + 
     ylab("-log(p-value)") + 
     xlab("") + 
@@ -323,19 +456,10 @@ smth[[1]] %>%
           legend.position = "top") + 
     guides(colour = guide_legend(override.aes = list(alpha = 1, size = 4)))
 
-#pValuesPh <- read.csv("./pValues/train_pvalues_Phylum.csv", row.names = 1) %>% 
-#    mutate(hlevel = "Phylum")
-#pValuesCl <- read.csv("./pValues/train_pvalues_Class.csv", row.names = 1) %>% 
-#    mutate(hlevel = "Class")
-#pValuesOr <- read.csv("./pValues/train_pvalues_Order.csv", row.names = 1) %>% 
-#    mutate(hlevel = "Order")
-#pValuesFa <- read.csv("./pValues/train_pvalues_Family.csv", row.names = 1) %>% 
-#    mutate(hlevel = "Family")
-#pValuesGe <- read.csv("./pValues/train_pvalues_Genus.csv", row.names = 1) %>% 
-#    mutate(hlevel = "Genus")
-
-#write.csv(
-#    integratedTable, 
-#    file = "./integrated_sample.csv",
-#    row.names = FALSE
-#)
+ggsave(
+    plot = pplot1, 
+    filename = paste0(
+        opt$out_dir, "pValues/", prefix0, "_", prefix1, "_", opt$model, "_", "log_pvalues.png"
+    ),
+    dpi = 600, width = 16, height = 9
+)
