@@ -7,21 +7,21 @@ Taxonomical data tables
   
 |   |Bacteria-Archaea | Virus   | Eukarya  | All   |  
 |---|---|---|---|---|  
-|Phylum   | [Bacteria-Phylum]()  | [Virus-Phylum]()   | [Eukarya-Phylum]()  | [All-Phylum]()   |   
-|Family|  [Bacteria-Family]() | [Virus-Family]()  |  [Eukarya-Family]() | [All-Family]()  |  
-|Class|  [Bacteria-Class]() | [Virus-Class]()  |  [Eukarya-Class]() | [All-Class]()  |  
-|Order | [Bacteria-Order]()  | [Virus-Order]()  | [Eukarya-Order]()  |  [All-Order]() |    
-|Genera | [Bacteria-Genus]()  | [Virus-Genus]()  | [Eukarya-Genus]()  |  [All-Genus]() |    
+|Phylum   | [Bacteria-Phylum](./Variable_Selection/data/reads/readsAB_count__Phylum.csv)  | [Virus-Phylum](./Variable_Selection/data/reads/readsViruses_count__Phylum.csv)   | [Eukarya-Phylum](./Variable_Selection/data/reads/readsEukarya_count__Phylum.csv)  | [All-Phylum](./Variable_Selection/data/reads/reads_count__Phylum.csv)   |   
+|Family   | [Bacteria-Family](./Variable_Selection/data/reads/readsAB_count__Family.csv)  | [Virus-Family](./Variable_Selection/data/reads/readsViruses_count__Family.csv)   | [Eukarya-Family](./Variable_Selection/data/reads/readsEukarya_count__Family.csv)  | [All-Family](./Variable_Selection/data/reads/reads_count__Family.csv)   |   
+|Class   | [Bacteria-Class](./Variable_Selection/data/reads/readsAB_count__Class.csv)  | [Virus-Class](./Variable_Selection/data/reads/readsViruses_count__Class.csv)   | [Eukarya-Class](./Variable_Selection/data/reads/readsEukarya_count__Class.csv)  | [All-Class](./Variable_Selection/data/reads/reads_count__Class.csv)   |   
+|Order   | [Bacteria-Order](./Variable_Selection/data/reads/readsAB_count__Order.csv)  | [Virus-Order](./Variable_Selection/data/reads/readsViruses_count__Order.csv)   | [Eukarya-Order](./Variable_Selection/data/reads/readsEukarya_count__Order.csv)  | [All-Order](./Variable_Selection/data/reads/reads_count__Order.csv)   |   
+|Genera   | [Bacteria-Genus](./Variable_Selection/data/reads/readsAB_count__Genus.csv)  | [Virus-Genus](./Variable_Selection/data/reads/readsViruses_count__Genus.csv)   | [Eukarya-Genus](./Variable_Selection/data/reads/readsEukarya_count__Genus.csv)  | [All-Genus](./Variable_Selection/data/reads/reads_count__Genus.csv)   |   
 
 - [OTU table with assemblies](https://github.com/ccm-bioinfo/cambda2023/blob/main/preprocessing/taxonomy/assembly-biom.tsv.gz)  
   
 |   |Bacteria-Archaea | Virus   | Eukarya  | All   |  
 |---|---|---|---|---|  
-|Phylum   | [Bacteria-En-Phylum]()  | [Virus-En-Phylum]()   | [Eukarya-En-Phylum]()  | [All-En-Phylum]()   |   
-|Family|  [Bacteria-En-Family]() | [Virus-En-Family]()  |  [Eukarya-En-Family]() | [All-En-Family]()  |    
-|Class|  [Bacteria-En-Class]() | [Virus-En-Class]()  |  [Eukarya-En-Class]() | [All-En-Class]()  |  
-|Order | [Bacteria-En-Order]()  | [Virus-En-Order]()  | [Eukarya-En-Order]()  |  [All-En-Order]() |    
-|Genera | [Bacteria-En-Genus]()  | [Virus-En-Genus]()  | [Eukarya-En-Genus]()  |  [All-En-Genus]() |    
+|Phylum   | [Bacteria-As-Phylum](./Variable_Selection/data/assembly/assemblyAB_count__Phylum.csv)  | [Virus-As-Phylum](./Variable_Selection/data/assembly/assemblyViruses_count__Phylum.csv)   | [Eukarya-As-Phylum](./Variable_Selection/data/assembly/assemblyEukarya_count__Phylum.csv)  | [All-As-Phylum](./Variable_Selection/data/assembly/assembly_count__Phylum.csv)   |   
+|Family   | [Bacteria-As-Family](./Variable_Selection/data/assembly/assemblyAB_count__Family.csv)  | [Virus-As-Family](./Variable_Selection/data/assembly/assemblyViruses_count__Family.csv)   | [Eukarya-As-Family](./Variable_Selection/data/assembly/assemblyEukarya_count__Family.csv)  | [All-As-Family](./Variable_Selection/data/assembly/assembly_count__Family.csv)   |   
+|Class   | [Bacteria-As-Class](./Variable_Selection/data/assembly/assemblyAB_count__Class.csv)  | [Virus-As-Class](./Variable_Selection/data/assembly/assemblyViruses_count__Class.csv)   | [Eukarya-As-Class](./Variable_Selection/data/assembly/assemblyEukarya_count__Class.csv)  | [All-As-Class](./Variable_Selection/data/assembly/assembly_count__Class.csv)   |   
+|Order   | [Bacteria-As-Order](./Variable_Selection/data/assembly/assemblyAB_count__Order.csv)  | [Virus-As-Order](./Variable_Selection/data/assembly/assemblyViruses_count__Order.csv)   | [Eukarya-As-Order](./Variable_Selection/data/assembly/assemblyEukarya_count__Order.csv)  | [All-As-Order](./Variable_Selection/data/assembly/assembly_count__Order.csv)   |   
+|Genera   | [Bacteria-As-Genus](./Variable_Selection/data/assembly/assemblyAB_count__Genus.csv)  | [Virus-As-Genus](./Variable_Selection/data/assembly/assemblyViruses_count__Genus.csv)   | [Eukarya-As-Genus](./Variable_Selection/data/assembly/assemblyEukarya_count__Genus.csv)  | [All-As-Genus](./Variable_Selection/data/assembly/assembly_count__Genus.csv)   |   
 
 Functional table 
 [FixME Anton]   
