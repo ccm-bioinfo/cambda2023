@@ -8,16 +8,20 @@ Taxonomical data tables
 |   |Bacteria-Archaea | Virus   | Eukarya  | All   |  
 |---|---|---|---|---|  
 |Phylum   | [Bacteria-Phylum]()  | [Virus-Phylum]()   | [Eukarya-Phylum]()  | [All-Phylum]()   |   
-|Family|  [Bacteria-Family]() | [Virus-Family]()  |  [Eukarya-Family]() | [All-Family]()  |    
+|Family|  [Bacteria-Family]() | [Virus-Family]()  |  [Eukarya-Family]() | [All-Family]()  |  
+|Class|  [Bacteria-Class]() | [Virus-Class]()  |  [Eukarya-Class]() | [All-Class]()  |  
 |Order | [Bacteria-Order]()  | [Virus-Order]()  | [Eukarya-Order]()  |  [All-Order]() |    
+|Genera | [Bacteria-Genus]()  | [Virus-Genus]()  | [Eukarya-Genus]()  |  [All-Genus]() |    
 
 - [OTU table with assemblies](https://github.com/ccm-bioinfo/cambda2023/blob/main/preprocessing/taxonomy/assembly-biom.tsv.gz)  
   
 |   |Bacteria-Archaea | Virus   | Eukarya  | All   |  
 |---|---|---|---|---|  
-|Phylum   | [Bacteria-Phylum]()  | [Virus-Phylum]()   | [Eukarya-Phylum]()  | [All-Phylum]()   |   
-|Family|  [Bacteria-Family]() | [Virus-Family]()  |  [Eukarya-Family]() | [All-Family]()  |    
-|Order | [Bacteria-Order]()  | [Virus-Order]()  | [Eukarya-Order]()  |  [All-Order]() |    
+|Phylum   | [Bacteria-En-Phylum]()  | [Virus-En-Phylum]()   | [Eukarya-En-Phylum]()  | [All-En-Phylum]()   |   
+|Family|  [Bacteria-En-Family]() | [Virus-En-Family]()  |  [Eukarya-En-Family]() | [All-En-Family]()  |    
+|Class|  [Bacteria-En-Class]() | [Virus-En-Class]()  |  [Eukarya-En-Class]() | [All-En-Class]()  |  
+|Order | [Bacteria-En-Order]()  | [Virus-En-Order]()  | [Eukarya-En-Order]()  |  [All-En-Order]() |    
+|Genera | [Bacteria-En-Genus]()  | [Virus-En-Genus]()  | [Eukarya-En-Genus]()  |  [All-En-Genus]() |    
 
 Functional table 
 
