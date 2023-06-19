@@ -24,9 +24,13 @@ Taxonomical data tables
 |Genera | [Bacteria-En-Genus]()  | [Virus-En-Genus]()  | [Eukarya-En-Genus]()  |  [All-En-Genus]() |    
 
 Functional table 
+[FixME Anton]  
 
 Resistance Table  
+[Reads-Kraken-Extraction-Assembly]()
+Upload table
 
+[]
 Welcome to Cambda 2023! 
 
 [Link a la presentación](https://docs.google.com/presentation/d/1AM7f3khAGLN8pXDnDs9BOYrUh56jCmPwoc2MRLTkfgg/edit#slide=id.g24bcac0919d_0_1109)  
