@@ -1,5 +1,7 @@
 ## Taxonomic assignation - Extraction by genus - City binning - Assembly - AMR identification
-Alnitak _path_ 
+Alnitak 
+Counts: /data/camda2023/extraction/extraction-amr-counts.tsv  
+Presence_absence: /data/camda2023/extraction/extraction-amr-presence.tsv
 
 In this pipeline, we first found reads taxonomy assignation using Kraken2, then, 
 we extracted and binned all reads that belonged to the same city. Next, we run RGI
