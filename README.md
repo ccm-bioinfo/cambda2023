@@ -1,4 +1,4 @@
-# Camda 2023
+# Camda 2023 Mexican Team
 
 ## Data 
 Here we need to fix the links! 
@@ -33,6 +33,10 @@ Upload table  FixMe nelly
 
 ### Genomes Csv
 [Genome Table](https://github.com/ccm-bioinfo/cambda2023/blob/main/genome-metadata.csv)
+
+### Reduced variables table 
+These tables are the result of the reduced variable team.  
+Imanol 👀[Fix me]
 
 Welcome to Cambda 2023! 
 ### Relevant links
