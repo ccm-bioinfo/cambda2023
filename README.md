@@ -2,7 +2,7 @@
 
 ## Data 
 Here we need to fix the links! 
-Reads after trimming are stored by duplicate in Chihuil <path> and Alnitak <path>
+Reads after trimming are stored by duplicate in Chihuil /botete/mvazquez/camda2023/trimmed/*.fastq.gz and Alnitak /data/camda2023/trimmed/*.fastq.gz
 Taxonomical data tables  
 - [OTU table from reads](https://github.com/ccm-bioinfo/cambda2023/blob/main/preprocessing/taxonomy/read-biom.tsv.gz)
   
