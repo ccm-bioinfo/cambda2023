@@ -2,21 +2,25 @@
 This code is used to classify data by city using 5-folds cross validation
 """
 
+import os
+from random import sample
+
 # Import libraries
 import pandas as pd
-from random import sample
+from matplotlib import pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import confusion_matrix, f1_score, accuracy_score
+from sklearn.metrics import accuracy_score, confusion_matrix, f1_score
 from sklearn.model_selection import StratifiedKFold
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
-from matplotlib import pyplot as plt
 
 # Load the dataset
 VERSION = "original"
 SCALER = "PowerTransformer"
-df = pd.read_csv(f"Hackaton_junio2023/CodigoDanielS/dta_{VERSION}_{SCALER}.tsv", sep='\t', header=0)
+INPUT_FOLDER = "clasificacion/generated_data"
+OUTPUT_FOLDER = "clasificacion/generated_imgs"
+df = pd.read_csv(f"{INPUT_FOLDER}/dta_{VERSION}_{SCALER}.tsv", sep='\t', header=0)
 
 # 5-folds column selection
 cols = {c:"_".join(c.split("_")[-3:-1]) for c in df.columns[1:]}
@@ -133,7 +137,7 @@ if __name__ == "__main__":
   results = {}
   for alg in algo:
     # Log the beginning of the classification
-    print(f"Classification using {alg}")
+    print(f"\tClassification using {alg}")
     # Initialize variables
     c_acc = 0
     c_f1 = 0
@@ -150,8 +154,11 @@ if __name__ == "__main__":
     # Print the average
     print(f"Average: F1 score = {c_f1/N:.3f}\tAccuracy = {c_acc/N:.3f}")
     fig.suptitle(f"{VERSION} - {SCALER} (F1={c_f1/N:.3f}, ACC={c_acc/N:.3f}) - {alg}")
+    # check if the output folder exists
+    if not os.path.exists(OUTPUT_FOLDER):
+      os.makedirs(OUTPUT_FOLDER)
     # Save the plot
-    plt.savefig(f"Hackaton_junio2023/CodigoDanielS/img_{VERSION}_{SCALER}_{alg}.png")
+    plt.savefig(f"{OUTPUT_FOLDER}/img_{VERSION}_{SCALER}_{alg}.png")
     results[alg] = (c_f1/N, c_acc/N, alg, fig)
     plt.pause(0.1)
 
@@ -162,7 +169,7 @@ if __name__ == "__main__":
     if i<2:
       # score as 4 digits integer
       score = int(results[alg][0]*10000)
-      results[alg][-1].savefig(f"Hackaton_junio2023/CodigoDanielS/imgSc{score}_{VERSION}_{SCALER}_{alg}.png")
+      results[alg][-1].savefig(f"{OUTPUT_FOLDER}/imgSc{score}_{VERSION}_{SCALER}_{alg}.png")
     else:
       break
 

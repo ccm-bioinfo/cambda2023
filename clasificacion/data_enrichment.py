@@ -4,18 +4,22 @@ This code is used to enrich the data from the database
  - Second, the data is enriched using SMOTE
 """
 
+import os
+
 # Import libraries
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from imblearn.over_sampling import SMOTE
+from sklearn.decomposition import PCA
+from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import (Binarizer, LabelEncoder, MinMaxScaler,
                                    Normalizer, OneHotEncoder, OrdinalEncoder,
                                    PowerTransformer, QuantileTransformer,
                                    RobustScaler, StandardScaler)
-from sklearn.decomposition import PCA
-from sklearn.pipeline import make_pipeline
 
+# constants
+OUTPUT_FOLDER = "clasificacion/generated_data"
 
 # Custom functions
 class LogScaler:
@@ -55,15 +59,18 @@ scalers = {
   "LogAndPca": LogAndPca(),
 }
 
+# # Import data
+# df_1 = pd.read_csv('Hackaton_junio2023/CodigoDanielS/c23/biom_2016.tsv', sep='\t', header=0)
+# df_2 = pd.read_csv('Hackaton_junio2023/CodigoDanielS/c23/biom_2017.tsv', sep='\t', header=0)
+
+# #rename first column 'OTU'->'OTU ID'
+# df_2.rename(columns={'OTU':'OTU ID'}, inplace=True)
+
+# # Merge data
+# df_i = pd.merge(df_1, df_2, on='OTU ID', how='outer')
+
 # Import data
-df_1 = pd.read_csv('Hackaton_junio2023/CodigoDanielS/c23/biom_2016.tsv', sep='\t', header=0)
-df_2 = pd.read_csv('Hackaton_junio2023/CodigoDanielS/c23/biom_2017.tsv', sep='\t', header=0)
-
-#rename first column 'OTU'->'OTU ID'
-df_2.rename(columns={'OTU':'OTU ID'}, inplace=True)
-
-# Merge data
-df_i = pd.merge(df_1, df_2, on='OTU ID', how='outer')
+df_i = pd.read_csv("Variable_Selection/data/assembly/assembly_count__Class.csv", sep=',', header=0) 
 
 # NaN values are replaced by 0
 df_i.fillna(0, inplace=True)
@@ -100,7 +107,10 @@ def normalize_data(_df,prefix="",norm="MinMaxScaler"):
 
   # Start the normalization process
   scaler = scalers[norm]
-  df_norm = scaler.fit_transform(data.T).T
+  if prefix != "transposed":
+    df_norm = scaler.fit_transform(data.T).T
+  else:
+    df_norm = scaler.fit_transform(data)
 
   # if the scaler is a PCA, then recover only the first 30 components (30 is arbitrary)
   if "Pca" in norm:
@@ -127,10 +137,14 @@ def normalize_data(_df,prefix="",norm="MinMaxScaler"):
   plt.xlabel("Otus/derived data")
   plt.ylabel("Samples")
 
+  # verify if output folder exists
+  if not os.path.exists(OUTPUT_FOLDER):
+    os.makedirs(OUTPUT_FOLDER)
+
   # Block to save the data into a file ------------------------------------------
   scaler_name = norm
-  df_o.to_csv(f"Hackaton_junio2023/CodigoDanielS/dta_{prefix}_{scaler_name}.tsv", sep='\t', index=False)
-  plt.savefig(f"Hackaton_junio2023/CodigoDanielS/dta_{prefix}_{scaler_name}.png")
+  df_o.to_csv(f"{OUTPUT_FOLDER}/dta_{prefix}_{scaler_name}.tsv", sep='\t', index=False)
+  plt.savefig(f"{OUTPUT_FOLDER}/dta_{prefix}_{scaler_name}.png")
 
   # Finish the program -----------------------------------------------------------
   plt.close()
@@ -141,6 +155,8 @@ if __name__ == "__main__":
   for sc in sc_list:
     # normalize input data
     normalize_data(df_i, prefix="original", norm=sc)
+    # normalize transposed data
+    normalize_data(df_i.T, prefix="transposed", norm=sc)
     # normalize enrichment data
-    normalize_data(df_e, prefix="enriched", norm=sc)
+    #normalize_data(df_e, prefix="enriched", norm=sc)
   pass
