@@ -115,6 +115,9 @@ def normalize_data(_df,prefix="",norm="MinMaxScaler"):
   # if the scaler is a PCA, then recover only the first 30 components (30 is arbitrary)
   if "Pca" in norm:
     df_norm = df_norm[:30,:]
+    if prefix == "transposed":
+      print("PCA is not compatible with transposed data")
+      return
 
   # Save into the original dataframe
   df_o = _df.copy()
@@ -156,7 +159,7 @@ if __name__ == "__main__":
     # normalize input data
     normalize_data(df_i, prefix="original", norm=sc)
     # normalize transposed data
-    normalize_data(df_i.T, prefix="transposed", norm=sc)
+    normalize_data(df_i, prefix="transposed", norm=sc)
     # normalize enrichment data
     #normalize_data(df_e, prefix="enriched", norm=sc)
   pass
