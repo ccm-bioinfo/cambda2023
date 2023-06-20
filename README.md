@@ -23,18 +23,19 @@ Taxonomical data tables
 |Order   | [Bacteria-As-Order](./Variable_Selection/data/assembly/assemblyAB_count__Order.csv)  | [Virus-As-Order](./Variable_Selection/data/assembly/assemblyViruses_count__Order.csv)   | [Eukarya-As-Order](./Variable_Selection/data/assembly/assemblyEukarya_count__Order.csv)  | [All-As-Order](./Variable_Selection/data/assembly/assembly_count__Order.csv)   |   
 |Genera   | [Bacteria-As-Genus](./Variable_Selection/data/assembly/assemblyAB_count__Genus.csv)  | [Virus-As-Genus](./Variable_Selection/data/assembly/assemblyViruses_count__Genus.csv)   | [Eukarya-As-Genus](./Variable_Selection/data/assembly/assemblyEukarya_count__Genus.csv)  | [All-As-Genus](./Variable_Selection/data/assembly/assembly_count__Genus.csv)   |   
 
-Functional table 
+### Functional Analysis
 [FixME Anton]   
 
-### Resistance Table  
-[Reads-Kraken-Extraction-Assembly]()
-Upload table
+### Resistance Table   
+[Table from mysterious sample]()
+[Reads-Kraken-Extraction-Assembly]()  
+Upload table  FixMe nelly
 
-### [Genomes Csv](https://github.com/ccm-bioinfo/cambda2023/blob/main/genome-metadata.csv)
-Genome Table  
+### Genomes Csv
+[Genome Table](https://github.com/ccm-bioinfo/cambda2023/blob/main/genome-metadata.csv)
 
 Welcome to Cambda 2023! 
-
+### Relevant links
 [Link a la presentación](https://docs.google.com/presentation/d/1AM7f3khAGLN8pXDnDs9BOYrUh56jCmPwoc2MRLTkfgg/edit#slide=id.g24bcac0919d_0_1109)  
 [Link Data Zenodo](https://zenodo.org/record/8003231)    
 [Carpeta de Trabajo Drive](https://drive.google.com/drive/folders/1vGOGMFTnl7k6A9n99KvYtZNmdANQCGOG?usp=drive_link)  
