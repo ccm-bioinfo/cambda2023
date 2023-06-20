@@ -1,6 +1,6 @@
 ## Data 
 - Kraken2-Extraction by Organism-binning by city-assembly  
-  Alnitak  _path_
+  Alnitak  /data/camda2023/extraction/assemblies/*.fasta
 - Binning by city-Assembly-  
   Alnitak _path_
   [] To do Kraken2 to the assemblies and run blast and CARD     
