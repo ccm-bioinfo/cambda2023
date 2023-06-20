@@ -40,6 +40,20 @@ Server Alnitak: /data/camda2023/genomes/*.gbff
 These tables are the result of the reduced variable team.  
 Imanol 👀[Fix me]
 
+For models fitted with all kingdoms:
+
+|    | Poisson | Negative Binomial | Zero Inflated Poisson | Zero Inflated Negative Binomial |
+|---|---|---|---|---|
+|Reads | [Reads-P](./Variable_Selection/selected_variables_results/integrated_tables/reads__p_integrated.csv) | [Reads-NB](./Variable_Selection/selected_variables_results/integrated_tables/reads__nb_integrated.csv) | [Reads-ZIP](./Variable_Selection/selected_variables_results/integrated_tables/reads__zip_integrated.csv) | [Reads-ZINB](./Variable_Selection/selected_variables_results/integrated_tables/reads__zinb_integrated.csv) |
+|Assembly | [Assembly-P](./Variable_Selection/selected_variables_results/integrated_tables/assembly__p_integrated.csv) | [Assembly-NB](./Variable_Selection/selected_variables_results/integrated_tables/assembly__nb_integrated.csv) | [Assembly-ZIP](./Variable_Selection/selected_variables_results/integrated_tables/assembly__zip_integrated.csv) | [Assembly-ZINB]() |
+
+For models fitted considering each kingdom separately:
+
+|    | Poisson | Negative Binomial | Zero Inflated Poisson | Zero Inflated Negative Binomial |
+|---|---|---|---|---|
+|Reads | [Reads-Sep-P]() | [Reads-Sep-NB]() | [Reads-Sep-ZIP]() | [Reads-Sep-ZINB]() |
+|Assembly | [Assembly-Sep-P]() | [Assembly-Sep-NB]() | [Assembly-Sep-ZIP]() | [Assembly-Sep-ZINB]() |
+
 Welcome to Cambda 2023! 
 ### Relevant links
 [Link a la presentación](https://docs.google.com/presentation/d/1AM7f3khAGLN8pXDnDs9BOYrUh56jCmPwoc2MRLTkfgg/edit#slide=id.g24bcac0919d_0_1109)  
