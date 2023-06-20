@@ -1,3 +1,6 @@
+# local changes
+clasificacion/generated*
+
 # Created by https://www.toptal.com/developers/gitignore/api/r,emacs,linux,macos,python,windows,jupyternotebooks,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=r,emacs,linux,macos,python,windows,jupyternotebooks,visualstudiocode
 
