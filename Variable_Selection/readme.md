@@ -1,6 +1,7 @@
-# Variance reduction
-Our goal is to reduce zeros in Zero inflated data and evaluate if this modeling impacts in the forensic challenge of city prediction. 
-First we are subseting the total OTU table into the following tables.
+# Variable selection
+Our goal is to select OTUs considering the possible zero inflated data and evaluate if this modeling impacts in the forensic challenge of city prediction.
+
+First we are subsetting the complete OTU table into the following tables:
 
 - Archaea and Bacteria Phylum    
 - Archaea and Bacteria Class    
@@ -24,16 +25,22 @@ First we are subseting the total OTU table into the following tables.
 - All Kingdoms Class   
 - All Kingdoms Order   
 - All Kingdoms Family   
-- All Kingdoms Genus  
+- All Kingdoms Genus
+
+All of the previous tables are constructed using [reads](./data/reads) and [assembbly](./data/reads) data. 
 
 ## 2023 06 03  
-We glomed two OTU tables:reads-OTU table and one for assemblies into several tables by taxonomic agglomeration.  
+We agglomerated two OTU tables: reads-OTU table and one for assemblies into several tables by taxonomic agglomeration.  
 We model the distribution of zero's in the all kingdoms-phylum table.  
 We run machine learning models (Victor's code) in the original reads-OTU table. 
 
-## Variable selection
-We propose a method to select OTUs that help us differentiate at least two of the cities. 
-The proposed selection uses negative binomial regression to account for overdispersion of absolute abundance, caused both by zeros and high level counts. 
+To select the variables, we consider the classical models for count data:
+
+- Poisson regression
+- Negative binomial regression
+
+Furthermore, to account for a possible excess of zeros we consider the corresponding zero inflated models. 
+Given one of the four possible models, for every OTU and each pair of cities we fit the model and check the p-value corresponding to the effect produced by a city. 
 To select the differentiating OTUs we compute p-values and for every pair of cities we select a fixed number of OTUs with the best (lowest) p-values. 
 This selection is mostly automatized in the script [variable_selection.R](./codes/variable_selection.R). 
 The method works at both assembly and reads levels, for every subset of kindoms obtained previously.
