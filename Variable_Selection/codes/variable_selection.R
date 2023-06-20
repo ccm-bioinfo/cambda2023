@@ -409,12 +409,12 @@ path_to_counts <- paste0(opt$input_dir, prefix0, "/")
 # train_cols <- train_test_set$Num_Col[train_test_set$Train == 1]
 kpvalues <- opt$best_k
 if (opt$all) {
-    hlevels <- c("_Phylum", "_Class", "_Order", "_Family", "_Genus")
+    hlevels <- c("_Phylum")#, "_Class", "_Order", "_Family", "_Genus")
 } else {
     hlevels <- c(
-        "AB_Phylum", #"AB_Class", "AB_Order", "AB_Family", "AB_Genus",
-        "Eukarya_Phylum", #"Eukarya_Class", "Eukarya_Order", "Eukarya_Family", "Eukarya_Genus",
-        "Viruses_Phylum"#, "Viruses_Class", "Viruses_Order", "Viruses_Family", "Viruses_Genus"
+        "AB_Phylum", "AB_Class", "AB_Order", "AB_Family", "AB_Genus",
+        "Eukarya_Phylum", "Eukarya_Class", "Eukarya_Order", "Eukarya_Family", "Eukarya_Genus",
+        "Viruses_Phylum", "Viruses_Class", "Viruses_Order", "Viruses_Family", "Viruses_Genus"
     )
 }
 
@@ -461,5 +461,5 @@ ggsave(
     filename = paste0(
         opt$out_dir, "pValues/", prefix0, "_", prefix1, "_", opt$model, "_", "log_pvalues.png"
     ),
-    dpi = 600, width = 16, height = 9
+    dpi = 180, width = 12, height = 6.75
 )
