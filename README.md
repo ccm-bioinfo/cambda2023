@@ -33,6 +33,7 @@ Upload table  FixMe nelly
 
 ### Genomes Csv
 [Genome Table](https://github.com/ccm-bioinfo/cambda2023/blob/main/genome-metadata.csv)
+Server Alnitak: /data/camda2023/genomes/*.gbff
 
 ### Reduced variables table 
 These tables are the result of the reduced variable team.  
