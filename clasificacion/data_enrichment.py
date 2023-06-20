@@ -5,6 +5,7 @@ This code is used to enrich the data from the database
 """
 
 import os
+import sys
 
 # Import libraries
 import matplotlib.pyplot as plt
@@ -70,7 +71,15 @@ scalers = {
 # df_i = pd.merge(df_1, df_2, on='OTU ID', how='outer')
 
 # Import data
-df_i = pd.read_csv("Variable_Selection/data/assembly/assembly_count__Class.csv", sep=',', header=0) 
+filename = "Variable_Selection/data/reads/readsEukarya_count__Class.csv"
+df_i = pd.read_csv(filename, sep=',', header=0) 
+
+# save the filename without extension into a txt file if first argument is 'save'
+if len(sys.argv) > 1 and sys.argv[1] == "save":
+  filename = filename.split('/')[-1]
+  filename = filename.split('.')[0]
+  with open("clasificacion/last_run.txt", "w") as f:
+    f.write(filename)
 
 # NaN values are replaced by 0
 df_i.fillna(0, inplace=True)

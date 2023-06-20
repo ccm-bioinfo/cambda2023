@@ -4,6 +4,7 @@ This code is used to classify data by city using 5-folds cross validation
 
 import os
 from random import sample
+import sys
 
 # Import libraries
 import pandas as pd
@@ -20,6 +21,12 @@ VERSION = "original"
 SCALER = "PowerTransformer"
 INPUT_FOLDER = "clasificacion/generated_data"
 OUTPUT_FOLDER = "clasificacion/generated_imgs"
+
+# check if there are input parameters
+if len(sys.argv)>1:
+  VERSION = sys.argv[1]
+if len(sys.argv)>2:
+  SCALER = sys.argv[2]
 df = pd.read_csv(f"{INPUT_FOLDER}/dta_{VERSION}_{SCALER}.tsv", sep='\t', header=0)
 
 # 5-folds column selection
@@ -174,5 +181,5 @@ if __name__ == "__main__":
     else:
       break
 
-  plt.show()
+  #plt.show()
   pass
