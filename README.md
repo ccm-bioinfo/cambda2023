@@ -27,7 +27,7 @@ Taxonomical data tables
 [FixME Anton]   
 
 ### Resistance Table   
-[Table from mysterious sample]()
+[Original table from mysterious sample](https://raw.githubusercontent.com/ccm-bioinfo/cambda2023/main/preprocessing/amr_patterns.tsv)
 [Reads-Kraken-Extraction-Assembly]()  
 Upload table  FixMe nelly
 
