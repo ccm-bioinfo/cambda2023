@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Change directory
-# cd ~/c23
+cd ..
 
 # Data downloading
 if [ ! -d "taxonomy" ]; then 

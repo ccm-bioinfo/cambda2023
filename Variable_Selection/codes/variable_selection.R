@@ -197,7 +197,7 @@ differentialOtusPvalues <- function(db, model) {
                 ungroup() %>% 
                 filter(otuReads > 0) %>% 
                 select(-otuReads) %>%
-                nest(-X) %>% 
+                nest(-X) %>%  
                 mutate(
                     modelFit = map(data, ~modelFitting(
                         formula = formulaModels, 
@@ -409,7 +409,7 @@ path_to_counts <- paste0(opt$input_dir, prefix0, "/")
 # train_cols <- train_test_set$Num_Col[train_test_set$Train == 1]
 kpvalues <- opt$best_k
 if (opt$all) {
-    hlevels <- c("_Phylum")#, "_Class", "_Order", "_Family", "_Genus")
+    hlevels <- c("_Phylum", "_Class", "_Order", "_Family", "_Genus")
 } else {
     hlevels <- c(
         "AB_Phylum", "AB_Class", "AB_Order", "AB_Family", "AB_Genus",
