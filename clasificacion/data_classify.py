@@ -169,6 +169,7 @@ if __name__ == "__main__":
     if i<2:
       # score as 4 digits integer
       score = int(results[alg][0]*10000)
+      score = f"{score:04d}"
       results[alg][-1].savefig(f"{OUTPUT_FOLDER}/imgSc{score}_{VERSION}_{SCALER}_{alg}.png")
     else:
       break
