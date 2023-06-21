@@ -1,5 +1,5 @@
 ## Data 
-- Mysterious sample all markers  
+- [Mysterious sample all markers](https://github.com/ccm-bioinfo/cambda2023/blob/main/Resistencia/codigos/data_preparation/data/amr_mistery_table_20230606.tsv)  
 - Kraken2-Extraction by Organism-binning by city-assembly   
   Alnitak  /data/camda2023/extraction/assemblies/*.fasta
     
