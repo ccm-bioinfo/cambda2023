@@ -45,14 +45,21 @@ For models fitted with all kingdoms:
 |    | Poisson | Negative Binomial | Zero Inflated Poisson | Zero Inflated Negative Binomial |
 |---|---|---|---|---|
 |Reads | [Reads-P](./Variable_Selection/selected_variables_results/integrated_tables/reads__p_integrated.csv) | [Reads-NB](./Variable_Selection/selected_variables_results/integrated_tables/reads__nb_integrated.csv) | [Reads-ZIP](./Variable_Selection/selected_variables_results/integrated_tables/reads__zip_integrated.csv) | [Reads-ZINB](./Variable_Selection/selected_variables_results/integrated_tables/reads__zinb_integrated.csv) |
-|Assembly | [Assembly-P](./Variable_Selection/selected_variables_results/integrated_tables/assembly__p_integrated.csv) | [Assembly-NB](./Variable_Selection/selected_variables_results/integrated_tables/assembly__nb_integrated.csv) | [Assembly-ZIP](./Variable_Selection/selected_variables_results/integrated_tables/assembly__zip_integrated.csv) | [Assembly-ZINB]() |
+|Assembly | [Assembly-P](./Variable_Selection/selected_variables_results/integrated_tables/assembly__p_integrated.csv) | [Assembly-NB](./Variable_Selection/selected_variables_results/integrated_tables/assembly__nb_integrated.csv) | [Assembly-ZIP](./Variable_Selection/selected_variables_results/integrated_tables/assembly__zip_integrated.csv) | [Assembly-ZINB](./Variable_Selection/selected_variables_results/integrated_tables/assembly__zinb_integrated.csv) |
 
 For models fitted considering each kingdom separately:
 
 |    | Poisson | Negative Binomial | Zero Inflated Poisson | Zero Inflated Negative Binomial |
 |---|---|---|---|---|
-|Reads | [Reads-Sep-P]() | [Reads-Sep-NB]() | [Reads-Sep-ZIP]() | [Reads-Sep-ZINB]() |
-|Assembly | [Assembly-Sep-P]() | [Assembly-Sep-NB]() | [Assembly-Sep-ZIP]() | [Assembly-Sep-ZINB]() |
+|Reads | [Reads-Sep-P](./Variable_Selection/selected_variables_results/integrated_tables/reads_kingdoms_p_integrated.csv) | [Reads-Sep-NB](./Variable_Selection/selected_variables_results/integrated_tables/reads_kingdoms_nb_integrated.csv) | [Reads-Sep-ZIP](./Variable_Selection/selected_variables_results/integrated_tables/reads_kingdoms_zip_integrated.csv) | [Reads-Sep-ZINB](./Variable_Selection/selected_variables_results/integrated_tables/reads_kingdoms_zinb_integrated.csv) |
+|Assembly | [Assembly-Sep-P](./Variable_Selection/selected_variables_results/integrated_tables/assembly_kingdoms_p_integrated.csv) | [Assembly-Sep-NB](./Variable_Selection/selected_variables_results/integrated_tables/assembly_kingdoms_nb_integrated.csv) | [Assembly-Sep-ZIP](./Variable_Selection/selected_variables_results/integrated_tables/assembly_kingdoms_zip_integrated.csv) | [Assembly-Sep-ZINB](./Variable_Selection/selected_variables_results/integrated_tables/assembly_kingdoms_zinb_integrated.csv) |
+
+Additionally we compared the fitted models for each OTU and pair of cities, choosing the one with the lowest AIC. The tables with the selected variables using this model selection are listed next:
+
+|   | Reads | Assembly |
+|---|---|---|
+|All kingdoms | [Reads-Best](./Variable_Selection/selected_variables_results/integrated_tables/reads__best_integrated.csv) | [Assembly-Best](./Variable_Selection/selected_variables_results/integrated_tables/assembly__best_integrated.csv) |
+|Separated | [Reads-Sep-Best](./Variable_Selection/selected_variables_results/integrated_tables/reads_kingdoms_best_integrated.csv) | [Assembly-Sep-Best](./Variable_Selection/selected_variables_results/integrated_tables/assembly_kingdoms_best_integrated.csv) |
 
 Welcome to Cambda 2023! 
 ### Relevant links
