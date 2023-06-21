@@ -1,9 +1,10 @@
 ## Data 
 - Kraken2-Extraction by Organism-binning by city-assembly   
-  Alnitak  /data/camda2023/extraction/assemblies/*.fasta  
-  [ X ] CARD
-  [ x ] Blastn
-  [ ] Table with rows of mysterious samples eliminating extra rows from CARD and from blast (505 rows)
+  Alnitak  /data/camda2023/extraction/assemblies/*.fasta
+    
+  [ X ] CARD  
+  [ x ] Blastn  
+  [ ] Table with rows of mysterious samples eliminating extra rows from CARD and from blast (505 rows)  
   
 - Binning by city-Assembly-  
   Alnitak  /data/camda2023/us-cities/assemblies/*.fasta    
