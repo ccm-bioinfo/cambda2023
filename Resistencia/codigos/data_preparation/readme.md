@@ -1,3 +1,10 @@
+We need. 
+
+A table with rows equal to the rows of mysterious sample
+columns mysterious sample 
+
+Extraidos 
+
 
 - join_card_data.py
 
