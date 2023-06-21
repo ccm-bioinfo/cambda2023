@@ -3,7 +3,7 @@
 - Kraken2-Extraction by Organism-binning by city-assembly   
   Alnitak  /data/camda2023/extraction/assemblies/*.fasta
     
-  [ X ] CARD  
+  [ X ] [CARD](https://github.com/ccm-bioinfo/cambda2023/blob/main/Resistencia/data/extraction-card-presence-anton-20230621.tsv)  
   [ x ] [Blastn](https://github.com/ccm-bioinfo/cambda2023/blob/main/data/amr_counts_complement_20230621.tsv)    
   [ ] Table with rows of mysterious samples eliminating extra rows from CARD and from blast (505 rows)  
   
