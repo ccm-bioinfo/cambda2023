@@ -3,7 +3,7 @@
   Alnitak  /data/camda2023/extraction/assemblies/*.fasta
     
   [ X ] CARD  
-  [ x ] Blastn  
+  [ x ] [Blastn](https://github.com/ccm-bioinfo/cambda2023/blob/main/data/amr_counts_complement_20230621.tsv)    
   [ ] Table with rows of mysterious samples eliminating extra rows from CARD and from blast (505 rows)  
   
 - Binning by city-Assembly-  
