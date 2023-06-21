@@ -58,3 +58,5 @@ Within this folder there are 6 subdirectories:
 - [data](./data/): The OTUs tables generated for different taxonomic labels are here.
 - [KEE](./KEE): Stading for Klebscillia-Escherichia-Enterobacter, here are two tables that sum up the number of times these genera are read in each sample.
 - [selected_variables_results](./selected_variables_results/): The results for the variable selection process are stored here.
+
+## [Slides for an upcoming talk](https://docs.google.com/presentation/d/1oTygOZpAoANx-CU-K4sYBJm8bcXnN6mPkFbK0PCCyJY/edit?usp=sharing)
