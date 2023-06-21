@@ -1,4 +1,5 @@
 ## Data 
+- Mysterious sample all markers  
 - Kraken2-Extraction by Organism-binning by city-assembly   
   Alnitak  /data/camda2023/extraction/assemblies/*.fasta
     
