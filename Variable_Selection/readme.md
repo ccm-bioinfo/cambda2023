@@ -47,3 +47,14 @@ The method works at both assembly and reads levels, for every subset of kindoms 
 
 We also propose a method to select the variable but considering the model that fits best the count data, for each OTU, among the Poisson (P), Negative Binomial (NB), Zero Inflated (ZI) Poisson and (ZINB). 
 This method is found in the script [variable_selection_with_model_selection.R](./codes/variable_selection_with_model_selection.R).
+
+## Structure of the folder
+
+Within this folder there are 6 subdirectories:
+
+- [codes](./codes/): Here we have the codes used to create the OTUs tables agglomerated by taxonomic level, and the selection of variables done with generalized linear models.
+- [CodigoLeticia](./CodigoLeticia/): In this folder there are codes and slides for compositional data analysis, and an introduction to the zero inflated negative models.
+- [CodigoMario](./CodigoMario/): An introduction to Bayesian theory and some implementations with R.
+- [data](./data/): The OTUs tables generated for different taxonomic labels are here.
+- [KEE](./KEE): Stading for Klebscillia-Escherichia-Enterobacter, here are two tables that sum up the number of times these genera are read in each sample.
+- [selected_variables_results](./selected_variables_results/): The results for the variable selection process are stored here.
