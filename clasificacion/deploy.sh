@@ -26,17 +26,16 @@ if [[ $CURRENT_HOST != xeon* ]]; then
 fi
 
 # get the destination folders
-DESTINATION_FOLDERS=$(find /home/ccm_* -maxdepth 1 -type d -name "CAMBDA2023")
+DESTINATION_FOLDERS=$(find /home -maxdepth 1 -type d -name "ccm_*")
+DESTINATION_FOLDERS=$(for DESTINATION_FOLDER in $DESTINATION_FOLDERS; do
+    echo $DESTINATION_FOLDER/cambda2023/clasificacion
+done)
 
 # deploy the source folder into the destination folders
 for DESTINATION_FOLDER in $DESTINATION_FOLDERS; do
-    # get the destination folder
-    DESTINATION_FOLDER=$(dirname $DESTINATION_FOLDER)
-    DESTINATION_FOLDER=$DESTINATION_FOLDER/clasificacion
-
-    # if destination folder does not exist, create it
+    # if destination folder does not exist, continue
     if [[ ! -d $DESTINATION_FOLDER ]]; then
-        mkdir $DESTINATION_FOLDER
+        continue
     fi
 
     # correct the destination folder based on source folder
