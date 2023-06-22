@@ -1,5 +1,5 @@
 ## Model selection
-First we performed a stratified k-fold split on the data to get a representative testing set of the 15% of the entire dataset which was assigned to be our testing set.
+First we performed a stratified k-fold split on the data to get a representative subset of the 15% of the entire dataset which was assigned to be our testing set.
 
 After that, we used a quantile transformation to avoid the problem of the different ranges on each variable. We fitted the transformation on the trainning set and then applied it to both trainning and testing sets.
 
