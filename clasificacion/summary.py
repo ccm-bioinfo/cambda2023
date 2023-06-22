@@ -26,7 +26,7 @@ for f in folders:
 
 # if there are parameters, keep only the ones that match
 if len(sys.argv)>1:
-  samples = [s.split("_")[0] for s in sys.argv[1:]]
+  samples = ["_".join(s.split("_")[:-1]) for s in sys.argv[1:]]
   print(f"Keeping only the following groups: {samples}")
   groups = {k:groups[k] for k in groups if k in samples}
 
