@@ -25,3 +25,6 @@ run: run_original run_transposed
 	rmdir generated_imgs-$(shell cat last_run.txt) || true
 	mv generated_imgs generated_imgs-$(shell cat last_run.txt)
 	cd .. && python clasificacion/summary.py $(shell cat last_run.txt)
+
+test:	
+	bash deploy.sh $(shell pwd)/$(shell cat last_run.txt)

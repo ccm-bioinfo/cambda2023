@@ -14,7 +14,7 @@ SOURCE_FOLDER=$1
 CURRENT_USER=$(whoami)
 if [[ $CURRENT_USER != ccm_* ]]; then
     echo "Current user is not valid: $CURRENT_USER"
-    exit 1
+    exit 0
 fi
 
 # get and validate the current host
@@ -22,7 +22,7 @@ fi
 CURRENT_HOST=$(hostname)
 if [[ $CURRENT_HOST != xeon* ]]; then
     echo "Current host is not valid: $CURRENT_HOST"
-    exit 1
+    exit 0
 fi
 
 # get the destination folders
