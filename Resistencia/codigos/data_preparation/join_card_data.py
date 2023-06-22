@@ -108,7 +108,7 @@ def traceToString(trace):
     return s
 
 def loadCard(fileName):
-    card = open('aro_index.tsv','r')
+    card = open('data/aro_index.tsv','r')
     aro = dict()
     for line in card:
     # sample line
@@ -135,18 +135,20 @@ def loadCard(fileName):
 
     return aro
 
-ontology = loadOntology('aro.obo')
-aro = loadCard('aro_index.tsv')
 
-camda = open('amr-counts_20230604.tsv','r')
-out = open('amr-counts_card_info.tsv','w')
-out.write(f'name\tARO\tARO_Trace\tAro_name_trace\tfamily\tdrugClass\tmechanism\t{camda.readline()[1:]}')
+if __name__ == '__main__':
+    ontology = loadOntology('aro.obo')
+    aro = loadCard('aro_index.tsv')
 
-for line in camda:
-    gene = line.split('\t')[0].lower()
-    gene =  re.sub('\W+','', gene)
-    family, drugclass, mechanism, aroId = aro[gene]
-    aroTrace, nameTrace = getOntologyTrace(aroId,ontology)
-    out.write(f'{gene}\t{aroId}\t{traceToString(aroTrace)}\t{traceToString(nameTrace)}\t{family}\t{drugclass}\t{mechanism}\t{line[len(gene)+1:]}')
+    camda = open('amr-counts_20230604.tsv','r')
+    out = open('amr-counts_card_info.tsv','w')
+    out.write(f'name\tARO\tARO_Trace\tAro_name_trace\tfamily\tdrugClass\tmechanism\t{camda.readline()[1:]}')
 
-out.close()
+    for line in camda:
+        gene = line.split('\t')[0].lower()
+        gene =  re.sub('\W+','', gene)
+        family, drugclass, mechanism, aroId = aro[gene]
+        aroTrace, nameTrace = getOntologyTrace(aroId,ontology)
+        out.write(f'{gene}\t{aroId}\t{traceToString(aroTrace)}\t{traceToString(nameTrace)}\t{family}\t{drugclass}\t{mechanism}\t{line[len(gene)+1:]}')
+
+    out.close()
