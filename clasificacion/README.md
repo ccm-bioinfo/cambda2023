@@ -29,3 +29,12 @@ Para referencia se incluye como código adicional.
 
 ## Extras
 Adicionalmente se incluye un código relacionado ([data_fetch.py](https://github.com/nselem/ccm-bioinfomatica-lab/tree/main/Hackaton_junio2023/CodigoDanielS/data_fetch.py)) a la adquisición de datos desde ncbi, éste código no se completó por un error y falta de tiempo, sin embargo a partir de aquí se puede extender para automatizar la descarga de datos.
+
+# Resultados
+
+## reads/all
+
+        reads_count__Phylum
+                source  score  accuracy prepreprocess        preprocess         algorithm
+1  reads_count__Phylum  69.89     74.52    transposed  PowerTransformer  randomForest1200
+0  reads_count__Phylum  68.70     73.42    transposed  PowerTransformer  randomForest_500
