@@ -29,8 +29,7 @@ Taxonomical data tables
 
 ### Resistance Table   
 [Original table from mysterious sample](https://raw.githubusercontent.com/ccm-bioinfo/cambda2023/main/preprocessing/amr_patterns.tsv)  
-[Reads-Kraken-Extraction-Assembly]()    
-Upload table  FixMe nelly
+[Reads-Kraken-Extraction-Assembly](https://raw.githubusercontent.com/ccm-bioinfo/cambda2023/main/Resistencia/data/230622_AMR_mysterious_ETBC_all_nelly.csv)    
 
 ### Genomes Csv
 [Genome Table](https://github.com/ccm-bioinfo/cambda2023/blob/main/genome-metadata.csv)
