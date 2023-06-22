@@ -71,8 +71,28 @@ scalers = {
 # df_i = pd.merge(df_1, df_2, on='OTU ID', how='outer')
 
 # Import data
-filename = "Variable_Selection/data/reads/readsEukarya_count__Class.csv"
-df_i = pd.read_csv(filename, sep=',', header=0) 
+filename = "Variable_Selection/data/assembly/assemblyAB_count__Class.csv"
+filename = "Variable_Selection/selected_variables_results/integrated_tables/reads__zip_integrated.csv"
+
+# Automation block ------------------------------------------------------------
+if len(sys.argv) > 1 and os.path.isfile("clasificacion/last_run.txt"):
+  print("Overwriting filename")
+  with open("to_run.txt", "r") as f:
+    filename = f.read()
+  # remove line breaks
+  filename = filename.replace('\n','')
+  # remove the file named to_run.txt
+  os.remove("to_run.txt")
+  # verify the file extension
+  if not filename.endswith('.csv') and not filename.endswith('.tsv'):
+    raise Exception("File extension not supported")
+  # verify the file exists
+  if not os.path.isfile(filename):
+    raise Exception("File not found")
+# end of automation block ------------------------------------------------------
+
+sep = ',' if filename.endswith('.csv') else '\t'
+df_i = pd.read_csv(filename, sep=sep, header=0) 
 
 # save the filename without extension into a txt file if first argument is 'save'
 if len(sys.argv) > 1 and sys.argv[1] == "save":

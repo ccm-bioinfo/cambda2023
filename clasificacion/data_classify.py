@@ -18,7 +18,7 @@ from sklearn.svm import SVC
 
 # Load the dataset
 VERSION = "original"
-SCALER = "PowerTransformer"
+SCALER = "LogAndPca"
 INPUT_FOLDER = "clasificacion/generated_data"
 OUTPUT_FOLDER = "clasificacion/generated_imgs"
 
@@ -31,6 +31,7 @@ df = pd.read_csv(f"{INPUT_FOLDER}/dta_{VERSION}_{SCALER}.tsv", sep='\t', header=
 
 # 5-folds column selection
 cols = {c:"_".join(c.split("_")[-3:-1]) for c in df.columns[1:]}
+cols = {k:v for k,v in cols.items() if k!="OTU ID"}
 cols = {k:[c for c in cols if cols[c]==k] for k in set(cols.values())}
 cols = {k:sample(v,len(v)) for k,v in cols.items()}
 cols = [c for k in cols for c in cols[k]]
@@ -177,7 +178,11 @@ if __name__ == "__main__":
       # score as 4 digits integer
       score = int(results[alg][0]*10000)
       score = f"{score:04d}"
-      results[alg][-1].savefig(f"{OUTPUT_FOLDER}/imgSc{score}_{VERSION}_{SCALER}_{alg}.png")
+      # accuracy as 4 digits integer
+      accuracy = int(results[alg][1]*10000)
+      accuracy = f"{accuracy:04d}"
+      # save the figure
+      results[alg][-1].savefig(f"{OUTPUT_FOLDER}/imgSc{score}Ac{accuracy}_{VERSION}_{SCALER}_{alg}.png")
     else:
       break
 
