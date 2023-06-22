@@ -2,10 +2,10 @@ import re
 import join_card_data as jc
 
 flagAROid = True
-misteryFile = open('amr_patterns.tsv','r')
+misteryFile = open('data/amr_patterns.tsv','r')
 if flagAROid:
-    aro = jc.loadCard('aro_index.tsv')
-out = open('amr_mistery_table.tsv','w')
+    aro = jc.loadCard('data/aro_index.tsv')
+out = open('data/amr_mistery_table20230622_aroIds.tsv','w')
 
 headers = misteryFile.readline()
 # get list of all amr markers in all the samples
@@ -28,6 +28,8 @@ for a in amrList:
         if a.lower() in aro.keys():
             _, _, _, aroId = aro[a.lower()]
             out.write(f'\t{aroId}')
+        else:
+            out.write(f'\t{a.lower()}')
     else:
         out.write(f'\t{a.lower()}')
 out.write('\n')
@@ -40,8 +42,12 @@ misteryFile.readline()
 for sample in misteryFile:
     id, species, astGroup, amrSample = sample.replace('\n','').split('\t')
     out.write(f'{id}')
+    amrSampleList = list()
+    for amr in amrSample.split(','):
+        amrSampleList.append( (re.sub('\W+','', amr)).lower() )
+
     for amr in amrList:
-        if amr in amrSample:
+        if amr in amrSampleList:
             out.write('\t1')
         else:
             out.write('\t0')
