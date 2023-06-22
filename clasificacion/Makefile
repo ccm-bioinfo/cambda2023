@@ -27,7 +27,9 @@ run: run_original run_transposed
 	cd .. && python clasificacion/summary.py $(shell cat last_run.txt)
 	bash deploy.sh $(shell pwd)/$(shell cat last_run.txt)
 
-deploy/%:	
-	[[ -f $* ]] && echo "existe" || echo "no existe el archivo '$*', verifique que el nombre sea correcto"
-	[[ -f $* ]]
-	bash deploy.sh $(shell pwd)/$*
+deploy/%:
+	@echo "verificando si existe el directorio $*"
+	@[[ -d $* ]] && echo "existe" || echo "no existe el directorio '$*', verifique que el nombre sea correcto"
+	@[[ -d $* ]]
+	@echo "copiando datos"
+	@bash deploy.sh $(shell pwd)/$*
