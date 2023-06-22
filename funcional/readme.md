@@ -1,4 +1,3 @@
-
 ## Model selection
 First we performed a stratified k-fold split on the data to get a representative testing set of the 15% of the entire dataset which was assigned to be our testing set.
 
@@ -17,6 +16,8 @@ For each of this models we performed a 5-fold cross validation Grid Search for h
 
 Random Forest:
 
+<center>
+
 | Parameter     | Values                 |
 | ------------- | ---------------------- |
 | Criterion     | entropy, gini index               |
@@ -24,7 +25,11 @@ Random Forest:
 | Max depth  | 3,5,8,10,12,15,20,30,35,40   |
 | Random state  | 0,1,2,3,4,5,6,7 |
 
+</center>
+
 Support Vector Classifier:
+
+<center>
 
 | Parameter     | Values                 |
 | ------------- | ---------------------- |
@@ -32,7 +37,11 @@ Support Vector Classifier:
 | Degree | 2,3,4,5,6,7,8       |
 | Random state  | 0,1,2,3,4,5,6,7 |
 
+</center>
+
 Multi-layer perceptron:
+
+<center>
 
 | Parameter     | Values                 |
 | ------------- | ---------------------- |
@@ -46,8 +55,11 @@ Multi-layer perceptron:
 | Early stopping  | True, False |
 | Learning rate  | constant, adaptive, invscaling |
 
+</center>
 
 Extremely Randomized Trees:
+
+<center>
 
 | Parameter     | Values                 |
 | ------------- | ---------------------- |
@@ -56,12 +68,18 @@ Extremely Randomized Trees:
 | Max depth  | 3,5,8,10,12,15,20,30,35,40   |
 | Random state  | 0,1,2,3,4,5,6,7 |
 
+</center>
+
 K-nearest neighbours:
+
+<center>
 
 | Parameter     | Values                 |
 | ------------- | ---------------------- |
 | Number of neighbours     | 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21               |
 | Weights | uniform, distance       |
+
+</center>
 
 After selecting the best hyperparameters for the models we evaluated them using three metrics:
     - Accuracy
@@ -89,4 +107,3 @@ Few results ¿How few?
 ## InterproSCAN (Chihuil-Miguel)  👀  
 Not finished for all cities  
 Interpro.sh -i <inputfile>  
-
