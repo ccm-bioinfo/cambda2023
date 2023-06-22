@@ -19,7 +19,7 @@ folders = [f for f in folders if f.startswith("generated_imgs-")]
 # Group the folders by string between "-" and "_"
 groups = {}
 for f in folders:
-  key = f.split("-")[1].split("_")[0]
+  key = "_".join(f.split("-")[1].split("_")[:-1])
   if key not in groups:
     groups[key] = []
   groups[key].append(f)
@@ -61,7 +61,7 @@ for key in groups:
   # sort the dataframe by score
   df = df.sort_values(by="score", ascending=False)
   # show the dataframe
-  print(f"\n\t{source}")
+  print(f"\n\t{key}")
   print(df)
   # append the dataframe to the list
   dfs.append(df)
