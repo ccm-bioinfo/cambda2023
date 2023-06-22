@@ -82,9 +82,9 @@ K-nearest neighbours:
 </center>
 
 After selecting the best hyperparameters for the models we evaluated them using three metrics:
-    - Accuracy
-    - Balanced accuracy
-    - F1 Score
+- Accuracy
+- Balanced accuracy
+- F1 Score
 
 We evaluated the predictions made by each of the individual models and an ensemble of the five models using a hard voting strategy and another using a soft voting method.
 
