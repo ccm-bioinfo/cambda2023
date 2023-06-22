@@ -1,3 +1,4 @@
+SHELL := /bin/bash
 clasify:
 	echo "Compilando clasificacion"
 	cd clasificacion && make run

@@ -1,3 +1,4 @@
+SHELL := /bin/bash
 data_preprocess:
 	@echo "Preprocessing data"
 	rm generated_data/* || true
