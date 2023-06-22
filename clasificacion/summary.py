@@ -19,14 +19,14 @@ folders = [f for f in folders if f.startswith("generated_imgs-")]
 # Group the folders by string between "-" and "_"
 groups = {}
 for f in folders:
-  key = "_".join(f.split("-")[1].split("_")[:-1])
+  key = "_".join(f.split("-")[1].split("_")[:-2])
   if key not in groups:
     groups[key] = []
   groups[key].append(f)
 
 # if there are parameters, keep only the ones that match
 if len(sys.argv)>1:
-  samples = ["_".join(s.split("_")[:-1]) for s in sys.argv[1:]]
+  samples = ["_".join(s.split("_")[:-2]) for s in sys.argv[1:]]
   print(f"Keeping only the following groups: {samples}")
   groups = {k:groups[k] for k in groups if k in samples}
 
