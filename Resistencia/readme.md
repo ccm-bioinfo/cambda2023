@@ -1,11 +1,13 @@
 ## Data 
-- [Mysterious sample all markers](https://github.com/ccm-bioinfo/cambda2023/blob/main/Resistencia/codigos/data_preparation/data/amr_mistery_table_20230606.tsv)  
+- [Mysterious sample all markers](https://github.com/ccm-bioinfo/cambda2023/blob/main/Resistencia/codigos/data_preparation/data/amr_mistery_table_20230606.tsv)  👀 This table is not ok, first row should have much more than 4 ones.  
 - Kraken2-Extraction by Organism-binning by city-assembly   
   Alnitak  /data/camda2023/extraction/assemblies/*.fasta
     
   [ X ] [CARD](https://github.com/ccm-bioinfo/cambda2023/blob/main/Resistencia/data/extraction-card-presence-anton-20230621.tsv)  
-  [ x ] [Blastn](https://github.com/ccm-bioinfo/cambda2023/blob/main/data/amr_counts_complement_20230621.tsv)    
-  [ ] Table with rows of mysterious samples eliminating extra rows from CARD and from blast (505 rows)  
+  [ x ] [Blastn](https://github.com/ccm-bioinfo/cambda2023/blob/main/data/amr_counts_complement_20230621.tsv)
+  [Notebook to produce joined table](https://github.com/ccm-bioinfo/cambda2023/blob/main/Resistencia/codigos/230622_AMR_JoinCARD-blastn.ipynb)
+   [ ] Table with rows of mysterious samples eliminating extra rows from CARD and from blast (505 rows)
+  This table would be replaced since The mysterious sample is not correct 
   
 - Binning by city-Assembly-  
   Alnitak  /data/camda2023/us-cities/assemblies/*.fasta    
