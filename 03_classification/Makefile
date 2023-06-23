@@ -3,15 +3,15 @@ data_preprocess:
 	@echo "Preprocessing data"
 	rm generated_data/* || true
 	rm generated_imgs/* || true
-	cd .. && python clasificacion/data_enrichment.py save
+	cd .. && python 03_classification/data_enrichment.py save
 
 run_original_%: data_preprocess
 	@echo "Running original data with $*"
-	cd .. && python clasificacion/data_classify.py original $*
+	cd .. && python 03_classification/data_classify.py original $*
 
 run_transposed_%: data_preprocess
 	@echo "Running transposed data with $*"
-	cd .. && python clasificacion/data_classify.py transposed $*
+	cd .. && python 03_classification/data_classify.py transposed $*
 
 run_original: run_original_PowerTransformer run_original_QuantileTransformer run_original_LogAndPca
 	echo "Original data completed"
@@ -24,7 +24,7 @@ run: run_original run_transposed
 	rm generated_imgs-$(shell cat last_run.txt)/* || true
 	rmdir generated_imgs-$(shell cat last_run.txt) || true
 	mv generated_imgs generated_imgs-$(shell cat last_run.txt)
-	cd .. && python clasificacion/summary.py $(shell cat last_run.txt)
+	cd .. && python 03_classification/summary.py $(shell cat last_run.txt)
 	bash deploy.sh $(shell pwd)/$(shell cat last_run.txt)
 
 deploy/%:

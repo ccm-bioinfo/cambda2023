@@ -33,7 +33,7 @@ if len(sys.argv)>1:
 # iterate over the groups
 dfs = []
 for key in groups:
-  df = pd.DataFrame(columns=["source", "score","accuracy", "prepreprocess", "preprocess", "algorithm"])
+  df = pd.DataFrame(columns=["Source", "F1-score","Accuracy", "Pre-preprocess", "Preprocess", "Algorithm"])
   for f in groups[key]:
     # retrieve from the file
     source = f.split("-")[1]
@@ -71,8 +71,8 @@ if len(sys.argv)==1:
   df = pd.concat(dfs)
   # sort the dataframe by score
   df = df.sort_values(by="score", ascending=False)
-  # keep only the first 10
-  df = df.head(10)
+  # keep only the first 20
+  df = df.head(20)
   # show the dataframe
   print(f"\n\tAll groups")
   print(df)
