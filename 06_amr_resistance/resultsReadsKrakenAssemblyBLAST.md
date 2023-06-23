@@ -10,5 +10,5 @@ we extracted and binned all reads that belonged to the same city. Next, we run R
 to predict the 180 CARD models that belong to the mysterious sample, and 
 ![OTU abundances](fig/Abundances_Denver_SFC_EsEnKl.jpeg)  
 
-![Hierarchical clustering with USA Cities](https://github.com/ccm-bioinfo/cambda2023/tree/main/06_amr_resistance/fig/230623_ModeAMR_ETBC.png)
-![Full hierarchical Clustering](https://github.com/ccm-bioinfo/cambda2023/tree/main/06_amr_resistance/fig/230623_Mode_Full_AMR_ETBC.png)
+![Hierarchical clustering with USA Cities](fig/230623_ModeAMR_ETBC.png)
+![Full hierarchical Clustering](fig/230623_Mode_Full_AMR_ETBC.png)
