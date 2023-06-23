@@ -10,3 +10,5 @@ data/genomic/annotations/
 data/genomic/annotations/**
 data/genomic/assemblies/
 data/genomic/assemblies/**
+software/standalone/
+software/standalone/**
