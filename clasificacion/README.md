@@ -34,7 +34,17 @@ Adicionalmente se incluye un código relacionado ([data_fetch.py](https://github
 
 ## reads/all
 
-        reads_count__Phylum
-                source  score  accuracy prepreprocess        preprocess         algorithm
-1  reads_count__Phylum  69.89     74.52    transposed  PowerTransformer  randomForest1200
-0  reads_count__Phylum  68.70     73.42    transposed  PowerTransformer  randomForest_500
+
+        reads_count__Class
+                source  score  accuracy prepreprocess           preprocess         algorithm
+1   reads_count__Genus  88.78     90.13      original            LogAndPca  randomForest_500
+7  reads_count__Family  88.68     90.68      original            LogAndPca  randomForest1200
+0   reads_count__Genus  88.31     91.50      original            LogAndPca          mlpc_200
+6  reads_count__Family  87.83     89.58      original            LogAndPca  randomForest_500
+5   reads_count__Order  83.00     85.20    transposed  QuantileTransformer  randomForest_500
+4   reads_count__Order  82.55     87.12      original            LogAndPca          mlpc_200
+9   reads_count__Class  74.41     80.54      original            LogAndPca        svc_linear
+8   reads_count__Class  74.05     80.00    transposed     PowerTransformer  randomForest1200
+3  reads_count__Phylum  69.89     74.52    transposed     PowerTransformer  randomForest1200
+2  reads_count__Phylum  68.70     73.42    transposed     PowerTransformer  randomForest_500
+make[3]: Leaving directory '/home/ccm_mariel/cambda2023/clasificacion'
