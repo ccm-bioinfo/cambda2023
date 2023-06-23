@@ -19,8 +19,8 @@ from sklearn.svm import SVC
 # Load the dataset
 VERSION = "original"
 SCALER = "LogAndPca"
-INPUT_FOLDER = "clasificacion/generated_data"
-OUTPUT_FOLDER = "clasificacion/generated_imgs"
+INPUT_FOLDER = "03_classification/generated_data"
+OUTPUT_FOLDER = "03_classification/generated_imgs"
 
 # check if there are input parameters
 if len(sys.argv)>1:

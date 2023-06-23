@@ -20,7 +20,7 @@ from sklearn.preprocessing import (Binarizer, LabelEncoder, MinMaxScaler,
                                    RobustScaler, StandardScaler)
 
 # constants
-OUTPUT_FOLDER = "clasificacion/generated_data"
+OUTPUT_FOLDER = "03_classification/generated_data"
 
 # Custom functions
 class LogScaler:
@@ -75,7 +75,7 @@ filename = "Variable_Selection/data/assembly/assemblyAB_count__Class.csv"
 filename = "Variable_Selection/selected_variables_results/integrated_tables/reads__zip_integrated.csv"
 
 # Automation block ------------------------------------------------------------
-if len(sys.argv) > 1 and os.path.isfile("clasificacion/last_run.txt"):
+if len(sys.argv) > 1 and os.path.isfile("03_classification/last_run.txt"):
   print("Overwriting filename")
   with open("to_run.txt", "r") as f:
     filename = f.read()
@@ -98,7 +98,7 @@ df_i = pd.read_csv(filename, sep=sep, header=0)
 if len(sys.argv) > 1 and sys.argv[1] == "save":
   filename = filename.split('/')[-1]
   filename = filename.split('.')[0]
-  with open("clasificacion/last_run.txt", "w") as f:
+  with open("03_classification/last_run.txt", "w") as f:
     f.write(filename)
 
 # NaN values are replaced by 0
