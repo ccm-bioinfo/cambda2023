@@ -234,7 +234,10 @@ output to `data/metagenomic/annotations/uniprot/[basename].tsv` and
 
 ### 1.2. Abundance table creation
 
-> To do. Add documentation.
+The `src/mg-tabulators/` directory contains the scripts used to create the
+abundance tables located in `data/metagenomic/tables/`, and are named after the
+corresponding annotation pipeline (for example, `src/mg-tabulators/kegg.py`
+creates the abundance table from `src/mg-annotators/kegg.sh` outputs).
 
 ### 1.3. Model training
 
