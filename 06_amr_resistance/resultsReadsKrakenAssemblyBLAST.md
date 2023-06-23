@@ -6,7 +6,7 @@ taxonomy Ids
 | Genus     | TaxId    | Species     |   TaxId  |    
 |-----|-----|-----|-----|
 |_Escherichia_|561|_Escherichia coli_|562   |  
-|_Enterobacter_|547|_Enterobacter_|  |  
+|_Enterobacter_|547|_Enterobacter hormaechei_| 158836 |  
 |_Klebsiella_|570|_Klebsiella pneumoniae_|573|  
 
  -k read-level/CAMDA23_MetaSUB_gCSD17_SAN_8.output -r read-level/CAMDA23_MetaSUB_gCSD17_SAN_7.report -s1 ../trimmed/CAMDA23_MetaSUB_gCSD17_SAN_7_1.fastq.gz -s2 ../trimmed/CAMDA23_MetaSUB_gCSD17_SAN_7_2.fastq.gz -o extraction/CAMDA23_MetaSUB_gCSD17_SAN_7_En_1.fq -o2 extraction/CAMDA23_MetaSUB_gCSD17_SAN_7_En_2.fq -t 547 --fastq-output --include-childre
