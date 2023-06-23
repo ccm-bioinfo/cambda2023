@@ -41,8 +41,8 @@ Taxonomical data tables
 [Reads-Kraken-Extraction-Assembly](https://raw.githubusercontent.com/ccm-bioinfo/cambda2023/main/Resistencia/data/230622_AMR_mysterious_ETBC_all_nelly.csv)    
 
 ### Genomes Csv
-[Genome Table](https://github.com/ccm-bioinfo/cambda2023/blob/main/genome-metadata.csv)
-Server Alnitak: /data/camda2023/genomes/*.gbff
+[Genome Table](https://github.com/ccm-bioinfo/cambda2023/blob/main/genome-metadata.csv)  
+Server Alnitak: /data/camda2023/genomes/assemblies/*.gbff
 
 ### Reduced variables table 
 These tables are the result of the reduced variable team.  
