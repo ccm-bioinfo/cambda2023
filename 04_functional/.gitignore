@@ -6,3 +6,7 @@ data/metagenomic/annotations/
 data/metagenomic/annotations/**
 data/metagenomic/assemblies/
 data/metagenomic/assemblies/**
+data/genomic/annotations/
+data/genomic/annotations/**
+data/genomic/assemblies/
+data/genomic/assemblies/**
