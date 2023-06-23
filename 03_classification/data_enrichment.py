@@ -75,7 +75,7 @@ filename = "Variable_Selection/data/assembly/assemblyAB_count__Class.csv"
 filename = "Variable_Selection/selected_variables_results/integrated_tables/reads__zip_integrated.csv"
 
 # Automation block ------------------------------------------------------------
-if len(sys.argv) > 1 and os.path.isfile("03_classification/last_run.txt"):
+if len(sys.argv) > 1 and os.path.isfile("to_run.txt"):
   print("Overwriting filename")
   with open("to_run.txt", "r") as f:
     filename = f.read()
