@@ -1,5 +1,5 @@
 ## Results on AMR analysis    
-- Pangenomes (extra genomes)     
+- [Pangenomes](readme_pangenoma.md) (extra genomes)     
 - [Extraction by Taxonomy - Binning by city - Assembly - AMR prediction](resultsReadsKrakenAssemblyBLAST.md)  (smaller contigs)  
 - Binning by City - Assembly - Extraction by taxonomy - AMR prediction (longer contigs)  
 ## Data 
