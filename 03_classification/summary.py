@@ -55,11 +55,11 @@ for key in groups:
       # retrieve the algorithm
       algorithm = "_".join(ff.split("_")[3:]).split(".")[0]
       # append the row
-      data = {"source":source, "score":score, "accuracy":accuracy, "prepreprocess":prepreprocess, "preprocess":preprocess, "algorithm":algorithm}
+      data = {"Source":source, "F1-score":score, "Accuracy":accuracy, "Pre-preprocess":prepreprocess, "Preprocess":preprocess, "Algorithm":algorithm}
       df.loc[len(df)] = data
     
   # sort the dataframe by score
-  df = df.sort_values(by="score", ascending=False)
+  df = df.sort_values(by="F1-score", ascending=False)
   # show the dataframe
   print(f"\n\t{key}")
   print(df)
@@ -70,7 +70,7 @@ if len(sys.argv)==1:
   # All groups together
   df = pd.concat(dfs)
   # sort the dataframe by score
-  df = df.sort_values(by="score", ascending=False)
+  df = df.sort_values(by="F1-score", ascending=False)
   # keep only the first 20
   df = df.head(20)
   # show the dataframe
