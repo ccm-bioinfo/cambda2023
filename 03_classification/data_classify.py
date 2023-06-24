@@ -140,7 +140,7 @@ if __name__ == "__main__":
     "svc_rbf": SVC(kernel='rbf', gamma='auto', C=1, random_state=42),
     "svc_linear": SVC(kernel='linear', gamma='auto', C=1, random_state=42),
     "svc_poly": SVC(kernel='poly', gamma='auto', C=1, random_state=42),
-    "mlpc_200": MLPClassifier(hidden_layer_sizes=(200,))
+    "mlpc_200": MLPClassifier(hidden_layer_sizes=(200,),max_iter=1000, random_state=42),
   }
   results = {}
   for alg in algo:
