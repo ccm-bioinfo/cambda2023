@@ -1,7 +1,8 @@
 ## Results on AMR analysis    
 - [Pangenomes](readme_pangenoma.md) (extra genomes)     
 - [Extraction by Taxonomy - Binning by city - Assembly - AMR prediction](resultsReadsKrakenAssemblyBLAST.md)  (smaller contigs)  
-- Binning by City - Assembly - Extraction by taxonomy - AMR prediction (longer contigs)  
+- [Binning by City - Assembly - Extraction by taxonomy - AMR prediction](readmeCoassemblyByCity_AMR_Taxonomy.md
+) (longer contigs)  
 ## Data 
 - [Mysterious sample all markers](data/amr_mistery_table20230622_aroIds.tsv) 
 - Kraken2-Extraction by Organism-binning by city-assembly   
