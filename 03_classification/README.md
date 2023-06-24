@@ -33,6 +33,22 @@ Adicionalmente se incluye un código relacionado ([data_fetch.py](https://github
 # Results
 
 
+## readsEukarya_count
+```
+                    Source  F1-score  Accuracy Pre-preprocess Preprocess        Algorithm
+ readsEukarya_count__Genus     27.14     27.94       original  LogAndPca randomForest_500
+ readsEukarya_count__Genus     26.88     27.94       original  LogAndPca randomForest1200
+readsEukarya_count__Family     25.66     27.67       original  LogAndPca randomForest1200
+readsEukarya_count__Family     25.29     27.12       original  LogAndPca randomForest_500
+readsEukarya_count__Phylum     24.43     28.21       original  LogAndPca         mlpc_200
+readsEukarya_count__Phylum     24.17     26.57       original  LogAndPca randomForest1200
+ readsEukarya_count__Class     22.84     25.75       original  LogAndPca            knn_5
+ readsEukarya_count__Order     22.17     29.04       original  LogAndPca         mlpc_200
+ readsEukarya_count__Class     21.58     27.12       original  LogAndPca         mlpc_200
+ readsEukarya_count__Order     20.82     25.47       original  LogAndPca            knn_3
+```
+
+
 ## assembly_
 ```
                    Source  F1-score  Accuracy Pre-preprocess          Preprocess        Algorithm
@@ -69,11 +85,31 @@ assembly_count__Phylum     48.33     55.89       original  LogAndPca       svc_l
 ```
                   Source  F1-score  Accuracy Pre-preprocess Preprocess        Algorithm
 assemblyAB_count__Family     80.55     83.01       original  LogAndPca         mlpc_200
+ assemblyAB_count__Genus     80.48     83.56       original  LogAndPca         mlpc_200
+ assemblyAB_count__Genus     77.38     80.54       original  LogAndPca randomForest1200
 assemblyAB_count__Family     75.99     79.72       original  LogAndPca randomForest_500
- assemblyAB_count__Order     73.04     78.90       original  LogAndPca         mlpc_200
- assemblyAB_count__Order     71.94     78.08       original  LogAndPca       svc_linear
+ assemblyAB_count__Order     72.82     78.63       original  LogAndPca         mlpc_200
+ assemblyAB_count__Order     71.89     78.08       original  LogAndPca       svc_linear
+ assemblyAB_count__Class     62.73     69.04       original  LogAndPca          svc_rbf
+ assemblyAB_count__Class     61.92     69.86       original  LogAndPca         mlpc_200
 assemblyAB_count__Phylum     43.16     52.60       original  LogAndPca         mlpc_200
 assemblyAB_count__Phylum     42.86     52.87       original  LogAndPca randomForest1200
+```
+
+
+## assemblyEukarya_count
+```
+                       Source  F1-score  Accuracy Pre-preprocess Preprocess Algorithm
+ assemblyEukarya_count__Order     22.93     28.49       original  LogAndPca     knn_5
+ assemblyEukarya_count__Order     22.83     27.67       original  LogAndPca     knn_3
+ assemblyEukarya_count__Class     22.12     27.39       original  LogAndPca     knn_5
+ assemblyEukarya_count__Class     20.41     26.57       original  LogAndPca     knn_3
+assemblyEukarya_count__Family     19.30     23.83       original  LogAndPca     knn_5
+assemblyEukarya_count__Family     19.23     24.10       original  LogAndPca     knn_3
+ assemblyEukarya_count__Genus     19.17     24.10       original  LogAndPca     knn_3
+assemblyEukarya_count__Phylum     18.98     24.38       original  LogAndPca     knn_3
+ assemblyEukarya_count__Genus     18.80     24.65       original  LogAndPca     knn_5
+assemblyEukarya_count__Phylum     18.36     24.93       original  LogAndPca     knn_5
 ```
 
 
