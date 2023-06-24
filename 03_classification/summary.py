@@ -8,7 +8,7 @@ import sys
 import pandas as pd
 
 # some constants
-OUTPUT_FOLDER = "clasificacion"
+OUTPUT_FOLDER = "03_classification"
 
 # Create a list of folders in current directory
 folders = [f for f in os.listdir(OUTPUT_FOLDER) if os.path.isdir(f"{OUTPUT_FOLDER}/{f}")]
