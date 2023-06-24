@@ -8,8 +8,8 @@
   Alnitak  /data/camda2023/extraction/assemblies/*.fasta
     
   [ X ] [CARD](data/extraction-card-presence-anton-20230621.tsv)  
-  [ x ] [Blastn](data/amr_counts_complement_20230621.tsv)
-  [Notebook to produce joined table](codigos/230622_AMR_JoinCARD-blastn.ipynb)
+  [ x ] [Blastn](data/amr_counts_complement_20230621.tsv)  
+  [Notebook to produce joined table](codigos/230622_AMR_JoinCARD-blastn.ipynb)  
    [ ] Table with rows of mysterious samples eliminating extra rows from CARD and from blast (505 rows)
   This table would be replaced since The mysterious sample is not correct 
   
