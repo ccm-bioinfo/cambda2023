@@ -1,7 +1,13 @@
-# Metapangenomics
-To be able to look for genes with resistance to antibiotics in mysterious cities. The CAMDA 2023 team has decided to create a metapangenome for the bacteria: Escherichia, Klebsiella and Enterobacter.
-This occurred to us due to the publication made in [2020 by Utter, et al](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02200-2#Bib1).
-Next, we will list the steps we are following to be able to replicate this research work.
+## Pangenomics  
+A pangenome with genomic data of genera  _Escherichia_, _Klebsiella_, and _Enterobacter_ from the US cities in the challenge, with samples collected near 2017 can extend information about genes with antibiotic resistance. NCBI Genomes from the selected date was downloaded and AMR annotated.  
+- [] Blast  
+- [] CARD
+- [] Full table  
+
+
+## Metapangenomics
+The CAMDA 2023 team has decided to create a meta pangenome for the bacterial genus: _Escherichia_, _Klebsiella_, and _Enterobacter_. The following approach follows the ideas presented in [2020 by Utter, et al](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02200-2#Bib1).
+Next, we will list the steps to replicate this research work.
 
 To do:
 1. Replicate the metapangenome of the oral microbiome.
