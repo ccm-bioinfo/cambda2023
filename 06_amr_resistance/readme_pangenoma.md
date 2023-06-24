@@ -129,8 +129,17 @@ Finally, we run all the scripts
 
 All the outputs can be found in the followings directory:
 
-`/home/haydee/camda2023/tblastx_all/cloud/output/output*.tsv`
-`/home/haydee/camda2023/tblastx_all/persistent/output/output*.tsv`
-`/home/haydee/camda2023/tblastx_all/shell/output/output*.tsv`
+`/home/haydee/camda2023/tblastx_all/cloud/output/output*.tsv`  
+`/home/haydee/camda2023/tblastx_all/persistent/output/output*.tsv`  
+`/home/haydee/camda2023/tblastx_all/shell/output/output*.tsv`  
 
+Genome Ids and Pangenome subset were added to blast files with the following line: 
+`cd shell`
+`ls |while read line; do id=$(echo $line|cut -d'_' -f3|cut -d'.' -f1); echo $id; perl -p -i -e 's/^/'"$id"'\tshell\t/' *$id*tsv; done`  
+
+After running the same command in the cloud and persistent directories, outputs were concatenated with:  
+`cd ..`  
+`cat shell/* cloud/* persistent/* > 230623_genomes_blast_counts.tsv`  
+
+And finally counts ara avilable at [blast Genomes Table](data/data230624_genomes_blast_counts.tsv)  
 
