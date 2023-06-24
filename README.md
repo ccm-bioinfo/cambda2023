@@ -37,8 +37,8 @@ Taxonomical data tables
 - [VFDB table (compressed)](https://github.com/ccm-bioinfo/cambda2023/blob/main/funcional/data/metagenomic/tables/vfdb.tsv.gz) (100% complete)
 
 ### Resistance Table   
-[Original table from mysterious sample](https://raw.githubusercontent.com/ccm-bioinfo/cambda2023/main/preprocessing/amr_patterns.tsv)  
-[Reads-Kraken-Extraction-Assembly](https://raw.githubusercontent.com/ccm-bioinfo/cambda2023/main/Resistencia/data/230622_AMR_mysterious_ETBC_all_nelly.csv)    
+[Original table from mysterious sample](preprocessing/amr_patterns.tsv)  
+[Reads-Kraken-Extraction-Assembly](06_amr_resistance/data/230622_AMR_mysterious_ETBC_all_nelly.csv)    
 
 ### Genomes Csv
 [Genome Table](https://github.com/ccm-bioinfo/cambda2023/blob/main/genome-metadata.csv)  
@@ -62,7 +62,7 @@ For models fitted considering each kingdom separately:
 |Reads | [Reads-Sep-P](./02_variable_selection/selected_variables_results/integrated_tables/reads_kingdoms_p_integrated.csv) | [Reads-Sep-NB](./02_variable_selection/selected_variables_results/integrated_tables/reads_kingdoms_nb_integrated.csv) | [Reads-Sep-ZIP](./02_variable_selection/selected_variables_results/integrated_tables/reads_kingdoms_zip_integrated.csv) | [Reads-Sep-ZINB](./02_variable_selection/selected_variables_results/integrated_tables/reads_kingdoms_zinb_integrated.csv) |
 |Assembly | [Assembly-Sep-P](./02_variable_selection/selected_variables_results/integrated_tables/assembly_kingdoms_p_integrated.csv) | [Assembly-Sep-NB](./02_variable_selection/selected_variables_results/integrated_tables/assembly_kingdoms_nb_integrated.csv) | [Assembly-Sep-ZIP](./02_variable_selection/selected_variables_results/integrated_tables/assembly_kingdoms_zip_integrated.csv) | [Assembly-Sep-ZINB](./02_variable_selection/selected_variables_results/integrated_tables/assembly_kingdoms_zinb_integrated.csv) |
 
-Additionally we compared the fitted models for each OTU and pair of cities, choosing the one with the lowest AIC. The tables with the selected variables using this model selection are listed next:
+Additionally, we compared the fitted models for each OTU and pair of cities, choosing the one with the lowest AIC. The tables with the selected variables using this model selection are listed next:
 
 |   | Reads | Assembly |
 |---|---|---|
