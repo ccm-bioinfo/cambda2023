@@ -3,13 +3,13 @@
 - [Extraction by Taxonomy - Binning by city - Assembly - AMR prediction](resultsReadsKrakenAssemblyBLAST.md)  (smaller contigs)  
 - Binning by City - Assembly - Extraction by taxonomy - AMR prediction (longer contigs)  
 ## Data 
-- [Mysterious sample all markers](https://github.com/ccm-bioinfo/cambda2023/blob/main/Resistencia/data/amr_mistery_table20230622_aroIds.tsv) 
+- [Mysterious sample all markers](data/amr_mistery_table20230622_aroIds.tsv) 
 - Kraken2-Extraction by Organism-binning by city-assembly   
   Alnitak  /data/camda2023/extraction/assemblies/*.fasta
     
-  [ X ] [CARD](https://github.com/ccm-bioinfo/cambda2023/blob/main/Resistencia/data/extraction-card-presence-anton-20230621.tsv)  
-  [ x ] [Blastn](https://github.com/ccm-bioinfo/cambda2023/blob/main/data/amr_counts_complement_20230621.tsv)
-  [Notebook to produce joined table](https://github.com/ccm-bioinfo/cambda2023/blob/main/Resistencia/codigos/230622_AMR_JoinCARD-blastn.ipynb)
+  [ X ] [CARD](data/extraction-card-presence-anton-20230621.tsv)  
+  [ x ] [Blastn](data/amr_counts_complement_20230621.tsv)
+  [Notebook to produce joined table](codigos/230622_AMR_JoinCARD-blastn.ipynb)
    [ ] Table with rows of mysterious samples eliminating extra rows from CARD and from blast (505 rows)
   This table would be replaced since The mysterious sample is not correct 
   
@@ -42,7 +42,7 @@ Figure 3 Example of sample-profile
 Table1 Ids that maybe SNPs  
 | Gen1  | Function   | Organism   | Gen2   | Function2   | Organims2 |  
 |---|---|---|---|---|---|  
-| chuX  | ChuY has been shown to function as an anaerobilin reductase, in a role that parallels biliverdin reductase  |   |shuX  |   |   |  
+| chuX  | ChuY has been shown to function as an anaerobilin reductase in a role that parallels biliverdin reductase  |   |shuX  |   |   |  
 | chuY |   |    |shuY   |   |   |  
 | chuZ  |   |   |shuZ   |   |   |  
 | fliG  |   |   |fliI  |   |   |  
@@ -75,11 +75,11 @@ Table 3 Ids that were not found
 |wcst	klebsiella |pneumoniae		NOT FOUND|  
 
 To do :
-- [ ] Diana Produce a heatmap with blast comparison for the variants of oxqB/A, with 6 sequences of each numerical group. Describe Table 2.   
-- [ ] Fonty, i) document script order to end with a reproducible workflow (data assemblies will change).  ii) Add a column with the number of contigs per sample. This number will help us to normalice abundances for sample for marker.  
+- [ ] Diana Produce a heatmap with blast comparison for the variants of oxqB/A, with six sequences of each numerical group. Describe Table 2.   
+- [ ] Fonty, i) document script order to end with a reproducible workflow (data assemblies will change).  ii) Add a column with the number of contigs per sample. This number will help us to normalize abundances for sample for the marker.  
 - [ ] Nelly and Johan Reduce cases for Table1 and Table3.  
 - [ ] Shaday Finish bins 
-- [ ] Anton finish output files for reads.  
+- [ ] Anton finishes output files for reads.  
 
 ----------------------------------------------------------------------------
 **Modelos de clasificación**
