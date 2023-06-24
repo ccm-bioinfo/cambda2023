@@ -137,7 +137,7 @@ Genome Ids and Pangenome subset were added to blast files with the following lin
 `cd shell`
 `ls |while read line; do id=$(echo $line|cut -d'_' -f3|cut -d'.' -f1); echo $id; perl -p -i -e 's/^/'"$id"'\tshell\t/' *$id*tsv; done`  
   
-Then we only keep results lines in each file, ridding heders appart.   (Example in shell)   
+Then we only kept results lines in each file, ridding heders appart.   (Example in shell)   
  `ls o*tsv |while read line; do tail -n +2 $line; done > shell_genomes_blast.tsv`
 
  Headers were obtained by `head -n1 output_GCF_002214205.1.blast.tsv >header.tsv` The file selection is irrelevant since all headers are equal.  
