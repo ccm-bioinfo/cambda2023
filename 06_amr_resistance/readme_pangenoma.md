@@ -136,10 +136,14 @@ All the outputs can be found in the followings directory:
 Genome Ids and Pangenome subset were added to blast files with the following line: 
 `cd shell`
 `ls |while read line; do id=$(echo $line|cut -d'_' -f3|cut -d'.' -f1); echo $id; perl -p -i -e 's/^/'"$id"'\tshell\t/' *$id*tsv; done`  
+  
+Then we only keep results lines in each file, ridding heders appart.   (Example in shell)   
+ `ls o*tsv |while read line; do tail -n +2 $line; done > shell_genomes_blast.tsv`
 
-After running the same command in the cloud and persistent directories, outputs were concatenated with:  
-`cd ..`  
-`cat shell/* cloud/* persistent/* > 230623_genomes_blast_counts.tsv`  
+ Headers were obtained by `head -n1 output_GCF_002214205.1.blast.tsv >header.tsv` The file selection is irrelevant since all headers are equal.  
+ 
+After running the same command in the cloud and persistent directories, outputs were concatenated with:
+`cat cloud/header.tsv cloud/cloud_genomes_blast.tsv shell/shell_genomes_blast.tsv persistent/persistence_genomes_blast.tsv  > 230624_genomes_blast_counts.tsv`
 
 And finally counts are available at [blast Genomes Table](data/230624_genomes_blast_counts.tsv)  
 
