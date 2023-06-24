@@ -1,7 +1,7 @@
 ## Pangenomics  
 A pangenome with genomic data of genera  _Escherichia_, _Klebsiella_, and _Enterobacter_ from the US cities in the challenge, with samples collected near 2017 can extend information about genes with antibiotic resistance. NCBI Genomes, see [Genomes Table](data/genome-metadata.csv) from the selected dates and places were downloaded and AMR annotated.
-- [] Blast  
-- [] [genomes CARD AMR annotation](data/230623_genomes_card_counts.tsv)  
+- [] [extra genomes blast AMR counts ](data/230624_genomes_blast_counts.tsv)
+- [] [extra genomes CARD AMR annotation](data/230623_genomes_card_counts.tsv)  
 - [] Full table  
 
 
