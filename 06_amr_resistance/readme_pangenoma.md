@@ -141,5 +141,5 @@ After running the same command in the cloud and persistent directories, outputs 
 `cd ..`  
 `cat shell/* cloud/* persistent/* > 230623_genomes_blast_counts.tsv`  
 
-And finally counts ara avilable at [blast Genomes Table](data/data230624_genomes_blast_counts.tsv)  
+And finally counts ara avilable at [blast Genomes Table](data/230624_genomes_blast_counts.tsv)  
 
