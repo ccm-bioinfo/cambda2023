@@ -123,7 +123,7 @@ The we use the following to create the scripts for each of the previous files:
 
 `ls *1.blast | while read line; do echo $line; cp parse_blast.py parse_blast_${line}.py; perl -p -i -e 's/SUSTITUIR1/'"$line"'/' parse_blast_${line}.py ; perl -p -i -e 's/SUSTITUIR2/temp_'"${line}"'/' parse_blast_${line}.py ; perl -p -i -e 's/SUSTITUIR3/output_'"${line}"'\.tsv/' parse_blast_${line}.py ; done`
 
-Finally, we run all the scripts
+Finally, we run all the scripts.
 
 `ls *1.blast.py | while read line; do python $line; done`
 
@@ -141,5 +141,5 @@ After running the same command in the cloud and persistent directories, outputs 
 `cd ..`  
 `cat shell/* cloud/* persistent/* > 230623_genomes_blast_counts.tsv`  
 
-And finally counts ara avilable at [blast Genomes Table](data/230624_genomes_blast_counts.tsv)  
+And finally counts are available at [blast Genomes Table](data/230624_genomes_blast_counts.tsv)  
 
