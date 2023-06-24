@@ -38,7 +38,7 @@ Taxonomical data tables
 
 ### Resistance Table   
 [Original table from mysterious sample](01_preprocessing/amr_patterns.tsv)  
-[Reads-Kraken-Extraction-Assembly](06_amr_resistance/data/230622_AMR_mysterious_ETBC_all_nelly.csv)    
+[Reads-Kraken-Extraction-Assembly](06_amr_resistance/data/230622_AMR_mysterious_ETBC_all_nelly.csv)    * This is the table to be used in the prediction of the mysterious city. This table will be updated with future better versions
 
 ### Genomes Csv
 [Genome Table](https://github.com/ccm-bioinfo/cambda2023/blob/main/genome-metadata.csv)  
