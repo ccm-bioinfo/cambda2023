@@ -37,7 +37,7 @@ Taxonomical data tables
 - [VFDB table (compressed)](https://github.com/ccm-bioinfo/cambda2023/blob/main/funcional/data/metagenomic/tables/vfdb.tsv.gz) (100% complete)
 
 ### Resistance Table   
-[Original table from mysterious sample](preprocessing/amr_patterns.tsv)  
+[Original table from mysterious sample](01_preprocessing/amr_patterns.tsv)  
 [Reads-Kraken-Extraction-Assembly](06_amr_resistance/data/230622_AMR_mysterious_ETBC_all_nelly.csv)    
 
 ### Genomes Csv
