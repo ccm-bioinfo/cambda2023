@@ -10,8 +10,8 @@
     
   [ X ] [CARD](data/extraction-card-presence-anton-20230621.tsv)  
   [ x ] [Blastn](data/amr_counts_complement_20230621.tsv)  [Notebook to produce joined table](codigos/230622_AMR_JoinCARD-blastn.ipynb)  
-   [ ] Table with rows of mysterious samples eliminating extra rows from CARD and from blast (505 rows)
-  This table would be replaced since The mysterious sample is not correct 
+  [ x ] [Table with rows of mysterious samples combined with US samples eliminating extra rows from CARD and from blast (505 rows)](data/230622_AMR_mysterious_ETBC_all_nelly.csv)  
+  This table would be replaced since we might have misplaced species labels in US samples  
   
 - Binning by city-Assembly-  
   Alnitak  /data/camda2023/us-cities/assemblies/*.fasta    
@@ -20,7 +20,7 @@
   [] CARD
    
 ## AMR processing
-We discovered that from the 505 AMR Ids markers from the misterious file only 180 were predicted using CARD v.XX over the assembled reads from US cities.  To comprehend the missing 325 markers we gathered our own [manually curated AMR gene list](https://docs.google.com/spreadsheets/d/1ThsVn6QuIEPvFqe_SwG1PawEghqHgQdvNgGiZd40jXY/edit?usp=sharing)
+We discovered that from the 505 AMR Ids markers from the mysterious file, only 180 were predicted using CARD v.XX over the assembled reads from US cities.  To comprehend the missing 325 markers, we gathered our own [manually curated AMR gene list](https://docs.google.com/spreadsheets/d/1ThsVn6QuIEPvFqe_SwG1PawEghqHgQdvNgGiZd40jXY/edit?usp=sharing)
  by searching the IDs in the following databases 
 - [microbigg-e](https://www.ncbi.nlm.nih.gov/pathogens/microbigge/#)  
 - [CARD](https://card.mcmaster.ca/)    
