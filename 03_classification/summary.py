@@ -30,6 +30,21 @@ if len(sys.argv)>1:
   print(f"Keeping only the following groups: {samples}")
   groups = {k:groups[k] for k in groups if k in samples}
 
+
+# print the dataframe
+def print_df(df, title):
+  # make space before the title
+  print("\n")
+
+  # print the title
+  print(f"## {title}")
+
+  # print the dataframe
+  print("```")
+  print(df.to_string(index=False))
+  print("```")
+
+
 # iterate over the groups
 dfs = []
 for key in groups:
@@ -61,8 +76,7 @@ for key in groups:
   # sort the dataframe by score
   df = df.sort_values(by="F1-score", ascending=False)
   # show the dataframe
-  print(f"\n\t{key}")
-  print(df)
+  print_df(df, key)
   # append the dataframe to the list
   dfs.append(df)
 
@@ -74,5 +88,4 @@ if len(sys.argv)==1:
   # keep only the first 20
   df = df.head(20)
   # show the dataframe
-  print(f"\n\tAll groups")
-  print(df)
+  print_df(df, "All groups together")
