@@ -1,4 +1,5 @@
 # local changes
+03_classification/generated*
 clasificacion/generated*
 
 # Created by https://www.toptal.com/developers/gitignore/api/r,emacs,linux,macos,python,windows,jupyternotebooks,visualstudiocode

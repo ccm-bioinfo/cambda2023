@@ -8,33 +8,41 @@ Taxonomical data tables
   
 |   |Bacteria-Archaea | Virus   | Eukarya  | All   |  
 |---|---|---|---|---|  
-|Phylum   | [Bacteria-Phylum](./Variable_Selection/data/reads/readsAB_count__Phylum.csv)  | [Virus-Phylum](./Variable_Selection/data/reads/readsViruses_count__Phylum.csv)   | [Eukarya-Phylum](./Variable_Selection/data/reads/readsEukarya_count__Phylum.csv)  | [All-Phylum](./Variable_Selection/data/reads/reads_count__Phylum.csv)   |   
-|Family   | [Bacteria-Family](./Variable_Selection/data/reads/readsAB_count__Family.csv)  | [Virus-Family](./Variable_Selection/data/reads/readsViruses_count__Family.csv)   | [Eukarya-Family](./Variable_Selection/data/reads/readsEukarya_count__Family.csv)  | [All-Family](./Variable_Selection/data/reads/reads_count__Family.csv)   |   
-|Class   | [Bacteria-Class](./Variable_Selection/data/reads/readsAB_count__Class.csv)  | [Virus-Class](./Variable_Selection/data/reads/readsViruses_count__Class.csv)   | [Eukarya-Class](./Variable_Selection/data/reads/readsEukarya_count__Class.csv)  | [All-Class](./Variable_Selection/data/reads/reads_count__Class.csv)   |   
-|Order   | [Bacteria-Order](./Variable_Selection/data/reads/readsAB_count__Order.csv)  | [Virus-Order](./Variable_Selection/data/reads/readsViruses_count__Order.csv)   | [Eukarya-Order](./Variable_Selection/data/reads/readsEukarya_count__Order.csv)  | [All-Order](./Variable_Selection/data/reads/reads_count__Order.csv)   |   
-|Genera   | [Bacteria-Genus](./Variable_Selection/data/reads/readsAB_count__Genus.csv)  | [Virus-Genus](./Variable_Selection/data/reads/readsViruses_count__Genus.csv)   | [Eukarya-Genus](./Variable_Selection/data/reads/readsEukarya_count__Genus.csv)  | [All-Genus](./Variable_Selection/data/reads/reads_count__Genus.csv)   |   
+|Phylum   | [Bacteria-Phylum](./02_variable_selection/data/reads/readsAB_count__Phylum.csv)  | [Virus-Phylum](./02_variable_selection/data/reads/readsViruses_count__Phylum.csv)   | [Eukarya-Phylum](./02_variable_selection/data/reads/readsEukarya_count__Phylum.csv)  | [All-Phylum](./02_variable_selection/data/reads/reads_count__Phylum.csv)   |   
+|Family   | [Bacteria-Family](./02_variable_selection/data/reads/readsAB_count__Family.csv)  | [Virus-Family](./02_variable_selection/data/reads/readsViruses_count__Family.csv)   | [Eukarya-Family](./02_variable_selection/data/reads/readsEukarya_count__Family.csv)  | [All-Family](./02_variable_selection/data/reads/reads_count__Family.csv)   |   
+|Class   | [Bacteria-Class](./02_variable_selection/data/reads/readsAB_count__Class.csv)  | [Virus-Class](./02_variable_selection/data/reads/readsViruses_count__Class.csv)   | [Eukarya-Class](./02_variable_selection/data/reads/readsEukarya_count__Class.csv)  | [All-Class](./02_variable_selection/data/reads/reads_count__Class.csv)   |   
+|Order   | [Bacteria-Order](./02_variable_selection/data/reads/readsAB_count__Order.csv)  | [Virus-Order](./02_variable_selection/data/reads/readsViruses_count__Order.csv)   | [Eukarya-Order](./02_variable_selection/data/reads/readsEukarya_count__Order.csv)  | [All-Order](./02_variable_selection/data/reads/reads_count__Order.csv)   |   
+|Genera   | [Bacteria-Genus](./02_variable_selection/data/reads/readsAB_count__Genus.csv)  | [Virus-Genus](./02_variable_selection/data/reads/readsViruses_count__Genus.csv)   | [Eukarya-Genus](./02_variable_selection/data/reads/readsEukarya_count__Genus.csv)  | [All-Genus](./02_variable_selection/data/reads/reads_count__Genus.csv)   |   
 
 - [OTU table with assemblies](https://github.com/ccm-bioinfo/cambda2023/blob/main/preprocessing/taxonomy/assembly-biom.tsv.gz)  
   
 |   |Bacteria-Archaea | Virus   | Eukarya  | All   |  
 |---|---|---|---|---|  
-|Phylum   | [Bacteria-As-Phylum](./Variable_Selection/data/assembly/assemblyAB_count__Phylum.csv)  | [Virus-As-Phylum](./Variable_Selection/data/assembly/assemblyViruses_count__Phylum.csv)   | [Eukarya-As-Phylum](./Variable_Selection/data/assembly/assemblyEukarya_count__Phylum.csv)  | [All-As-Phylum](./Variable_Selection/data/assembly/assembly_count__Phylum.csv)   |   
-|Family   | [Bacteria-As-Family](./Variable_Selection/data/assembly/assemblyAB_count__Family.csv)  | [Virus-As-Family](./Variable_Selection/data/assembly/assemblyViruses_count__Family.csv)   | [Eukarya-As-Family](./Variable_Selection/data/assembly/assemblyEukarya_count__Family.csv)  | [All-As-Family](./Variable_Selection/data/assembly/assembly_count__Family.csv)   |   
-|Class   | [Bacteria-As-Class](./Variable_Selection/data/assembly/assemblyAB_count__Class.csv)  | [Virus-As-Class](./Variable_Selection/data/assembly/assemblyViruses_count__Class.csv)   | [Eukarya-As-Class](./Variable_Selection/data/assembly/assemblyEukarya_count__Class.csv)  | [All-As-Class](./Variable_Selection/data/assembly/assembly_count__Class.csv)   |   
-|Order   | [Bacteria-As-Order](./Variable_Selection/data/assembly/assemblyAB_count__Order.csv)  | [Virus-As-Order](./Variable_Selection/data/assembly/assemblyViruses_count__Order.csv)   | [Eukarya-As-Order](./Variable_Selection/data/assembly/assemblyEukarya_count__Order.csv)  | [All-As-Order](./Variable_Selection/data/assembly/assembly_count__Order.csv)   |   
-|Genera   | [Bacteria-As-Genus](./Variable_Selection/data/assembly/assemblyAB_count__Genus.csv)  | [Virus-As-Genus](./Variable_Selection/data/assembly/assemblyViruses_count__Genus.csv)   | [Eukarya-As-Genus](./Variable_Selection/data/assembly/assemblyEukarya_count__Genus.csv)  | [All-As-Genus](./Variable_Selection/data/assembly/assembly_count__Genus.csv)   |   
+|Phylum   | [Bacteria-As-Phylum](./02_variable_selection/data/assembly/assemblyAB_count__Phylum.csv)  | [Virus-As-Phylum](./02_variable_selection/data/assembly/assemblyViruses_count__Phylum.csv)   | [Eukarya-As-Phylum](./02_variable_selection/data/assembly/assemblyEukarya_count__Phylum.csv)  | [All-As-Phylum](./02_variable_selection/data/assembly/assembly_count__Phylum.csv)   |   
+|Family   | [Bacteria-As-Family](./02_variable_selection/data/assembly/assemblyAB_count__Family.csv)  | [Virus-As-Family](./02_variable_selection/data/assembly/assemblyViruses_count__Family.csv)   | [Eukarya-As-Family](./02_variable_selection/data/assembly/assemblyEukarya_count__Family.csv)  | [All-As-Family](./02_variable_selection/data/assembly/assembly_count__Family.csv)   |   
+|Class   | [Bacteria-As-Class](./02_variable_selection/data/assembly/assemblyAB_count__Class.csv)  | [Virus-As-Class](./02_variable_selection/data/assembly/assemblyViruses_count__Class.csv)   | [Eukarya-As-Class](./02_variable_selection/data/assembly/assemblyEukarya_count__Class.csv)  | [All-As-Class](./02_variable_selection/data/assembly/assembly_count__Class.csv)   |   
+|Order   | [Bacteria-As-Order](./02_variable_selection/data/assembly/assemblyAB_count__Order.csv)  | [Virus-As-Order](./02_variable_selection/data/assembly/assemblyViruses_count__Order.csv)   | [Eukarya-As-Order](./02_variable_selection/data/assembly/assemblyEukarya_count__Order.csv)  | [All-As-Order](./02_variable_selection/data/assembly/assembly_count__Order.csv)   |   
+|Genera   | [Bacteria-As-Genus](./02_variable_selection/data/assembly/assemblyAB_count__Genus.csv)  | [Virus-As-Genus](./02_variable_selection/data/assembly/assemblyViruses_count__Genus.csv)   | [Eukarya-As-Genus](./02_variable_selection/data/assembly/assemblyEukarya_count__Genus.csv)  | [All-As-Genus](./02_variable_selection/data/assembly/assembly_count__Genus.csv)   |   
 
 ### Functional Analysis
-[FixME Anton]   
+
+- MetaCyc: (100% complete)
+  - [Noncummulative unscaled tables](https://github.com/ccm-bioinfo/cambda2023/tree/main/funcional/data/metagenomic/tables/metacyc/noncummulative/unscaled)
+  - [Noncummulative scaled tables](https://github.com/ccm-bioinfo/cambda2023/tree/main/funcional/data/metagenomic/tables/metacyc/noncummulative/scaled)
+  - [Cummulative unscaled tables](https://github.com/ccm-bioinfo/cambda2023/tree/main/funcional/data/metagenomic/tables/metacyc/cummulative/unscaled)
+  - [Cummulative scaled tables](https://github.com/ccm-bioinfo/cambda2023/tree/main/funcional/data/metagenomic/tables/metacyc/cummulative/scaled)
+- [Mi-Faser tables](https://github.com/ccm-bioinfo/cambda2023/tree/main/funcional/data/metagenomic/tables/mifaser) (100% complete; to be run with a large database)
+- [KEGG table](https://github.com/ccm-bioinfo/cambda2023/blob/main/funcional/data/metagenomic/tables/kegg.tsv) (74.79% complete)
+- [UniProt table (compressed)](https://github.com/ccm-bioinfo/cambda2023/blob/main/funcional/data/metagenomic/tables/uniprot.tsv.gz) (96.44% complete)
+- [VFDB table (compressed)](https://github.com/ccm-bioinfo/cambda2023/blob/main/funcional/data/metagenomic/tables/vfdb.tsv.gz) (100% complete)
 
 ### Resistance Table   
 [Original table from mysterious sample](https://raw.githubusercontent.com/ccm-bioinfo/cambda2023/main/preprocessing/amr_patterns.tsv)  
-[Reads-Kraken-Extraction-Assembly]()    
-Upload table  FixMe nelly
+[Reads-Kraken-Extraction-Assembly](https://raw.githubusercontent.com/ccm-bioinfo/cambda2023/main/Resistencia/data/230622_AMR_mysterious_ETBC_all_nelly.csv)    
 
 ### Genomes Csv
-[Genome Table](https://github.com/ccm-bioinfo/cambda2023/blob/main/genome-metadata.csv)
-Server Alnitak: /data/camda2023/genomes/*.gbff
+[Genome Table](https://github.com/ccm-bioinfo/cambda2023/blob/main/genome-metadata.csv)  
+Server Alnitak: /data/camda2023/genomes/assemblies/*.gbff
 
 ### Reduced variables table 
 These tables are the result of the reduced variable team.  
@@ -44,22 +52,22 @@ For models fitted with all kingdoms:
 
 |    | Poisson | Negative Binomial | Zero Inflated Poisson | Zero Inflated Negative Binomial |
 |---|---|---|---|---|
-|Reads | [Reads-P](./Variable_Selection/selected_variables_results/integrated_tables/reads__p_integrated.csv) | [Reads-NB](./Variable_Selection/selected_variables_results/integrated_tables/reads__nb_integrated.csv) | [Reads-ZIP](./Variable_Selection/selected_variables_results/integrated_tables/reads__zip_integrated.csv) | [Reads-ZINB](./Variable_Selection/selected_variables_results/integrated_tables/reads__zinb_integrated.csv) |
-|Assembly | [Assembly-P](./Variable_Selection/selected_variables_results/integrated_tables/assembly__p_integrated.csv) | [Assembly-NB](./Variable_Selection/selected_variables_results/integrated_tables/assembly__nb_integrated.csv) | [Assembly-ZIP](./Variable_Selection/selected_variables_results/integrated_tables/assembly__zip_integrated.csv) | [Assembly-ZINB](./Variable_Selection/selected_variables_results/integrated_tables/assembly__zinb_integrated.csv) |
+|Reads | [Reads-P](./02_variable_selection/selected_variables_results/integrated_tables/reads__p_integrated.csv) | [Reads-NB](./02_variable_selection/selected_variables_results/integrated_tables/reads__nb_integrated.csv) | [Reads-ZIP](./02_variable_selection/selected_variables_results/integrated_tables/reads__zip_integrated.csv) | [Reads-ZINB](./02_variable_selection/selected_variables_results/integrated_tables/reads__zinb_integrated.csv) |
+|Assembly | [Assembly-P](./02_variable_selection/selected_variables_results/integrated_tables/assembly__p_integrated.csv) | [Assembly-NB](./02_variable_selection/selected_variables_results/integrated_tables/assembly__nb_integrated.csv) | [Assembly-ZIP](./02_variable_selection/selected_variables_results/integrated_tables/assembly__zip_integrated.csv) | [Assembly-ZINB](./02_variable_selection/selected_variables_results/integrated_tables/assembly__zinb_integrated.csv) |
 
 For models fitted considering each kingdom separately:
 
 |    | Poisson | Negative Binomial | Zero Inflated Poisson | Zero Inflated Negative Binomial |
 |---|---|---|---|---|
-|Reads | [Reads-Sep-P](./Variable_Selection/selected_variables_results/integrated_tables/reads_kingdoms_p_integrated.csv) | [Reads-Sep-NB](./Variable_Selection/selected_variables_results/integrated_tables/reads_kingdoms_nb_integrated.csv) | [Reads-Sep-ZIP](./Variable_Selection/selected_variables_results/integrated_tables/reads_kingdoms_zip_integrated.csv) | [Reads-Sep-ZINB](./Variable_Selection/selected_variables_results/integrated_tables/reads_kingdoms_zinb_integrated.csv) |
-|Assembly | [Assembly-Sep-P](./Variable_Selection/selected_variables_results/integrated_tables/assembly_kingdoms_p_integrated.csv) | [Assembly-Sep-NB](./Variable_Selection/selected_variables_results/integrated_tables/assembly_kingdoms_nb_integrated.csv) | [Assembly-Sep-ZIP](./Variable_Selection/selected_variables_results/integrated_tables/assembly_kingdoms_zip_integrated.csv) | [Assembly-Sep-ZINB](./Variable_Selection/selected_variables_results/integrated_tables/assembly_kingdoms_zinb_integrated.csv) |
+|Reads | [Reads-Sep-P](./02_variable_selection/selected_variables_results/integrated_tables/reads_kingdoms_p_integrated.csv) | [Reads-Sep-NB](./02_variable_selection/selected_variables_results/integrated_tables/reads_kingdoms_nb_integrated.csv) | [Reads-Sep-ZIP](./02_variable_selection/selected_variables_results/integrated_tables/reads_kingdoms_zip_integrated.csv) | [Reads-Sep-ZINB](./02_variable_selection/selected_variables_results/integrated_tables/reads_kingdoms_zinb_integrated.csv) |
+|Assembly | [Assembly-Sep-P](./02_variable_selection/selected_variables_results/integrated_tables/assembly_kingdoms_p_integrated.csv) | [Assembly-Sep-NB](./02_variable_selection/selected_variables_results/integrated_tables/assembly_kingdoms_nb_integrated.csv) | [Assembly-Sep-ZIP](./02_variable_selection/selected_variables_results/integrated_tables/assembly_kingdoms_zip_integrated.csv) | [Assembly-Sep-ZINB](./02_variable_selection/selected_variables_results/integrated_tables/assembly_kingdoms_zinb_integrated.csv) |
 
 Additionally we compared the fitted models for each OTU and pair of cities, choosing the one with the lowest AIC. The tables with the selected variables using this model selection are listed next:
 
 |   | Reads | Assembly |
 |---|---|---|
-|All kingdoms | [Reads-Best](./Variable_Selection/selected_variables_results/integrated_tables/reads__best_integrated.csv) | [Assembly-Best](./Variable_Selection/selected_variables_results/integrated_tables/assembly__best_integrated.csv) |
-|Separated | [Reads-Sep-Best](./Variable_Selection/selected_variables_results/integrated_tables/reads_kingdoms_best_integrated.csv) | [Assembly-Sep-Best](./Variable_Selection/selected_variables_results/integrated_tables/assembly_kingdoms_best_integrated.csv) |
+|All kingdoms | [Reads-Best](./02_variable_selection/selected_variables_results/integrated_tables/reads__best_integrated.csv) | [Assembly-Best](./02_variable_selection/selected_variables_results/integrated_tables/assembly__best_integrated.csv) |
+|Separated | [Reads-Sep-Best](./02_variable_selection/selected_variables_results/integrated_tables/reads_kingdoms_best_integrated.csv) | [Assembly-Sep-Best](./02_variable_selection/selected_variables_results/integrated_tables/assembly_kingdoms_best_integrated.csv) |
 
 Welcome to Cambda 2023! 
 ### Relevant links

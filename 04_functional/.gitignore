@@ -1,0 +1,14 @@
+data/databases/
+data/databases/**
+data/databases/kegg/profiles/*
+data/databases/kegg/ko-list.txt
+data/metagenomic/annotations/
+data/metagenomic/annotations/**
+data/metagenomic/assemblies/
+data/metagenomic/assemblies/**
+data/genomic/annotations/
+data/genomic/annotations/**
+data/genomic/assemblies/
+data/genomic/assemblies/**
+software/standalone/
+software/standalone/**

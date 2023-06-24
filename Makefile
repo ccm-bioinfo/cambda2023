@@ -1,22 +1,30 @@
 SHELL := /bin/bash
 clasify:
-	echo "Compilando clasificacion"
-	cd clasificacion && make run
+	echo "Starting classification"
+	cd 03_classification && make run
 
 run/%:
-	@echo "buscando $*"
-	@[[ -f $* ]] && echo "existe" || echo "no existe el archivo '$*', verifique que el nombre sea correcto"
+	@echo "Searching $*"
+	@[[ -f $* ]] && echo "file exists" || echo "file does not exist, verify the name"
 	@[[ -f $* ]]
-	@echo "ejecutando $*"
+	@echo "Executing $*"
 	@echo "$*" > to_run.txt
 	make clasify
 
 https\://github.com/ccm-bioinfo/cambda2023/blob/main/%.csv:
-	@echo "archivo detectado: $*.csv"
+	@echo "file detected: $*.csv"
 	git pull
 	make run/$*.csv
 
 https\://github.com/ccm-bioinfo/cambda2023/blob/main/%.tsv:
-	@echo "archivo detectado: $*.tsv"
+	@echo "file detected: $*.tsv"
 	git pull
 	make run/$*.tsv
+
+https\://github.com/ccm-bioinfo/cambda2023/blob/main/%.gz:
+	@echo "file detected: $*.gz"
+	@echo "unzipping $*.gz withouth removing the original file"
+	gunzip -k $*.gz
+	make run/$*
+	@echo "removing $*"
+	rm $*
