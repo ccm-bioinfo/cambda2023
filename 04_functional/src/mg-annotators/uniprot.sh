@@ -10,8 +10,6 @@ echo $(date +"%D %T:") Annotating ${1} with UniProt
 inp=$(readlink -f "data/metagenomic/annotations/prokka/${1}/${1}.faa")
 out=$(readlink -f "data/metagenomic/annotations/uniprot/")
 
-for s in {1..64}; do trap "echo trap $s" $s; done
-
 # Remove outputs if the script is stopped with Ctrl-C
 trap "rm -f ${out}/${1}.tsv" 2 15
 
