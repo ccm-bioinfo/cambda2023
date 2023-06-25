@@ -5,13 +5,13 @@
 set -e
 cd $(dirname "$(dirname "$(dirname "$(readlink -f $0)")")")
 
+echo $(date +"%D %T:") Annotating ${1} with MetaCyc
+
 inp=$(readlink -f "data/metagenomic/annotations/prokka/${1}/${1}.gff")
 out=$(readlink -f "data/metagenomic/annotations/metacyc/")
 
-echo $(date +"%D %T:") Working with ${1}
-
 # Remove outputs if the script is stopped with Ctrl-C
-trap "rm -f ${out}/${1}.{ec,minpath,tsv}" SIGINT
+trap "rm -f ${out}/${1}.{ec,minpath,tsv}" 2 15
 
 mkdir -p ${out}
 

@@ -45,6 +45,8 @@ The most important packages included in the virtual environment are:
 - [Prokka 1.14.6](https://github.com/tseemann/prokka)
 - [BLAST 2.14.0](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
 - [GNU parallel 20230522](https://www.gnu.org/software/parallel)
+- [KofamScan 1.3.0](https://github.com/takaram/kofam_scan)
+> To do: Add InterProScan version and link.
 
 **The Prokka script is modified to skip the execution of
 [tbl2asn](https://www.ncbi.nlm.nih.gov/genbank/table2asn/), which we have found
@@ -52,12 +54,10 @@ to be extremely slow when working with large metagenomic assemblies; as a
 consequence, it does not produce `.gbk`, `.sqn` or `.err` outputs. View lines
 41-44 of `src/download-software.sh` to view how this is done.**
 
-We used three standalone programs:
+We used two standalone programs:
 
-- [KofamScan 1.3.0](https://github.com/takaram/kofam_scan/tree/62cee3943aa28b96f498150f5e0bb2d7c498e648)
 - [MinPath 1.6](https://github.com/mgtools/MinPath/tree/46d3e81a4dca2310d558bea970bc002b15d44767)
 - [Mi-faser 1.61](https://bitbucket.org/bromberglab/mifaser/src/8012b2676eb3d2548db569191d19c0da9f64330c/)
-> To do: Add InterProScan version and link.
 
 While some of this software have databases preinstalled, we had to manually
 download other databases as well. This is done with the `src/load-databases.sh`
@@ -112,7 +112,7 @@ funcional/
     │   └── {kegg,metacyc,mifaser,interproscan,prokka,uniprot,vfdb}.sh
     ├── mg-tabulators/
     │   └── {kegg,metacyc,mifaser,interproscan,uniprot,vfdb}.py
-    ├── mg-annotate.sh     # to be created
+    ├── mg-annotate.sh
     ├── mg-grid-search.py  # to be created
     └── metacyc-conversion.py
 ```
