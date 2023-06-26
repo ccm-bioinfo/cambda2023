@@ -71,7 +71,10 @@ Additionally, we compared the fitted models for each OTU and pair of cities, cho
 
 Welcome to Cambda 2023! 
 ### Relevant links
-[Link a la presentación](https://docs.google.com/presentation/d/1AM7f3khAGLN8pXDnDs9BOYrUh56jCmPwoc2MRLTkfgg/edit#slide=id.g24bcac0919d_0_1109)  
+[Link a la presentación](https://docs.google.com/presentation/d/1AM7f3khAGLN8pXDnDs9BOYrUh56jCmPwoc2MRLTkfgg/edit#slide=id.g24bcac0919d_0_1109) 
+[Hypothesis testing presentation](https://docs.google.com/presentation/d/1-qJd4-2TZXH2kP6S08iNl8AY2kt0TlMMJKaS4yzM0XM/edit#slide=id.g226f7d9b690_1_1)
+[Classification presentation](https://docs.google.com/presentation/d/1N3uOvBw1reHhLpv-PvflEhafwmfr2xbPE5hmKjvH2YY/edit)
+[Variable Reduction]()
 [Link Data Zenodo](https://zenodo.org/record/8003231)    
 [Carpeta de Trabajo Drive](https://drive.google.com/drive/folders/1vGOGMFTnl7k6A9n99KvYtZNmdANQCGOG?usp=drive_link)  
 [Documento Resultados](https://docs.google.com/document/d/15g4cXKPa0Vthr3SUdVO-0EDLhMhDyhp3ZDhNoX7_8I8/edit)  
