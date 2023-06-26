@@ -132,7 +132,7 @@ differentialAmrMarkers <- function(db) {
     pb <- txtProgressBar(min = 0, max = nLocs * (nLocs - 1) / 2, style = 3)
     k <- 1
     # Construct the formula for the models
-    formulaModels <- formula(counts ~ offset(logNreads) + sample_loc)
+    formulaModels <- formula(presence ~ offset(logNreads) + sample_loc)
     for (i in 1:(nLocs - 1)) {
         for (j in (i+1):nLocs) {
             # Given two city-year classes, we first filter the data that 
@@ -153,7 +153,8 @@ differentialAmrMarkers <- function(db) {
             tempPvalues <- db %>% 
                 filter(sample_loc %in% locations[c(i, j)]) %>% 
                 mutate(sample_loc = factor(sample_loc)) %>% 
-                ungroup() %>% group_by(c(V1, aro)) %>% 
+                ungroup() %>% 
+                group_by(V1, aro) %>% 
                 mutate(presenceReads = sum(presence)) %>% 
                 ungroup() %>% 
                 filter(presenceReads > 0) %>% 
@@ -162,12 +163,11 @@ differentialAmrMarkers <- function(db) {
                 mutate(
                     modelFit = map(data, ~modelFitting(
                         formula = formulaModels, 
-                        model = model, 
                         db = .
                     ))
                 ) %>% 
                 unnest_wider(modelFit) %>% 
-                select(c("V1", "aro", "pvalues", "score")) %>% 
+            select(c("V1", "aro", "pvalues", "score")) %>% 
                 mutate(
                     loc1 = locations[i], 
                     loc2 = locations[j], 
@@ -209,8 +209,6 @@ computePvaluesLevel <- function(path_to_counts, train = NULL,
     }
     # compute p-values
     tempPvalues <- differentialAmrMarkers(train_db)
-    # Add the level of the p_value
-    tempPvalues <- tempPvalue
     return(tempPvalues)
 }
 
@@ -228,7 +226,7 @@ getKAmrMarkers <- function(db, k) {
         loc2 = character(), locs = character(), adj_pvalues = double(),  
         sign_rank = integer()
     )
-    # Get the significant OTus
+    # Get the significant AMR markers
     for(i in 1:length(comparisons)) {
         tempData <- db %>% 
             filter(locs == comparisons[i]) %>% 
@@ -253,7 +251,7 @@ constructReducedData <- function(sign_amr, path_to_counts) {
         paste0(path_to_counts, "amr-presence.tsv")
     ))
     # Subset the identified AMR markers
-    retDF <- db[db[, 1] %in% sign_amr[, 1], ]
+    retDF <- db[db[, 1] %in% unlist(sign_amr[, 1]), ]
     return(retDF)
 }
 
@@ -269,7 +267,7 @@ variableSelection <- function(path_to_counts, train_cols = NULL, kpvalues = 5) {
     # pair of cities
     significantAMR <- getKAmrMarkers(pValues, kpvalues)
     # Construct the integrated data with the significant OTUs 
-    reducedTable <- constructReducedData(AMR, path_to_counts)
+    reducedTable <- constructReducedData(significantAMR, path_to_counts)
     return(list(pValues, significantAMR, reducedTable))
 }
 
