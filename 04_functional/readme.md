@@ -97,7 +97,7 @@ The files and directories related to city prediction have the following
 structure:
 
 ```text
-funcional/
+04_functional/
 ├── data/
 │   └── metagenomic/
 │       ├── models/
@@ -136,7 +136,7 @@ abundance tables.
 
 Before starting to annotate, it is important to place the metagenomic
 assemblies into the `data/metagenomic/assemblies/` directory. You can do it by
-creating symlinks like this (supposing you are in the `funcional/` root
+creating symlinks like this (supposing you are in the `04_functional/` root
 directory):
 
 ```text
@@ -176,6 +176,8 @@ and skipping already finished annotations:
 $ ./src/mg-annotate.sh [number of jobs]
 ```
 
+#### Prokka
+
 The `src/mg-annotators/prokka.sh` script must be the first annotation pipeline
 to be executed, as its outputs are a requirement for the other pipelines
 (except for `mifaser.sh`). This script runs the modified Prokka pipeline (see
@@ -184,6 +186,8 @@ stated in Prokka's help page, can "improve gene predictions for highly
 fragmented genomes." It takes a metagenomic assembly located in
 `data/metagenomic/assemblies/[basename].fasta` and outputs into
 `data/metagenomic/annotations/prokka/[basename]/`.
+
+#### Mi-Faser
 
 The `src/mg-annotators/mifaser.sh` script annotates assemblies with mi-faser 
 (located in `software/standalone/mifaser/`), which employs its own curated
@@ -197,11 +201,15 @@ Similar to `src/mg-annotators/prokka.sh`, it uses the
 `data/metagenomic/assemblies/[basename].fasta` assembly file as input, and
 outputs into `data/metagenomic/annotations/mifaser/[basename]/`.
 
+#### KEGG
+
 The `src/mg-annotators/kegg.sh` script uses KofamScan (located in
 `software/standalone/kofamscan/`) to annotate Prokka's `.faa` files with the
 KEGG Ontology (KO) and HMM profiles. Input is taken from
 `data/metagenomic/annotations/prokka/[basename]/[basename].faa` and results
 are written to `data/metagenomic/annotations/kegg/[basename].txt`.
+
+#### MetaCyc
 
 MetaCyc pathways are predicted with `src/mg-annotators/metacyc.sh`, based on
 EnvGen's
@@ -221,7 +229,11 @@ and saves outputs in `data/metagenomic/annotations/metacyc/[basename].tsv`. It
 is the only script we advice not to run in parallel as it might not finish
 annotating properly when doing so.
 
+#### InterProScan
+
 > To do: InterProScan pipeline description.
+
+#### UniProt and VFDB
 
 Both `src/mg-annotators/uniprot.sh` and `src/mg-annotators/vfdb.sh` annotate
 Prokka's `.faa` outputs by running BLAST against their respective databases
@@ -237,7 +249,57 @@ output to `data/metagenomic/annotations/uniprot/[basename].tsv` and
 The `src/mg-tabulators/` directory contains the scripts used to create the
 abundance tables located in `data/metagenomic/tables/`, and are named after the
 corresponding annotation pipeline (for example, `src/mg-tabulators/kegg.py`
-creates the abundance table from `src/mg-annotators/kegg.sh` outputs).
+creates the abundance table from `src/mg-annotators/kegg.sh` outputs). All
+tables follow a similar structure: every row corresponds to a sample, the first
+column (named `City`) is the label for prediction, and the rest of the columns
+contain individual annotation attributes.
+
+#### MetaCyc
+
+MetaCyc's abundance tables have the most complicated structure. In order to
+understand it, one must take a look at the `.tsv` outputs that
+`src/mg-annotators/metacyc.sh` produces, whose rows look something like this:
+
+| |Level1|Level2|Level3|Level4|Level5|Level6|Level7|Level8|
+|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
+|3.0|Biosynthesis|Lipid-Biosynthesis|sophorolipid biosynthesis| | | | | |
+
+The first number indicates relative abundance in the sample, and the rest of
+the row contains the functional category organized in a hierarchical manner, in
+which "Level`n`" is a subcategory of "Level`n-1`". Note that not all levels are
+filled; this is the case for most rows in the `.tsv` files produced by the
+pipeline. We called these tables with empty cells "noncummulative", because the
+last known level (in this example, the third) is not placed in the rest of the
+levels. To convert this table into its "cummulative" counterpart, one would
+fill in the missing values in the table using the last known level; for
+example:
+
+| |Level1|Level2|Level3|Level4|Level5|Level6|Level7|Level8|
+|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
+|3.0|Biosynthesis|Lipid-Biosynthesis|sophorolipid biosynthesis|**sophorolipid biosynthesis**|**sophorolipid biosynthesis**|**sophorolipid biosynthesis**|**sophorolipid biosynthesis**|**sophorolipid biosynthesis**|
+
+We created two kinds of abundance tables from both the cummulative and
+noncummulative datasets: one in which we take into account the relative
+abundances, and one in which we don't. Each abundance table stores information
+on a single MetaCyc level. To include relative abundance information in the
+final tables, we multiplied the relative abundance by the unique function count
+it corresponds to; that is, we *scaled* the function counts with their relative
+abundances, for which reason these tables are called "scaled" abundance tables,
+as opposed to the "*unscaled*" ones, where relative abundance was not included.
+As such, we produced four kinds of tables: noncummulative unscaled, 
+noncummulative scaled, cummulative unscaled, and cummulative scaled tables, for
+each MetaCyc level (named `lvl1.tsv` to `lvl8.tsv`), producing 32 different
+tables, all of which can be found in `data/metagenomic/tables/metacyc/`. This
+entire process is executed by `src/mg-tabulators/metacyc.sh`.
+
+#### Mi-Faser
+
+Mi-Faser outputs the counts of E.C. numbers for each sample. Similarly to
+MetaCyc's functional categories, E.C. numbers are hierarchical and are divided
+into [four different levels](https://en.wikipedia.org/wiki/List_of_enzymes).
+Thus, we created a single abundance table for each E.C. level and saved into
+`data/metagenomic/tables/mifaser/lvl{1..4}.tsv`, all of which is accomplished
+with the `src/mg-tabulators/mifaser.sh` script.
 
 ### 1.3. Model training
 
