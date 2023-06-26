@@ -23,7 +23,7 @@ PATH_OUTPUT_METACYC_NONCUMMULATIVE_UNSCALED = '../data/metagenomic/models/metacy
 PATH_OUTPUT_MIFASER = '../data/metagenomic/models/mifaser/'
 PATH_OUTPUT = '../data/metagenomic/models/'
 PATH_OUTPUT_IMAGES = '../images/'
-# level = 1
+
 
 def make_score_plots(data_name, names, accuracy, balanced_accuracy, f1):
     bar_width = 0.2
@@ -58,30 +58,17 @@ def make_cm_plots(data_name, models, predictions, true_):
         cm = confusion_matrix(true_, item[1], labels = cities)
         fig, ax = plt.subplots(figsize=(6, 6))
 
-# Plot the confusion matrix using seaborn heatmap
         sns.heatmap(cm, annot=True, cmap="Blues", fmt="d", cbar=False, ax=ax)
 
-        # Set labels, title, and ticks
         ax.set_xlabel('Predicted labels')
         ax.set_ylabel('True labels')
         ax.set_title(f'Confusion Matrix {item[0]}')
         ax.xaxis.set_ticklabels(cities)
         ax.yaxis.set_ticklabels(cities, rotation=0)
 
-        # Rotate tick labels for better visibility if needed
-        # plt.setp(ax.get_xticklabels(), rotation=45, ha="right", rotation_mode="anchor")
-
-        # Display the plot
         plt.tight_layout()
-        # if lvl is not None:
-        #     plt.savefig(f'{PATH_OUTPUT_IMAGES}confusion_matrix_{data_name}_lvl{lvl}_{item[0]}.png', dpi = 200)
-        # else:
-        #     plt.savefig(f'{PATH_OUTPUT_IMAGES}confusion_matrix_{data_name}_{item[0]}.png', dpi = 200)
         plt.savefig(f'{PATH_OUTPUT_IMAGES}confusion_matrix_{data_name}_{item[0]}.png', dpi = 200)
-        # df_cm = pd.DataFrame(array, index = [i for i in "ABCDEFGHIJK"],
-        #           columns = [i for i in "ABCDEFGHIJK"])
-        # plt.figure(figsize = (10,7))
-        # sn.heatmap(df_cm, annot=True)
+
     
 
 def multi_grid_search(data_name, data, out_dir):
@@ -141,14 +128,6 @@ def multi_grid_search(data_name, data, out_dir):
     clf4.fit(X_train_transformed, y_train)
     clf5.fit(X_train_transformed, y_train)
 
-    # if lvl is not None:
-    #     pd.DataFrame(clf1.cv_results_).to_csv(f'{out_dir}{data_name}_RF_results_lvl{lvl}.csv')
-    #     pd.DataFrame(clf2.cv_results_).to_csv(f'{out_dir}{data_name}_SVC_results_lvl{lvl}.csv')
-    #     pd.DataFrame(clf3.cv_results_).to_csv(f'{out_dir}{data_name}_MLP_results_lvl{lvl}.csv')
-    #     pd.DataFrame(clf4.cv_results_).to_csv(f'{out_dir}{data_name}_ET_results_lvl{lvl}.csv')
-    #     pd.DataFrame(clf5.cv_results_).to_csv(f'{out_dir}{data_name}_KNN_results_lvl{lvl}.csv')
-    #     pd.DataFrame(zip(['RF', 'SVC', 'MLP', 'ET', 'KNN'], [clf1.best_params_ , clf2.best_params_ , clf3.best_params_ , clf4.best_params_ , clf5.best_params_ ])).to_csv(f'{out_dir}best_params_{data_name}lvl{lvl}.csv')
-    # else:
     pd.DataFrame(clf1.cv_results_).to_csv(f'{out_dir}{data_name}_RF_results.csv')
     pd.DataFrame(clf2.cv_results_).to_csv(f'{out_dir}{data_name}_SVC_results.csv')
     pd.DataFrame(clf3.cv_results_).to_csv(f'{out_dir}{data_name}_MLP_results.csv')
@@ -156,7 +135,6 @@ def multi_grid_search(data_name, data, out_dir):
     pd.DataFrame(clf5.cv_results_).to_csv(f'{out_dir}{data_name}_KNN_results.csv')
     pd.DataFrame(zip(['RF', 'SVC', 'MLP', 'ET', 'KNN'], [clf1.best_params_ , clf2.best_params_ , clf3.best_params_ , clf4.best_params_ , clf5.best_params_ ])).to_csv(f'{out_dir}best_params_{data_name}.csv')
 
-    # pd.DataFrame(zip(['RF', 'SVC', 'MLP', 'ET', 'KNN'], [clf1.best_params_ , clf2.best_params_ , clf3.best_params_ , clf4.best_params_ , clf5.best_params_ ])).to_csv(f'{out_dir}best_params_{model_name}.csv')
 
     best_model1 = clf1.best_estimator_
     best_model2 = clf2.best_estimator_
@@ -185,12 +163,10 @@ def multi_grid_search(data_name, data, out_dir):
     pred6 = voting_classifier_hard.predict(X_test_transformed)
     pred7 = voting_classifier_soft.predict(X_test_transformed)
 
-    # names = ['RandomForest', 'SVC', 'MLP', 'ExtraTrees', 'KNN', 'VotingClassifier_hard', 'VotingClassifier_soft']
     names = ['RandomForest', 'SVC', 'MLP', 'ExtraTrees', 'KNN', 'VC(hard)', 'VC(soft)']
     preds = [list(pred1), list(pred2), list(pred3), list(pred4), list(pred5), list(pred6), list(pred7)]
     true_ = [y_test, y_test, y_test, y_test, y_test, y_test, y_test]
 
-    # pd.DataFrame(zip(names, preds, true_), columns = ['model', 'predictions', 'true']).to_csv(f'{PATH_OUTPUT}predictions_level{level}.tsv', sep = '\t')
     predictions_cm = pd.DataFrame(zip(names, preds, true_), columns = ['model', 'predictions', 'true']).to_csv(f'{out_dir}predictions_{data_name}.tsv', sep = '\t')
 
 
@@ -198,7 +174,6 @@ def multi_grid_search(data_name, data, out_dir):
 
     for p in preds:
         acc, bal, f1 = accuracy_score(y_test, p), balanced_accuracy_score(y_test, p), f1_score(y_test, p, average="macro")
-        # print(acc, bal, f1)
         accuracies.append(acc)
         balanced.append(bal)
         f1s.append(f1)
@@ -210,16 +185,10 @@ def multi_grid_search(data_name, data, out_dir):
 
     transformations = ['Quantile Transformation' for _ in range(len(names))]
 
-    # if lvl is not None:
-    #     pd.DataFrame(zip(names, transformations, accuracies, balanced, f1s), columns = ['Model', 'Transformation', 'Accuracy', 'Balanced Accuracy', 'F1 Score']).to_csv(f'{out_dir}results_lvl{data_name}.tsv')
-    # else:
-    #     pd.DataFrame(zip(names, transformations, accuracies, balanced, f1s), columns = ['Model', 'Transformation', 'Accuracy', 'Balanced Accuracy', 'F1 Score']).to_csv(f'{out_dir}results.tsv')
     pd.DataFrame(zip(names, transformations, accuracies, balanced, f1s), columns = ['Model', 'Transformation', 'Accuracy', 'Balanced Accuracy', 'F1 Score']).to_csv(f'{out_dir}results_{data_name}.tsv', sep = '\t', index = False)
-    # return best_model1, best_model2, best_model3, best_model4, best_model5
 
 
 def main():
-    # for level in range(1, 3):
     #Mifaser tables
     mifaser1 = pd.read_csv(f'{PATH_INPUT}mifaser/lvl1.tsv', sep = '\t', index_col = 0)
     mifaser2 = pd.read_csv(f'{PATH_INPUT}mifaser/lvl2.tsv', sep = '\t', index_col = 0)
@@ -274,7 +243,7 @@ def main():
 
 
     '''Hyperparameter search'''
-    # multi_grid_search('mifaser', mifaser1, PATH_OUTPUT_MIFASER, '1')
+
     pool = multiprocessing.Pool()
     parameters = [
         # ('Mifaser_level_1', mifaser1, PATH_OUTPUT_MIFASER),
@@ -319,9 +288,7 @@ def main():
     pool.close()
     pool.join()
 
-    # best_model1, best_model2, best_model3, best_model4, best_model5 = multi_grid_search('mifaser', lab, X_train_transformed, y_train, 'mifaser_lvl1')
     
-   
 
 
 
