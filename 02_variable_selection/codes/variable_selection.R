@@ -16,7 +16,10 @@ option_list = list(
                 help = "number of significant OTUs", metavar = "integer"),
     make_option(c("-m", "--model"), type = "character", default = "nb",
                 help = "model to adjust: Poisson (p), Negative Binomial (nb), Zero Inflated Poisson (zip) or Zero Inflated Negative Binomial (zinb) [default= %default]",
-                metavar = "integer")
+                metavar = "integer"),
+    make_option(c("-v", "--validation"), type = "character", default = NULL, 
+                help = "path to a file which specifies the validation samples",
+                metavar = "character")
 ); 
 
 opt_parser = OptionParser(option_list = option_list);
@@ -405,6 +408,16 @@ variableSelection <- function(hlevels = c("_Phylum", "_Class", "_Order", "_Famil
 prefix0 <- ifelse(opt$reads, "reads", "assembly")
 prefix1 <- ifelse(opt$all, "", "kingdoms")
 path_to_counts <- paste0(opt$input_dir, prefix0, "/")
+if (is.null(opt$validation)) {
+    cat(sprintf("There is no validation data set\n"))
+    train_cols <- NULL
+    suffix0 <- ""
+} else {
+    cat(sprintf("There is a validation data set\n"))
+    train_val_set <- read.csv(opt$validation)
+    train_cols <- train_val_set$Num_Col[train_val_set$Train == 1]
+    suffix0 <- "_tv"
+}
 # train_test_set <- read.csv("./Train_Test.csv", row.names = 1)
 # train_cols <- train_test_set$Num_Col[train_test_set$Train == 1]
 kpvalues <- opt$best_k
@@ -419,28 +432,31 @@ if (opt$all) {
 }
 
 smth <- variableSelection(path_to_counts = path_to_counts, 
-                          train_cols = NULL, kpvalues = kpvalues, 
+                          train_cols = train_cols, kpvalues = kpvalues, 
                           hlevels = hlevels, model = opt$model,
                           reads = opt$reads)
 
 write.csv(
     smth[[1]],  
     file = paste0(
-        opt$out_dir, "pValues/", prefix0, "_", prefix1, "_", opt$model, "_", "pvalues.csv"
+        opt$out_dir, "pValues/", prefix0, "_", prefix1, "_", opt$model, "_", "pvalues",
+        suffix0, ".csv"
     ),
     row.names = FALSE
 )
 write.csv(
     smth[[2]],  
     file = paste0(
-        opt$out_dir, "significant_otus/", prefix0, "_", prefix1, "_", opt$model, "_", "signif.csv"
+        opt$out_dir, "significant_otus/", prefix0, "_", prefix1, "_", opt$model, "_", 
+        "signif", suffix0,".csv"
     ),
     row.names = FALSE
 )
 write.csv(
     smth[[3]],  
     file = paste0(
-        opt$out_dir, "integrated_tables/", prefix0, "_", prefix1, "_", opt$model, "_", "integrated.csv"
+        opt$out_dir, "integrated_tables/", prefix0, "_", prefix1, "_", opt$model, "_", 
+        "integrated", suffix0,".csv"
     ),
     row.names = FALSE
 )
@@ -459,7 +475,8 @@ pplot1 <- smth[[1]] %>%
 ggsave(
     plot = pplot1, 
     filename = paste0(
-        opt$out_dir, "pValues/", prefix0, "_", prefix1, "_", opt$model, "_", "log_pvalues.png"
+        opt$out_dir, "pValues/", prefix0, "_", prefix1, "_", opt$model, "_", 
+        "log_pvalues", suffix0,".png"
     ),
     dpi = 180, width = 12, height = 6.75
 )
