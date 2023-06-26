@@ -38,7 +38,7 @@ Taxonomical data tables
 
 ### Resistance Table   
 [Original table from mysterious sample](01_preprocessing/amr_patterns.tsv)  
-[AMR mysterious metagenomes NCBIGenomes]((https://docs.google.com/spreadsheets/d/1ekyUCvOw7xsR7W72utqS8jcUH7129EBPvX4dSnnKekw/edit))    * This is the table to be used in the prediction of the mysterious city. This table will be updated with better future versions
+[AMR mysterious metagenomes NCBIGenomes](https://docs.google.com/spreadsheets/d/1ekyUCvOw7xsR7W72utqS8jcUH7129EBPvX4dSnnKekw/edit)    * This is the table to be used in the prediction of the mysterious city. This table will be updated with better future versions
 
 ### Genomes Csv
 [Genome Table](06_amr_resistance/data/genome-metadata.csv)  
