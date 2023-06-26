@@ -1,7 +1,7 @@
 ## Results on AMR analysis    
-[MicroReact Dendogram with AMR metadata](https://microreact.org/project/mv3PRaax1TNsNseKzZUQnF-230626amrcamda)    
-[Google Metadata](https://docs.google.com/spreadsheets/d/1ekyUCvOw7xsR7W72utqS8jcUH7129EBPvX4dSnnKekw/edit?usp=sharing)  
-[Newick Tree](data/230626_Full_Newick.nwk)
+[MicroReact Dendogram with AMR metadata](https://microreact.org/project/mv3PRaax1TNsNseKzZUQnF-230626amrcamda) with this  
+[Google Metadata](https://docs.google.com/spreadsheets/d/1ekyUCvOw7xsR7W72utqS8jcUH7129EBPvX4dSnnKekw/edit?usp=sharing) using  
+[Newick Tree](data/230626_Full_Newick.nwk) 
 ![Dendogram](fig/CAMDA2023_Inicio.png)  
 ###
 - [Pangenomes](readme_pangenoma.md) (extra genomes)     
