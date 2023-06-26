@@ -414,7 +414,7 @@ if (is.null(opt$validation)) {
     suffix0 <- ""
 } else {
     cat(sprintf("There is a validation data set\n"))
-    train_val_set <- read.csv(opt$validation, row.names = 1)
+    train_val_set <- read.csv(opt$validation)
     train_cols <- train_val_set$Num_Col[train_val_set$Train == 1]
     suffix0 <- "_tv"
 }
