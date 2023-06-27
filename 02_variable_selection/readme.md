@@ -67,7 +67,7 @@ It goes as follows:
 2. Reject the null hypothesis (i.e., declare discoveries) for all 
 $H_{(i)}$ for $i = 1, \ldots, k$.
 
-Alternatively to changing the rejection criterion, one can alter or adjust the associated p-values. In this way they can still be interpreted as evidence against the hypothesis. In the Bonferroni case one simply multiplies the p-value by the number of tests. The Benjamini & Hochberg case is a bit more complicated to express analytically, but the resulting p-values allow us to obtain a rejection criterion equivalent to the one described above for the desired $\alpha$. 
+Alternatively to changing the rejection criterion, one can alter or adjust the associated p-values. In this way they can still be interpreted as evidence against the hypothesis. In the Bonferroni case one simply multiplies the p-value by the number of tests. The Benjamini & Hochberg case is a bit more complicated to express in a non-algoritmic form, but the resulting p-values allow us to obtain a rejection criterion equivalent to the one described above for the desired $\alpha$. 
 
 Here we show a couple of the obtained p-values. 
 The computed p-values for the Poisson regression, when fitting with all kingdoms together, are shown in the next figure:
