@@ -99,7 +99,7 @@ As we suspect that the genomic samples of AMR profiles are from New York City, w
 According the the [classification results](../03_classification/) we will be using the selected variables while using the Negative binomial model, fitted on the kingdoms separately. 
 We present the corresponding OTUs as a table:
 
-|     OTU|locs           |hlevel         | sign_rank|Kingdom  |Phylum                      |Class               |Order            |Family              |Genus                      |
+|     OTU|locs           |hlevel         | sign_rank[^1]|Kingdom  |Phylum                      |Class               |Order            |Family              |Genus                      |
 |-------:|:--------------|:--------------|---------:|:--------|:---------------------------|:-------------------|:----------------|:-------------------|:--------------------------|
 |     469|NYC16_vs_SAN17 |AB_Order       |         4|Bacteria |Pseudomonadota              |Gammaproteobacteria |Moraxellales     |NA                  |NA                         |
 |     469|NYC16_vs_SAN17 |AB_Family      |         5|Bacteria |Pseudomonadota              |Gammaproteobacteria |Moraxellales     |Moraxellaceae       |NA                         |
@@ -161,6 +161,7 @@ We present the corresponding OTUs as a table:
 | 2936682|NYC16_vs_MIN17 |AB_Genus       |         3|Bacteria |Bacillota                   |Bacilli             |Bacillales       |Bacillaceae         |Lysinibacillus             |
 | 2956463|MIN17_vs_NYC17 |Viruses_Genus  |         3|Viruses  |Uroviricota                 |Caudoviricetes      |                 |                    |Skogvirus                  |
 | 2994664|NYC16_vs_SAC16 |AB_Genus       |         5|Bacteria |Actinomycetota              |Actinomycetes       |Micrococcales    |Microbacteriaceae   |Frigoribacterium           |
+[^1]: The variable "sign_rank" corresponds to the place in the ranking of lowest p-values.
 
 The first thing one notices is that there are repeated OTUs that correspond to different taxonomic levels. 
 This is a byproduct of the way `phyloseq` does the agglomeration of variables. 
