@@ -60,6 +60,15 @@ Given one of the four possible models (for instance the Poisson), for every OTU 
 This procedure is done for each of the taxonomic levels previously presented. 
 Additionally, even if the method was applied separately for each of the kingdoms, to select the variables we mixed the computed p-values, giving us a similar table to the one obtained when applying the procedure to all the kingdoms together, but with different results. 
 
+As we simultaneously perform several hypothesis tests on different OTUs or AMRs, the probability of committing a type 1 error increases with the number of tests. To counter this tendency and avoid spurious discoveries, different methods can be used. One of the best known is the Bonferroni correction, where basically the base significance level is divided by the number of tests.  There are other more sophisticated alternatives such as the Tukey or Scheffe tests. In our case we decide to control the false discovery rate (FDR). The FDR is defined as the expected ratio between the number of false positive classifications (false discoveries) and the total number of positive classifications (rejections of the null hypothesis). A very popular methodology to control the FDR is the Benjamini-Hochberg procedure.
+
+It goes as follows: 
+1. For a given $\alpha$ , find the largest $k$ such that $\displaystyle P_{(k)}\leq {\frac {k}{m}}\alpha $. 
+2. Reject the null hypothesis (i.e., declare discoveries) for all 
+$H_{(i)}$ for $i = 1, \ldots, k$.
+
+Alternatively to changing the rejection criterion, one can alter or adjust the associated p-values. In this way they can still be interpreted as evidence against the hypothesis. In the Bonferroni case one simply multiplies the p-value by the number of tests. The Benjamini & Hochberg case is a bit more complicated to express analytically, but the resulting p-values allow us to obtain a rejection criterion equivalent to the one described above for the desired $\alpha$. 
+
 Here we show a couple of the obtained p-values. 
 The computed p-values for the Poisson regression, when fitting with all kingdoms together, are shown in the next figure:
 ![](./selected_variables_results/pValues/reads__p_log_pvalues.png)
