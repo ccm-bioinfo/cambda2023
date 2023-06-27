@@ -50,6 +50,14 @@ Validation results:
 # Results
 
 
+## reads_kingdoms_zip
+```
+                               Source  F1-score  Accuracy Pre-preprocess       Preprocess  Algorithm
+reads_kingdoms_zip_integrated_reduced     92.84     93.69     transposed PowerTransformer svc_linear
+reads_kingdoms_zip_integrated_reduced     90.12     91.50     transposed PowerTransformer   mlpc_200
+```
+
+
 ## readsEukarya_count
 ```
                     Source  F1-score  Accuracy Pre-preprocess Preprocess        Algorithm
@@ -130,6 +138,22 @@ assemblyEukarya_count__Phylum     18.36     24.93       original  LogAndPca     
 ```
 
 
+## assembly_kingdoms_nb
+```
+                                 Source  F1-score  Accuracy Pre-preprocess       Preprocess  Algorithm
+assembly_kingdoms_nb_integrated_reduced     82.37     85.75     transposed PowerTransformer svc_linear
+assembly_kingdoms_nb_integrated_reduced     81.86     85.20       original        LogAndPca   mlpc_200
+```
+
+
+## assembly_kingdoms_p
+```
+                                Source  F1-score  Accuracy Pre-preprocess          Preprocess  Algorithm
+assembly_kingdoms_p_integrated_reduced     59.65     67.12       original           LogAndPca svc_linear
+assembly_kingdoms_p_integrated_reduced     59.26     67.12       original QuantileTransformer   mlpc_200
+```
+
+
 ## reads_kingdoms
 ```
                         Source  F1-score  Accuracy Pre-preprocess          Preprocess        Algorithm
@@ -178,7 +202,31 @@ readsAB_count__Phylum     65.29     70.95     transposed    PowerTransformer ran
 ```
 
 
-## 
+## assembly__zip
+```
+                          Source  F1-score  Accuracy Pre-preprocess       Preprocess  Algorithm
+assembly__zip_integrated_reduced     78.69     83.28     transposed PowerTransformer svc_linear
+assembly__zip_integrated_reduced     77.98     82.19       original PowerTransformer   mlpc_200
+```
+
+
+## reads_kingdoms_zinb
+```
+                                Source  F1-score  Accuracy Pre-preprocess       Preprocess  Algorithm
+reads_kingdoms_zinb_integrated_reduced     90.79     92.05       original        LogAndPca svc_linear
+reads_kingdoms_zinb_integrated_reduced     89.88     91.78     transposed PowerTransformer svc_linear
+```
+
+
+## reads__nb
+```
+                      Source  F1-score  Accuracy Pre-preprocess          Preprocess  Algorithm
+reads__nb_integrated_reduced     95.62     96.43     transposed QuantileTransformer svc_linear
+reads__nb_integrated_reduced     94.29     95.34     transposed    PowerTransformer svc_linear
+```
+
+
+##
 ```
 Source  F1-score  Accuracy Pre-preprocess       Preprocess        Algorithm
   lvl4     79.88     83.23     transposed PowerTransformer       svc_linear
@@ -208,6 +256,70 @@ reads_count__Phylum     68.70     73.42     transposed    PowerTransformer rando
 ```
 
 
+## assembly_kingdoms_zinb
+```
+                                   Source  F1-score  Accuracy Pre-preprocess Preprocess  Algorithm
+assembly_kingdoms_zinb_integrated_reduced     85.20     87.39       original  LogAndPca   mlpc_200
+assembly_kingdoms_zinb_integrated_reduced     83.32     86.57       original  LogAndPca svc_linear
+```
+
+
+## assembly__nb
+```
+                         Source  F1-score  Accuracy Pre-preprocess       Preprocess  Algorithm
+assembly__nb_integrated_reduced     81.92     85.47       original        LogAndPca   mlpc_200
+assembly__nb_integrated_reduced     80.58     85.47     transposed PowerTransformer svc_linear
+```
+
+
+## reads__zinb
+```
+                        Source  F1-score  Accuracy Pre-preprocess       Preprocess  Algorithm
+reads__zinb_integrated_reduced     90.74     92.05     transposed PowerTransformer svc_linear
+reads__zinb_integrated_reduced     89.17     92.32       original        LogAndPca   mlpc_200
+```
+
+
+## reads__p
+```
+                     Source  F1-score  Accuracy Pre-preprocess       Preprocess  Algorithm
+reads__p_integrated_reduced     65.83     70.68       original PowerTransformer   mlpc_200
+reads__p_integrated_reduced     63.36     67.39       original        LogAndPca svc_linear
+```
+
+
+## assembly__p
+```
+                        Source  F1-score  Accuracy Pre-preprocess          Preprocess  Algorithm
+assembly__p_integrated_reduced     65.65     70.68       original QuantileTransformer   mlpc_200
+assembly__p_integrated_reduced     62.26     67.67       original    PowerTransformer svc_linear
+```
+
+
+## reads_kingdoms_p
+```
+                             Source  F1-score  Accuracy Pre-preprocess       Preprocess  Algorithm
+reads_kingdoms_p_integrated_reduced     67.57     73.69       original PowerTransformer   mlpc_200
+reads_kingdoms_p_integrated_reduced     66.29     70.41       original PowerTransformer svc_linear
+```
+
+
+## reads_kingdoms_best
+```
+                                Source  F1-score  Accuracy Pre-preprocess       Preprocess  Algorithm
+reads_kingdoms_best_integrated_reduced     94.89     96.43     transposed PowerTransformer svc_linear
+reads_kingdoms_best_integrated_reduced     94.73     95.89     transposed PowerTransformer   mlpc_200
+```
+
+
+## assembly__zinb
+```
+                           Source  F1-score  Accuracy Pre-preprocess       Preprocess  Algorithm
+assembly__zinb_integrated_reduced     81.99     85.47       original        LogAndPca svc_linear
+assembly__zinb_integrated_reduced     80.76     84.93     transposed PowerTransformer svc_linear
+```
+
+
 ## assembly_kingdoms
 ```
                            Source  F1-score  Accuracy Pre-preprocess          Preprocess        Algorithm
@@ -224,27 +336,82 @@ assembly_kingdoms_best_integrated     81.49     85.20       original           L
 ```
 
 
+## assembly__best
+```
+                           Source  F1-score  Accuracy Pre-preprocess       Preprocess  Algorithm
+assembly__best_integrated_reduced     82.01     86.30       original        LogAndPca   mlpc_200
+assembly__best_integrated_reduced     80.66     85.47     transposed PowerTransformer svc_linear
+```
+
+
+## reads__best
+```
+                        Source  F1-score  Accuracy Pre-preprocess          Preprocess  Algorithm
+reads__best_integrated_reduced     95.48     96.43     transposed    PowerTransformer svc_linear
+reads__best_integrated_reduced     94.36     95.06     transposed QuantileTransformer svc_linear
+```
+
+
+## assembly_kingdoms_zip
+```
+                                  Source  F1-score  Accuracy Pre-preprocess       Preprocess  Algorithm
+assembly_kingdoms_zip_integrated_reduced     79.35     84.10     transposed PowerTransformer svc_linear
+assembly_kingdoms_zip_integrated_reduced     78.75     83.28       original        LogAndPca   mlpc_200
+```
+
+
+## reads_kingdoms_nb
+```
+                              Source  F1-score  Accuracy Pre-preprocess       Preprocess  Algorithm
+reads_kingdoms_nb_integrated_reduced     96.47     97.26     transposed PowerTransformer svc_linear
+reads_kingdoms_nb_integrated_reduced     95.75     96.71     transposed PowerTransformer   mlpc_200
+```
+
+
+## reads__zip
+```
+                       Source  F1-score  Accuracy Pre-preprocess       Preprocess  Algorithm
+reads__zip_integrated_reduced     90.92     93.15     transposed PowerTransformer svc_linear
+reads__zip_integrated_reduced     89.38     91.23       original PowerTransformer svc_linear
+```
+
+
+## reads_kingdoms_zip
+```
+                               Source  F1-score  Accuracy Pre-preprocess       Preprocess  Algorithm
+reads_kingdoms_zip_integrated_reduced     92.84     93.69     transposed PowerTransformer svc_linear
+reads_kingdoms_zip_integrated_reduced     90.12     91.50     transposed PowerTransformer   mlpc_200
+```
+
+
+## assembly_kingdoms_best
+```
+                                   Source  F1-score  Accuracy Pre-preprocess       Preprocess  Algorithm
+assembly_kingdoms_best_integrated_reduced     82.79     86.02     transposed PowerTransformer   mlpc_200
+assembly_kingdoms_best_integrated_reduced     82.16     84.93       original        LogAndPca svc_linear
+```
+
+
 ## All groups together
 ```
-                        Source  F1-score  Accuracy Pre-preprocess          Preprocess        Algorithm
-        reads__best_integrated     95.79     96.43     transposed    PowerTransformer       svc_linear
-  reads_kingdoms_nb_integrated     95.51     96.16     transposed    PowerTransformer         mlpc_200
-  reads_kingdoms_nb_integrated     95.50     96.43     transposed    PowerTransformer       svc_linear
-          reads__nb_integrated     95.37     95.89     transposed    PowerTransformer         mlpc_200
-        reads__best_integrated     95.30     95.61     transposed QuantileTransformer       svc_linear
-          reads__nb_integrated     95.29     96.16       original           LogAndPca       svc_linear
-reads_kingdoms_best_integrated     95.12     95.89     transposed QuantileTransformer       svc_linear
-reads_kingdoms_best_integrated     94.54     96.16     transposed    PowerTransformer       svc_linear
-         reads__zip_integrated     92.01     93.15     transposed    PowerTransformer       svc_linear
- reads_kingdoms_zip_integrated     91.55     93.15     transposed    PowerTransformer       svc_linear
-reads_kingdoms_zinb_integrated     90.91     92.05       original           LogAndPca         mlpc_200
-reads_kingdoms_zinb_integrated     90.58     91.50       original           LogAndPca randomForest1200
-        reads__zinb_integrated     90.46     92.32     transposed    PowerTransformer       svc_linear
-          readsAB_count__Genus     90.23     91.78     transposed    PowerTransformer       svc_linear
-         readsAB_count__Family     89.92     92.32       original           LogAndPca         mlpc_200
-          readsAB_count__Genus     89.11     89.86     transposed QuantileTransformer       svc_linear
- reads_kingdoms_zip_integrated     89.02     90.95     transposed QuantileTransformer       svc_linear
-            reads_count__Genus     88.78     90.13       original           LogAndPca randomForest_500
-           reads_count__Family     88.68     90.68       original           LogAndPca randomForest1200
-         reads__zip_integrated     88.48     89.86     transposed    PowerTransformer         mlpc_200
-```
+                                Source  F1-score  Accuracy Pre-preprocess          Preprocess  Algorithm
+  reads_kingdoms_nb_integrated_reduced     96.47     97.26     transposed    PowerTransformer svc_linear
+                reads__best_integrated     95.79     96.43     transposed    PowerTransformer svc_linear
+  reads_kingdoms_nb_integrated_reduced     95.75     96.71     transposed    PowerTransformer   mlpc_200
+          reads__nb_integrated_reduced     95.62     96.43     transposed QuantileTransformer svc_linear
+          reads_kingdoms_nb_integrated     95.51     96.16     transposed    PowerTransformer   mlpc_200
+          reads_kingdoms_nb_integrated     95.50     96.43     transposed    PowerTransformer svc_linear
+        reads__best_integrated_reduced     95.48     96.43     transposed    PowerTransformer svc_linear
+                  reads__nb_integrated     95.37     95.89     transposed    PowerTransformer   mlpc_200
+                reads__best_integrated     95.30     95.61     transposed QuantileTransformer svc_linear
+                  reads__nb_integrated     95.29     96.16       original           LogAndPca svc_linear
+        reads_kingdoms_best_integrated     95.12     95.89     transposed QuantileTransformer svc_linear
+reads_kingdoms_best_integrated_reduced     94.89     96.43     transposed    PowerTransformer svc_linear
+reads_kingdoms_best_integrated_reduced     94.73     95.89     transposed    PowerTransformer   mlpc_200
+        reads_kingdoms_best_integrated     94.54     96.16     transposed    PowerTransformer svc_linear
+        reads__best_integrated_reduced     94.36     95.06     transposed QuantileTransformer svc_linear
+          reads__nb_integrated_reduced     94.29     95.34     transposed    PowerTransformer svc_linear
+ reads_kingdoms_zip_integrated_reduced     92.84     93.69     transposed    PowerTransformer svc_linear
+                 reads__zip_integrated     92.01     93.15     transposed    PowerTransformer svc_linear
+         reads_kingdoms_zip_integrated     91.55     93.15     transposed    PowerTransformer svc_linear
+         reads__zip_integrated_reduced     90.92     93.15     transposed    PowerTransformer svc_linear
