@@ -4,7 +4,7 @@ Using the same principle that was used to [select differentially abundant OTUs b
 
 For completeness let us recall the variable selection method. 
 The data comprises 365 metagenomic samples, where each sample consists of 2799 entries, being 1 if a marker was found in that sample and 0 otherwise. 
-For each marker, say macB, and each pair of cities, for instance Denver 2016 and New York City 2017, a logistic regression that considered the cities as dummy variables was fitted. 
+For each marker, say macB, and each pair of cities, for instance Denver 2016 and New York City 2017, a logistic regression that considered the contrast of both cities as a dummy variable was fitted. 
 We then recorded the p-value of the coefficient that pertains to the dummy variable, which is a naive way to measure the difference caused by changing cities. 
 The code to do this procedure [is in here](../02_variable_selection/codes/variable_selection_binary.R).
 
