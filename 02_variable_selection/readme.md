@@ -94,7 +94,7 @@ Indeed, for every selected OTU we know for which pairs of cities it is different
 
 ## The particular case of New York
 
-As we suspect that the genomic samples of AMR profiles are from New York City, we focused our attention on the selected OTUs that are differential between New York City and other cities in the USA. 
+As we suspect that the genomic samples of AMR profiles are from New York City, we focused our attention on the selected OTUs that are differential between New York City and other cities in USA. 
 
 According the the [classification results](../03_classification/) we will be using the selected variables while using the Negative binomial model, fitted on the kingdoms separately. 
 We present the corresponding OTUs as a table:
@@ -164,10 +164,30 @@ We present the corresponding OTUs as a table:
 
 The first thing one notices is that there are repeated OTUs that correspond to different taxonomic levels. 
 This is a byproduct of the way `phyloseq` does the agglomeration of variables. 
-Nonetheless, it is remarkable that most of the time, when an OTU is present at at least two different taxonomic levels, it is differential for the same pair of cities. 
+Nonetheless, it is remarkable that most of the time, when an OTU is present for at least two different taxonomic levels, it is differential for the same pair of cities. 
 In particular this leads to ask ourselves if we can further reduce the number of selected OTUs, keeping only one of the taxonomic levels if nesting is present. 
 
 ## Revisiting differential OTUs
+
+After exploring the differential OTUs for NYC against other cities in USA, we decided to reduce even more the number of selected OTUs. 
+To achieve this, we analysed the selected OTUs for each pair of cities, and if one was repeated (at different taxonomic levels), we only retained the one at the lowest taxonomic level. 
+For example, for the OTU with ID 469, which appears twice, once at Order and once at Family, we kept the one at the Order rank. 
+We automatized this procedure and constructed the [reduced integrated tables](./selected_variables_results/integrated_reduced_tables/) for every one of the constructed tables using the different count models. 
+
+To show that we indeed reduced the number of selected OTUs, we present the analogous to the last table presented in the _Identifying differential OTUs_ section, but considering the selection according to the taxonomic level. 
+With this extra step, the number of selected OTUs (and corresponding percentage of zeros) is presented next:
+
+|Model | Fit with all kingdoms | Fit kingdoms separately |
+|---|---|---|
+|P               | 15 (0.91)   | 16 (0.96)   |
+|NB              | 242 (9.15)  | 258 (11.30) |
+|ZIP             | 331 (11.42) | 294 (10.49) |
+|ZINB            | 405 (31.39) | 401 (31.10) |
+|Model selection | 258 (13.81) | 272 (12.91) |
+
+Except for the OTUs selected with the Poisson regression approach, we see that there are selected less OTUs present. 
+
+It remains to check if this reduction keeps the good performance for classification that the original selection presented. 
 
 ## Structure of the folder
 
