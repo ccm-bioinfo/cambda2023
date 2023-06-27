@@ -26,6 +26,7 @@ samples = [ c for c in df.columns if c.startswith("CAMDA")]
 # get the labels for each sample
 labels = [ "_".join(s.split("_")[-3:-1]) for s in samples ]
 labels = list(set(labels))
+labels.sort()
 
 # split the samples by label and sort them randomly
 samples_by_label = { l: [ s for s in samples if l in s ] for l in labels }
@@ -33,10 +34,10 @@ samples_by_label = { l: sample(samples_by_label[l], len(samples_by_label[l])) fo
 sequential_samples = [ s for l in samples_by_label for s in samples_by_label[l] ]
 
 # assign the samples to each fold
-samples_by_fold = { f: [] for f in range(FOLDS) }
-for l in samples_by_label:
-  for i,s in enumerate(samples_by_label[l]):
-    samples_by_fold[i%FOLDS].append(s)
+samples_list = [ s for l in samples_by_label for s in samples_by_label[l] ]
+samples_by_fold = { i:[] for i in range(FOLDS) }
+for i in range(len(samples_list)):
+  samples_by_fold[i%FOLDS].append(samples_list[i])
 
 # prepare the train and validation sets
 train = [ s for f in samples_by_fold if f!=FOLD for s in samples_by_fold[f] ]
@@ -80,5 +81,14 @@ df = df[["fold","sample"]]
 # save the dataframe
 sep = {"csv": ",", "tsv": "\t"}[SELECTION.split('.')[-1]]
 df.to_csv(ALTERNATIVE, sep=sep, index=False, header=True, quoting=2)
+
+# final summary ---------------------------------------------------------------
+print(df.head())
+print("Number of samples:", len(samples))
+print("Number of labels:", len(labels))
+print("Number of samples by label:", { l:len(samples_by_label[l]) for l in samples_by_label })
+print("Number of samples by fold:", { f:len(samples_by_fold[f]) for f in samples_by_fold })
+print("Number of samples in train set:", len(train))
+print("Number of samples in validation set:", len(val))
 
 pass
