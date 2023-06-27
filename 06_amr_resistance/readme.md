@@ -145,3 +145,14 @@ Por hacer, hay varias cosas:
 - [ ] Probar con algunos métodos de reducción de dimensión para los OTUS (Kernel PCA y UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction)
 - [ ] Hacer la selección de modelos de clasificación con Grid Search y Cross-validation. Esto requiere muchos recursos de cómputo (tiempo y procesamiento)
 - [ ] Usar un enfoque de AutoML (automated machine learning, Plonska et al., 2021) para encontrar un ensamble de clasificadores que incluye su hiperparametrización y oprimización de parámetros.
+
+----------------------------------------------------------------------------
+## Relative abundance of Escherichia, Enterobacter and Klebsiella in USA samples 
+
+Using the [reads data at Genus level](../02_variable_selection/data/reads/reads_count__Genus.csv) we calculated the relative abundance of Escherichia, Enterobacter and Klebsiella in USA cities. This is done with [the code linked here](../02_variable_selection/codes/kee_usa_relative_abundance.R). 
+After calculating the relative abundances, we proceeded to [plot histograms](../02_variable_selection/codes/kee_usa_relative_abundance_hists.R) of this values for Escherichia, Enterobacter and Klebsiella. 
+The resulting histograms are shown next:
+
+![rel_abundance_entero](./fig/relative_abundance_enterobacter_usa.png)
+![rel_abundance_escher](./fig/relative_abundance_escherichia_usa.png)
+![rel_abundance_klebsc](./fig/relative_abundance_klebsciella_usa.png)
