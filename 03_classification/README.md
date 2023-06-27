@@ -30,6 +30,23 @@ Para referencia se incluye como código adicional.
 ## Extras
 Adicionalmente se incluye un código relacionado ([data_fetch.py](https://github.com/nselem/ccm-bioinfomatica-lab/tree/main/Hackaton_junio2023/CodigoDanielS/data_fetch.py)) a la adquisición de datos desde ncbi, éste código no se completó por un error y falta de tiempo, sin embargo a partir de aquí se puede extender para automatizar la descarga de datos.
 
+# Selected pipeline results
+
+This selected pipeline is described at the beggining of [data_classify_with_preselection.py](https://github.com/ccm-bioinfo/cambda2023/tree/main/03_classification/data_classify_with_preselection.py).
+
+This code was selected to verify the results of the simulations including the complete data selection process to evaluate the overfiting risk.
+
+## Fold 0
+Validation results:
+  - Number of training samples: 292
+  - Number of validation samples: 73
+    - Ratio of training samples: 0.8
+    - Number of correct predictions: 72
+    - Number of incorrect predictions: 1
+  - Accuracy: 0.9863013698630136
+  - Balanced accuracy: 0.9791666666666666
+  - F1 score: 0.9852919971160777
+
 # Results
 
 

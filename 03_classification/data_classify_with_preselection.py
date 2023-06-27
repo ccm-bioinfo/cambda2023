@@ -2,6 +2,19 @@
 This code is to run the complete pipeline for classification
 taking into account the preselection of training and validation data
 proposed by the variable selection team
+
+The preselection is done by the following steps:
+  - First, the train/val data is selected using 03_classification/samples_selection.py
+  - Second, the data is selected running 02_variable_selection/codes/nb_with_training.sh
+  - Finally, data is stored in reads_kingdoms_nb_integrated_tv.csv (complete path shown below)
+
+The pipeline is the following:
+  - First, the data is normalized by columns using PowerTransformer
+  - Second, the classifier is trained using MLPClassifier
+  - Third, the classifier is evaluated using the validation data
+
+Environment variables:
+  - PLOT: if set to True, the plots are shown
 """
 
 import os
