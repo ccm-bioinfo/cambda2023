@@ -42,7 +42,7 @@ KlebscPlot <- kee_data %>%
     geom_histogram() +
     facet_wrap(~samples, scales = "free") + 
     theme_fivethirtyeight() + 
-    ggtitle("Histograms of relative abundance of Escherichia in USA cities samples") +
+    ggtitle("Histograms of relative abundance of Klebsiella in USA cities samples") +
     scale_x_continuous(breaks = breaks_extended(), labels = scales::scientific)
 
 # Save the plots
