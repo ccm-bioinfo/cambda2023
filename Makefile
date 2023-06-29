@@ -20,7 +20,10 @@ fold%: 03_classification/data_classify_with_preselection.py
 	@echo "Starting variables selection"
 	cd 02_variable_selection/codes && bash nb_with_training.sh || echo "failed"
 	@echo "Starting model training"
-	export FOLD=$* && export PLOT=true && python 03_classification/data_classify_with_preselection.py
+	rm -rf 03_classification/generated_plots/results_fold$*.txt || echo "failed"
+	export FOLD=$* && export PLOT=true && export METHOD=MLP && python 03_classification/data_classify_with_preselection.py
+	export FOLD=$* && export PLOT=true && export METHOD=SVC && python 03_classification/data_classify_with_preselection.py
+	export FOLD=$* && export PLOT=true && export METHOD=KNN && python 03_classification/data_classify_with_preselection.py
 
 run/%:
 	@echo "Searching $*"

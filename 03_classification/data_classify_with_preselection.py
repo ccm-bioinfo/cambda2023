@@ -26,17 +26,21 @@ import pandas as pd
 from sklearn.metrics import (accuracy_score, balanced_accuracy_score,
                              confusion_matrix, f1_score, precision_score,
                              recall_score, roc_auc_score)
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import PowerTransformer
+from sklearn.svm import SVC
 
 # constants
 FILENAME = "02_variable_selection/selected_variables_results/integrated_tables/reads_kingdoms_nb_integrated_tv.csv"
 SELECTION = "02_variable_selection/validation_set/train_val.csv"
 IMG_PATH = "03_classification/generated_plots"
+SEED = 42
 
 # check if the environment variable is set to plot
 ENV_PLOT = os.environ.get('PLOT', False)
 ENV_FOLD = os.environ.get('FOLD', "-")
+ENV_METHOD = os.environ.get('METHOD', "MLP")
 plt.rcParams["figure.figsize"] = (6,6)
 
 # data loading
@@ -71,7 +75,7 @@ if ENV_PLOT:
   if not os.path.exists(IMG_PATH):
     os.makedirs(IMG_PATH)
   # save the plot
-  plt.savefig(os.path.join(IMG_PATH, f"heatmap_fold{ENV_FOLD}.png"))
+  plt.savefig(os.path.join(IMG_PATH, f"heatmap_fold{ENV_FOLD}_{ENV_METHOD}.png"))
 
 # data selection --------------------------------------------------------------
 # read the preselected data list
@@ -91,7 +95,12 @@ val_y = [ t.split("_")[-2] for t in val_samples ]
 
 # data classification ---------------------------------------------------------
 # prepare the classifier
-clasif = MLPClassifier(hidden_layer_sizes=(200,),max_iter=1000, random_state=42)
+clasif = {
+  "MLP": MLPClassifier(hidden_layer_sizes=(200,),max_iter=1000, random_state=SEED, activation="tanh", solver="adam", batch_size=50),
+  "SVC": SVC(kernel="linear", random_state=SEED, probability=True, degree=2),
+  "KNN": KNeighborsClassifier(n_jobs=2, n_neighbors=2, weights="distance"),
+}
+clasif = clasif[ENV_METHOD]
 clasif.fit(train_X, train_y)
 # predict the validation data
 pred_y = clasif.predict(val_X)
@@ -102,10 +111,8 @@ def _print(txt):
     # export the results to a file
     with open(os.path.join(IMG_PATH, f"results_fold{ENV_FOLD}.txt"), "a") as f:
       f.write(txt+"\n")
-if os.path.exists(os.path.join(IMG_PATH, f"results_fold{ENV_FOLD}.txt")):
-  os.remove(os.path.join(IMG_PATH, f"results_fold{ENV_FOLD}.txt"))
 # print the results -----------------------------------------------------------
-_print(f"date: {datetime.datetime.now()}")
+_print(f"{ENV_METHOD} at {datetime.datetime.now()}")
 _print(f"Validation results (fold {ENV_FOLD}):" if ENV_FOLD!="-" else "Validation results:")
 _print("  - Number of training samples: {}".format(len(train_y)))
 _print("  - Number of validation samples: {}".format(len(val_y)))
@@ -139,6 +146,6 @@ if ENV_PLOT:
   if not os.path.exists(IMG_PATH):
     os.makedirs(IMG_PATH)
   # save the plot
-  plt.savefig(os.path.join(IMG_PATH, f"confusion_matrix_fold{ENV_FOLD}.png"))
+  plt.savefig(os.path.join(IMG_PATH, f"confusion_matrix_fold{ENV_FOLD}_{ENV_METHOD}.png"))
 
 pass
