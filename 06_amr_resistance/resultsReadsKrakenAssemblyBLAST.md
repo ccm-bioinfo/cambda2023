@@ -14,10 +14,10 @@ _Escherichia_, _Enterobacter_ or _Klebsiella_, by Kraken.
 - `city-list.txt` is the list of US cities.
 - `reads-amr-counts.tsv` is the table of AMR gene counts by city and
 genus from the reads. On GitHub, you can find it here:
-[`230628_reads_card_counts.tsv`](https://github.com/ccm-bioinfo/cambda2023/blob/main/06_amr_resistance/data/230628_reads_card_counts.tsv)
+[`230628_us_reads_card_counts.tsv`](https://github.com/ccm-bioinfo/cambda2023/blob/main/06_amr_resistance/data/230628_us_reads_card_counts.tsv)
 - `reads-amr-presence.tsv` is the presence-absence table. On GitHub,
 you can find it here:
-[`230628_reads_card_presence.tsv`](https://github.com/ccm-bioinfo/cambda2023/blob/main/06_amr_resistance/data/230628_reads_card_presence.tsv)
+[`230628_us_reads_card_presence.tsv`](https://github.com/ccm-bioinfo/cambda2023/blob/main/06_amr_resistance/data/230628_us_reads_card_presence.tsv)
 
 ## Steps
 
