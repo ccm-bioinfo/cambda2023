@@ -1,0 +1,546 @@
+	aro	BAL_En	BAL_Es	BAL_Kl	DEN_En	DEN_Es	DEN_Kl	MIN_En	MIN_Es	MIN_Kl	NYC_En	NYC_Es	NYC_Kl	SAC_En	SAC_Es	SAC_Kl	SAN_En	SAN_Es	SAN_Kl
+macB	3000535	1	0	1	1	0	1	0	0	1	1	1	1	0	0	0	0	1	0
+adeL	3000620	1	0	1	0	0	1	1	0	0	1	1	1	1	0	0	0	1	0
+mdtN	3003548	1	0	0	1	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Escherichia coli soxS with mutation conferring antibiotic resistance	3003511	1	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+patA	3000024	1	0	1	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+RanA	3005091	1	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+Acinetobacter baumannii AbaF	3004573	1	0	1	0	0	1	0	0	0	1	1	1	1	0	0	0	0	0
+Clostridioides difficile gyrB conferring resistance to fluoroquinolones	3004562	1	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+tetA(58)	3003980	1	0	1	0	1	1	0	0	0	1	1	1	1	0	0	0	1	0
+arlR	3000838	1	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Staphylococcus aureus mupA conferring resistance to mupirocin	3000521	1	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+bcrA	3002987	1	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+TxR	3005008	1	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+vanR gene in vanM cluster	3002928	1	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+emrR	3000516	1	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+salC	3007027	1	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+smeC	3003053	1	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+norB	3000421	1	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+optrA	3003746	1	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Acinetobacter baumannii AmvA	3004577	1	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+farB	3003962	1	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+AcrF	3000502	1	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Pseudomonas aeruginosa CpxR	3004054	1	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Staphylococcus aureus mupB conferring resistance to mupirocin	3000510	1	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+rosB	3003049	1	0	1	1	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+patB	3000025	1	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+gadX	3000508	1	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Escherichia coli fabI mutations conferring resistance to isoniazid and triclosan	3004045	1	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+Escherichia coli EF-Tu mutants conferring resistance to Pulvomycin	3003369	1	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+mreA	3007050	1	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+mdtP	3003550	1	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+mdtH	3001216	1	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+lmrD	3002882	1	0	1	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+lmrB	3002813	1	0	0	0	0	1	0	0	1	1	1	1	0	0	0	0	0	0
+tet(36)	3000197	1	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+facT	3001313	1	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+basS	3003583	1	0	1	1	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Rhodococcus fascians cmr	3002701	1	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+oqxB	3003923	1	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Borreliella burgdorferi murA with mutation conferring resistance to fosfomycin	3003777	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+lmrC	3002881	1	0	1	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+vanR gene in vanI cluster	3003728	1	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+mdtC	3000794	1	0	1	0	0	1	0	0	1	1	1	1	0	0	0	0	1	0
+oqxA	3003922	1	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+cpxA	3000830	1	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+cfrC	3004146	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+baeS	3000829	1	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+msrF	3005087	1	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+acrB	3000216	1	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+adeR	3000553	1	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+oleC	3003748	1	0	1	0	0	1	0	0	0	1	1	1	0	0	1	0	1	0
+bacA	3002986	1	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Bifidobacterium adolescentis rpoB mutants conferring resistance to rifampicin	3004480	0	1	0	0	1	1	0	0	0	1	1	1	1	0	1	0	0	0
+gadW	3003838	0	1	0	0	1	1	0	1	0	1	1	1	0	0	0	0	1	0
+Acinetobacter baumannii AbaQ	3004574	0	0	1	1	0	1	0	0	0	1	1	1	1	0	0	0	0	0
+NmcR	3003665	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+leuO	3003843	0	0	1	0	0	1	0	0	0	1	1	1	1	0	0	0	0	0
+kdpD	3004047	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+tet(X1)	3005166	0	0	1	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+almE	3007433	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+MexK	3003693	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+emrB	3000074	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+mdtB	3000793	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+golS	3000504	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	1	1
+TaeA	3003986	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+YojI	3003952	0	0	1	0	1	1	0	0	1	1	1	1	1	0	0	0	0	0
+Mycobacterium tuberculosis katG mutations conferring resistance to isoniazid	3003392	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+vanH gene in vanD cluster	3002944	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+vanH gene in vanM cluster	3002947	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+smeE	3003056	0	0	1	0	0	1	0	0	0	0	0	1	1	0	0	0	0	0
+Streptomyces rimosus otr(A)	3002891	0	0	1	0	0	1	0	0	1	1	1	1	0	0	0	0	0	0
+salD	3007028	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+MexS	3000813	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Helicobacter pylori pbp1 mutants conferring resistance to amoxicillin	3007060	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+cprR	3005063	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+mdtO	3003549	0	0	1	0	0	1	0	0	0	0	1	1	0	0	0	0	1	0
+tetB(46)	3004033	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+PmrF	3003578	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+tet(L)	3000179	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+mexQ	3003699	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+mecA	3000617	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+CRP	3000518	0	0	1	0	0	1	0	0	0	1	0	1	1	0	0	0	1	0
+carA	3002817	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+MexB	3000378	0	0	1	0	0	1	0	0	0	1	0	1	1	0	0	0	0	0
+MexD	3000801	0	0	1	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0
+lsaC	3003112	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+vanR gene in vanF cluster	3002925	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+poxtA	3004470	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+OprM	3000379	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+msbA	3003950	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+mdsB	3000790	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+tet(S)	3000192	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+ParR	3005068	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+OpmB	3004072	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+vanT gene in vanC cluster	3002970	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+ceoB	3003010	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+marA	3000263	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+TriA	3003679	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Bifidobacterium bifidum ileS conferring resistance to mupirocin	3003730	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+vatA	3002840	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+tlrC	3002827	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Helicobacter pylori pbp3 conferring resistance to amoxicillin	3007057	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+vanN	3002912	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+evgS	3000833	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+OmpA	3005044	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+tetA(60)	3004035	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+TriB	3003680	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+mdtG	3001329	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+APH(3')-Ia	3002641	0	0	1	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0
+vanH gene in vanB cluster	3002943	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+qacA	3003046	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+YajC	3005040	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+ArnT	3005053	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+catB8	3002680	0	0	1	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0
+vanH gene in vanF cluster	3002945	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+LlmA 23S ribosomal RNA methyltransferase	3003982	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+vanT gene in vanG cluster	3002972	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+srmB	3002828	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+vanT gene in vanE cluster	3002971	0	0	1	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+chrB	3001302	0	0	1	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+MexJ	3003692	0	0	1	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+nalC	3000818	0	0	1	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Escherichia coli AcrAB-TolC with AcrR mutation conferring resistance to ciprofloxacin, tetracycline, and ceftazidime	3003807	0	0	0	1	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+lfrA	3003967	0	0	0	1	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+TolC	3000237	0	0	0	1	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+apmA	3003918	0	0	0	1	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+bcr-1	3003801	0	0	0	0	1	1	0	0	0	1	1	1	0	0	0	0	0	0
+APH(3'')-Ib	3002639	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0
+sul1	3000410	0	0	0	0	1	0	0	0	0	0	1	1	0	0	0	0	0	0
+qacEdelta1	3005010	0	0	0	0	1	0	0	0	0	0	1	1	0	0	0	0	0	0
+Klebsiella pneumoniae OmpK37	3004122	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+acrD	3000491	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+novA	3002522	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+ParS	3005067	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+cmlv	3002700	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+arnA	3002985	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+kdpE	3003841	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+MdtK	3001327	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+mtrA	3000816	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+macA	3000533	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+farA	3003961	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+AcrE	3000499	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+otr(B)	3002892	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+MexT	3000814	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+LptD	3005059	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+tsnR	3003060	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+rphB	3003992	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+vanG	3002909	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+mdtM	3001214	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+smeS	3003067	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+eptB	3005047	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+baeR	3000828	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+evgA	3000832	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+TriC	3003681	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Klebsiella pneumoniae KpnG	3004588	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+eptA	3003576	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+ugd	3003577	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+ramA	3000823	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+smeF	3003057	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+iri	3002884	0	0	0	0	0	1	0	0	0	0	1	1	0	0	0	0	0	0
+vmlR	3004476	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+MuxA	3004073	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Streptomyces venezuelae rox	3007209	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+tetB(60)	3004036	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Escherichia coli mdfA	3001328	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Mycobacterium tuberculosis kasA mutant conferring resistance to isoniazid	3003463	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+dfrA3	3003105	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+vatF	3003744	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+sdiA	3000826	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+tetB(P)	3000195	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+smeR	3003066	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Staphylococcus aureus GlpT with mutation conferring resistance to fosfomycin	3003901	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Staphylococcus aureus murA with mutation conferring resistance to fosfomycin	3003776	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Mycobacterium tuberculosis thyA with mutation conferring resistance to para-aminosalicylic acid	3004153	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+pmrA	3000822	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+vatH	3002845	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+vanR gene in vanG cluster	3002926	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+hp1181	3003964	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+cmx	3002703	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+AAC(6')-Isa	3002563	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+efpA	3003955	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+msrE	3003109	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0
+vatB	3002841	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Erm(30)	3001265	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0
+vanH gene in vanP cluster	3007188	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+MexF	3000804	0	0	0	0	0	1	0	0	0	1	0	1	1	0	0	0	0	0
+basR	3003582	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+rpoB2	3000501	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+mdtA	3000792	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+nalD	3000819	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+emrY	3000254	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+sul4	3004361	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Escherichia coli soxR with mutation conferring antibiotic resistance	3003381	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Nocardia farcinica rox	3007210	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0
+H-NS	3000676	0	0	0	0	0	1	0	0	0	1	0	1	1	0	0	0	0	0
+Klebsiella pneumoniae acrA	3004041	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Klebsiella pneumoniae KpnH	3004597	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+vanH gene in vanO cluster	3002948	0	0	0	0	0	1	0	0	0	1	0	1	0	0	1	0	0	0
+efrA	3003948	0	0	0	0	0	1	0	0	0	1	0	1	1	0	0	0	0	0
+vanH gene in vanA cluster	3002942	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+hmrM	3003953	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+PAC-1	3005150	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+efrB	3003949	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+vanR gene in vanL cluster	3002927	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+vanT gene in vanN cluster	3002975	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0
+mgrA	3000815	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+norC	3007010	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+LpsB	3005051	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+MexC	3000800	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0
+vanC	3000368	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+RlmA(II)	3001301	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0
+MexA	3000377	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+rosA	3003048	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+mexN	3003705	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+PmpM	3004077	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+otr(C)	3002894	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+SatA	3005045	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+mexM	3003704	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+abeM	3000753	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	1
+Staphylococcus aureus fusA with mutation conferring resistance to fusidic acid	3003735	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+ykkD	3003064	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+vanP	3007189	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+Erm(34)	3000600	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+mecC	3001209	0	0	0	0	0	1	0	0	0	0	1	1	0	0	0	0	0	0
+Mycobacterium tuberculosis ndh with mutation conferring resistance to isoniazid	3003461	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Mycobacterium tuberculosis pncA mutations conferring resistance to pyrazinamide	3003394	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Mycobacterium tuberculosis gidB mutation conferring resistance to streptomycin	3003470	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Helicobacter pylori frxA mutation conferring resistance to metronidazole	3007059	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+Escherichia coli UhpT with mutation conferring resistance to fosfomycin	3003890	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Mycobacterium tuberculosis rpsA mutations conferring resistance to pyrazinamide	3004721	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Helicobacter pylori rdxA mutation conferring resistance to metronidazole	3007055	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	1	0
+Mycobacterium tuberculosis inhA mutations conferring resistance to isoniazid	3003393	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+Klebsiella pneumoniae acrR with mutation conferring multidrug antibiotic resistance	3003373	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Escherichia coli EF-Tu mutants conferring resistance to kirromycin	3003368	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Enterococcus faecium cls conferring resistance to daptomycin	3003092	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Escherichia coli AcrAB-TolC with MarR mutations conferring resistance to ciprofloxacin and tetracycline	3003378	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	1	0
+Klebsiella pneumoniae KpnE	3004580	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Morganella morganii gyrB conferring resistance to fluoroquinolones	3003306	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+qacJ	3007014	0	0	0	0	0	1	0	0	0	1	0	1	0	1	0	0	0	0
+vanS gene in vanM cluster	3002939	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+tet(X4)	3004720	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+SAT-3	3002898	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+rsmA	3005069	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+tet(T)	3000193	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+salE	3007029	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0
+msrH	3005088	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+vanR gene in vanA cluster	3002919	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+QepA2	3004103	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+vanR gene in vanN cluster	3002929	0	0	0	0	0	1	0	0	0	1	0	0	1	0	0	0	0	0
+ALG11-1	3006892	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0
+cmlB	3002698	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+CMY-51	3002062	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0
+tet(39)	3000566	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+mtrE	3000812	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+tet(43)	3000573	0	0	0	0	0	1	0	0	0	1	0	1	1	0	0	0	0	0
+MexV	3003030	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Brucella suis mprF	3003772	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+tet(35)	3000481	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0
+adeG	3000778	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+mef(D)	3005089	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+RanB	3005090	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Staphylococcus aureus norA	3004667	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+QepA4	3004379	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+adeJ	3000781	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Helicobacter pylori pbp2 mutants conferring resistance to amoxicillin	3007058	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+PDC-437	3006806	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+fexA	3002704	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+ceoA	3003009	0	0	0	0	0	1	0	0	0	0	1	1	0	0	0	0	0	0
+amrB	3002983	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+AAC(6')-Iy	3002569	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0
+mexP	3003698	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0
+vatC	3002842	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+qacL	3005098	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	1	0
+bmr	3003007	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+cmeC	3000785	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+cmrA	3002702	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Planobispora rosea EF-Tu mutants conferring resistance to inhibitor GE2270A	3003361	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+pp-flo	3002812	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0
+vgaC	3002831	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0
+msr(I)	3007043	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0
+tet(56)	3004603	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0
+lsaE	3003206	0	0	0	0	0	1	0	0	0	0	1	1	0	0	0	0	0	0
+smeD	3003055	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0
+Corynebacterium striatum tetA	3004639	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+Chlamydia trachomatis intrinsic murA conferring resistance to fosfomycin	3003785	0	0	0	0	0	1	0	0	0	1	1	1	0	0	1	0	0	0
+OXY-2-4	3002399	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+tet(41)	3000569	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0
+MexW	3003031	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+vanR gene in vanE cluster	3002924	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+cmlA9	3005043	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+mecD	3004185	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+clbB	3002815	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+Haemophilus influenzae PBP3 conferring resistance to beta-lactam antibiotics	3004446	0	0	0	0	0	1	0	0	0	1	1	1	0	0	0	0	0	0
+AcrS	3000656	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+smeA	3003051	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+mepR	3000746	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+lsaA	3000300	0	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0
+SST-1	3006999	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+MexH	3000807	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+vanO	3002913	0	0	0	0	0	1	0	0	0	1	0	1	0	0	0	0	0	0
+fosA5	3003209	0	0	0	0	0	1	0	0	0	0	0	1	0	0	0	0	0	0
+Enterobacter cloacae acrA	3004042	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+tetA(46)	3004032	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+fexB	3007019	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+sta	3004699	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+arlS	3000839	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+OprN	3000805	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+MexR	3000506	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+tet(W/32/O)	3007124	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+Staphylococcus aureus pgsA mutations conferring resistance to daptomycin	3003323	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+Clostridioides difficile gyrA conferring resistance to fluoroquinolones	3003995	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+Neisseria gonorrhoeae PBP2 conferring resistance to beta-lactam antibiotics	3004832	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+Neisseria gonorrhoeae pilQ gene conferring resistance to beta-lactam	3004835	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0
+tet(X)	3000205	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+MSI-1	3003718	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+Helicobacter pylori rpoB mutation conferring resistance to rifampicin	3007051	0	0	0	0	0	0	0	0	0	1	1	1	1	0	0	0	0	0
+emrA	3000027	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+tcr3	3002893	0	0	0	0	0	0	0	0	0	1	1	1	0	0	1	0	0	0
+tet(M)	3000186	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+vanS gene in vanG cluster	3002937	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+tet(A)	3000165	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+CrcB	3005049	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+vanR gene in vanB cluster	3002921	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	1	0
+MuxC	3004075	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+Agrobacterium fabrum chloramphenicol acetyltransferase	3004451	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+MexL	3003710	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+catA4	3004657	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+mefE	3000614	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+oleB	3003036	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+Enterococcus faecalis cls with mutation conferring resistance to daptomycin	3003760	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+PNGM-1	3004571	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+OprZ	3004142	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+Klebsiella pneumoniae KpnF	3004583	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+mepA	3000026	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+Staphylococcus aureus fusE with mutation conferring resistance to fusidic acid	3003737	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0
+Salmonella serovars soxS with mutation conferring antibiotic resistance	3003383	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+adeF	3000777	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+vanX gene in vanM cluster	3002953	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+LRA-2	3002485	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+vanR gene in vanO cluster	3002930	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+OprA	3003039	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+catB9	3002681	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+SAT-2	3002895	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+adeH	3000779	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+tet(V)	3000181	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+tet(47)	3004613	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+FosA2	3002804	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+FosC2	3002874	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+Streptomyces lividans otr(A)	3007127	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+vanR gene in vanC cluster	3002922	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+adeB	3000775	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+FosB6	3004673	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+tet(W)	3000194	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	1	0
+adeN	3000559	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+tet(O/W)	3007121	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+AAC(6')-If	3002553	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+tap	3000343	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+Escherichia coli parE conferring resistance to fluoroquinolones	3003316	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+Mycobacterium tuberculosis gyrB mutant conferring resistance to fluoroquinolones	3003459	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+vanS gene in vanN cluster	3002940	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+opmE	3003700	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+aacA43	3004641	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+LRA-19	3002513	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+Streptococcus pneumoniae PBP2x conferring resistance to amoxicillin	3003043	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+Enterococcus faecium liaR mutant conferring daptomycin resistance	3003078	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+vanE	3002907	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+vanS gene in vanF cluster	3002936	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+salB	3007026	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+CMY-169	3006461	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+cmlA8	3004665	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+MOX-9	3002191	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+mel	3000616	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+mdtF	3000796	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+tva(A)	3004730	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+vanS gene in vanC cluster	3002933	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+Escherichia coli acrA	3004043	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0
+Klebsiella aerogenes Omp36	3003385	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+AIM-1	3000853	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+Escherichia coli EF-Tu mutants conferring resistance to Enacyloxin IIa	3003370	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+vanS gene in vanL cluster	3002938	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+PEDO-2	3003714	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+mecB	3003440	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+vatE	3002844	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+tet(X6)	3005056	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0
+DHA-6	3002135	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+vgaD	3002832	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+Mycobacterium tuberculosis rpoB mutants conferring resistance to rifampicin	3003283	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+MCR-8.3	3007227	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+emrK	3000206	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+Escherichia coli uhpA with mutation conferring resistance to fosfomycin	3003893	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+GOB-18	3004213	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+adeS	3000549	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+GOB-12	3004804	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+BahA	3003984	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+GOB-46	3005695	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+CMY-144	3005219	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+vanS gene in vanB cluster	3002932	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+Clostridioides difficile rpoB with mutation conferring resistance to rifampicin	3004563	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+LRA-9	3002488	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+clbC	3002816	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+PDC-90	3004353	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+oleI	3000866	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+rphA	3000444	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+Escherichia coli GlpT with mutation conferring resistance to fosfomycin	3003889	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+Klebsiella pneumoniae ramR mutants	3003380	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+THIN-B	3000851	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+MexE	3000803	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+tet(O/W/O)	3007123	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+Mycolicibacterium smegmatis ndh with mutation conferring resistance to isoniazid	3003778	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+PDC-241	3006619	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+ACT-24	3001844	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+AAC(6')-Iz	3002570	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+MCR-9.1	3004684	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+MuxB	3004074	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+mtrC	3000810	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+ACC-3	3001817	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+tet(O/W/32/O)	3007122	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+RUB-1	3006984	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+AAC(3)-Ic	3002531	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+vanX gene in vanP cluster	3007190	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+OprJ	3000802	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+cmlA6	3002696	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+tet(H)	3000175	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+cmeB	3000784	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+ACT-8	3001831	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+tet(32)	3000196	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+CTX-M-25	3001887	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+norA	3000391	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+MCR-10.2	3007277	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+Pseudomonas aeruginosa emrE	3004038	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+vatD	3002843	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0
+tet(X3)	3004719	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+DHA-29	3006470	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0
+tet(30)	3000561	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+tet(45)	3003196	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+mtrD	3000811	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+MCR-10.3	3007275	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+ACT-83	3006277	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+mexY	3003033	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+AAC(6')-Iap	3007204	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+catI	3002683	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+cmeR	3000526	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+msr(G)	3007042	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+mefJ	3007049	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+oleD	3000865	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+cfr(D)	3005021	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0
+cfrE	3005023	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0
+DHA-17	3002148	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+ACT-74	3006268	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+sdrM	3007013	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+AAC(6')-Ib8	3002579	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+qacB	3003047	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+D-Ala-D-Ala ligase	3003970	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+ACT-1	3001821	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+tet(52)	3004587	0	0	0	0	0	0	0	0	0	1	1	1	0	0	0	0	0	0
+QepA1	3000448	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+dfrA12	3002858	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+vgaB	3000118	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+PAM-3	3007201	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+POM-1	3006974	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+ACT-21	3001842	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+tet(O/32/O)	3007119	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+myrA	3001300	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+Streptomyces lividans cmlR	3002690	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+SPR-1	3006996	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+GMB-1	3006889	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+DHT2-1	3006872	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+vgaALC	3002830	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+lin	3004651	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+tet(40)	3000567	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+MCR-3.22	3007259	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+Bla2	3004189	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+PEDO-1	3003670	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+Salmonella enterica cmlA	3002691	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+CAR-1	3006903	0	0	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+floR	3002705	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+OXA-296	3001751	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+mphE	3003741	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0
+Mycobacterium leprae gyrA conferring resistance to fluoroquinolones	3003298	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+vanS gene in vanP cluster	3007192	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0
+Bartonella bacilliformis gyrB conferring resistance to aminocoumarin	3003302	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+sul2	3000412	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0
+vanS gene in vanA cluster	3002931	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+TEM-98	3006139	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+lnuG	3004085	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+aadA17	3002617	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+PDC-73	3004336	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+vanTr gene in vanL cluster	3002974	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+mdtE	3000795	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+aadA24	3002621	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+tet(X5)	3005057	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+vanL	3002910	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	1	0
+mefF	3007044	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+MCR-5.2	3004698	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+APH(6)-Id	3002660	0	0	0	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0
+aadA5	3002605	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+Neisseria gonorrhoeae 23S rRNA with mutation conferring resistance to azithromycin	3004836	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+FosA6	3004111	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+Vibrio cholerae varG	3004289	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+salA	3003749	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+MexI	3000808	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+cfrA	3003441	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+MexG	3000806	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+IMP-41	3002232	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+EFM-1	3006884	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+emeA	3003551	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+vanR gene in vanD cluster	3002923	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+SRT-1	3002493	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+CRD3-1	3006864	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+OXA-514	3005744	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+ELM-1	3006885	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+mfpA	3003035	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+MexZ	3003709	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+dfr22	3005354	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+qacE	3005009	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+Neisseria gonorrhoeae gyrB conferring resistance to zoliflodacin	3004859	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+tet(W/N/W)	3004442	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+AAC(6')-Iak	3003199	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+OXA-163	3001783	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+Type A NfxB	3004059	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+SHV-50	3001107	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+vgaA	3002829	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+SHV-132	3001341	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+qacG	3007015	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+Erm(41)	3000603	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+lsaD	3005121	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+QnrB46	3002761	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+abeS	3000768	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+PJM-1	3007374	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+erm(45)	3004595	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+vanR gene in vanP cluster	3007191	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+FosA8	3007371	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+msrA	3000251	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+Escherichia coli emrE	3004039	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+vanF	3002908	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+CMY-109	3002121	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+Staphylococcus aureus LmrS	3004572	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+tet(50)	3004584	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+tet(Z)	3000183	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+LEN-13	3002463	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+bcrC	3003250	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+ACT-44	3006239	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0
+Shigella flexneri parC conferring resistance to fluoroquinolones	3003941	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+ErmC	3000250	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
+MCR-5.3	3007282	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0
