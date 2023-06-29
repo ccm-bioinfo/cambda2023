@@ -29,9 +29,12 @@ from sklearn.metrics import accuracy_score, balanced_accuracy_score, f1_score, p
 # constants
 FILENAME = "02_variable_selection/selected_variables_results/integrated_tables/reads_kingdoms_nb_integrated_tv.csv"
 SELECTION = "02_variable_selection/validation_set/train_val.csv"
+IMG_PATH = "03_classification/generated_plots"
 
 # check if the environment variable is set to plot
 ENV_PLOT = os.environ.get('PLOT', False)
+ENV_FOLD = os.environ.get('FOLD', "-")
+plt.rcParams["figure.figsize"] = (6,6)
 
 # data loading
 sep = {"csv": ",", "tsv": "\t"}[FILENAME.split('.')[-1]]
@@ -53,11 +56,19 @@ if ENV_PLOT:
   # get the row names
   rows = [ c for c in df.columns if c.startswith("CAMDA")]
   rows = [ "_".join(c.split("_")[-3:-1]) for c in rows ]
+  rows = [ f"{r[-3:]}_{r[-6:-4]}" for r in rows ]
   rows = [ (i,c) for i,c in enumerate(rows) ]
   # for each repeated c keep only the first one
   rows = [ (i,c) for i,c in rows if c not in [c2 for i2,c2 in rows[:i] if c2==c] ]
   plt.yticks(*zip(*rows))
+  # change left and right margins
+  plt.subplots_adjust(left=0, right=1)
   #plt.show()
+  # verify the save path exists
+  if not os.path.exists(IMG_PATH):
+    os.makedirs(IMG_PATH)
+  # save the plot
+  plt.savefig(os.path.join(IMG_PATH, f"heatmap_fold{ENV_FOLD}.png"))
 
 # data selection ----------------------------------------------------------------
 # read the preselected data list
@@ -92,5 +103,29 @@ print("  - Accuracy: {}".format(accuracy_score(val_y, pred_y)))
 print("  - Balanced accuracy: {}".format(balanced_accuracy_score(val_y, pred_y)))
 print("  - F1 score: {}".format(f1_score(val_y, pred_y, average='weighted')))
 
+# confusion matrix --------------------------------------------------------------
+if ENV_PLOT:
+  cm = confusion_matrix(val_y, pred_y)
+  plt.matshow(cm, cmap=plt.cm.Blues)
+  plt.colorbar()
+  # annotate the confusion matrix
+  for i in range(cm.shape[0]):
+    for j in range(cm.shape[1]):
+      if cm[i,j] > 0:
+        plt.text(j, i, cm[i, j], va='center', ha='center')
+  # annotate the axes
+  plt.ylabel('True label')
+  plt.xlabel('Predicted label')
+  # Add row and column labels ()
+  labels = list(set(val_y))
+  labels.sort()
+  plt.xticks(range(len(labels)), labels, rotation=90)
+  plt.yticks(range(len(labels)), labels)
+  plt.show()
+  # verify the save path exists
+  if not os.path.exists(IMG_PATH):
+    os.makedirs(IMG_PATH)
+  # save the plot
+  plt.savefig(os.path.join(IMG_PATH, f"confusion_matrix_fold{ENV_FOLD}.png"))
 
 pass
