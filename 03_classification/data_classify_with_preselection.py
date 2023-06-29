@@ -17,14 +17,17 @@ Environment variables:
   - PLOT: if set to True, the plots are shown
 """
 
+import datetime
 import os
 import sys
 
 import matplotlib.pyplot as plt
 import pandas as pd
-from sklearn.preprocessing import PowerTransformer
+from sklearn.metrics import (accuracy_score, balanced_accuracy_score,
+                             confusion_matrix, f1_score, precision_score,
+                             recall_score, roc_auc_score)
 from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import accuracy_score, balanced_accuracy_score, f1_score, precision_score, recall_score, roc_auc_score, confusion_matrix
+from sklearn.preprocessing import PowerTransformer
 
 # constants
 FILENAME = "02_variable_selection/selected_variables_results/integrated_tables/reads_kingdoms_nb_integrated_tv.csv"
@@ -40,7 +43,7 @@ plt.rcParams["figure.figsize"] = (6,6)
 sep = {"csv": ",", "tsv": "\t"}[FILENAME.split('.')[-1]]
 df = pd.read_csv(FILENAME, sep=sep, header=0)
 
-# data preconditioning ---------------------------------------------------------
+# data preconditioning --------------------------------------------------------
 # get all the cells from second column to the last column
 # and all the rows from the fist row to the last row
 data = df.iloc[:, 1:].values
@@ -70,7 +73,7 @@ if ENV_PLOT:
   # save the plot
   plt.savefig(os.path.join(IMG_PATH, f"heatmap_fold{ENV_FOLD}.png"))
 
-# data selection ----------------------------------------------------------------
+# data selection --------------------------------------------------------------
 # read the preselected data list
 sep = {"csv": ",", "tsv": "\t"}[SELECTION.split('.')[-1]]
 df_sel = pd.read_csv(SELECTION, sep=sep, header=0)
@@ -86,24 +89,34 @@ train_y = [ t.split("_")[-2] for t in train_samples ]
 val_X = df.loc[:, val_samples].values.T
 val_y = [ t.split("_")[-2] for t in val_samples ]
 
-# data classification -----------------------------------------------------------
+# data classification ---------------------------------------------------------
 # prepare the classifier
 clasif = MLPClassifier(hidden_layer_sizes=(200,),max_iter=1000, random_state=42)
 clasif.fit(train_X, train_y)
 # predict the validation data
 pred_y = clasif.predict(val_X)
-# print the results
-print("Validation results:")
-print("  - Number of training samples: {}".format(len(train_y)))
-print("  - Number of validation samples: {}".format(len(val_y)))
-print("    - Ratio of training samples: {}".format(len(train_y)/(len(val_y)+len(train_y))))
-print("    - Number of correct predictions: {}".format(sum([1 for i in range(len(val_y)) if val_y[i]==pred_y[i]])))
-print("    - Number of incorrect predictions: {}".format(sum([1 for i in range(len(val_y)) if val_y[i]!=pred_y[i]])))
-print("  - Accuracy: {}".format(accuracy_score(val_y, pred_y)))
-print("  - Balanced accuracy: {}".format(balanced_accuracy_score(val_y, pred_y)))
-print("  - F1 score: {}".format(f1_score(val_y, pred_y, average='weighted')))
+# prepare data printing -------------------------------------------------------
+def _print(txt):
+  print(txt)
+  if ENV_PLOT:
+    # export the results to a file
+    with open(os.path.join(IMG_PATH, f"results_fold{ENV_FOLD}.txt"), "a") as f:
+      f.write(txt+"\n")
+if os.path.exists(os.path.join(IMG_PATH, f"results_fold{ENV_FOLD}.txt")):
+  os.remove(os.path.join(IMG_PATH, f"results_fold{ENV_FOLD}.txt"))
+# print the results -----------------------------------------------------------
+_print(f"date: {datetime.datetime.now()}")
+_print(f"Validation results (fold {ENV_FOLD}):" if ENV_FOLD!="-" else "Validation results:")
+_print("  - Number of training samples: {}".format(len(train_y)))
+_print("  - Number of validation samples: {}".format(len(val_y)))
+_print("    - Ratio of training samples: {}".format(len(train_y)/(len(val_y)+len(train_y))))
+_print("    - Number of correct predictions: {}".format(sum([1 for i in range(len(val_y)) if val_y[i]==pred_y[i]])))
+_print("    - Number of incorrect predictions: {}".format(sum([1 for i in range(len(val_y)) if val_y[i]!=pred_y[i]])))
+_print("  - Accuracy: {}".format(accuracy_score(val_y, pred_y)))
+_print("  - Balanced accuracy: {}".format(balanced_accuracy_score(val_y, pred_y)))
+_print("  - F1 score: {}".format(f1_score(val_y, pred_y, average='weighted')))
 
-# confusion matrix --------------------------------------------------------------
+# confusion matrix ------------------------------------------------------------
 if ENV_PLOT:
   cm = confusion_matrix(val_y, pred_y)
   plt.matshow(cm, cmap=plt.cm.Blues)
@@ -121,7 +134,7 @@ if ENV_PLOT:
   labels.sort()
   plt.xticks(range(len(labels)), labels, rotation=90)
   plt.yticks(range(len(labels)), labels)
-  plt.show()
+  #plt.show()
   # verify the save path exists
   if not os.path.exists(IMG_PATH):
     os.makedirs(IMG_PATH)

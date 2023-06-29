@@ -5,6 +5,7 @@ number of samples from each city/year combination
 """
 
 import random
+import sys
 from random import sample
 
 import pandas as pd
@@ -17,6 +18,10 @@ FOLDS, FOLD = 5, 0
 
 # set the seed for reproducibility
 random.seed(42)
+
+# fold overwrite
+if len(sys.argv) > 1:
+  FOLD = int(sys.argv[1])
 
 # open the file and retrieve the samples' names
 sep = {"csv": ",", "tsv": "\t"}[FILENAME.split('.')[-1]]

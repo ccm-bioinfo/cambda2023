@@ -3,6 +3,16 @@ clasify:
 	echo "Starting classification"
 	cd 03_classification && make run
 
+fold%:
+	@echo "Starting data partitioning"
+	python 03_classification/samples_selection.py $*
+	@echo "Starting variables selection"
+	cd 02_variable_selection/codes && bash nb_with_training.sh || echo "failed"
+	@echo "Starting model training"
+	@date >> log
+	@echo "Starting model training (fold $*)" >> log
+	export FOLD=$* && export PLOT=true && python 03_classification/data_classify_with_preselection.py
+
 run/%:
 	@echo "Searching $*"
 	@[[ -f $* ]] && echo "file exists" || echo "file does not exist, verify the name"
