@@ -3,14 +3,23 @@ clasify:
 	echo "Starting classification"
 	cd 03_classification && make run
 
-fold%:
+all_folds:
+	make 03_classification/generated_plots/results_fold4.txt
+	make 03_classification/generated_plots/results_fold3.txt
+	make 03_classification/generated_plots/results_fold2.txt
+	make 03_classification/generated_plots/results_fold1.txt
+	make 03_classification/generated_plots/results_fold0.txt
+	@echo "All folds finished"
+
+03_classification/generated_plots/results_fold%.txt: fold%
+	@echo "Fold $* completed"
+
+fold%: 03_classification/data_classify_with_preselection.py
 	@echo "Starting data partitioning"
 	python 03_classification/samples_selection.py $*
 	@echo "Starting variables selection"
 	cd 02_variable_selection/codes && bash nb_with_training.sh || echo "failed"
 	@echo "Starting model training"
-	@date >> log
-	@echo "Starting model training (fold $*)" >> log
 	export FOLD=$* && export PLOT=true && python 03_classification/data_classify_with_preselection.py
 
 run/%:
