@@ -46,19 +46,6 @@ else
   echo $(date +"%D %T:") Skipping MinPath Github repository cloning.
 fi
 
-# If kofamscan hasn't been downloaded yet
-if [[ ! -d software/standalone/kofamscan/ ]]; then
-  echo $(date +"%D %T:") Cloning kofam_scan GitHub repository.
-  
-  # Clone repository and set to specific commit ID for reproducibility
-  git clone https://github.com/takaram/kofam_scan/ software/standalone/kofamscan
-  cd software/standalone/kofamscan
-  git checkout 62cee3943aa28b96f498150f5e0bb2d7c498e648
-  cd ../../..
-else
-  echo $(date +"%D %T:") Skipping kofam_scan Github repository cloning.
-fi
-
 # If mifaser hasn't been downloaded yet
 if [[ ! -d software/standalone/mifaser/ ]]; then
   echo $(date +"%D %T:") Cloning mifaser Bitbucket repository.
@@ -69,5 +56,5 @@ if [[ ! -d software/standalone/mifaser/ ]]; then
   git checkout 8012b2676eb3d2548db569191d19c0da9f64330c
   cd ../../..
 else
-  echo $(date +"%D %T:") Skipping kofam_scan Bitbucket repository cloning.
+  echo $(date +"%D %T:") Skipping mifaser Bitbucket repository cloning.
 fi
