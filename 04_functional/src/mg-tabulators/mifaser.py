@@ -27,9 +27,22 @@ def load_file(file):
     )
     return dict(data)
 
-table = pd.DataFrame({file.parent.stem: load_file(file) for file in inp})
-for j in range(0, 4):
+# Create complete table
+table = pd.DataFrame(
+    {file.parent.stem: load_file(file) for file in inp}
+).fillna(0)
+
+# Save tables by level
+for j in range(1, 5):
     partial = table.copy()
-    partial["index"] = table.index.str.rsplit(".", n=j).str.get(0)
-    print(partial)
-    break
+    if j != 4:
+        partial["index"] = table.index.str.rsplit(".", n=4-j).str.get(0)
+        partial = partial.groupby("index").sum()
+    partial = partial.T
+    partial["City"] = partial.index.str[23:26]
+    cols = ["City"] + list(partial.columns[:-1])
+    partial = partial.reindex(columns=cols).sort_index()
+    partial.columns.name = ""
+    partial.to_csv(out/f"lvl{j}.tsv", sep="\t", index=True)
+
+print()
