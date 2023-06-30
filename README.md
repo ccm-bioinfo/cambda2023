@@ -33,7 +33,7 @@ Taxonomical data tables
   - [Cummulative scaled tables](https://github.com/ccm-bioinfo/cambda2023/tree/main/funcional/data/metagenomic/tables/metacyc/cummulative/scaled)
 - [Mi-Faser tables](https://github.com/ccm-bioinfo/cambda2023/tree/main/funcional/data/metagenomic/tables/mifaser) (100% complete; to be run with a large database)
 - [KEGG table](https://github.com/ccm-bioinfo/cambda2023/blob/main/funcional/data/metagenomic/tables/kegg.tsv) (74.79% complete)
-- [UniProt table (compressed)](https://github.com/ccm-bioinfo/cambda2023/blob/main/funcional/data/metagenomic/tables/uniprot.tsv.gz) (96.44% complete)
+- [UniProt table (compressed)](https://github.com/ccm-bioinfo/cambda2023/blob/main/funcional/data/metagenomic/tables/uniprot.tsv.gz) (100% complete)
 - [VFDB table (compressed)](https://github.com/ccm-bioinfo/cambda2023/blob/main/funcional/data/metagenomic/tables/vfdb.tsv.gz) (100% complete)
 
 ### Resistance Table   
