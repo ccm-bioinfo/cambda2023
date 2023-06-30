@@ -301,6 +301,25 @@ Thus, we created a single abundance table for each E.C. level and saved into
 `data/metagenomic/tables/mifaser/lvl{1..4}.tsv`, all of which is accomplished
 with the `src/mg-tabulators/mifaser.sh` script.
 
+#### KEGG
+
+The `src/mg-tabulators/kegg.sh` script produces a single abundance table from
+the outputs of `src/mg-annotators/kegg.sh`, using only the rows that start with
+an asterisk (`*`), which correspond to annotations with the highest confidence
+levels. The table can be found in `data/metagenomic/tables/kegg.tsv`.
+
+#### UniProt and VFDB
+
+Because both UniProt and VFDB annotations were performed with BLAST, their
+outputs have an identical structure and, thus, their tabulation scripts
+(`src/mg-tabulators/uniprot.py` and `src/mg-tabulators/vfdb.py`) are similar.
+To create the abundance tables, we only kept BLAST results with a sequence
+identity greater than 80%. Furthermore, because the amount of results is large,
+the tabulation process is run on multiple processors, and the final tables are
+gzip-compressed (meaning that their extension is `.tsv.gz`). These tables are
+located in `data/metagenomic/tables/uniprot.tsv.gz` and
+`data/metagenomic/tables/vfdb.tsv.gz`.
+
 ### 1.3. Model training
 
 First we performed a stratified k-fold split on the data to get a representative subset of the 15% of the entire dataset which was assigned to be our testing set.
