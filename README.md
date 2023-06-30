@@ -26,15 +26,15 @@ Taxonomical data tables
 
 ### Functional Analysis
 
-- MetaCyc: (100% complete)
+- MetaCyc:
   - [Noncummulative unscaled tables](https://github.com/ccm-bioinfo/cambda2023/tree/main/funcional/data/metagenomic/tables/metacyc/noncummulative/unscaled)
   - [Noncummulative scaled tables](https://github.com/ccm-bioinfo/cambda2023/tree/main/funcional/data/metagenomic/tables/metacyc/noncummulative/scaled)
   - [Cummulative unscaled tables](https://github.com/ccm-bioinfo/cambda2023/tree/main/funcional/data/metagenomic/tables/metacyc/cummulative/unscaled)
   - [Cummulative scaled tables](https://github.com/ccm-bioinfo/cambda2023/tree/main/funcional/data/metagenomic/tables/metacyc/cummulative/scaled)
-- [Mi-Faser tables](https://github.com/ccm-bioinfo/cambda2023/tree/main/funcional/data/metagenomic/tables/mifaser) (100% complete; to be run with a large database)
-- [KEGG table](https://github.com/ccm-bioinfo/cambda2023/blob/main/funcional/data/metagenomic/tables/kegg.tsv) (74.79% complete)
-- [UniProt table (compressed)](https://github.com/ccm-bioinfo/cambda2023/blob/main/funcional/data/metagenomic/tables/uniprot.tsv.gz) (100% complete)
-- [VFDB table (compressed)](https://github.com/ccm-bioinfo/cambda2023/blob/main/funcional/data/metagenomic/tables/vfdb.tsv.gz) (100% complete)
+- [Mi-Faser tables](https://github.com/ccm-bioinfo/cambda2023/tree/main/funcional/data/metagenomic/tables/mifaser)
+- [KEGG table](https://github.com/ccm-bioinfo/cambda2023/blob/main/funcional/data/metagenomic/tables/kegg.tsv)
+- [UniProt table (compressed)](https://github.com/ccm-bioinfo/cambda2023/blob/main/funcional/data/metagenomic/tables/uniprot.tsv.gz)
+- [VFDB table (compressed)](https://github.com/ccm-bioinfo/cambda2023/blob/main/funcional/data/metagenomic/tables/vfdb.tsv.gz)
 
 ### Resistance Table   
 [Original table from mysterious sample](01_preprocessing/amr_patterns.tsv)  
