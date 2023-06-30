@@ -252,7 +252,17 @@ corresponding annotation pipeline (for example, `src/mg-tabulators/kegg.py`
 creates the abundance table from `src/mg-annotators/kegg.sh` outputs). All
 tables follow a similar structure: every row corresponds to a sample, the first
 column (named `City`) is the label for prediction, and the rest of the columns
-contain individual annotation attributes.
+contain individual annotation attributes. For instance, the following is a
+subsection of the KEGG abundance table:
+
+| |City|K01489|K09902|K03551|K01653|K01726|
+|:--|:--|:--|:--|:--|:--|:--|
+|CAMDA23_MetaSUB_gCSD16_AKL_1|AKL|8|0|6|4|2|
+|CAMDA23_MetaSUB_gCSD16_AKL_2|AKL|0|1|1|1|2|
+|CAMDA23_MetaSUB_gCSD16_AKL_3|AKL|7|3|5|5|5|
+|CAMDA23_MetaSUB_gCSD16_BER_1|BER|1|1|0|3|1|
+|CAMDA23_MetaSUB_gCSD16_BER_2|BER|1|0|1|1|0|
+|CAMDA23_MetaSUB_gCSD16_BER_3|BER|0|0|1|0|0|
 
 #### MetaCyc
 
