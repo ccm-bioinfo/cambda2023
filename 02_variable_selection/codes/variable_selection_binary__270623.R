@@ -3,7 +3,7 @@ library("optparse")
 
 option_list = list(
     make_option(c("-I", "--input_file"), type = "character", 
-                default = "https://docs.google.com/spreadsheets/d/1ekyUCvOw7xsR7W72utqS8jcUH7129EBPvX4dSnnKekw/edit?usp=sharing", 
+                default = "https://github.com/ccm-bioinfo/cambda2023/raw/main/06_amr_resistance/data/230701_AMR_mysterious_NCBI_all_nelly.csv", 
                 help = "input file [default= %default]", metavar = "character"),
     make_option(c("-O", "--out_dir"), type = "character", 
                 default = "../selected_variables_results/", 
@@ -24,7 +24,7 @@ opt = parse_args(opt_parser);
 #-------------------------------------------------------------------------------
 # Load libraries via pacman
 pacman::p_load(ggplot2, ggthemes,                       # Plots
-               dplyr, tibble, tidyr, purrr, broom, pscl, googlesheets4)                 # Data frame manipulation 
+               dplyr, tibble, tidyr, purrr, broom, pscl)                 # Data frame manipulation 
 # library(ggplot2)
 # library(ggthemes)
 # library(dplyr)
@@ -195,10 +195,10 @@ differentialAmrMarkers <- function(db) {
 # model adjusted by differentialAmrMarkers for the presence data
 # This function may take into account a set of indices for training 
 computePvaluesLevel <- function(path_to_counts, path_to_pvalues = NULL) {
-    db <- read_sheet(path_to_counts)
+    db <- read.csv(url(path_to_counts))
     db <- db %>% 
         pivot_longer(
-            -c("ID", "Species", "City", "vi tm", "Procedence", "Year", "included"),
+            -c("ID", "Species", "City", "AST.based.group", "Collection_date", "included"),
             names_to = "Markers", 
             values_to = "Presence"
         )
@@ -225,7 +225,7 @@ getKAmrMarkers <- function(db, k) {
     for(i in 1:length(comparisons)) {
         tempData <- db %>% 
             filter(locs == comparisons[i]) %>% 
-            arrange(pvalues) %>% 
+            arrange(adj_pvalues) %>% 
             head(n = k) %>% 
             mutate(sign_rank = 1:k)
         reducedK <- reducedK %>% 
@@ -242,13 +242,13 @@ getKAmrMarkers <- function(db, k) {
 # Given a list of significant AMR markers, construct the reduced sample with only 
 # these AMR markers. 
 constructReducedData <- function(sign_amr, path_to_counts) {
-    db <- read_sheet(path_to_counts)
+    db <- read.csv(url(path_to_counts))
     # Subset the identified AMR markers
     retDF <- db %>% 
         dplyr::select(c(
-            "ID", "Species", "City", "vi tm", "Procedence", 
+            "ID", "Species", "City", "AST.based.group",  
             unique(unlist(sign_amr[, 1])),
-            "Year", "included"
+            "Collection_date", "included"
         ))
     return(retDF)
 }
@@ -279,28 +279,28 @@ smth <- variableSelection(path_to_counts = path_to_counts,
 write.csv(
     smth[[1]],  
     file = paste0(
-        opt$out_dir, "pValues_amr/amr_pvalues_270623.csv"
+        opt$out_dir, "pValues_amr/amr_pvalues_010723.csv"
     ),
     row.names = FALSE
 )
 write.csv(
     smth[[2]],  
     file = paste0(
-        opt$out_dir, "significant_amr/amr_signif_270623.csv"
+        opt$out_dir, "significant_amr/amr_signif_010723_adj.csv"
     ),
     row.names = FALSE
 )
 write.csv(
-    smth[[3]] %>% mutate(`vi tm` = as.character(`vi tm`), 
-                         included = as.character(included)),  
+    smth[[3]], #%>% mutate(`vi tm` = as.character(`vi tm`), 
+#                         included = as.character(included)),  
     file = paste0(
-        opt$out_dir, "reduced_tables/amr_reduced_270623.csv"
+        opt$out_dir, "reduced_tables/amr_reduced_010723_adj.csv"
     ),
     row.names = FALSE
 )
 
 pplot1 <- smth[[1]] %>% 
-    ggplot(aes(x = locs, y = -log(pvalues))) + 
+    ggplot(aes(x = locs, y = -log(adj_pvalues))) + 
     geom_hline(yintercept = -log(1e-1), colour = "hotpink") + 
     geom_point(alpha = 0.5, size = 1) + 
     theme_few() + 
@@ -312,7 +312,7 @@ pplot1 <- smth[[1]] %>%
 ggsave(
     plot = pplot1, 
     filename = paste0(
-        opt$out_dir, "pValues_amr/amr_log_pvalues_270623.png"
+        opt$out_dir, "pValues_amr/amr_log_pvalues_010723_adj.png"
     ),
     dpi = 180, width = 12, height = 6.75
 )
