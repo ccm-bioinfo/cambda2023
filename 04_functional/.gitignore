@@ -12,3 +12,13 @@ data/genomic/assemblies/
 data/genomic/assemblies/**
 software/standalone/
 software/standalone/**
+data/usco/annotations/
+data/usco/annotations/**
+data/usco/assemblies/
+data/usco/assemblies/**
+data/usre/annotations/
+data/usre/annotations/**
+data/usre/assemblies/
+data/usre/assemblies/**
+tmp/
+tmp/**
