@@ -88,12 +88,12 @@ def multi_grid_search(data_name, data, out_dir):
 
 
     # Random Forest
-    parameters1 = {'criterion':['entropy', 'gini'], 'n_estimators':[10, 50, 100, 300, 500, 750, 1200], 'max_depth':[5,10,15,20,30,35,40], 'random_state':[0,1,2,3], 'n_jobs':[1]}
+    parameters1 = {'criterion':['entropy', 'gini'], 'n_estimators':[10, 50, 100, 500, 750, 1200], 'max_depth':[5,10,15,20,30,35,40], 'n_jobs':[1]}
     rf = RandomForestClassifier()
     clf1 = GridSearchCV(rf, parameters1, verbose = 1, cv = stratified_kfold, scoring = scoring, refit = 'f1', n_jobs = 1)
 
     #SVC
-    parameters2 = {'kernel':['linear', 'poly','rbf'], 'degree':[2,3,4,5,6,7,8], 'random_state':[0,1,2,3], 'probability':[True]}
+    parameters2 = {'kernel':['linear', 'poly','rbf'], 'degree':[2,3,4,5,6,7,8], 'probability':[True]}
     svc = SVC()
     clf2 = GridSearchCV(svc, parameters2,  verbose = 1, cv = stratified_kfold, scoring = scoring, refit = 'f1', n_jobs = 1)
 
@@ -104,16 +104,15 @@ def multi_grid_search(data_name, data, out_dir):
         'batch_size':['auto',50, 100],
         'solver': ['adam', 'sgd'],
         'max_iter':[1000, 3000, 5000],
-        'random_state':[0,1,2],
         'early_stopping':[False, True],
-        'learning_rate': ['constant','adaptive'],
+        'learning_rate': ['constant','adaptive']
     }
 
     mlp = MLPClassifier()
     clf3 = GridSearchCV(mlp, parameters3,  verbose = 1, cv = stratified_kfold, scoring = scoring, refit = 'f1', n_jobs = 1)
 
     #Extra trees
-    parameters4 = {'n_estimators':[10, 50, 100, 300, 500, 750, 1200], 'criterion':['entropy', 'gini'], 'max_depth': [5,10,15,20,30,35,40], 'random_state':[0,1,2,3], 'n_jobs':[1]}
+    parameters4 = {'n_estimators':[10, 50, 100, 500, 750, 1200], 'criterion':['entropy', 'gini'], 'max_depth': [5,10,15,20,30,35,40], 'n_jobs':[1]}
     extra_trees = ExtraTreesClassifier()
     clf4 = GridSearchCV(extra_trees, parameters4,  verbose = 1, cv = stratified_kfold, scoring = scoring, refit = 'f1', n_jobs = 1)
 
@@ -246,9 +245,9 @@ def main():
 
     pool = multiprocessing.Pool()
     parameters = [
-        # ('Mifaser_level_1', mifaser1, PATH_OUTPUT_MIFASER),
-        # ('Mifaser_level_2', mifaser2, PATH_OUTPUT_MIFASER),
-        # ('Mifaser_level_3', mifaser3, PATH_OUTPUT_MIFASER),
+        ('Mifaser_level_1', mifaser1, PATH_OUTPUT_MIFASER),
+        ('Mifaser_level_2', mifaser2, PATH_OUTPUT_MIFASER),
+        ('Mifaser_level_3', mifaser3, PATH_OUTPUT_MIFASER),
         ('Mifaser_level_4', mifaser4, PATH_OUTPUT_MIFASER),
         ('Metacyc_cummulative_scaled_level_1', metacyc_cummulative_scaled_1, PATH_OUTPUT_METACYC_CUMMULATIVE_SCALED),
         ('Metacyc_cummulative_scaled_level_2', metacyc_cummulative_scaled_2, PATH_OUTPUT_METACYC_CUMMULATIVE_SCALED),

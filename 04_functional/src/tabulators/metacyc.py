@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Usage:  ./metacyc.py
+# Usage:  ./metacyc.py [-g] [input directory] [output directory]
 
 import os
 import sys
@@ -8,11 +8,24 @@ from itertools import product
 from pathlib import Path
 import pandas as pd
 
-base_dir = Path(os.path.realpath(__file__)).parent.parent.parent
-inp = list(base_dir.glob("data/metagenomic/annotations/metacyc/*.tsv"))
-out = base_dir/"data/metagenomic/tables/metacyc/"
-total = 10
-sys.stderr.write(f"MetaCyc tabulation progress: 0%\r")
+# Check if -g flag was used
+try:
+    genomic = sys.argv.index("-g")
+    del sys.argv[genomic]
+except ValueError:
+    genomic = 0
+
+try: inp = list(Path(sys.argv[1]).glob("*.tsv"))
+except IndexError:
+    print("ERROR: Missing input directory", file=sys.stderr)
+    sys.exit(1)
+
+try: out = Path(sys.argv[2])/"metacyc"
+except IndexError:
+    print("ERROR: Missing output directory", file=sys.stderr)
+    sys.exit(1)
+
+print(f"MetaCyc tabulation progress: 0%", file=sys.stderr, end="\r")
 
 for a, b in product(["cummulative", "noncummulative"], ["unscaled", "scaled"]):
     os.makedirs(out/a/b, exist_ok=True)
@@ -24,17 +37,37 @@ def read_table(file):
     table["Sample"] = file.stem
     return table
 
+# Adds City column, and Taxon column for genomic files
+def add_metadata(table):
+    global genomic
+    if genomic:
+        cities = pd.Series(
+            data=table.index.str[:3], index=table.index, name="City"
+        )
+        taxon = pd.Series(
+            data=table.index.str[4:6], index=table.index, name="Taxon"
+        )
+        return pd.concat([cities, taxon, table], axis=1)
+    else:
+        cities = pd.Series(
+            data=table.index.str[23:26], index=table.index, name="City"
+        )
+        return pd.concat([cities, table], axis=1)
+
 # Create noncummulative table
-ntable = pd.concat(read_table(file) for file in inp)
-sys.stderr.write(f"MetaCyc tabulation progress: 10%\r")
+ntable = pd.concat([read_table(file) for file in inp])
+print(f"MetaCyc tabulation progress: 10%", file=sys.stderr, end="\r")
 
 # Create cummulative table
 ctable = ntable.fillna(method="ffill", axis=1)
-sys.stderr.write(f"MetaCyc tabulation progress: 20%\r")
+print(f"MetaCyc tabulation progress: 20%", file=sys.stderr, end="\r")
 
 # For each level
 for lvl in range(1, 9):
-    sys.stderr.write(f"MetaCyc tabulation progress: {(lvl+2)*10}%\r")
+    print(
+        f"MetaCyc tabulation progress: {(lvl+2)*10}%\r",
+        file=sys.stderr, end="\r"
+    )
 
     # Create noncummulative unscaled table
     nutable = (
@@ -46,10 +79,7 @@ for lvl in range(1, 9):
         .pivot(index="Sample", columns=f"Level{lvl}", values="Count")
         .fillna(0)
     )
-    cities = pd.Series(
-        data=nutable.index.str[23:26], index=nutable.index, name="City"
-    )
-    nutable = pd.concat([cities, nutable], axis=1)
+    nutable = add_metadata(nutable)
     nutable.to_csv(
         out/f"noncummulative/unscaled/lvl{lvl}.tsv", sep="\t", index=True
     )
@@ -64,10 +94,7 @@ for lvl in range(1, 9):
         .pivot(index="Sample", columns=f"Level{lvl}", values="Abundance")
         .fillna(0)
     )
-    cities = pd.Series(
-        data=nstable.index.str[23:26], index=nstable.index, name="City"
-    )
-    nstable = pd.concat([cities, nstable], axis=1)
+    nstable = add_metadata(nstable)
     nstable.to_csv(
         out/f"noncummulative/scaled/lvl{lvl}.tsv", sep="\t", index=True
     )
@@ -82,10 +109,7 @@ for lvl in range(1, 9):
         .pivot(index="Sample", columns=f"Level{lvl}", values="Count")
         .fillna(0)
     )
-    cities = pd.Series(
-        data=cutable.index.str[23:26], index=cutable.index, name="City"
-    )
-    cutable = pd.concat([cities, cutable], axis=1)
+    cutable = add_metadata(cutable)
     cutable.to_csv(
         out/f"cummulative/unscaled/lvl{lvl}.tsv", sep="\t", index=True
     )
@@ -100,12 +124,9 @@ for lvl in range(1, 9):
         .pivot(index="Sample", columns=f"Level{lvl}", values="Abundance")
         .fillna(0)
     )
-    cities = pd.Series(
-        data=cstable.index.str[23:26], index=cstable.index, name="City"
-    )
-    cstable = pd.concat([cities, cstable], axis=1)
+    cstable = add_metadata(cstable)
     cstable.to_csv(
         out/f"cummulative/scaled/lvl{lvl}.tsv", sep="\t", index=True
     )
 
-print()
+print("MetaCyc tabulation progress: Done!", file=sys.stderr)

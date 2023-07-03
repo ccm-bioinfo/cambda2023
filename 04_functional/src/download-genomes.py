@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 
+# Usage:  ./download-genomes.py [output directory]
+
 import io
 import os
 import gzip
 import shutil
+import sys
 from pathlib import Path
 from subprocess import check_output
 from urllib.request import urlopen
 
 import pandas as pd
 
-base_dir = Path(os.path.realpath(__file__)).parent.parent
-out = base_dir/"data/genomic/assemblies/"
+out = Path(sys.argv[1])
 os.makedirs(out, exist_ok=True)
 
 cities = {
@@ -21,9 +23,9 @@ cities = {
     "Minneapolis": "MIN"
 }
 species = {
-    "Klebsiella pneumoniae": "KP",
-    "Escherichia coli": "EC",
-    "Enterobacter hormaechei": "EH"
+    "Klebsiella pneumoniae": "Kl",
+    "Escherichia coli": "Es",
+    "Enterobacter hormaechei": "En"
 }
 genomes = pd.read_csv(
     "https://raw.githubusercontent.com/ccm-bioinfo/cambda2023/main/06_amr_resistance/data/genome-metadata.csv",
@@ -45,7 +47,7 @@ def download_genome(acc, year, spp, city):
 
     # Open and decompress .fna.gzip file
     with gzip.GzipFile(fileobj=urlopen(url), mode='rb') as gz:
-        with open(out/f"{city}_{year}_{spp}_{acc}.fna", mode='wb') as fna:
+        with open(out/f"{city}_{spp}_{year}_{acc}.fna", mode='wb') as fna:
             shutil.copyfileobj(gz, fna)
 
 for acc, row in genomes.iterrows():
