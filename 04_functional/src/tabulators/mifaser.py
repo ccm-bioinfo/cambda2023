@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Usage:  ./mifaser.py [-g] [input directory] [output directory]
+# Usage:  ./mifaser.py [-g] [input_dir] [output_dir]
 
 import os
 import sys

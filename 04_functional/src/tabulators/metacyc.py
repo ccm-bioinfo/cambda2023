@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Usage:  ./metacyc.py [-g] [input directory] [output directory]
+# Usage:  ./metacyc.py [-g] [input_dir] [output_dir]
 
 import os
 import sys

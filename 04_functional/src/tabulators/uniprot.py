@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Usage:  ./uniprot.py [-g] [input directory] [output directory]
+# Usage:  ./uniprot.py [-g] [input_dir] [output_dir]
 
 import math
 import os

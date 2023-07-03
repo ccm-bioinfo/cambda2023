@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Usage:  ./prokka.py [-g] [input directory] [output directory]
+# Usage:  ./prokka.py [-g] [input_dir] [output_dir]
 
 import os
 import sys
