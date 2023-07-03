@@ -1,0 +1,7 @@
+Sample	City	Taxon	(<i>S</i>)-reticuline biosynthesis I	CMP-Legionaminate-Biosynthesis	CMP-pseudaminate biosynthesis	gibberellin biosynthesis I (non C-3, non C-13 hydroxylation)	gibberellin biosynthesis II (early C-3 hydroxylation)	gibberellin biosynthesis IV (<i>Gibberella fujikuroi</i>)	gibberellin biosynthesis V	inosine-5'-phosphate biosynthesis I	inosine-5'-phosphate biosynthesis III
+DEN_Kl	DEN	Kl	0.0	1.0	0.0	0.0	0.0	0.0	0.0	1.0	1.0
+NYC_En	NYC	En	0.0	1.0	0.0	1.0	1.0	1.0	1.0	1.0	1.0
+NYC_Es	NYC	Es	1.0	0.0	1.0	1.0	1.0	0.0	1.0	0.0	1.0
+NYC_Kl	NYC	Kl	0.0	1.0	0.0	1.0	1.0	1.0	1.0	1.0	1.0
+SAC_En	SAC	En	0.0	1.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+SAN_Es	SAN	Es	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	1.0
