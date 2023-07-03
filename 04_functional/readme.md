@@ -23,16 +23,104 @@
 This directory contains the scripts and results of the functional annotation
 subproject of CAMDA 2023.
 
-## 0. Software and databases
+Contents:
+
+0. [Preamble](#0-preamble)
+    - File structure
+    - Software
+    - Databases
+    - Annotation scripts
+    - Tabulation scripts
+1. [City prediction](#1-city-prediction)
+2. [Mystery sample prediction](#2-mystery-sample-prediction)
+
+## [0. Preamble](#functional-annotation)
+
+### File structure
+
+> :heavy_exclamation_mark: **To do**:
+> - Add `models/` subdirectory structure; it should store machine learning
+model results (parameters and metrics).
+> - Add `interproscan.tsv` abundance table created from InterProScan's outputs.
+> - Add `images/` subdirectory structure.
+
+The git repository contains the following files:
+
+```text
+04_functional/
+├── data/
+│   └── {genomic,metagenomic,usco,usre}/
+│       ├── models/
+│       └── tables/
+│           ├── metacyc/
+│           │   └── {cummulative,noncummulative}/
+│           │       └── {scaled,unscaled}/
+│           │           └── lvl{1..8}.tsv
+│           ├── mifaser/
+│           │   └── lvl{1..4}.tsv
+│           ├── kegg.tsv
+│           ├── prokka.tsv
+│           ├── uniprot.tsv.gz
+│           └── vfdb.tsv.gz
+├── images/
+├── src/
+│   ├── annotators/
+│   │   └── {interproscan,kegg,metacyc,mifaser,prokka,uniprot,vfdb}.sh
+│   ├── tabulators/
+│   │   └── {interproscan,kegg,metacyc,mifaser,prokka,uniprot,vfdb}.py
+│   ├── download-genomes.py
+│   ├── load-databases.sh
+│   ├── metacyc-conversion.py
+│   └── mg-grid-search.py
+├── environment.yml
+└── readme.md
+```
+
+The complete file structure can be found in Huawei:
+`/home/2022_15/camda-git/04_functional`. Briefly, we describe the contents of
+each file and directory (elements marked with an asterisk `*` can only be found
+on the Huawei server):
+
+- `data/genomic/`. [Downloaded genomes data](https://github.com/ccm-bioinfo/cambda2023/blob/main/06_amr_resistance/data/genome-metadata.csv).
+- `data/metagenomic/`. CAMDA 2023 metagenomic assembly data.
+- `data/usco/`. [US city coassembly and extraction data](https://github.com/ccm-bioinfo/cambda2023/blob/main/06_amr_resistance/readmeCoassemblyByCity_AMR_Taxonomy.md).
+- `data/usre/`. [US city extracted read assembly data](https://github.com/ccm-bioinfo/cambda2023/blob/main/06_amr_resistance/resultsReadsKrakenAssemblyBLAST.md).
+- `data/{genomic,metagenomic,usco,usre}/assemblies/`. Assemblies. `*`
+- `data/{genomic,metagenomic,usco,usre}/annotations/`. Results from each
+individual annotation pipeline. `*`
+- `data/{genomic,metagenomic,usco,usre}/tables/`. Abundance tables by sample
+produced from the annotation results.
+- `data/{genomic,metagenomic,usco,usre}/models/`. Machine learning model
+results (parameters and metrics).
+- `images/`. Various images.
+- `src/annotators/`. Annotation pipelines.
+- `src/tabulators/`. Scripts to create abundance tables from annotation
+results.
+- `src/download-genomes.py`. Downloads genomes from [this table](https://github.com/ccm-bioinfo/cambda2023/blob/main/06_amr_resistance/data/genome-metadata.csv).
+- `src/load-databases.sh`. Installs necessary databases for the subproject.
+- `src/metacyc-conversion.py`. Helper script for `src/tabulators/metacyc.py`.
+- `src/mg-grid-search.py`. Performs machine learning grid search on all input
+tables.
+- `environment.yml`. Conda/mamba/micromamba environment spec file.
+- `readme.md`. Current file.
+
+### Software
+
+> :heavy_exclamation_mark: **To do**:
+> - Add InterProScan version and link.
+
+```text
+Usage:  ./src/download-software.sh [software_dir]
+```
 
 The `src/download-software.sh` script installs the software packages needed for
 this subproject. Some of these programs are installed via a package manager
 (such as conda, mamba or micromamba) into a virtual environment at
-`software/venv/`, whereas others are downloaded as standalone versions from
-their git repositories into `software/standalone/`. To ensure software
-reproducibility, we have created a spec file at `software/environment.yml`
-with which the virtual environment can be created, and we set a specific commit
-ID for each of the standalone programs, ensuring that the same version is
+`[software_dir]/venv/`, whereas others are downloaded as standalone versions
+from their git repositories into `[software_dir]/standalone/`. To ensure
+software reproducibility, we have created a spec file at `environment.yml` with
+which the virtual environment can be created, and we set a specific commit ID
+for each of the standalone programs, ensuring that the same version is
 installed.
 
 The most important packages included in the virtual environment are:
@@ -46,214 +134,195 @@ The most important packages included in the virtual environment are:
 - [BLAST 2.14.0](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
 - [GNU parallel 20230522](https://www.gnu.org/software/parallel)
 - [KofamScan 1.3.0](https://github.com/takaram/kofam_scan)
-> To do: Add InterProScan version and link.
 
-**The Prokka script is modified to skip the execution of
+> **Warning**. The Prokka script is modified to skip the execution of
 [tbl2asn](https://www.ncbi.nlm.nih.gov/genbank/table2asn/), which we have found
 to be extremely slow when working with large metagenomic assemblies; as a
 consequence, it does not produce `.gbk`, `.sqn` or `.err` outputs. View lines
-41-44 of `src/download-software.sh` to view how this is done.**
+41-44 of `src/download-software.sh` to view how this is done.
 
 We used two standalone programs:
 
 - [MinPath 1.6](https://github.com/mgtools/MinPath/tree/46d3e81a4dca2310d558bea970bc002b15d44767)
 - [Mi-faser 1.61](https://bitbucket.org/bromberglab/mifaser/src/8012b2676eb3d2548db569191d19c0da9f64330c/)
 
-While some of this software have databases preinstalled, we had to manually
+### Databases
+
+> :heavy_exclamation_mark: **To do**:
+> - Add InterPro database download description.
+
+```text
+Usage:  ./src/load-databases.sh [databases_dir]
+```
+
+While some of the software have databases preinstalled, we had to manually
 download other databases as well. This is done with the `src/load-databases.sh`
 script, which must be run after `src/download-software.sh` as it requires
 BLAST. It fetches the following databases:
 
 - The KEGG [Ontology list](https://www.genome.jp/ftp/db/kofam/ko_list.gz) and 
 [HMM profiles](https://www.genome.jp/ftp/db/kofam/profiles.tar.gz) are
-downloaded and extracted into `data/databases/kegg/`.
+downloaded and extracted into `[databases_dir]/kegg/`.
 - The MinPath [mapping](https://raw.githubusercontent.com/EnvGen/metagenomics-workshop/master/reference_db/metacyc/ec.to.pwy)
 and [hierarchy](https://raw.githubusercontent.com/EnvGen/metagenomics-workshop/master/reference_db/metacyc/pwy.hierarchy)
 files for [MetaCyc](https://metacyc.org/) pathways from EnvGen's
 [Metagenomics Workshop](https://github.com/EnvGen/metagenomics-workshop/) are
-placed into `data/databases/metacyc/`.
+placed into `[databases_dir]/metacyc/`.
 - The [reviewed UniProt](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz) database is downloaded into
-`data/databases/uniprot/` and a BLAST database is generated from it.
+`[databases_dir]/uniprot/` and a BLAST database is generated from it.
 - The [Virulence Factor Database](http://www.mgc.ac.cn/VFs/Down/VFDB_setB_pro.fas.gz)
-(VFDB) is placed in `data/database/vfdb/` and a BLAST database is produced from
+(VFDB) is placed in `[databases_dir]/vfdb/` and a BLAST database is produced from
 it.
 
-> To do: Add InterPro database download description.
+These databases were downloaded in June 2023, and newer versions of them might
+have become available. Please download the appropiate database versions to
+ensure reproducibility.
 
-These databases were downloaded in early June, 2023, and newer versions of them
-might become available. Please ensure you download the appropiate database
-versions to ensure reproducibility.
+### Annotation scripts
 
-## 1. City prediction
+The `src/annotators/` directory stores annotation pipeline scripts, which are
+named after the software or database they employ. Each script may contain some
+of the following command line options:
 
-We used seven different functional annotation pipelines, from which we produced
-sixteen abundance tables that contain the number of functions found in each
-metagenomic assembly. These tables were then used as training and validation
-data for machine learning algorithms in order to identify the best annotation
-or combination of annotations to predict the city from which a sample comes
-from.
+- `-i`: input.
+- `-o`: output.
+- `-d`: databases directory (same as the one from `./src/load-databases.sh`)
+- `-s`: standalone software directory (created by `./src/download-software.sh`
+in `[software_dir]/standalone/`)
+- `-g`: used when working with genomic sequences.
 
-The files and directories related to city prediction have the following
-structure:
+When setting an output, the scripts will automatically create all intermediate
+directories if they don't already exist.
 
-```text
-04_functional/
-├── data/
-│   └── metagenomic/
-│       ├── models/
-│       │   ├── metacyc/
-│       │   │   └── {cummulative,noncummulative}/{scaled,unscaled}/lvl{1..8}.tsv
-│       │   ├── mifaser/
-│       │   │   └── lvl{1,2,3,4}.tsv
-│       │   └── {kegg,interproscan,uniprot,vfdb}.tsv
-│       └── tables/    # same structure as models/
-└── src/
-    ├── mg-annotators/
-    │   └── {kegg,metacyc,mifaser,interproscan,prokka,uniprot,vfdb}.sh
-    ├── mg-tabulators/
-    │   └── {kegg,metacyc,mifaser,interproscan,uniprot,vfdb}.py
-    ├── mg-annotate.sh
-    ├── mg-grid-search.py  # to be created
-    └── metacyc-conversion.py
-```
-
-Briefly, we describe the contents of each file and directory:
-
-- `data/metagenomic/tables/` stores abundance tables of samples against
-functional annotations obtained through the different strategies.
-- `data/metagenomic/models/` contains performance results of the machine
-learning grid search applied on all of the functional annotation strategies.
-- `src/mg-annotators/` contains the annotation scripts.
-- `src/mg-tabulators/` stores the scripts used to create the abundance tables.
-- `src/mg-annotate.sh` automatically performs all of the annotations on the
-assemblies using the scripts of `src/mg-annotators/`.
-- `src/mg-grid-search.py` performs the machine learning grid search on all
-abundance tables.
-- `src/metacyc-conversion.py` is a helper script for
-`src/mg-annotators/metacyc.sh`.
-
-### 1.1. Functional annotation
-
-Before starting to annotate, it is important to place the metagenomic
-assemblies into the `data/metagenomic/assemblies/` directory. You can do it by
-creating symlinks like this (supposing you are in the `04_functional/` root
-directory):
+For example, if the metagenomic assemblies are located in
+`data/metagenomic/assemblies/` and standalone software was downloaded into
+`software/standalone/`, it is possible to annotate all of the assemblies with
+Mi-Faser using GNU Parallel:
 
 ```text
-$ mkdir -p data/metagenomic/assemblies/
-$ cd data/metagenomic/assemblies/
-$ parallel ln -s {} {/} ::: /full/path/to/assemblies/*.fasta
-$ cd ../../..
+# Runs 5 annotations in parallel
+parallel -uj 5 ./src/annotators/mifaser.sh \
+  -i data/metagenomic/assemblies/{/.}.fasta \
+  -o data/metagenomic/annotations/mifaser/{/.}/ \
+  -s software/standalone/ \
+  ::: data/metagenomic/assemblies/*.fasta
 ```
 
-Any annotation can be performed using the following command:
-
-```text
-$ ./src/mg-annotators/xxx.sh [basename]
-```
-
-Where `xxx` can be any of `kegg`, `metacyc`, `mifaser`, `interproscan`,
-`prokka`, `uniprot` or `vfdb`, and `[basename]` is the filename without
-extension or directory (e.g. `CAMDA23_MetaSUB_gCSD17_SAN_3`). All pipelines use
-12 CPUs.
-
-To run a pipeline on all assemblies, you can use GNU parallel, specifying the
-number of jobs with the `-j` parameter:
-
-```text
-$ parallel -uj 5 ./src/mg-annotators/xxx.sh {/.} ::: data/metagenomic/assemblies/*.fasta
-```
-
-**Warning**: The `src/mg-annotators/metacyc.sh` script fails when running in
-parallel for reasons we are yet to find out; for now, we advice running it
-sequentially instead.
-
-Or you can use this convenience script to run all pipelines on all assemblies,
-executing any number of jobs simultaneously (except for the MetaCyc pipeline), 
-and skipping already finished annotations:
-
-```text
-$ ./src/mg-annotate.sh [number of jobs]
-```
+Any annotation pipeline can be run in parallel, except for `metacyc.sh`, which
+fails unless it is run one by one. We advice executing it with the `-uj 1`
+option instead.
 
 #### Prokka
 
-The `src/mg-annotators/prokka.sh` script must be the first annotation pipeline
+```text
+Usage:  ./src/annotators/prokka.sh [-g] [-i input_fasta] [-o output_dir]
+```
+
+The `src/annotators/prokka.sh` script must be the first annotation pipeline
 to be executed, as its outputs are a requirement for the other pipelines
 (except for `mifaser.sh`). This script runs the modified Prokka pipeline (see
-*Software and databases* section) using the `--metagenome` flag, which, as
-stated in Prokka's help page, can "improve gene predictions for highly
-fragmented genomes." It takes a metagenomic assembly located in
-`data/metagenomic/assemblies/[basename].fasta` and outputs into
-`data/metagenomic/annotations/prokka/[basename]/`.
+*Software* section) on the `input_fasta` file. When using the `-g` flag, this
+script runs Prokka in "genomic" mode, whereas, if not provided, it will use
+Prokka's `--metagenome` flag, which, as stated in Prokka's help page, can
+"improve gene predictions for highly fragmented genomes." Outputs are saved
+into `output_dir`.
 
 #### Mi-Faser
 
-The `src/mg-annotators/mifaser.sh` script annotates assemblies with mi-faser 
-(located in `software/standalone/mifaser/`), which employs its own curated
-databases, finds individual enzymes, and outputs E.C. numbers. Here, we used
-the `GS-21-all` database, that, according to the
+```text
+Usage:  ./src/annotators/mifaser.sh [-i input_fasta] [-o output_dir]
+                                    [-s standalone_dir]
+```
+
+The `src/annotators/mifaser.sh` script annotates assemblies with mi-faser 
+(located in `[standalone_dir]/mifaser/`), which employs its own
+curated databases, finds individual enzymes, and outputs E.C. numbers. Here, we
+used the `GS-21-all` database, that, according to the
 [mi-faser online service page](https://services.bromberglab.org/mifaser/submit),
 stores a "set of reference proteins from Eukaryota, Archea, Bacteria and
 Viruses, with experimentally annotated molecular functions (confirmed E.C.
 annotations)," thus making it its largest and most comprehensive database.
-Similar to `src/mg-annotators/prokka.sh`, it uses the
-`data/metagenomic/assemblies/[basename].fasta` assembly file as input, and
-outputs into `data/metagenomic/annotations/mifaser/[basename]/`.
+Similar to `src/annotators/prokka.sh`, it uses and `input_fasta` assembly file,
+and outputs into `output_dir`.
 
 #### KEGG
 
-The `src/mg-annotators/kegg.sh` script uses KofamScan (located in
-`software/standalone/kofamscan/`) to annotate Prokka's `.faa` files with the
-KEGG Ontology (KO) and HMM profiles. Input is taken from
-`data/metagenomic/annotations/prokka/[basename]/[basename].faa` and results
-are written to `data/metagenomic/annotations/kegg/[basename].txt`.
+```text
+Usage:  ./src/annotators/kegg.sh [-i input_faa] [-o output_txt]
+                                 [-d databases_dir]
+```
+
+The `src/annotators/kegg.sh` script uses KofamScan to annotate Prokka's `.faa`
+files with the KEGG Ontology (KO) and HMM profiles. Input is taken from
+`input_faa` and results are written to `output_txt`; the `databases_dir`
+parameter must be the same as originally specified to the 
+`./src/load-databases.sh` script (see *Databases* section).
 
 #### MetaCyc
 
-MetaCyc pathways are predicted with `src/mg-annotators/metacyc.sh`, based on
+```text
+Usage:  ./src/annotators/metacyc.sh [-i input_gff] [-o output_tsv]
+                                    [-s standalone_dir] [-d databases_dir]
+```
+
+MetaCyc pathways are predicted with `src/annotators/metacyc.sh`, based on
 EnvGen's
 [Metagenomics Workshop functional annotation pipeline](https://metagenomics-workshop.readthedocs.io/en/2014-11-uppsala/functional-annotation/index.html).
 Just like this pipeline, the script parses Prokka's `.gff` file for the E.C.
 numbers that Prokka managed to identify, which are then used to obtain a 
 minimum set of MetaCyc pathways with the help of MinPath (located in
-`software/standalone/minpath/`). Then, MinPath's outputs are rearranged into a
+`[standalone_dir]/minpath/`). Then, MinPath's outputs are rearranged into a
 table where rows are individual functions and columns are the different
 functional levels (with eight in total), each more specific than the previous,
-which is accomplish with `src/metacyc-conversion.py` helper script, taken from
-the [Workshop's `genes.to.kronaTable.py` script](https://github.com/EnvGen/metagenomics-workshop/blob/master/in-house/genes.to.kronaTable.py).
+which is accomplished with the `src/metacyc-conversion.py` helper script, taken
+from the [Workshop's `genes.to.kronaTable.py` script](https://github.com/EnvGen/metagenomics-workshop/blob/master/in-house/genes.to.kronaTable.py).
 Unlike the Workshop's pipeline, however, coverage is not calculated, but
 functional abundance information is still obtained. The script uses the
-`data/metagenomic/annotations/prokka/[basename]/[basename].gff` file as input
-and saves outputs in `data/metagenomic/annotations/metacyc/[basename].tsv`. It
-is the only script we advice not to run in parallel as it might not finish
-annotating properly when doing so.
+`input_gff` file as input and saves outputs in `output_tsv`; it also requires
+to specify the directory where the standalone software and the databases where
+downloaded. It is the only script we advice not to run in parallel as it might
+not finish annotating properly when doing so.
 
 #### InterProScan
 
-> To do: InterProScan pipeline description.
+> :heavy_exclamation_mark: **To do**:
+> - Add InterProScan pipeline description.
 
 #### UniProt and VFDB
 
-Both `src/mg-annotators/uniprot.sh` and `src/mg-annotators/vfdb.sh` annotate
-Prokka's `.faa` outputs by running BLAST against their respective databases
-(UniProt and VFDB). They both produce `.tsv` files with five columns: `qseqid`,
+```text
+Usage:  ./uniprot.sh [-i input_faa] [-o output_tsv] [-d databases_dir]
+        ./vfdb.sh [-i input_faa] [-o output_tsv] [-d databases_dir]
+```
+
+Both `src/annotators/uniprot.sh` and `src/annotators/vfdb.sh` annotate Prokka's
+`.faa` outputs by running BLAST against their respective databases (UniProt
+and VFDB). They both produce `.tsv` files with five columns: `qseqid`,
 `sseqid`, `evalue`, `pident`, and `stilte`, all of which correspond to BLAST's
-homonymous outputs. They read the
-`data/metagenomic/annotations/prokka/[basename]/[basename].faa` file, and
-output to `data/metagenomic/annotations/uniprot/[basename].tsv` and
-`data/metagenomic/annotations/vfdb/[basename].tsv`, respectively.
+homonymous outputs. They read the `input_faa` file, and output to `output_tsv`,
+using the databases located in `databases_dir`.
 
-### 1.2. Abundance table creation
+### Tabulation scripts
 
-The `src/mg-tabulators/` directory contains the scripts used to create the
-abundance tables located in `data/metagenomic/tables/`, and are named after the
-corresponding annotation pipeline (for example, `src/mg-tabulators/kegg.py`
-creates the abundance table from `src/mg-annotators/kegg.sh` outputs). All
-tables follow a similar structure: every row corresponds to a sample, the first
-column (named `City`) is the label for prediction, and the rest of the columns
+The `src/tabulators/` directory contains the scripts used to create the
+abundance tables located in `data/*/tables/`, and are named after the
+corresponding annotation pipeline (for example, `src/tabulators/kegg.py`
+creates the abundance table from `src/annotators/kegg.sh` outputs). All scripts
+have the same command line options:
+
+- `-g`: when running on genomic or extraction data.
+- `-i`: input directory.
+- `-o`: output directory.
+
+Every single table produced has a similar structure. Every row corresponds to a
+sample. The first column (named `City`) contains the city the sample was taken
+from. If the `-g` flag is used, the second column is `Taxon`, which may contain
+any of the following values: `En`, `Es`, or `Kl`; if it is run on genomic data,
+these values refer to species (*Enterobacter hormaechei*, *Escherichia coli*,
+and *Klebsiella pneumoniae*), but if run on extraction data, they refer to
+genera (*Enterobacter*, *Escherichia*, and *Klebsiella*). The rest of the columns
 contain individual annotation attributes. For instance, the following is a
-subsection of the KEGG abundance table:
+subsection of the KEGG abundance table generated from metagenomic assemblies:
 
 | |City|K01489|K09902|K03551|K01653|K01726|
 |:--|:--|:--|:--|:--|:--|:--|
@@ -264,11 +333,25 @@ subsection of the KEGG abundance table:
 |CAMDA23_MetaSUB_gCSD16_BER_2|BER|1|0|1|1|0|
 |CAMDA23_MetaSUB_gCSD16_BER_3|BER|0|0|1|0|0|
 
+To create this table, the following command can be used (supposing that KEGG's
+outputs are placed in `data/metagenomic/annotations/kegg/`):
+
+```text
+./src/tabulators/kegg.py -i data/metagenomic/annotations/kegg/ \
+  -o data/metagenomic/tables/
+```
+
+The output table is saved in `data/metagenomic/tables/kegg.tsv`.
+
+Tables located in `data/metagenomic/tables/` were created without the `-g`
+flag, but the rest of the tables (located in `genomic`, `usco`, and `usre`)
+were created with it.
+
 #### MetaCyc
 
 MetaCyc's abundance tables have the most complicated structure. In order to
 understand it, one must take a look at the `.tsv` outputs that
-`src/mg-annotators/metacyc.sh` produces, whose rows look something like this:
+`src/annotators/metacyc.sh` produces, whose rows look something like this:
 
 | |Level1|Level2|Level3|Level4|Level5|Level6|Level7|Level8|
 |:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
@@ -299,8 +382,15 @@ as opposed to the "*unscaled*" ones, where relative abundance was not included.
 As such, we produced four kinds of tables: noncummulative unscaled, 
 noncummulative scaled, cummulative unscaled, and cummulative scaled tables, for
 each MetaCyc level (named `lvl1.tsv` to `lvl8.tsv`), producing 32 different
-tables, all of which can be found in `data/metagenomic/tables/metacyc/`. This
-entire process is executed by `src/mg-tabulators/metacyc.sh`.
+tables, all of which can be found in `data/*/tables/metacyc/`. This
+entire process is executed by `src/tabulators/metacyc.py`.
+
+#### Prokka
+
+The `src/tabulators/prokka.py` script uses Prokka's `.tsv` outputs to create
+the abundance tables. Because Prokka may predict some proteins without a known
+function, we excluded these "hypothetical proteins" from the final tables. The
+abundance tables can be found in `data/*/tables/prokka.tsv`.
 
 #### Mi-Faser
 
@@ -308,29 +398,34 @@ Mi-Faser outputs the counts of E.C. numbers for each sample. Similarly to
 MetaCyc's functional categories, E.C. numbers are hierarchical and are divided
 into [four different levels](https://en.wikipedia.org/wiki/List_of_enzymes).
 Thus, we created a single abundance table for each E.C. level and saved into
-`data/metagenomic/tables/mifaser/lvl{1..4}.tsv`, all of which is accomplished
-with the `src/mg-tabulators/mifaser.sh` script.
+`data/*/tables/mifaser/lvl{1..4}.tsv`, all of which is accomplished
+with the `src/tabulators/mifaser.py` script.
+
+#### InterProScan
+
+> :heavy_exclamation_mark: **To do**:
+> - Add InterProScan tabulation script description.
 
 #### KEGG
 
-The `src/mg-tabulators/kegg.sh` script produces a single abundance table from
-the outputs of `src/mg-annotators/kegg.sh`, using only the rows that start with
+The `src/tabulators/kegg.py` script produces a single abundance table from
+the outputs of `src/annotators/kegg.sh`, using only the rows that start with
 an asterisk (`*`), which correspond to annotations with the highest confidence
-levels. The table can be found in `data/metagenomic/tables/kegg.tsv`.
+levels. The tables can be found in `data/*/tables/kegg.tsv`.
 
 #### UniProt and VFDB
 
 Because both UniProt and VFDB annotations were performed with BLAST, their
 outputs have an identical structure and, thus, their tabulation scripts
-(`src/mg-tabulators/uniprot.py` and `src/mg-tabulators/vfdb.py`) are similar.
+(`src/tabulators/uniprot.py` and `src/tabulators/vfdb.py`) are similar.
 To create the abundance tables, we only kept BLAST results with a sequence
 identity greater than 80%. Furthermore, because the amount of results is large,
 the tabulation process is run on multiple processors, and the final tables are
 gzip-compressed (meaning that their extension is `.tsv.gz`). These tables are
-located in `data/metagenomic/tables/uniprot.tsv.gz` and
-`data/metagenomic/tables/vfdb.tsv.gz`.
+located in `data/*/tables/uniprot.tsv.gz` and
+`data/*/tables/vfdb.tsv.gz`.
 
-### 1.3. Model training
+## [1. City prediction](#functional-annotation)
 
 First we performed a stratified k-fold split on the data to get a representative subset of the 15% of the entire dataset which was assigned to be our testing set.
 
@@ -423,6 +518,17 @@ We evaluated the predictions made by each of the individual models and an ensemb
 
 At the end we compared the performance of the 7 models (5 original models + 2 ensembles) for each of the functional annotations we made. 
 
-## 2. Mystery sample prediction
+## [2. Mystery sample prediction](#functional-annotation)
 
-> To do.
+> :heavy_exclamation_mark: **To do**:
+> - Finish this section.
+
+In order to predict which city the mystery sample comes from, we performed
+functional annotation on a set of genomes of the three bacterium species
+sampled from different US cities between 2015 and 2018, and on both extractions
+made by the AMR team. We are planning to use unsupervised learning techniques
+to analyze frequent patterns in the genomic and extracted functional
+annotations and compare them with the ones found in the metagenomic samples.
+Because we weren't able to find genomic sequences from all US cities, our
+team's findings would be, at most, one more piece of evidence to support the
+conclusion reached by the other teams.
