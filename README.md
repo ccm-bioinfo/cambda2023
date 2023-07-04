@@ -1,5 +1,7 @@
 # Camda 2023 Mexican Team
-
+- [Presentation Talk](https://docs.google.com/presentation/d/1AM7f3khAGLN8pXDnDs9BOYrUh56jCmPwoc2MRLTkfgg/edit#slide=id.g24bcac0919d_0_1109)  
+- [Poster Presentation](https://docs.google.com/presentation/d/1aWgVJKH5xzAP4uH8Rrd_m4FlXFdcB-AgWaaDt66LRsM/edit#slide=id.p)    
+- [Plan google sheet](https://docs.google.com/spreadsheets/d/1GRxtgu_4-9FCARIu2ke_AxGVEQxKd_TSnKtql4LroiU/edit#gid=622084973)    
 ## Data 
 Here we need to fix the links! 
 Reads after trimming are stored by duplicate in Chihuil /botete/mvazquez/camda2023/trimmed/*.fastq.gz and Alnitak /data/camda2023/trimmed/*.fastq.gz  
