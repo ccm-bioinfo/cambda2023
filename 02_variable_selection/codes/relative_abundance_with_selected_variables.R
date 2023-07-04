@@ -99,14 +99,23 @@ phylo_sv <- phyloseq(
 
 phylo_sv_rel <- transform_sample_counts(phylo_sv, function(x) x / sum(x) )
 
-rel_ab_sv <- plot_bar(phylo_sv_rel, fill = opt$level) +
+data_glom <- psmelt(phylo_sv_rel) # create dataframe from phyloseq object
+data_glom[, opt$level] <- as.character(data_glom[, opt$level]) #convert to character
+
+#simple way to rename phyla with < 1% abundance
+data_glom[,opt$level][data_glom$Abundance < 0.05] <- "< 5% abund."
+
+#Count # phyla to set color palette
+Count <- length(unique(data_glom[,opt$level]))
+
+rel_ab_sv <- data_glom %>% 
+    ggplot(aes(x = Sample, y = Abundance, fill = .data[[opt$level]])) + 
     facet_grid(cols = vars(City_year), scales = "free") +
+    geom_bar(aes(), stat="identity", position="stack") +
     theme_fivethirtyeight() +
     theme(axis.text.x = element_blank(),
           legend.position = "bottom",
-          legend.margin = margin(),
-          legend.text = element_text(size=rel(0.5))) +
-    guides(fill = guide_legend(nrow = 5, byrow = TRUE))
+          legend.margin = margin())
 
 ggsave(
     filename = path_to_fig,

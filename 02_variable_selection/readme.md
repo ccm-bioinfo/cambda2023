@@ -101,11 +101,56 @@ Up to June 26, the selected variables using the Negative binomial model, and the
 Hence, we think that this variable selection method is performing well with the benefit that the selected variables might be interpreted biologically. 
 Indeed, for every selected OTU we know for which pairs of cities it is differential, so we might ask what are the biological reasons for this to happen. 
 
+## Most differential OTUs 
+
+According with the [classification results](../03_classification/) we will be using the selected variables using the Negative binomial model, fitted on the kingdoms separately. 
+We deemed an OTU to be _most differential_ if it is differential for more than 10 cityc comparisons; i.e. if it is selected as differential for at least 11 pairs of cities. 
+With this definition we obtained the following table, where we present the ID of the identified OTUs, the number of times it was identified as differential, and its taxonomic classification (up to Genera). 
+
+|     OTU| Comparisons|Kingdom  |Phylum         |Class               |Order               |Family               |Genus                      |
+|-------:|-----------:|:--------|:--------------|:-------------------|:-------------------|:--------------------|:--------------------------|
+|      22|          12|Bacteria |Pseudomonadota |Gammaproteobacteria |Alteromonadales     |Shewanellaceae       |Shewanella                 |
+|     297|          40|Bacteria |Pseudomonadota |Hydrogenophilia     |Hydrogenophilales   |Hydrogenophilaceae   |Hydrogenophilus            |
+|     316|          46|Bacteria |Pseudomonadota |Gammaproteobacteria |Pseudomonadales     |Pseudomonadaceae     |Stutzerimonas              |
+|     565|          24|Bacteria |Pseudomonadota |Gammaproteobacteria |Enterobacterales    |Enterobacteriaceae   |Atlantibacter              |
+|     566|          12|Bacteria |Pseudomonadota |Gammaproteobacteria |Enterobacterales    |Enterobacteriaceae   |Pseudescherichia           |
+|    1280|          75|Bacteria |Bacillota      |Bacilli             |Bacillales          |Staphylococcaceae    |Staphylococcus             |
+|    1747|          54|Bacteria |Actinomycetota |Actinomycetes       |Propionibacteriales |Propionibacteriaceae |Cutibacterium              |
+|   29370|          16|Bacteria |Bacillota      |Clostridia          |Eubacteriales       |Lachnospiraceae      |Lacrimispora               |
+|   38304|          12|Bacteria |Actinomycetota |Actinomycetes       |Mycobacteriales     |Corynebacteriaceae   |Corynebacterium            |
+|   49319|          15|Bacteria |Actinomycetota |Rubrobacteria       |Rubrobacterales     |Rubrobacteraceae     |Rubrobacter                |
+|  165179|          11|Bacteria |Bacteroidota   |Bacteroidia         |Bacteroidales       |Prevotellaceae       |Prevotella                 |
+|  225148|          16|Bacteria |Chlamydiota    |Chlamydiia          |Parachlamydiales    |Rhabdochlamydiaceae  |Candidatus Rhabdochlamydia |
+|  262209|          11|Bacteria |Actinomycetota |Actinomycetes       |Micrococcales       |Intrasporangiaceae   |Janibacter                 |
+|  288000|          46|Bacteria |Pseudomonadota |Alphaproteobacteria |Hyphomicrobiales    |Nitrobacteraceae     |Bradyrhizobium             |
+|  546871|          15|Bacteria |Actinomycetota |Actinomycetes       |Propionibacteriales |Nocardioidaceae      |Friedmanniella             |
+|  712435|          14|Bacteria |Bacteroidota   |Bacteroidia         |Bacteroidales       |Porphyromonadaceae   |Porphyromonas              |
+| 1458307|          26|Bacteria |Pseudomonadota |Alphaproteobacteria |Rhodobacterales     |Roseobacteraceae     |Octadecabacter             |
+| 1528099|          25|Bacteria |Actinomycetota |Actinomycetes       |Mycobacteriales     |Lawsonellaceae       |Lawsonella                 |
+| 1980928|          33|Viruses  |Uroviricota    |Caudoviricetes      |                    |Herelleviridae       |Sepunavirus                |
+| 1982251|          19|Viruses  |Uroviricota    |Caudoviricetes      |                    |                     |Pahexavirus                |
+| 2086471|          11|Bacteria |Bacteroidota   |Cytophagia          |Cytophagales        |Hymenobacteraceae    |Adhaeribacter              |
+| 2596915|          27|Bacteria |Bacteroidota   |Cytophagia          |Cytophagales        |Hymenobacteraceae    |Hymenobacter               |
+| 2713640|          16|Viruses  |Artverviricota |Revtraviricetes     |Ortervirales        |Caulimoviridae       |Cavemovirus                |
+| 2939494|          11|Bacteria |Bacillota      |Bacilli             |Bacillales          |Planococcaceae       |Rummeliibacillus           |
+
+## Relative abundance of selected OTUs 
+
+We will keep using the selected variables under the NB model, fitted on the kingdoms separately. 
+Because we are particularly interested in the USA cities, in the next figure we only present the relative abundance of the OTUs for those cities. 
+
+![relative abundances](./selected_variables_results/relative_abundance_plots/reads_kingdoms_nb_relAbund_usa.png)
+
+To make the previous graph we only considered the OTUs at Order level, and grouped into a category called _< 5% abund._ all the OTUs whose relative abundance is less than 5 %. 
+The NA category, which is grey, corresponds to OTUs that are at a higher taxonomic hierarchy than Order. 
+
+This graph was done with `phyloseq` and `ggplot2`, using the [data with selected variables under NB](./selected_variables_results/integrated_tables/reads_kingdoms_nb_integrated.csv) and the [taxonomic information](./selected_variables_results/otus_taxonomic/otus_reads_kingdoms_nb_tax.csv) to construct a phyloseq object (see [the code](./codes/relative_abundance_with_selected_variables.R)).
+
 ## The particular case of New York
 
 As we suspect that the genomic samples of AMR profiles are from New York City, we focused our attention on the selected OTUs that are differential between New York City and other cities in USA. 
 
-According the the [classification results](../03_classification/) we will be using the selected variables while using the Negative binomial model, fitted on the kingdoms separately. 
+According with the [classification results](../03_classification/) we will be using the selected variables while using the Negative binomial model, fitted on the kingdoms separately. 
 We present the corresponding OTUs as a table:
 
 |     OTU|locs           |hlevel         | sign_rank[^1]|Kingdom  |Phylum                      |Class               |Order            |Family              |Genus                      |
@@ -195,7 +240,7 @@ With this extra step, the number of selected OTUs (and corresponding percentage 
 |ZINB            | 405 (31.39) | 401 (31.10) |
 |Model selection | 258 (13.81) | 272 (12.91) |
 
-Except for the OTUs selected with the Poisson regression approach, we see that there are selected less OTUs present. 
+Except for the OTUs selected with the Poisson regression approach, we see that we have selecetd less differential OTUs. 
 
 It remains to check if this reduction keeps the good performance for classification that the original selection presented. 
 
