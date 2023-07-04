@@ -1,5 +1,5 @@
 # Metapangenomics
-The CAMDA 2023 team has decided to create a meta pangenome for the bacterial genus: _Escherichia_, _Klebsiella_, and _Enterobacter_. The following approach follows the ideas presented in [2020 by Utter, et al](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02200-2#Bib1).
+The CAMDA 2023 team has decided to create a meta pangenome for the bacterial genus: _Klebsiella_. The following approach follows the ideas presented in [2020 by Utter, et al](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02200-2#Bib1).
 Next, we will list the steps to replicate this research work.
 
 This a tutorial for create a metapangenomics of Klebsiella pneumoniae to CAMDA 2023 was guided by Metapangenomics of Rothia and H. parainfluenzae.
