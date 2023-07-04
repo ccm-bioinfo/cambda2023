@@ -2,12 +2,14 @@
 library("optparse")
 
 option_list = list(
-    make_option(c("-I", "--input_dir"), type = "character", default = "../selected_variables_results/reduced_significant_otus/", 
+    make_option(c("-I", "--input_dir"), type = "character", default = "../selected_variables_results/", 
                 help = "input directory [default= %default]", metavar = "character"),
     make_option(c("-d", "--tax_data"), type = "character", default = "../data/", 
                 help = "directory where the taxonomic dictionaries are stored [default= %default]", metavar = "character"),
-    make_option(c("-O", "--out_dir"), type = "character", default = "../selected_variables_results/reduced_otus_list/", 
+    make_option(c("-O", "--out_dir"), type = "character", default = "../selected_variables_results/otus_taxonomic/", 
                 help = "output directory [default= %default]", metavar = "character"),
+    make_option(c("-R", "--reduced"), type = "logical", default = TRUE, 
+                help = "work with reduced OTUs", metavar = "logical"),
     make_option(c("-r", "--reads"), type = "logical", default = TRUE,
                 help = "reads (TRUE) or assembly (FALSE) [default= %default]", 
                 metavar = "logical"),
@@ -36,10 +38,14 @@ path_to_output <- opt$out_dir
 prefix0 <- ifelse(opt$reads, "reads", "assembly")
 prefix1 <- ifelse(opt$all, "", "kingdoms")
 prefix2 <- opt$model
+suffix0 <- ifelse(opt$reduced, "_reduced", "")
+path_to_otus <- ifelse(opt$reduced, "reduced_significant_otus/", 
+                       "significant_otus/")
 
 # Reading the data
 signif_otus_best <- read.csv(
-    paste0(path_to_input, prefix0, "_", prefix1, "_", prefix2, "_signif_reduced.csv")
+    paste0(path_to_input, path_to_otus, 
+           prefix0, "_", prefix1, "_", prefix2, "_signif", suffix0, ".csv")
 )
 
 # Get the different taxonomic levels present in the data
@@ -95,7 +101,7 @@ signif_otus_best_names %>%
     write.csv(
         file = paste0(
             path_to_output, "otus_", prefix0, "_", prefix1, "_", prefix2, 
-            ".csv"
+            "_tax", suffix0,".csv"
         ),
         row.names = FALSE
     )
