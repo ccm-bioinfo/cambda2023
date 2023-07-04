@@ -1,39 +1,40 @@
+# Metapangenomics
+The CAMDA 2023 team has decided to create a meta pangenome for the bacterial genus: _Escherichia_, _Klebsiella_, and _Enterobacter_. The following approach follows the ideas presented in [2020 by Utter, et al](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02200-2#Bib1).
+Next, we will list the steps to replicate this research work.
+
+This a tutorial for create a metapangenomics of Klebsiella pneumoniae to CAMDA 2023 was guided by Metapangenomics of Rothia and H. parainfluenzae.
+## Organization & Workflow
+Software.
+You need the next bioinformatics software to recreate the metapagenomics:
+- anvi’o 7.1 version
+- Prodigal
+- InterProScan (version 5.30-69)
+- Bowtie2
+- BLASTP
+- MUSCLE
+## Step 1. Collecting and annotating genomes.
+Getting the genomes from the list filtered by Team Antón. 
+In order to obtain the genomes during the CAMDA2023 Hackathon, Antó's team searched for Klebsiella genomes that were sequenced in the USA in 2016 and 2017. A total of 90 genomes were later downloaded to the Alnitak cluster. However, they were downloaded in '.gbk' and for this analysis it must be started with '.fasta' files, so it was decided to download it with the script that was provided to me by the tutorial by Daniel Utter et al. The first thing to do is obtain a list of all the genomes available at NCBI which is available at the following link: ftp://ftp.ncbi.nlm.nih.gov/genomes/ASSEMBLY_REPORTS/
+Subsequently, use the download script MASTER_SCRIPTS/01GetGen.sh which has been slightly modified to download the klebsiella genomes previously listed by Antón's team. The original script is available in the tutorial by Daniel Utter et al. 
+## Step 2. Functional annotation.
+Functional annotation was performed using the InterProscan Database. This part of the analysis was carried out in the Chihuil cluster since alnitak did not have InterProscan installed, take into account that this step was carried out with the InterProscan installation that was installed locally (Installation made by Miguel CCM), since if you do With the InterProscan environment, it is likely that you will have errors because the DBs are not updated. In this step, a file called “interpro-results-fmt-Klebsiella-isolates.tsv” is created, which contains all the functional annotations of the Klebsiella genomes. You can consult the script to generate the functional annotations in MASTER_SCRIPT/99_geneFunctions.sh
+## Step 3. Mapping. 
+Recruiting metagenomes to the contigs.
+This step aims to search for reads that align with the Klebsiella genomes. We want this so that we can know which are the genes that are most represented in the niche that we are investigating. These analyzes were carried out with the following script: MASTER_SCRIPTS/03ProMeRe.sh
+## Step 4. Profiling the metagenome recruitment
+
+## Step 5. Pangenome and metapangenome construction
+Pangenome creation methods details
+Metapangenome detailed assumptions and specifics
+Precise choice of ECG/EAG threshold has little impact
+## Step 6. Combining metapangenomes
+Anvi’o interactive display choices for metapangenomes
+
 ## Pangenomics  
 A pangenome with genomic data of genera  _Escherichia_, _Klebsiella_, and _Enterobacter_ from the US cities in the challenge, with samples collected near 2017 can extend information about genes with antibiotic resistance. NCBI Genomes, see [Genomes Table](data/genome-metadata.csv) from the selected dates and places were downloaded and AMR annotated.
 - [] [extra genomes blast AMR counts ](data/230624_genomes_blast_counts.tsv)
 - [] [extra genomes CARD AMR annotation](data/230623_genomes_card_counts.tsv)  
 - [] Full table  
-
-
-## Metapangenomics
-The CAMDA 2023 team has decided to create a meta pangenome for the bacterial genus: _Escherichia_, _Klebsiella_, and _Enterobacter_. The following approach follows the ideas presented in [2020 by Utter, et al](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02200-2#Bib1).
-Next, we will list the steps to replicate this research work.
-
-To do:
-1. Replicate the metapangenome of the oral microbiome.
-2. Download the Escherichia, Klebsiella, and Enterobacter genomes that have been uploaded to NCBI in 2018
-3. Obtain the trimming reads of the metagenomic data by city.
-4. build the pangenome
-5. Build the metapangenome
-6. Discussion of the results with the CAMDA 2023 team
-
-Doing
-* We verified that the BetterLab server had the necessary programs to run the metapangenome.
-- anvi’o (installed)
-- Prodigal (installed)
-- InterProScan (version 5.30-69) (installed?)
-- bowtie2 (installed)
-- BLASTP (installed)
-- MUSCLE  (installed)
-* Once the programs have been verified, we continue to replicate the data. However, we had some problems running the data due to the format of the files.
-
-Done
-
-Issues
-BetterLab doesn't let you upload files larger than 3gb, apparently it's a problem with the "gz" format.
-
-We don't know if InterProScan is already installed in BetterLab.
-
 
 # Pangenome
 
