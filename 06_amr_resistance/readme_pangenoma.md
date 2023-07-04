@@ -4,6 +4,8 @@ Next, we will list the steps to replicate this research work.
 
 This a tutorial for create a metapangenomics of Klebsiella pneumoniae to CAMDA 2023 was guided by Metapangenomics of Rothia and H. parainfluenzae.
 ## Organization & Workflow
+
+![workflow](fig/metapangenomics_workflow.png)  
 Software.
 You need the next bioinformatics software to recreate the metapagenomics:
 - anvi’o 7.1 version
@@ -28,8 +30,8 @@ Pangenome creation methods details
 Metapangenome detailed assumptions and specifics
 Precise choice of ECG/EAG threshold has little impact
 ## Step 6. Combining metapangenomes
-Anvi’o interactive display choices for metapangenomes
-
+## Anvi’o interactive display choices for metapangenomes
+![metapangenome](fig/metapangenomics_file1.png) 
 ## Pangenomics  
 A pangenome with genomic data of genera  _Escherichia_, _Klebsiella_, and _Enterobacter_ from the US cities in the challenge, with samples collected near 2017 can extend information about genes with antibiotic resistance. NCBI Genomes, see [Genomes Table](data/genome-metadata.csv) from the selected dates and places were downloaded and AMR annotated.
 - [] [extra genomes blast AMR counts ](data/230624_genomes_blast_counts.tsv)
