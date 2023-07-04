@@ -1,0 +1,258 @@
+gene,mechanism
+AAC(3)-II,antibiotic inactivation
+AAC(3)-IIa,antibiotic inactivation
+AAC(3)-IIc,antibiotic inactivation
+AAC(3)-IV,antibiotic inactivation
+AAC(6')-30_AAC(6')-Ib'fusionprotein,antibiotic inactivation
+AAC(6')-IIc,antibiotic inactivation
+AAC(6')-Ib-Hangzhou,antibiotic inactivation
+AAC(6')-Ib-Suzhou,antibiotic inactivation
+AAC(6')-Ib-cr,antibiotic inactivation
+AAC(6')-Ib-cr7,antibiotic inactivation
+AAC(6')-Ib10,antibiotic inactivation
+AAC(6')-Ib7,antibiotic inactivation
+AAC(6')-Ib8,antibiotic inactivation
+ACT-16,antibiotic inactivation
+ACT-17,antibiotic inactivation
+ACT-56,antibiotic inactivation
+ANT(2'')-Ia,antibiotic inactivation
+ANT(3'')-IIa,antibiotic inactivation
+APH(3'')-Ib,antibiotic inactivation
+APH(3')-Ia,antibiotic inactivation
+APH(3')-VI,antibiotic inactivation
+APH(4)-Ia,antibiotic inactivation
+APH(6)-Id,antibiotic inactivation
+AacA16,antibiotic inactivation
+AcrA,antibiotic efflux
+AcrB,antibiotic efflux
+AcrD,antibiotic efflux
+AcrE,antibiotic efflux
+AcrF,antibiotic efflux
+AcrR,antibiotic efflux
+AcrS,antibiotic efflux
+ArmA,antibiotic target alteration
+ArnT,antibiotic target alteration
+Arr,antibiotic inactivation
+Arr-2,antibiotic inactivation
+Arr-3,antibiotic inactivation
+BRP(MBL),antibiotic inactivation
+BacA,antibiotic target alteration
+BaeR,antibiotic efflux
+BaeS,antibiotic efflux
+BasS,antibiotic efflux;antibiotic target alteration
+CMY-59,antibiotic inactivation
+CRP,antibiotic efflux
+CTX-M-14,antibiotic inactivation
+CTX-M-15,antibiotic inactivation
+CTX-M-27,antibiotic inactivation
+CTX-M-33,antibiotic inactivation
+CatA10,antibiotic inactivation
+CatB,antibiotic inactivation
+CatB3,antibiotic inactivation
+CatI,antibiotic inactivation
+CatII,antibiotic inactivation
+ClbA,antibiotic target alteration
+ClbB,antibiotic target alteration
+ClbC,antibiotic target alteration
+CmlA5,antibiotic efflux
+CpxA,antibiotic efflux
+CrcB,antibiotic efflux
+CyaA,antibiotic target alteration
+DHA-1,antibiotic inactivation
+DHA-4,antibiotic inactivation
+Dfr,antibiotic target replacement
+DfrA1,antibiotic target replacement
+DfrA12,antibiotic target replacement
+DfrA14,antibiotic target replacement
+DfrA15,antibiotic target replacement
+DfrA19,antibiotic target replacement
+DfrA24,antibiotic target replacement
+DfrA25,antibiotic target replacement
+DfrA27,antibiotic target replacement
+DfrA30,antibiotic target replacement
+DfrA5,antibiotic target replacement
+EC-145,antibiotic target replacement
+EC-148,antibiotic target replacement
+EmrA,antibiotic efflux
+EmrB,antibiotic efflux
+EmrD,antibiotic efflux
+EmrE,antibiotic efflux
+EmrK,antibiotic efflux
+EmrR,antibiotic efflux
+EmrY,antibiotic efflux
+EreA,antibiotic inactivation
+EreA2,antibiotic inactivation
+ErmB,antibiotic target alteration
+EvgA,antibiotic efflux
+EvgS,antibiotic efflux
+FabI,antibiotic target alteration
+FloR,antibiotic efflux
+FosA,antibiotic inactivation
+FosA2,antibiotic inactivation
+FosA5,antibiotic inactivation
+Fosa7.3,antibiotic inactivation
+GadW,antibiotic efflux
+GadX,antibiotic efflux
+GlpT,antibiotic target alteration
+H-NS,antibiotic efflux
+KPC-2,antibiotic inactivation
+KPC-3,antibiotic inactivation
+KdpE,antibiotic efflux
+KpnE,antibiotic efflux
+KpnF,antibiotic efflux
+KpnG,antibiotic efflux
+KpnH,antibiotic efflux
+LAP-2,antibiotic inactivation
+LEN-6,antibiotic inactivation
+LptD,antibiotic efflux
+MCR-9,antibiotic target alteration
+MacA,antibiotic efflux
+MacB,antibiotic efflux
+MarA,antibiotic efflux;reduced permeability to antibiotic
+MarR,antibiotic efflux;reduced permeability to antibiotic
+MdfA,antibiotic efflux
+MdtA,antibiotic efflux
+MdtB,antibiotic efflux
+MdtC,antibiotic efflux
+MdtE,antibiotic efflux
+MdtF,antibiotic efflux
+MdtG,antibiotic efflux
+MdtH,antibiotic efflux
+MdtK,antibiotic efflux
+MdtM,antibiotic efflux
+MdtN,antibiotic efflux
+MdtO,antibiotic efflux
+MdtP,antibiotic efflux
+Mph(A),antibiotic inactivation
+Mph(B),antibiotic inactivation
+Mph(D),antibiotic inactivation
+Mrx,antibiotic inactivation
+MsbA,antibiotic efflux
+MsrB,antibiotic target protection
+MsrE,antibiotic target protection
+NDM-1,antibiotic inactivation
+NDM-4,antibiotic inactivation
+NDM-5,antibiotic inactivation
+NDM-7,antibiotic inactivation
+NfsA,antibiotic target alteration
+OXA-1,antibiotic inactivation
+OXA-181,antibiotic inactivation
+OXA-2,antibiotic inactivation
+OXA-232,antibiotic inactivation
+OXA-48,antibiotic inactivation
+OXA-9,antibiotic inactivation
+OmpA,reduced permeability to antibiotic
+OmpK35,reduced permeability to antibiotic
+OmpK36,reduced permeability to antibiotic
+OmpK37,reduced permeability to antibiotic
+OqxA,antibiotic efflux
+OqxA10,antibiotic efflux
+OqxA11,antibiotic efflux
+OqxA3,antibiotic efflux
+OqxA6,antibiotic efflux
+OqxA8,antibiotic efflux
+OqxB,antibiotic efflux
+OqxB14,antibiotic efflux
+OqxB19,antibiotic efflux
+OqxB20,antibiotic efflux
+OqxB22,antibiotic efflux
+OqxB24,antibiotic efflux
+OqxB25,antibiotic efflux
+OqxB32,antibiotic efflux
+OqxB5,antibiotic efflux
+OqxB9,antibiotic efflux
+OqxR,antibiotic efflux
+PatA,antibiotic efflux
+PhoQ,antibiotic efflux;antibiotic target alteration;resistance by absence
+PmrC,antibiotic target alteration
+PmrE,antibiotic target alteration
+PmrF,antibiotic target alteration
+PmrL,antibiotic target alteration
+PtsI,antibiotic target alteration
+QacE,antibiotic efflux
+QacL,antibiotic efflux
+QnrA1,antibiotic target protection
+QnrB1,antibiotic target protection
+QnrB10,antibiotic target protection
+QnrB20,antibiotic target protection
+QnrB29,antibiotic target protection
+QnrB4,antibiotic target protection
+QnrS7,antibiotic target protection
+RamA,antibiotic efflux;reduced permeability to antibiotic
+RamR,antibiotic efflux;antibiotic target alteration
+RmtB,antibiotic target alteration
+RmtF,antibiotic target alteration
+RosA,antibiotic efflux
+RosB,antibiotic efflux
+Rpsl,antibiotic target alteration
+SHV-1,antibiotic inactivation
+SHV-100,antibiotic inactivation
+SHV-106,antibiotic inactivation
+SHV-11,antibiotic inactivation
+SHV-110,antibiotic inactivation
+SHV-112,antibiotic inactivation
+SHV-12,antibiotic inactivation
+SHV-122,antibiotic inactivation
+SHV-160,antibiotic inactivation
+SHV-168,antibiotic inactivation
+SHV-187,antibiotic inactivation
+SHV-26,antibiotic inactivation
+SHV-28,antibiotic inactivation
+SHV-30,antibiotic inactivation
+SHV-31,antibiotic inactivation
+SHV-33,antibiotic inactivation
+SHV-40,antibiotic inactivation
+SHV-60,antibiotic inactivation
+SHV-7,antibiotic inactivation
+SHV-71,antibiotic inactivation
+SHV-76,antibiotic inactivation
+Sat2,antibiotic inactivation
+SoxR,antibiotic efflux;antibiotic target alteration
+Sul1,antibiotic target replacement
+Sul2,antibiotic target replacement
+Sul3,antibiotic target replacement
+TEM-1,antibiotic inactivation
+TEM-98,antibiotic inactivation
+Tet(A),antibiotic efflux
+Tet(B),antibiotic efflux
+Tet(D),antibiotic efflux
+Tet(G),antibiotic efflux
+TmrB,reduced permeability to antibiotic
+TolC,antibiotic efflux
+UhpT,antibiotic target alteration
+Vga(C),antibiotic target protection
+YojI,antibiotic efflux
+aadA,antibiotic inactivation
+aadA16,antibiotic inactivation
+aadA2,antibiotic inactivation
+aadA5,antibiotic inactivation
+ampC1,antibiotic inactivation
+clbD,antibiotic target alteration
+clbE,antibiotic target alteration
+clbF,antibiotic target alteration
+clbG,antibiotic target alteration
+clbH,antibiotic target alteration
+clbI,antibiotic target alteration
+clbJ,antibiotic target alteration
+clbK,antibiotic target alteration
+clbL,antibiotic target alteration
+clbM,antibiotic target alteration
+clbN,antibiotic target alteration
+clbO,antibiotic target alteration
+clbP,antibiotic target alteration
+clbQ,antibiotic target alteration
+clbS,antibiotic target alteration
+eptB,antibiotic target alteration
+folC,antibiotic target alteration
+fosa9,antibiotic inactivation
+gyrA,antibiotic target alteration
+gyrB,antibiotic target alteration
+leuO,antibiotic efflux
+mtfA,antibiotic target alteration
+ompR,reduced permeability to antibiotic
+parC,antibiotic target alteration
+parE,antibiotic target alteration
+porin,reduced permeability to antibiotic
+qacEdelta1,antibiotic efflux
+rpoS,antibiotic target alteration
+ugd,antibiotic target alteration
