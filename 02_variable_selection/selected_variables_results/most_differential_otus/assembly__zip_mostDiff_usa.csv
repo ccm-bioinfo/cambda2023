@@ -1,3 +1,3 @@
 "OTU","Comparisons","min_tax","max_tax","rel_ab_min_tax","rel_ab_max_tax","Kingdom","Phylum","Class","Order","Family","Genus"
-119219,13,"Class","Family",0.0330816530527198,0.00826686171001193,"Bacteria","Pseudomonadota","Betaproteobacteria","Burkholderiales","Burkholderiaceae",NA
-2596915,11,"Phylum","Family",0.00843486284886855,0.00297320336054729,"Bacteria","Bacteroidota","Cytophagia","Cytophagales","Hymenobacteraceae",NA
+119219,13,"Class","Family",0.0678788793939176,0.0139420465979639,"Bacteria","Pseudomonadota","Betaproteobacteria","Burkholderiales","Burkholderiaceae",NA
+2596915,11,"Class","Family",0.0132066865180249,0.0125803507905461,"Bacteria","Bacteroidota","Cytophagia","Cytophagales","Hymenobacteraceae",NA

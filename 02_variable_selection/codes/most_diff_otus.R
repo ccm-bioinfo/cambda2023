@@ -42,10 +42,7 @@ suffix0 <- ifelse(opt$reduced, "_reduced", "")
 suffix1 <- ifelse(opt$usa, "_usa", "")
 
 path_to_counts <- paste0(
-    opt$input_dir, 
-    ifelse(opt$reduced, "integrated_reduced_tables/", "integrated_tables/"), 
-    prefix0, "_", prefix1, 
-    "_", prefix2, "_integrated", suffix0, ".csv"
+    "../", "data/", prefix0, "/"
 )
 
 path_to_tax <- paste0(
@@ -57,30 +54,6 @@ path_to_tab <- paste0(
     opt$out_dir, prefix0, "_", prefix1, "_", prefix2, "_mostDiff", suffix0
     , suffix1, ".csv"
 )
-
-if (opt$kingdoms) {
-    counts <- read.csv(path_to_counts) %>% 
-        mutate(OTU = sub('(.*)_.*_.*', '\\1', ID, perl = TRUE),
-               hlevel = sub('.*_(.*_.*)', '\\1', ID, perl = TRUE)) %>% 
-        relocate(c("OTU", "hlevel")) %>% 
-        pivot_longer(-c("OTU", "hlevel", "ID"), names_to = "Sample", values_to = "abundance") %>% 
-        group_by(Sample) %>% 
-        mutate(abundance = abundance / sum(abundance)) %>% 
-        group_by(OTU, hlevel) %>% 
-        summarise(relAbundance_mean = mean(abundance)) %>% 
-        ungroup()
-} else {
-    counts <- read.csv(path_to_counts) %>% 
-        mutate(OTU = sub('(.*)__.*', '\\1', ID, perl = TRUE),
-               hlevel = sub('.*_(_.*)', '\\1', ID, perl = TRUE)) %>% 
-        relocate(c("OTU", "hlevel")) %>% 
-        pivot_longer(-c("OTU", "hlevel", "ID"), names_to = "Sample", values_to = "abundance") %>% 
-        group_by(Sample) %>% 
-        mutate(abundance = abundance / sum(abundance)) %>% 
-        group_by(OTU, hlevel) %>% 
-        summarise(relAbundance_mean = mean(abundance)) %>% 
-        ungroup()
-}
 
 tax_selected_variables <- read.csv(
     path_to_tax
@@ -114,46 +87,87 @@ tax_witouth_locations <- tax_selected_variables %>%
         ))
     ) %>% 
     group_by(OTU) %>% 
-    slice(which.max(hlevel)) %>% 
+    slice(c(which.max(hlevel), which.min(hlevel))) %>% 
     ungroup()
+
+tax_witouth_locations_min <- tax_witouth_locations %>% 
+    slice( 2 * (1:n()) )
+
+tax_witouth_locations_max <- tax_witouth_locations %>% 
+    slice( 2 * (1:n()) - 1 )
 
 otuCounts <- table(tax_selected_variables$OTU)
 
 most_diff_otus <- otuCounts[otuCounts > opt$differential]
+while (length(most_diff_otus) == 0) {
+    opt$differential <- opt$differential - 1
+    most_diff_otus <- otuCounts[otuCounts > opt$differential]
+}
 
-tax_diff_otus <- tax_witouth_locations[
-    tax_witouth_locations$OTU %in% as.integer(names(most_diff_otus)), 
+tax_diff_otus <- tax_witouth_locations %>% 
+    group_by(OTU) %>% 
+    slice(which.max(hlevel)) %>% 
+    filter(OTU %in% as.integer(names(most_diff_otus))) %>% 
+    select(-hlevel) %>% 
+    arrange(OTU) %>% 
+    ungroup()
+
+tax_diff_otus_min <- tax_witouth_locations_min[
+    tax_witouth_locations_min$OTU %in% as.integer(names(most_diff_otus)), 
 ] %>% 
     mutate(Comparisons = as.vector(most_diff_otus)) %>%
-    select(-hlevel) %>% 
-    relocate(Comparisons, .after = OTU)
+    relocate(Comparisons, .after = OTU) %>% 
+    mutate(rel_ab_min_tax = NA)
 
-counts <- counts %>% 
-    mutate(OTU = as.integer(OTU)) %>% 
-    filter(OTU %in% as.integer(tax_diff_otus$OTU)) %>% 
-    arrange(OTU) %>% 
-    mutate(
-        hlevel = factor(hlevel, levels = c(
-            "_Phylum", "_Class", "_Order", "_Family", "_Genus",
-            "AB_Phylum", "AB_Class", "AB_Order", "AB_Family", "AB_Genus",
-            "Eukarya_Phylum", "Eukarya_Class", "Eukarya_Order", "Eukarya_Family", "Eukarya_Genus",
-            "Viruses_Phylum", "Viruses_Class", "Viruses_Order", "Viruses_Family", "Viruses_Genus"
-        ))
+tax_diff_otus_max <- tax_witouth_locations_max[
+    tax_witouth_locations_max$OTU %in% as.integer(names(most_diff_otus)), 
+] %>% 
+    mutate(Comparisons = as.vector(most_diff_otus)) %>%
+    relocate(Comparisons, .after = OTU) %>% 
+    mutate(rel_ab_max_tax = NA)
+
+taxLevels <- sort(unique(c(tax_diff_otus_min$hlevel, tax_diff_otus_max$hlevel)))
+
+for (i in 1:length(taxLevels)) {
+    tempData <- read.csv(
+        paste0(
+            path_to_counts, prefix0, 
+            sub('(.*)_.*', '\\1', taxLevels[i], perl = TRUE), "_count__", 
+            sub('.*_(.*)', '\\1', taxLevels[i], perl = TRUE), ".csv"
+        ) 
     ) %>% 
-    group_by(OTU) %>% 
-    slice(c(which.min(hlevel), which.max(hlevel))) %>% 
-    ungroup() 
+        rename(OTU = "X") %>% 
+        pivot_longer(-OTU, names_to = "Sample", values_to = "abundance") %>% 
+        group_by(Sample) %>% 
+        mutate(abundance = abundance / sum(abundance)) %>% 
+        filter(OTU %in% as.integer(names(most_diff_otus))) 
+    if (opt$usa) {
+        tempData <- tempData %>% 
+            filter( grepl("BAL", Sample) | grepl("DEN", Sample) | 
+                        grepl("MIN", Sample) | grepl("NYC", Sample) | 
+                        grepl("SAC", Sample) | grepl("SAN", Sample) )
+    }
+    tempData <- tempData %>% 
+        group_by(OTU) %>% 
+        summarise(relMean = mean(abundance)) %>% 
+        arrange(OTU)
+    min_idx <- which(tax_diff_otus_min$OTU %in% tempData$OTU & tax_diff_otus_min$hlevel == taxLevels[i])
+    max_idx <- which(tax_diff_otus_max$OTU %in% tempData$OTU & tax_diff_otus_max$hlevel == taxLevels[i])
+    tax_diff_otus_min$rel_ab_min_tax[min_idx] <- tempData$relMean[tempData$OTU %in% tax_diff_otus_min$OTU[min_idx]]
+    tax_diff_otus_max$rel_ab_max_tax[max_idx] <- tempData$relMean[tempData$OTU %in% tax_diff_otus_max$OTU[max_idx]]
+}
 
 tax_diff_otus <- tax_diff_otus %>% 
     mutate(
-        rel_ab_min_tax = counts$relAbundance_mean[2 * (1:n()) - 1],
-        rel_ab_max_tax = counts$relAbundance_mean[2 * (1:n())],
-        min_tax = sub('.*_(.*)', '\\1', counts$hlevel[2 * (1:n()) - 1], perl = TRUE),
-        max_tax = sub('.*_(.*)', '\\1', counts$hlevel[2 * (1:n())], perl = TRUE)
+        Comparisons = tax_diff_otus_min$Comparisons,
+        rel_ab_min_tax = tax_diff_otus_min$rel_ab_min_tax,
+        rel_ab_max_tax = tax_diff_otus_max$rel_ab_max_tax,
+        min_tax = sub('.*_(.*)', '\\1', tax_diff_otus_min$hlevel, perl = TRUE),
+        max_tax = sub('.*_(.*)', '\\1', tax_diff_otus_max$hlevel, perl = TRUE)
     ) %>% 
-    relocate(c("min_tax", "max_tax",
+    relocate(c("Comparisons", "min_tax", "max_tax",
                "rel_ab_min_tax", "rel_ab_max_tax"),
-             .after = Comparisons)
+             .after = OTU)
     
 
 write.csv(

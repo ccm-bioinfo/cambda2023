@@ -1,6 +1,6 @@
 "OTU","Comparisons","min_tax","max_tax","rel_ab_min_tax","rel_ab_max_tax","Kingdom","Phylum","Class","Order","Family","Genus"
-1282,17,"Phylum","Class",0.0519815652440241,0.0434509591305398,"Bacteria","Bacillota","Bacilli",NA,NA,NA
-1747,24,"Phylum","Class",0.147483822441788,0.145325764882069,"Bacteria","Actinomycetota","Actinomycetes",NA,NA,NA
-28090,19,"Class","Order",0.0848323796305585,0.0291731878698691,"Bacteria","Pseudomonadota","Gammaproteobacteria",NA,NA,NA
-288000,24,"Phylum","Class",0.224381189151956,0.100871712823761,"Bacteria","Pseudomonadota","Alphaproteobacteria",NA,NA,NA
-2596915,18,"Phylum","Class",0.0121024146408027,0.00429597863694998,"Bacteria","Bacteroidota","Cytophagia",NA,NA,NA
+1282,17,"Phylum","Class",0.0856785852788876,0.0734382471533938,"Bacteria","Bacillota","Bacilli",NA,NA,NA
+1747,24,"Phylum","Class",0.377530110072036,0.375519963555232,"Bacteria","Actinomycetota","Actinomycetes",NA,NA,NA
+28090,19,"Class","Class",0.188030491652618,0.188030491652618,"Bacteria","Pseudomonadota","Gammaproteobacteria",NA,NA,NA
+288000,24,"Phylum","Class",0.472789261103523,0.201587284540428,"Bacteria","Pseudomonadota","Alphaproteobacteria",NA,NA,NA
+2596915,18,"Phylum","Class",0.0330629775610371,0.0174492154909102,"Bacteria","Bacteroidota","Cytophagia",NA,NA,NA

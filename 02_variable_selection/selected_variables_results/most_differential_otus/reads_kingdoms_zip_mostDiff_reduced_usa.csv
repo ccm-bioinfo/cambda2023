@@ -1,1 +1,2 @@
-"OTU","Comparisons","Kingdom","Phylum","Class","Order","Family","Genus"
+"OTU","Comparisons","min_tax","max_tax","rel_ab_min_tax","rel_ab_max_tax","Kingdom","Phylum","Class","Order","Family","Genus"
+147322,7,"Family","Genus",0.000428141269526979,0.000431217876623526,"Bacteria","Cyanobacteriota","Cyanophyceae","Oscillatoriales","Sirenicapillariaceae","Limnospira"

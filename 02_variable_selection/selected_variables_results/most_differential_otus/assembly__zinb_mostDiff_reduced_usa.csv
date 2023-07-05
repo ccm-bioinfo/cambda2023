@@ -1,1 +1,2 @@
-"OTU","Comparisons","Kingdom","Phylum","Class","Order","Family","Genus"
+"OTU","Comparisons","min_tax","max_tax","rel_ab_min_tax","rel_ab_max_tax","Kingdom","Phylum","Class","Order","Family","Genus"
+1768242,5,"Genus","Genus",0.000319854762904092,0.000319854762904092,"Bacteria","Pseudomonadota","Betaproteobacteria","Burkholderiales","","Paucibacter"

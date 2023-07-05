@@ -1,5 +1,5 @@
 "OTU","Comparisons","min_tax","max_tax","rel_ab_min_tax","rel_ab_max_tax","Kingdom","Phylum","Class","Order","Family","Genus"
-119219,11,"Class","Family",0.0388103140692364,0.00925121621824723,"Bacteria","Pseudomonadota","Betaproteobacteria","Burkholderiales",NA,NA
-2080419,11,"Phylum","Family",0.00385909021418001,0.00378621249331756,"Bacteria","Deinococcota","Deinococci","Deinococcales",NA,NA
-2596915,11,"Phylum","Family",0.0132083504134073,0.00387031192180228,"Bacteria","Bacteroidota","Cytophagia","Cytophagales","Hymenobacteraceae",NA
-2861285,11,"Order","Family",0.00495629732332877,0.00495629732332877,"Bacteria","Pseudomonadota","Alphaproteobacteria","Caulobacterales","Caulobacteraceae",NA
+119219,11,"Class","Order",0.0832506632805449,0.0786776007444362,"Bacteria","Pseudomonadota","Betaproteobacteria","Burkholderiales",NA,NA
+2080419,11,"Phylum","Order",0.00865640291903788,0.00856359236532023,"Bacteria","Deinococcota","Deinococci","Deinococcales",NA,NA
+2596915,11,"Class","Family",0.0174492154909102,0.0162832831972985,"Bacteria","Bacteroidota","Cytophagia","Cytophagales","Hymenobacteraceae",NA
+2861285,11,"Order","Family",0.00628535455607648,0.00637543309506994,"Bacteria","Pseudomonadota","Alphaproteobacteria","Caulobacterales","Caulobacteraceae",NA

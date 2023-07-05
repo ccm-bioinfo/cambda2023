@@ -1,9 +1,9 @@
 "OTU","Comparisons","min_tax","max_tax","rel_ab_min_tax","rel_ab_max_tax","Kingdom","Phylum","Class","Order","Family","Genus"
-316,205,"Phylum","Phylum",0.489111021742564,0.489111021742564,"Bacteria","Pseudomonadota",NA,NA,NA,NA
-1280,199,"Phylum","Phylum",0.0986816917475631,0.0986816917475631,"Bacteria","Bacillota",NA,NA,NA,NA
-1747,173,"Phylum","Phylum",0.355777059422473,0.355777059422473,"Bacteria","Actinomycetota",NA,NA,NA,NA
-119532,63,"Phylum","Phylum",0.00609986820619553,0.00609986820619553,"Bacteria","Cyanobacteriota",NA,NA,NA,NA
-274537,28,"Phylum","Phylum",7.02906387589409e-05,7.02906387589409e-05,"Bacteria","Chlorobiota",NA,NA,NA,NA
-343874,193,"Phylum","Phylum",0.0347887300080063,0.0347887300080063,"Bacteria","Bacteroidota",NA,NA,NA,NA
-861299,150,"Phylum","Phylum",0.00055785858621194,0.00055785858621194,"Bacteria","Gemmatimonadota",NA,NA,NA,NA
-980427,26,"Phylum","Phylum",0.00709615861748802,0.00709615861748802,"Bacteria","Deinococcota",NA,NA,NA,NA
+316,205,"Phylum","Phylum",0.3426037751133,0.3426037751133,"Bacteria","Pseudomonadota",NA,NA,NA,NA
+1280,199,"Phylum","Phylum",0.050465123334287,0.050465123334287,"Bacteria","Bacillota",NA,NA,NA,NA
+1747,173,"Phylum","Phylum",0.208751255147675,0.208751255147675,"Bacteria","Actinomycetota",NA,NA,NA,NA
+119532,63,"Phylum","Phylum",0.00321694583532772,0.00321694583532772,"Bacteria","Cyanobacteriota",NA,NA,NA,NA
+274537,28,"Phylum","Phylum",4.43490139383127e-05,4.43490139383127e-05,"Bacteria","Chlorobiota",NA,NA,NA,NA
+343874,193,"Phylum","Phylum",0.021858042714998,0.021858042714998,"Bacteria","Bacteroidota",NA,NA,NA,NA
+861299,150,"Phylum","Phylum",0.000356569658251547,0.000356569658251547,"Bacteria","Gemmatimonadota",NA,NA,NA,NA
+980427,26,"Phylum","Phylum",0.00422962188045549,0.00422962188045549,"Bacteria","Deinococcota",NA,NA,NA,NA

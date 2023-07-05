@@ -1,1 +1,2 @@
-"OTU","Comparisons","Kingdom","Phylum","Class","Order","Family","Genus"
+"OTU","Comparisons","min_tax","max_tax","rel_ab_min_tax","rel_ab_max_tax","Kingdom","Phylum","Class","Order","Family","Genus"
+2713640,10,"Phylum","Genus",0.000123059617509568,9.61634144043333e-05,"Viruses","Artverviricota","Revtraviricetes","Ortervirales","Caulimoviridae","Cavemovirus"

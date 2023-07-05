@@ -1,1 +1,2 @@
-"OTU","Comparisons","Kingdom","Phylum","Class","Order","Family","Genus"
+"OTU","Comparisons","min_tax","max_tax","rel_ab_min_tax","rel_ab_max_tax","Kingdom","Phylum","Class","Order","Family","Genus"
+288000,10,"Order","Genus",0.124219333269309,0.097853293355276,"Bacteria","Pseudomonadota","Alphaproteobacteria","Hyphomicrobiales","Nitrobacteraceae","Bradyrhizobium"

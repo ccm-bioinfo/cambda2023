@@ -1,3 +1,3 @@
 "OTU","Comparisons","min_tax","max_tax","rel_ab_min_tax","rel_ab_max_tax","Kingdom","Phylum","Class","Order","Family","Genus"
-1280,12,"Phylum","Genus",0.0148514794692476,0.00473883256248431,"Bacteria","Bacillota","Bacilli","Bacillales","Staphylococcaceae","Staphylococcus"
-288000,17,"Order","Genus",0.0255236559583981,0.0140933166393737,"Bacteria","Pseudomonadota","Alphaproteobacteria","Hyphomicrobiales","Nitrobacteraceae","Bradyrhizobium"
+1280,12,"Phylum","Genus",0.0473297617495557,0.0262107072186424,"Bacteria","Bacillota","Bacilli","Bacillales","Staphylococcaceae","Staphylococcus"
+288000,17,"Order","Genus",0.0680564535823947,0.0378660719639671,"Bacteria","Pseudomonadota","Alphaproteobacteria","Hyphomicrobiales","Nitrobacteraceae","Bradyrhizobium"

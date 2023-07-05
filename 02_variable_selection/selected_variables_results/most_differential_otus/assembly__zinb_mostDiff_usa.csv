@@ -1,1 +1,2 @@
-"OTU","Comparisons","Kingdom","Phylum","Class","Order","Family","Genus"
+"OTU","Comparisons","min_tax","max_tax","rel_ab_min_tax","rel_ab_max_tax","Kingdom","Phylum","Class","Order","Family","Genus"
+1196095,6,"Order","Genus",0.000546509459555663,0.000563304686071115,"Bacteria","Pseudomonadota","Gammaproteobacteria","Orbales","Orbaceae","Gilliamella"

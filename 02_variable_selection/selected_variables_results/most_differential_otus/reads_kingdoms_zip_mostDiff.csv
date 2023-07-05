@@ -1,25 +1,25 @@
 "OTU","Comparisons","min_tax","max_tax","rel_ab_min_tax","rel_ab_max_tax","Kingdom","Phylum","Class","Order","Family","Genus"
-297,36,"Class","Family",0.0109446650010311,0.0109446650010311,"Bacteria","Pseudomonadota","Hydrogenophilia","Hydrogenophilales","Hydrogenophilaceae",NA
-833,15,"Phylum","Genus",0.000368556082172327,0.000368556082172327,"Bacteria","Fibrobacterota","Fibrobacteria","Fibrobacterales","Fibrobacteraceae","Fibrobacter"
-959,11,"Phylum","Phylum",0.00531428453288211,0.00531428453288211,"Bacteria","Bdellovibrionota",NA,NA,NA,NA
-1603,11,"Genus","Genus",0.000172819805780288,0.000172819805780288,"Bacteria","Bacillota","Bacilli","Lactobacillales","Lactobacillaceae","Amylolactobacillus"
-2057,18,"Phylum","Class",0.00341579120975013,0.00341579120975013,"Bacteria","Thermomicrobiota","Thermomicrobia",NA,NA,NA
-2098,16,"Order","Genus",0.00249605571098324,0.00158215275671261,"Bacteria","Mycoplasmatota","","Mycoplasmoidales","Metamycoplasmataceae","Metamycoplasma"
-5761,11,"Phylum","Genus",0.000928616531945465,0.000928616531945465,"Eukaryota","Heterolobosea","","","Vahlkampfiidae","Naegleria"
-29394,12,"Genus","Genus",0.00725666124472617,0.00725666124472617,"Bacteria","Bacillota","Bacilli","Lactobacillales","Carnobacteriaceae","Dolosigranulum"
-147322,27,"Family","Genus",0.00334700887319369,0.00334700887319369,"Bacteria","Cyanobacteriota","Cyanophyceae","Oscillatoriales","Sirenicapillariaceae","Limnospira"
-191303,19,"Family","Genus",0.00146643999170832,0.00146643999170832,"Bacteria","Bacillota","Erysipelotrichia","Erysipelotrichales","Turicibacteraceae","Turicibacter"
-225148,37,"Phylum","Genus",0.00298685713626699,0.000843352739803554,"Bacteria","Chlamydiota","Chlamydiia","Parachlamydiales","Rhabdochlamydiaceae","Candidatus Rhabdochlamydia"
-453230,18,"Class","Order",0.00117398156460423,0.00117398156460423,"Bacteria","Thermodesulfobacteriota","Desulfarculia","Desulfarculales",NA,NA
-651822,11,"Phylum","Phylum",0.00398932118420629,0.00398932118420629,"Bacteria","Synergistota",NA,NA,NA,NA
-693075,16,"Phylum","Family",0.000190193225468652,0.000190193225468652,"Bacteria","Caldisericota","Caldisericia","Caldisericales","Caldisericaceae",NA
-861299,28,"Phylum","Class",0.0230902008866656,0.0230902008866656,"Bacteria","Gemmatimonadota","Gemmatimonadetes",NA,NA,NA
-1056807,13,"Genus","Genus",0.00591923933226931,0.00591923933226931,"Bacteria","Pseudomonadota","Betaproteobacteria","Neisseriales","Neisseriaceae","Morococcus"
-1397703,14,"Genus","Genus",0.00263113198774644,0.00263113198774644,"Bacteria","Cyanobacteriota","Cyanophyceae","Nostocales","Scytonemataceae","Brasilonema"
-1528099,20,"Family","Genus",0.0212801961302243,0.0212801961302243,"Bacteria","Actinomycetota","Actinomycetes","Mycobacteriales","Lawsonellaceae","Lawsonella"
-1817405,12,"Genus","Genus",0.00367078104118407,0.00367078104118407,"Bacteria","Bacillota","Bacilli","Bacillales","Staphylococcaceae","Abyssicoccus"
-1982626,13,"Genus","Genus",0.00144004167951595,0.00144004167951595,"Bacteria","Bacillota","Erysipelotrichia","Erysipelotrichales","Erysipelotrichaceae","Faecalibacillus"
-2364647,11,"Genus","Genus",0.0196807341447791,0.0196807341447791,"Bacteria","Pseudomonadota","Gammaproteobacteria","Enterobacterales","Erwiniaceae","Kalamiella"
-2596890,17,"Class","Genus",0.00043994912753175,0.00043994912753175,"Bacteria","Planctomycetota","Candidatus Uabimicrobiia","Candidatus Uabimicrobiales","Candidatus Uabimicrobiaceae","Candidatus Uabimicrobium"
-2713640,13,"Phylum","Genus",0.00208690333972777,0.00133723739849032,"Viruses","Artverviricota","Revtraviricetes","Ortervirales","Caulimoviridae","Cavemovirus"
-2807512,20,"Class","Class",0.0080437672989412,0.0080437672989412,"Bacteria","Planctomycetota","Phycisphaerae",NA,NA,NA
+297,36,"Class","Family",0.000443584855442573,0.000454412708319144,"Bacteria","Pseudomonadota","Hydrogenophilia","Hydrogenophilales","Hydrogenophilaceae",NA
+833,15,"Phylum","Genus",1.03282305849137e-05,1.07297479871801e-05,"Bacteria","Fibrobacterota","Fibrobacteria","Fibrobacterales","Fibrobacteraceae","Fibrobacter"
+959,11,"Phylum","Phylum",0.000134393452722047,0.000134393452722047,"Bacteria","Bdellovibrionota",NA,NA,NA,NA
+1603,11,"Genus","Genus",4.8230006230285e-06,4.8230006230285e-06,"Bacteria","Bacillota","Bacilli","Lactobacillales","Lactobacillaceae","Amylolactobacillus"
+2057,18,"Phylum","Class",7.69602272004911e-05,7.69964591784877e-05,"Bacteria","Thermomicrobiota","Thermomicrobia",NA,NA,NA
+2098,16,"Order","Genus",8.2979034347215e-05,5.5006116279136e-05,"Bacteria","Mycoplasmatota","","Mycoplasmoidales","Metamycoplasmataceae","Metamycoplasma"
+5761,11,"Phylum","Genus",5.43468144078619e-05,5.43468144078619e-05,"Eukaryota","Heterolobosea","","","Vahlkampfiidae","Naegleria"
+29394,12,"Genus","Genus",0.000163049575743483,0.000163049575743483,"Bacteria","Bacillota","Bacilli","Lactobacillales","Carnobacteriaceae","Dolosigranulum"
+147322,27,"Family","Genus",0.000184803632982031,0.000186311543541533,"Bacteria","Cyanobacteriota","Cyanophyceae","Oscillatoriales","Sirenicapillariaceae","Limnospira"
+191303,19,"Family","Genus",4.67581805700149e-05,4.74685806356557e-05,"Bacteria","Bacillota","Erysipelotrichia","Erysipelotrichales","Turicibacteraceae","Turicibacter"
+225148,37,"Phylum","Genus",8.8761769932717e-05,2.12204842828187e-05,"Bacteria","Chlamydiota","Chlamydiia","Parachlamydiales","Rhabdochlamydiaceae","Candidatus Rhabdochlamydia"
+453230,18,"Class","Order",2.43615020625069e-05,2.43673545503347e-05,"Bacteria","Thermodesulfobacteriota","Desulfarculia","Desulfarculales",NA,NA
+651822,11,"Phylum","Phylum",8.63715969371346e-05,8.63715969371346e-05,"Bacteria","Synergistota",NA,NA,NA,NA
+693075,16,"Phylum","Family",1.00284244885804e-05,1.01986503153151e-05,"Bacteria","Caldisericota","Caldisericia","Caldisericales","Caldisericaceae",NA
+861299,28,"Phylum","Class",0.000549826377516964,0.000550076252679413,"Bacteria","Gemmatimonadota","Gemmatimonadetes",NA,NA,NA
+1056807,13,"Genus","Genus",8.83060533275809e-05,8.83060533275809e-05,"Bacteria","Pseudomonadota","Betaproteobacteria","Neisseriales","Neisseriaceae","Morococcus"
+1397703,14,"Genus","Genus",8.73852377386021e-05,8.73852377386021e-05,"Bacteria","Cyanobacteriota","Cyanophyceae","Nostocales","Scytonemataceae","Brasilonema"
+1528099,20,"Family","Genus",0.000397500842822187,0.000401877745308353,"Bacteria","Actinomycetota","Actinomycetes","Mycobacteriales","Lawsonellaceae","Lawsonella"
+1817405,12,"Genus","Genus",9.26702980641477e-05,9.26702980641477e-05,"Bacteria","Bacillota","Bacilli","Bacillales","Staphylococcaceae","Abyssicoccus"
+1982626,13,"Genus","Genus",4.91371166017967e-05,4.91371166017967e-05,"Bacteria","Bacillota","Erysipelotrichia","Erysipelotrichales","Erysipelotrichaceae","Faecalibacillus"
+2364647,11,"Genus","Genus",0.000436631098649309,0.000436631098649309,"Bacteria","Pseudomonadota","Gammaproteobacteria","Enterobacterales","Erwiniaceae","Kalamiella"
+2596890,17,"Class","Genus",1.441228149766e-05,1.48882902060122e-05,"Bacteria","Planctomycetota","Candidatus Uabimicrobiia","Candidatus Uabimicrobiales","Candidatus Uabimicrobiaceae","Candidatus Uabimicrobium"
+2713640,13,"Phylum","Genus",0.0335916255323718,0.0206658697952517,"Viruses","Artverviricota","Revtraviricetes","Ortervirales","Caulimoviridae","Cavemovirus"
+2807512,20,"Class","Class",0.000203877387215069,0.000203877387215069,"Bacteria","Planctomycetota","Phycisphaerae",NA,NA,NA
