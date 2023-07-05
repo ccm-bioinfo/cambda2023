@@ -2,6 +2,8 @@
 library("optparse")
 
 option_list = list(
+    make_option(c("-i", "--input_dir"), type = "character", default = "../selected_variables_results/", 
+                help = "input directory [default= %default]", metavar = "character"),
     make_option(c("-d", "--tax_data"), type = "character", default = "../selected_variables_results/otus_taxonomic/", 
                 help = "directory where the taxonomic dictionaries are stored [default= %default]", metavar = "character"),
     make_option(c("-O", "--out_dir"), type = "character", default = "../selected_variables_results/most_differential_otus/", 
@@ -39,6 +41,13 @@ prefix2 <- opt$model
 suffix0 <- ifelse(opt$reduced, "_reduced", "")
 suffix1 <- ifelse(opt$usa, "_usa", "")
 
+path_to_counts <- paste0(
+    opt$input_dir, 
+    ifelse(opt$reduced, "integrated_reduced_tables/", "integrated_tables/"), 
+    prefix0, "_", prefix1, 
+    "_", prefix2, "_integrated", suffix0, ".csv"
+)
+
 path_to_tax <- paste0(
     opt$tax_data, "otus_", prefix0, "_", prefix1, "_", 
     prefix2, "_tax", suffix0, ".csv"
@@ -48,6 +57,30 @@ path_to_tab <- paste0(
     opt$out_dir, prefix0, "_", prefix1, "_", prefix2, "_mostDiff", suffix0
     , suffix1, ".csv"
 )
+
+if (opt$kingdoms) {
+    counts <- read.csv(path_to_counts) %>% 
+        mutate(OTU = sub('(.*)_.*_.*', '\\1', ID, perl = TRUE),
+               hlevel = sub('.*_(.*_.*)', '\\1', ID, perl = TRUE)) %>% 
+        relocate(c("OTU", "hlevel")) %>% 
+        pivot_longer(-c("OTU", "hlevel", "ID"), names_to = "Sample", values_to = "abundance") %>% 
+        group_by(Sample) %>% 
+        mutate(abundance = abundance / sum(abundance)) %>% 
+        group_by(OTU, hlevel) %>% 
+        summarise(relAbundance_mean = mean(abundance)) %>% 
+        ungroup()
+} else {
+    counts <- read.csv(path_to_counts) %>% 
+        mutate(OTU = sub('(.*)__.*', '\\1', ID, perl = TRUE),
+               hlevel = sub('.*_(_.*)', '\\1', ID, perl = TRUE)) %>% 
+        relocate(c("OTU", "hlevel")) %>% 
+        pivot_longer(-c("OTU", "hlevel", "ID"), names_to = "Sample", values_to = "abundance") %>% 
+        group_by(Sample) %>% 
+        mutate(abundance = abundance / sum(abundance)) %>% 
+        group_by(OTU, hlevel) %>% 
+        summarise(relAbundance_mean = mean(abundance)) %>% 
+        ungroup()
+}
 
 tax_selected_variables <- read.csv(
     path_to_tax
@@ -94,6 +127,34 @@ tax_diff_otus <- tax_witouth_locations[
     mutate(Comparisons = as.vector(most_diff_otus)) %>%
     select(-hlevel) %>% 
     relocate(Comparisons, .after = OTU)
+
+counts <- counts %>% 
+    mutate(OTU = as.integer(OTU)) %>% 
+    filter(OTU %in% as.integer(tax_diff_otus$OTU)) %>% 
+    arrange(OTU) %>% 
+    mutate(
+        hlevel = factor(hlevel, levels = c(
+            "_Phylum", "_Class", "_Order", "_Family", "_Genus",
+            "AB_Phylum", "AB_Class", "AB_Order", "AB_Family", "AB_Genus",
+            "Eukarya_Phylum", "Eukarya_Class", "Eukarya_Order", "Eukarya_Family", "Eukarya_Genus",
+            "Viruses_Phylum", "Viruses_Class", "Viruses_Order", "Viruses_Family", "Viruses_Genus"
+        ))
+    ) %>% 
+    group_by(OTU) %>% 
+    slice(c(which.min(hlevel), which.max(hlevel))) %>% 
+    ungroup() 
+
+tax_diff_otus <- tax_diff_otus %>% 
+    mutate(
+        rel_ab_min_tax = counts$relAbundance_mean[2 * (1:n()) - 1],
+        rel_ab_max_tax = counts$relAbundance_mean[2 * (1:n())],
+        min_tax = sub('.*_(.*)', '\\1', counts$hlevel[2 * (1:n()) - 1], perl = TRUE),
+        max_tax = sub('.*_(.*)', '\\1', counts$hlevel[2 * (1:n())], perl = TRUE)
+    ) %>% 
+    relocate(c("min_tax", "max_tax",
+               "rel_ab_min_tax", "rel_ab_max_tax"),
+             .after = Comparisons)
+    
 
 write.csv(
     tax_diff_otus,

@@ -1,13 +1,13 @@
-"OTU","Comparisons","Kingdom","Phylum","Class","Order","Family","Genus"
-297,15,"Bacteria","Pseudomonadota","Hydrogenophilia","Hydrogenophilales","Hydrogenophilaceae",NA
-1603,13,"Bacteria","Bacillota","Bacilli","Lactobacillales","Lactobacillaceae","Amylolactobacillus"
-147322,11,"Bacteria","Cyanobacteriota","Cyanophyceae","Oscillatoriales","Sirenicapillariaceae","Limnospira"
-225148,20,"Bacteria","Chlamydiota","Chlamydiia","Parachlamydiales","Rhabdochlamydiaceae","Candidatus Rhabdochlamydia"
-861299,17,"Bacteria","Gemmatimonadota","Gemmatimonadetes","Gemmatimonadales",NA,NA
-1397703,12,"Bacteria","Cyanobacteriota","Cyanophyceae","Nostocales","Scytonemataceae","Brasilonema"
-1528099,16,"Bacteria","Actinomycetota","Actinomycetes","Mycobacteriales","Lawsonellaceae",NA
-1891644,13,"Bacteria","Actinomycetota","Actinomycetes","Sporichthyales","Sporichthyaceae",NA
-1980928,17,"Viruses","Uroviricota","Caudoviricetes","","Herelleviridae","Sepunavirus"
-2713640,21,"Viruses","Artverviricota","Revtraviricetes","Ortervirales","Caulimoviridae","Cavemovirus"
-2807512,17,"Bacteria","Planctomycetota","Phycisphaerae",NA,NA,NA
-2881056,12,"Bacteria","Actinomycetota","Actinomycetes","Micrococcales","Demequinaceae","Demequina"
+"OTU","Comparisons","min_tax","max_tax","rel_ab_min_tax","rel_ab_max_tax","Kingdom","Phylum","Class","Order","Family","Genus"
+297,15,"Class","Family",0.0106120635045061,0.0106120635045061,"Bacteria","Pseudomonadota","Hydrogenophilia","Hydrogenophilales","Hydrogenophilaceae",NA
+1603,13,"Genus","Genus",0.000147328994472955,0.000147328994472955,"Bacteria","Bacillota","Bacilli","Lactobacillales","Lactobacillaceae","Amylolactobacillus"
+147322,11,"Family","Genus",0.00300189531956503,0.00300189531956503,"Bacteria","Cyanobacteriota","Cyanophyceae","Oscillatoriales","Sirenicapillariaceae","Limnospira"
+225148,20,"Phylum","Genus",0.00264711337397648,0.000724821992010222,"Bacteria","Chlamydiota","Chlamydiia","Parachlamydiales","Rhabdochlamydiaceae","Candidatus Rhabdochlamydia"
+861299,17,"Phylum","Order",0.0188091984102507,0.0188091984102507,"Bacteria","Gemmatimonadota","Gemmatimonadetes","Gemmatimonadales",NA,NA
+1397703,12,"Genus","Genus",0.00211935481864906,0.00211935481864906,"Bacteria","Cyanobacteriota","Cyanophyceae","Nostocales","Scytonemataceae","Brasilonema"
+1528099,16,"Family","Family",0.0217121116549736,0.0217121116549736,"Bacteria","Actinomycetota","Actinomycetes","Mycobacteriales","Lawsonellaceae",NA
+1891644,13,"Order","Family",0.0042235315184279,0.0042235315184279,"Bacteria","Actinomycetota","Actinomycetes","Sporichthyales","Sporichthyaceae",NA
+1980928,17,"Family","Genus",0.00226983833663298,0.00134235892125128,"Viruses","Uroviricota","Caudoviricetes","","Herelleviridae","Sepunavirus"
+2713640,21,"Phylum","Genus",0.00186688548369283,0.00119714489963983,"Viruses","Artverviricota","Revtraviricetes","Ortervirales","Caulimoviridae","Cavemovirus"
+2807512,17,"Class","Class",0.00675391131645013,0.00675391131645013,"Bacteria","Planctomycetota","Phycisphaerae",NA,NA,NA
+2881056,12,"Family","Genus",0.00168724302299848,0.00168724302299848,"Bacteria","Actinomycetota","Actinomycetes","Micrococcales","Demequinaceae","Demequina"

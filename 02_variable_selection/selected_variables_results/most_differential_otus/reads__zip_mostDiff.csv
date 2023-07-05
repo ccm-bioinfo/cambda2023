@@ -1,19 +1,19 @@
-"OTU","Comparisons","Kingdom","Phylum","Class","Order","Family","Genus"
-297,36,"Bacteria","Pseudomonadota","Hydrogenophilia","Hydrogenophilales","Hydrogenophilaceae",NA
-833,13,"Bacteria","Fibrobacterota","Fibrobacteria","Fibrobacterales","Fibrobacteraceae","Fibrobacter"
-1603,13,"Bacteria","Bacillota","Bacilli","Lactobacillales","Lactobacillaceae","Amylolactobacillus"
-2057,11,"Bacteria","Thermomicrobiota","Thermomicrobia",NA,NA,NA
-147322,18,"Bacteria","Cyanobacteriota","Cyanophyceae","Oscillatoriales","Sirenicapillariaceae","Limnospira"
-191303,12,"Bacteria","Bacillota","Erysipelotrichia","Erysipelotrichales","Turicibacteraceae","Turicibacter"
-225148,37,"Bacteria","Chlamydiota","Chlamydiia","Parachlamydiales","Rhabdochlamydiaceae","Candidatus Rhabdochlamydia"
-337051,15,"Viruses","Cossaviricota","Papovaviricetes","Zurhausenvirales","Papillomaviridae","Betapapillomavirus"
-693075,15,"Bacteria","Caldisericota","Caldisericia","Caldisericales","Caldisericaceae",NA
-861299,40,"Bacteria","Gemmatimonadota","Gemmatimonadetes","Gemmatimonadales",NA,NA
-1397703,12,"Bacteria","Cyanobacteriota","Cyanophyceae","Nostocales","Scytonemataceae","Brasilonema"
-1528099,16,"Bacteria","Actinomycetota","Actinomycetes","Mycobacteriales","Lawsonellaceae",NA
-1891644,19,"Bacteria","Actinomycetota","Actinomycetes","Sporichthyales","Sporichthyaceae",NA
-1980928,17,"Viruses","Uroviricota","Caudoviricetes","","Herelleviridae","Sepunavirus"
-2596890,20,"Bacteria","Planctomycetota","Candidatus Uabimicrobiia","Candidatus Uabimicrobiales","Candidatus Uabimicrobiaceae","Candidatus Uabimicrobium"
-2713640,40,"Viruses","Artverviricota","Revtraviricetes","Ortervirales","Caulimoviridae","Cavemovirus"
-2807512,17,"Bacteria","Planctomycetota","Phycisphaerae",NA,NA,NA
-2881056,13,"Bacteria","Actinomycetota","Actinomycetes","Micrococcales","Demequinaceae","Demequina"
+"OTU","Comparisons","min_tax","max_tax","rel_ab_min_tax","rel_ab_max_tax","Kingdom","Phylum","Class","Order","Family","Genus"
+297,36,"Class","Family",0.010586324373814,0.010586324373814,"Bacteria","Pseudomonadota","Hydrogenophilia","Hydrogenophilales","Hydrogenophilaceae",NA
+833,13,"Phylum","Genus",0.000303917341057404,0.000303917341057404,"Bacteria","Fibrobacterota","Fibrobacteria","Fibrobacterales","Fibrobacteraceae","Fibrobacter"
+1603,13,"Genus","Genus",0.000146229189617178,0.000146229189617178,"Bacteria","Bacillota","Bacilli","Lactobacillales","Lactobacillaceae","Amylolactobacillus"
+2057,11,"Phylum","Class",0.00279977239660633,0.00279977239660633,"Bacteria","Thermomicrobiota","Thermomicrobia",NA,NA,NA
+147322,18,"Family","Genus",0.00297390010970014,0.00297390010970014,"Bacteria","Cyanobacteriota","Cyanophyceae","Oscillatoriales","Sirenicapillariaceae","Limnospira"
+191303,12,"Family","Genus",0.00127772413714098,0.00127772413714098,"Bacteria","Bacillota","Erysipelotrichia","Erysipelotrichales","Turicibacteraceae","Turicibacter"
+225148,37,"Phylum","Genus",0.00261970144663347,0.000719590207801626,"Bacteria","Chlamydiota","Chlamydiia","Parachlamydiales","Rhabdochlamydiaceae","Candidatus Rhabdochlamydia"
+337051,15,"Phylum","Genus",0.000931812447785729,0.000308893730703163,"Viruses","Cossaviricota","Papovaviricetes","Zurhausenvirales","Papillomaviridae","Betapapillomavirus"
+693075,15,"Phylum","Family",0.000171919262301317,0.000171919262301317,"Bacteria","Caldisericota","Caldisericia","Caldisericales","Caldisericaceae",NA
+861299,40,"Phylum","Order",0.0186739615463656,0.0186739615463656,"Bacteria","Gemmatimonadota","Gemmatimonadetes","Gemmatimonadales",NA,NA
+1397703,12,"Genus","Genus",0.0021009821256861,0.0021009821256861,"Bacteria","Cyanobacteriota","Cyanophyceae","Nostocales","Scytonemataceae","Brasilonema"
+1528099,16,"Family","Family",0.0215919943182793,0.0215919943182793,"Bacteria","Actinomycetota","Actinomycetes","Mycobacteriales","Lawsonellaceae",NA
+1891644,19,"Order","Family",0.00419823554246643,0.00419823554246643,"Bacteria","Actinomycetota","Actinomycetes","Sporichthyales","Sporichthyaceae",NA
+1980928,17,"Family","Genus",0.00225730688381062,0.00133758559236961,"Viruses","Uroviricota","Caudoviricetes","","Herelleviridae","Sepunavirus"
+2596890,20,"Class","Genus",0.000387514942245976,0.000387514942245976,"Bacteria","Planctomycetota","Candidatus Uabimicrobiia","Candidatus Uabimicrobiales","Candidatus Uabimicrobiaceae","Candidatus Uabimicrobium"
+2713640,40,"Phylum","Genus",0.00184916990514498,0.0011851569627251,"Viruses","Artverviricota","Revtraviricetes","Ortervirales","Caulimoviridae","Cavemovirus"
+2807512,17,"Class","Class",0.00670474695952012,0.00670474695952012,"Bacteria","Planctomycetota","Phycisphaerae",NA,NA,NA
+2881056,13,"Family","Genus",0.00167803060042296,0.00167803060042296,"Bacteria","Actinomycetota","Actinomycetes","Micrococcales","Demequinaceae","Demequina"
