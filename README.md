@@ -40,10 +40,10 @@ Taxonomical data tables
 
 ### Resistance Table   
 [Original table from mysterious sample](01_preprocessing/amr_patterns.tsv)  
-[AMR mysterious metagenomes NCBIGenomes](https://docs.google.com/spreadsheets/d/1ekyUCvOw7xsR7W72utqS8jcUH7129EBPvX4dSnnKekw/edit)    * This is the table to be used in the prediction of the mysterious city. This table will be updated with better future versions
+[AMR mysterious metagenomes NCBIGenomes](https://docs.google.com/spreadsheets/d/1ekyUCvOw7xsR7W72utqS8jcUH7129EBPvX4dSnnKekw/edit)    * This is the table to be used in the prediction of the mysterious city. This table will be updated with better future versions.
 
 ### Genomes Csv
-[Genome Table](06_amr_resistance/data/genome-metadata.csv)  
+[AMR Table](06_amr_resistance/data/230701_AMR_mysterious_NCBI_all_nelly.csv) 
 Server Alnitak: /data/camda2023/genomes/assemblies/*.gbff
 
 ### Reduced variables table 
@@ -93,7 +93,7 @@ Welcome to Cambda 2023!
 
 
 - All research submitted to CAMDA must be previously unpublished original work intended for publication, including procedures and results.
-- Challenge data set embargo: Any challenge data that is not already in the public domain remains exclusive for participants in the contest until conference presentation. This means that no publication of your results is allowed prior to the CAMDA conference. Once research has been accepted for publication at CAMDA, however, dissemination by pre-print servers is fine and encouraged.
+- Challenge data set embargo: Any challenge data that is not already in the public domain remains exclusive for participants in the contest until the conference presentation. This means that no publication of your results is allowed prior to the CAMDA conference. Once research has been accepted for publication at CAMDA, however, dissemination by pre-print servers is fine and encouraged.
 - Research introducing data sets outside the set CAMDA challenges need to put these data in the context of the challenges and make both raw and derived data publicly available if the submitted work is accepted.
 - Methods research needs to include at least two independent types of validation, such as a benchmark on simulated data with known truth, a benchmark on real-world data with built-in truths, or an application to real-world data with critical biological / medical interpretation.
 - Researchers introducing novel computational approaches must make their procedure available to others (e.g., source code or commercial demo), and a publication of source code is strongly encouraged.
