@@ -139,7 +139,7 @@ The most important packages included in the virtual environment are:
 [tbl2asn](https://www.ncbi.nlm.nih.gov/genbank/table2asn/), which we have found
 to be extremely slow when working with large metagenomic assemblies; as a
 consequence, it does not produce `.gbk`, `.sqn` or `.err` outputs. View lines
-41-44 of `src/download-software.sh` to view how this is done.
+31-34 of `src/download-software.sh` to view how this is done.
 
 We used two standalone programs:
 
