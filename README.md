@@ -1,6 +1,6 @@
 # Camda 2023 Mexican Team
 - [Presentation Talk](https://docs.google.com/presentation/d/1AM7f3khAGLN8pXDnDs9BOYrUh56jCmPwoc2MRLTkfgg/edit#slide=id.g24bcac0919d_0_1109)  
-- [Poster Presentation](https://docs.google.com/presentation/d/1aWgVJKH5xzAP4uH8Rrd_m4FlXFdcB-AgWaaDt66LRsM/edit#slide=id.p)    
+- [Poster Presentation](https://docs.google.com/presentation/d/1y93GOJ49hvfOcMjYxObsL0WITbK4ZtDRAqbZ6paRE9c/edit#slide=id.g22edbecd1bc_12_40)    
 - [Plan google sheet](https://docs.google.com/spreadsheets/d/1GRxtgu_4-9FCARIu2ke_AxGVEQxKd_TSnKtql4LroiU/edit#gid=622084973)    
 ## Data 
 Here we need to fix the links! 
