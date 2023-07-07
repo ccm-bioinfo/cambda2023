@@ -235,11 +235,19 @@ def main():
     metacyc_noncummulative_unscaled_8 = pd.read_csv(f'{PATH_INPUT}metacyc/noncummulative/unscaled/lvl8.tsv', sep = '\t', index_col = 0)
     
     #Kegg table
+    kegg = pd.read_csv(f'{PATH_INPUT}kegg.tsv', sep = '\t', index_col = 0)
 
     #VFDB table
+    vfdb = pd.read_csv(f'{PATH_INPUT}vfdb.tsv.gz', sep = '\t', index_col = 0, compression = 'gzip')
 
     #UNIPROT table
+    uniprot = pd.read_csv(f'{PATH_INPUT}uniprot.tsv.gz', sep = '\t', index_col = 0, compression = 'gzip')
 
+    #Interproscan table
+    interproscan = pd.read_csv(f'{PATH_INPUT}interproscan.tsv', sep = '\t', index_col = 0)
+
+    #Prokka table
+    prokka = pd.read_csv(f'{PATH_INPUT}prokka.tsv', sep = '\t', index_col = 0)
 
     '''Hyperparameter search'''
 
@@ -249,6 +257,11 @@ def main():
         ('Mifaser_level_2', mifaser2, PATH_OUTPUT_MIFASER),
         ('Mifaser_level_3', mifaser3, PATH_OUTPUT_MIFASER),
         ('Mifaser_level_4', mifaser4, PATH_OUTPUT_MIFASER),
+        ('KEGG', kegg, PATH_OUTPUT),
+        ('VFDB', vfdb, PATH_OUTPUT),
+        ('UNIPROT', uniprot, PATH_OUTPUT),
+        ('INTERPROSCAN', interproscan, PATH_OUTPUT),
+        ('PROKKA', prokka, PATH_OUTPUT),
         ('Metacyc_cummulative_scaled_level_1', metacyc_cummulative_scaled_1, PATH_OUTPUT_METACYC_CUMMULATIVE_SCALED),
         ('Metacyc_cummulative_scaled_level_2', metacyc_cummulative_scaled_2, PATH_OUTPUT_METACYC_CUMMULATIVE_SCALED),
         ('Metacyc_cummulative_scaled_level_3', metacyc_cummulative_scaled_3, PATH_OUTPUT_METACYC_CUMMULATIVE_SCALED),
