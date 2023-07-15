@@ -1,40 +1,47 @@
 
-# Pre-requisitos
-- El listado de pre-requisitos de librerías estará guardado dentro del archivo [requirements](https://github.com/nselem/ccm-bioinfomatica-lab/tree/main/Hackaton_junio2023/CodigoDanielS/requirements.txt)
-- En cuanto a datos de entrada, el código está preparado para recibir la lísta de otus en las carpetas c23/biom_2016.tsv y c23/biom_2017.tsv
+# Prerequisites
+- The list of library prerequisites will be stored in the file named [requirements](https://github.com/nselem/ccm-bioinfomatica-lab/tree/main/Hackaton_junio2023/CodigoDanielS/requirements.txt).
+- Regarding input data, the code is prepared to receive the list of otus in the folders 01_preprocessing and 02_variable_selection
 
-# Flujo de trabajo
+# Workflow
 
 ![image](aux/workFlow.png)
 
-El flujo de trabajo está pensado dos etapas de procesamiento, la etapa cero integraría los datos iniciales adquiridos desde las tablas de otus.
+The workflow is designed with two stages of processing, where stage zero integrates the initial data acquired from the otus tables.
+
+## data_classify_with_preselection.py
+
+This code was created to make a complete pipeline of variable selection, data preprosessing, k-folds selection and data training-validation.
+
+The beggining of the pipeline starts with the 5-folds selection, after that, for each fold there is a trainning-validation process taking the selected fold as a validation set and the other four folds as a trainning set.
+
+The trainning is started with the negative-binomial data selection, after that we use a quantile transformer included on sklean to transform the input data by city and finally we 
 
 ## data_enrichment.py
-La primer etapa de procesamiento se integra con los códigos de normalización de datos, éstos son pre-procesados en dos caminos diferentes.
-Normalización empleando algoritmos estandar de scikit-learn, de entre los cuales se usó MinMaxScaler, Normalizer, OneHotEncoder, OrdinalEncoder, PowerTransformer, QuantileTransformer, RobustScaler, StandardScaler.
-Normalización basada en log base 10 sumando uno para manejar errores con el logarítmo de cero, esta estrategia se siguió sin y con selección de parámetros mediante PCA.
+The first processing stage integrates with the data normalization codes, which are preprocessed through two different paths.
+Normalization using standard scikit-learn algorithms, including MinMaxScaler, Normalizer, OneHotEncoder, OrdinalEncoder, PowerTransformer, QuantileTransformer, RobustScaler, and StandardScaler.
+Normalization based on base 10 logarithm plus one to handle errors with the logarithm of zero. This strategy was followed both with and without parameter selection using PCA.
 
-El código adicionalmente a estas normalizaciones también integra un enriquecimiento de datos usando los códigos de SMOTE, librería para enriquecimiento de datos desbalanceados.
-El conjunto de datos enriquecidos finalmente no fue usado en el pipeline final debido a sesgoz de datos que produce ya que el enriquecimiento fue realizado ántes de separar en conjuntos de prueba y validación.
+Additionally, the code includes data enrichment using SMOTE codes, a library for enriching imbalanced data.
+The enriched dataset was ultimately not used in the final pipeline due to data bias it introduces, as the enrichment was performed before separating into test and validation sets.
 
 ## data_classify.py
-La segunda etapa de procesamiento integra los códigos de clasificacion y evaluación de los modelos, éstos códigos están preparados para validar una lista de modelos contra los datos pre-procesados en la búsqueda y comparación de los resultados.
+The second processing stage integrates the classification and model evaluation codes. These codes are prepared to validate a list of models against the preprocessed data in the search for comparison of results.
 
-Cada algoritmo elegido dentro de este código fue seleccionado mediante pruebas adicionales realizadas por los miembros del equipo.
-Los códigos, salvo el correspondiente al doctor Balanzario, se pueden leer en la carpeta [other_codes](https://github.com/nselem/ccm-bioinfomatica-lab/tree/main/Hackaton_junio2023/CodigoDanielS/other_codes)
+Each algorithm chosen within this code was selected through additional tests conducted by team members.
+The codes, except for the one corresponding to Dr. Balanzario, can be found in the folder [other_codes](https://github.com/nselem/ccm-bioinfomatica-lab/tree/main/Hackaton_junio2023/CodigoDanielS/other_codes).
 
 ## other_codes
-Aquí se agrupan todos los códigos de trabajo que se siguieron durante el proceso del hackaton, prácticamente todas las ideas desarrolladas ya están integradas en el código principal.
-Para referencia se incluye como código adicional.
+Here, all the working codes followed during the hackathon process are grouped. Virtually all the developed ideas are already integrated into the main code. They are included as additional reference.
 
 ## Extras
-Adicionalmente se incluye un código relacionado ([data_fetch.py](https://github.com/nselem/ccm-bioinfomatica-lab/tree/main/Hackaton_junio2023/CodigoDanielS/data_fetch.py)) a la adquisición de datos desde ncbi, éste código no se completó por un error y falta de tiempo, sin embargo a partir de aquí se puede extender para automatizar la descarga de datos.
+Additionally, a related code ([data_fetch.py](https://github.com/nselem/ccm-bioinfomatica-lab/tree/main/Hackaton_junio2023/CodigoDanielS/data_fetch.py)) for data acquisition from NCBI is included. This code was not completed due to an error and lack of time. However, it can be extended from here to automate data downloads.
 
 # Selected pipeline results
 
-This selected pipeline is described at the beggining of [data_classify_with_preselection.py](https://github.com/ccm-bioinfo/cambda2023/tree/main/03_classification/data_classify_with_preselection.py).
+This selected pipeline is described at the beginning of [data_classify_with_preselection.py](https://github.com/ccm-bioinfo/cambda2023/tree/main/03_classification/data_classify_with_preselection.py).
 
-This code was selected to verify the results of the simulations including the complete data selection process to evaluate the overfiting risk.
+This code was selected to verify the results of the simulations, including the complete data selection process to evaluate the overfitting risk.
 
 ## Fold 0
 Validation results:
