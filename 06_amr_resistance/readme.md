@@ -1,9 +1,11 @@
 ## Results on AMR analysis    
 [MicroReact Dendogram with AMR metadata](https://microreact.org/project/bHkp6ZePSx5Sxaa41wTysB-230725camdarepresentans) with this 
-[Google Metadata](data/xvxvx) using 
-[Newick Tree](data/230626_Full_Newick.nwk) 
-![Dendogram](fig/230626_AMR_tree.png)  
-![Dendogram](fig/230626_leyend.png)  
+[Metadata](data/230724_Representants.csv) using 
+[Newick Tree](data/230725_Representants_Newick.nwk) 
+![Dendogram](fig/230725_TreeAMRMicroReactRepresentants.png)   
+
+Full dendogram
+![Dendogram](fig/230626_AMR_tree.png)    
 ###
 - [Pangenomes](readme_pangenoma.md) (extra genomes)     
 - [Extraction by Taxonomy - Binning by city - Assembly - AMR prediction](resultsReadsKrakenAssemblyBLAST.md)  (smaller contigs)  
