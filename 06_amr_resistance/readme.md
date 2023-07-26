@@ -3,6 +3,7 @@
 [Metadata](data/230724_Representants.csv) using 
 [Newick Tree](data/230725_Representants_Newick.nwk) 
 ![Dendogram](fig/230725_TreeAMRMicroReactRepresentants.png)   
+![Leyend](fig/230725_leyend.png)   
 
 Full dendogram
 ![Dendogram](fig/230626_AMR_tree.png)    
