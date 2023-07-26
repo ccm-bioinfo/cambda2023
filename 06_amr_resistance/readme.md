@@ -1,6 +1,6 @@
 ## Results on AMR analysis    
-[MicroReact Dendogram with AMR metadata](https://microreact.org/project/mv3PRaax1TNsNseKzZUQnF-230626amrcamda) with this 
-[Google Metadata](https://docs.google.com/spreadsheets/d/1ekyUCvOw7xsR7W72utqS8jcUH7129EBPvX4dSnnKekw/edit?usp=sharing) using 
+[MicroReact Dendogram with AMR metadata](https://microreact.org/project/bHkp6ZePSx5Sxaa41wTysB-230725camdarepresentans) with this 
+[Google Metadata](data/xvxvx) using 
 [Newick Tree](data/230626_Full_Newick.nwk) 
 ![Dendogram](fig/230626_AMR_tree.png)  
 ![Dendogram](fig/230626_leyend.png)  
