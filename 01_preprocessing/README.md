@@ -15,7 +15,10 @@ c23.zip
 ├── amr/
 │   ├── tsv/
 │   │   └── <basename>.tsv
-│   └── amr-counts.tsv
+│   ├── amr-counts.tsv
+│   ├── amr-presence.tsv
+│   ├── amr-counts-strict.tsv
+│   └── amr-presence-strict.tsv
 ├── functions/
 │   ├── html/
 │   │   └── <basename>.html
@@ -205,11 +208,12 @@ taxonomy, respectively. This step requires `venv/` to be activated.
 metagenomic analysis with Kraken 2. *Genomy Biology, 20*(257).
 [10.1186/s13059-019-1891-0](https://doi.org/10.1186/s13059-019-1891-0)
 
-### AMR detection: `detect-amr.sh` and `get-amr-counts.py`
+### AMR detection: `detect-amr.sh`, `get-amr-counts.py` and `get-amr-counts-strict.py`
 
 ```text
 Usage:  ./src/detect-amr.sh [basename]
         ./src/get-amr-counts.py
+        ./src/get-amr-counts-strict.py
 ```
 
 The first script runs
@@ -224,6 +228,9 @@ The second script creates the `amr/amr-counts.tsv` contingency table with gene
 counts per sample (as found in the Zenodo repository), and the 
 `amr/amr-presence.tsv` which only reports gene presence per sample (and is not
 stored in the Zenodo repository, but can be found in this GitHub repository).
+The third script does the same exact thing as `get-amr-counts.py`, but only
+considers AMR markers with a strict cut-off; its outputs can be found in
+`amr/amr-counts-strict.tsv` and `amr/amr-presence-strict.tsv`.
 
 ### Functional annotation: `annotate-funcs.sh`
 
