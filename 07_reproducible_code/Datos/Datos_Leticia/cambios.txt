@@ -1,1 +1,78 @@
+Las útlimas lineas del codigo (desde linea 442), en donde se guardan los archivos csv, que originalmente es:
+---------------------------------------------------------------------------
+write.csv(
+  smth[[1]],  
+  file = paste0(
+    opt$out_dir, "pValues/", prefix0, "_", prefix1, "_", opt$model, "_", "pvalues",
+    suffix0, ".csv"
+  ),
+  row.names = FALSE
+)
+write.csv(
+  smth[[2]],  
+  file = paste0(
+    opt$out_dir, "significant_otus/", prefix0, "_", prefix1, "_", opt$model, "_", 
+    "signif", suffix0,".csv"
+  ),
+  row.names = FALSE
+)
+write.csv(
+  smth[[3]],  
+  file = paste0(
+    opt$out_dir, "integrated_tables/", prefix0, "_", prefix1, "_", opt$model, "_", 
+    "integrated", suffix0,".csv"
+  ),
+  row.names = FALSE
+)
+
+pplot1 <- smth[[1]] %>% 
+  ggplot(aes(x = locs, y = -log(adj_pvalues), colour = hlevel)) + 
+  geom_hline(yintercept = -log(1e-3), colour = "hotpink") + 
+  geom_point(alpha = 0.5, size = 1) + 
+  theme_few() + 
+  ylab("-log(p-value)") + 
+  xlab("") + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, size=rel(0.5)),
+        legend.position = "top") + 
+  guides(colour = guide_legend(override.aes = list(alpha = 1, size = 4)))
+
+ggsave(
+  plot = pplot1, 
+  filename = paste0(
+    opt$out_dir, "pValues/", prefix0, "_", prefix1, "_", opt$model, "_", 
+    "log_pvalues", suffix0,".png"
+  ),
+  dpi = 180, width = 12, height = 6.75
+)
+---------------------------------------------------------------------------
+
+Lo cambié a 
+---------------------------------------------------------------------------
+#Guardo en
+write.csv(
+  smth[[1]],  
+  file = paste0(
+    prefix0, "_", prefix1, "_", opt$model, "_", "pvalues",
+    suffix0, ".csv"
+  ),
+  row.names = FALSE
+)
+write.csv(
+  smth[[2]],  
+  file = paste0(
+    prefix0, "_", prefix1, "_", opt$model, "_", 
+    "signif", suffix0,".csv"
+  ),
+  row.names = FALSE
+)
+write.csv(
+  smth[[3]],  
+  file = paste0(
+    prefix0, "_", prefix1, "_", opt$model, "_", 
+    "integrated", suffix0,".csv"
+  ),
+  row.names = FALSE
+)
+---------------------------------------------------------------------------
+
 
