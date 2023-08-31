@@ -18,6 +18,13 @@ genus from the reads. On GitHub, you can find it here:
 - `reads-amr-presence.tsv` is the presence-absence table. On GitHub,
 you can find it here:
 [`230628_us_reads_card_presence.tsv`](https://github.com/ccm-bioinfo/cambda2023/blob/main/06_amr_resistance/data/230628_us_reads_card_presence.tsv)
+- `reads-amr-counts-strict.tsv` is analogous to `reads-amr-counts.tsv`
+using only strict results. On GitHub, you can find it here:
+[`230831_us_reads_card_counts_strict.tsv`](https://github.com/ccm-bioinfo/cambda2023/blob/main/06_amr_resistance/data/230831_us_reads_card_counts_strict.tsv)
+- `reads-amr-presence-strict.tsv` is analogous to
+`reads-amr-presence.tsv` using only strict results. On GitHub,
+you can find it here:
+[`230831_us_reads_card_presence_strict.tsv`](https://github.com/ccm-bioinfo/cambda2023/blob/main/06_amr_resistance/data/230831_us_reads_card_presence_strict.tsv)
 
 ## Steps
 
@@ -156,12 +163,17 @@ parallel mv {} {.}.tsv ::: a4-reads-card/*.txt
 
 8. Create abundance and presence-absence tables with the
 [`get-amr-counts.py`](https://github.com/ccm-bioinfo/cambda2023/blob/main/01_preprocessing/src/get-amr-counts.py)
-script
+script, as well as strict-only tables with the
+[`get-amr-counts-strict.py`](https://github.com/ccm-bioinfo/cambda2023/blob/main/01_preprocessing/src/get-amr-counts-strict.py)
+script.
 
 ```bash
 python get-amr-counts.py a4-reads-card/*.tsv
 mv amr-counts.tsv reads-amr-counts.tsv
 mv amr-presence.tsv reads-amr-presence.tsv
+python get-amr-counts-strict.py a4-reads-card/*.tsv
+mv amr-counts-strict.tsv reads-amr-counts-strict.tsv
+mv amr-presence-strict.tsv reads-amr-presence-strict.tsv
 ```
 
 9. **TODO**: BLAST for genes not in CARD.
