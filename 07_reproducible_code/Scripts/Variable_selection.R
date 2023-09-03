@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
-#install.packages("optparse")
-#install.packages("pacman")
+install.packages("optparse")
+install.packages("pacman")
 library("optparse")
 option_list = list(
   make_option(c("-I", "--input_dir"), type = "character", default = "https://raw.githubusercontent.com/ccm-bioinfo/cambda2023/main/02_variable_selection/data/", 
@@ -483,3 +483,4 @@ ggsave(
   ),
   dpi = 180, width = 12, height = 6.75
 )
+#---------------------------------------------------------------------
