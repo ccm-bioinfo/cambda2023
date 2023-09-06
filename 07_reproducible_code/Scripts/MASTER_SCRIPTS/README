@@ -1,0 +1,12 @@
+#The scripts will run next way
+00GetGen.sh #To obtain the genomes from NCBI.
+01_genContigsDB.sh #To create a database with the genomes.
+011_99_geneFunctions.sh #To run Intrproscan.
+012_COG_annotations.sh #To run COG annotations #WARNING: This process is the longest of all.
+02_btmapHMP.sh #To recruitment the reads from metagenomics samples
+021_btmapHMP.sh #To split every script for to increase the speed of the process 
+03ProMeRe.sh
+04PanMeCons-cp.sh
+04PanMeCons.sh
+06CombMetaPan_NYC.sh
+06CombMetaPan.sh
