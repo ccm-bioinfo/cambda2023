@@ -9,13 +9,23 @@ all_folds:
 03_classification/generated_plots/results_fold%.txt: fold%
 	@echo "Fold $* completed"
 
-fold%: 07_reproducible_code/Scripts/data_classify_with_preselection.py
+fold%: Scripts/data_classify_with_preselection.py .venv/bin/activate
 	@echo "Starting data partitioning"
-	python 07_reproducible_code/Scripts/samples_selection.py $*
+	. .venv/bin/activate; python Scripts/samples_selection.py $*
 	@echo "Starting variables selection"
-	cd 02_variable_selection/codes && bash nb_with_training.sh || echo "failed"
+	bash Scripts/nb_with_training.sh
 	@echo "Starting model training"
-	rm -rf 03_classification/generated_plots/results_fold$*.txt || echo "failed"
-	export FOLD=$* && export PLOT=true && export METHOD=MLP && python 07_reproducible_code/Scripts/data_classify_with_preselection.py
-	export FOLD=$* && export PLOT=true && export METHOD=SVC && python 07_reproducible_code/Scripts/data_classify_with_preselection.py
-	export FOLD=$* && export PLOT=true && export METHOD=KNN && python 07_reproducible_code/Scripts/data_classify_with_preselection.py
+	rm -rf 03_classification/generated_plots/results_fold$*.txt
+	. .venv/bin/activate; export FOLD=$*; export PLOT=true; export METHOD=MLP; python Scripts/data_classify_with_preselection.py
+	. .venv/bin/activate; export FOLD=$*; export PLOT=true; export METHOD=SVC; python Scripts/data_classify_with_preselection.py
+	. .venv/bin/activate; export FOLD=$*; export PLOT=true; export METHOD=KNN; python Scripts/data_classify_with_preselection.py
+
+
+.venv/bin/activate: requirements.txt
+	@echo "Creating virtual environment"
+	python3 -m venv .venv
+	@echo "Activating virtual environment"
+	. .venv/bin/activate
+	@echo "Installing requirements"
+	. .venv/bin/activate; pip install -r requirements.txt
+	@echo "Virtual environment created"

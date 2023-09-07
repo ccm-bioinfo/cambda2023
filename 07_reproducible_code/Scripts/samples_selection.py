@@ -11,9 +11,9 @@ from random import sample
 import pandas as pd
 
 # constants
-FILENAME = "02_variable_selection/selected_variables_results/integrated_tables/reads_kingdoms_nb_integrated_tv.csv"
-SELECTION = "02_variable_selection/validation_set/train_val.csv"
-ALTERNATIVE = "02_variable_selection/validation_set/fold_selection.csv"
+FILENAME = "../02_variable_selection/selected_variables_results/integrated_tables/reads_kingdoms_nb_integrated_tv.csv"
+SELECTION = "Data/train_val.csv"
+ALTERNATIVE = "Data/fold_selection.csv"
 FOLDS, FOLD = 5, 0
 
 # set the seed for reproducibility
