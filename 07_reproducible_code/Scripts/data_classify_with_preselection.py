@@ -32,9 +32,9 @@ from sklearn.preprocessing import PowerTransformer
 from sklearn.svm import SVC
 
 # constants
-FILENAME = "02_variable_selection/selected_variables_results/integrated_tables/reads_kingdoms_nb_integrated_tv.csv"
-SELECTION = "02_variable_selection/validation_set/train_val.csv"
-IMG_PATH = "03_classification/generated_plots"
+FILENAME = "Outputs/Variable-selection/reads_kingdoms_nb_integrated_tv.csv"
+SELECTION = "Data/train_val.csv"
+IMG_PATH = "Data/generated_plots"
 SEED = 42
 
 # check if the environment variable is set to plot
