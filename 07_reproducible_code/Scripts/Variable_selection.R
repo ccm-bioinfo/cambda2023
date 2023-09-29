@@ -33,16 +33,24 @@ opt = parse_args(opt_parser);
 
 #-------------------------------------------------------------------------------
 # Load libraries via pacman
-pacman::p_load(ggplot2, ggthemes,                       # Plots
-               dplyr, tibble, tidyr, purrr, broom, pscl)                 # Data frame manipulation 
-# library(ggplot2)
-# library(ggthemes)
-# library(dplyr)
-# library(tibble)
-# library(tidyr)
-# library(purrr)
-# library(broom)
-# library(pscl)
+# pacman::p_load(ggplot2, ggthemes,                       # Plots
+#                dplyr, tibble, tidyr, purrr, broom, pscl)                 # Data frame manipulation 
+install.packages("ggplot2", repos = "http://cran.us.r-project.org", lib = "./libs")
+install.packages("ggthemes", repos = "http://cran.us.r-project.org", lib = "./libs")
+install.packages("dplyr", repos = "http://cran.us.r-project.org", lib = "./libs")
+install.packages("tibble", repos = "http://cran.us.r-project.org", lib = "./libs")
+install.packages("tidyr", repos = "http://cran.us.r-project.org", lib = "./libs")
+install.packages("purrr", repos = "http://cran.us.r-project.org", lib = "./libs")
+install.packages("broom", repos = "http://cran.us.r-project.org", lib = "./libs")
+install.packages("pscl", repos = "http://cran.us.r-project.org", lib = "./libs")
+library(ggplot2, lib.loc = "./libs")
+library(ggthemes, lib.loc = "./libs")
+library(dplyr, lib.loc = "./libs")
+library(tibble, lib.loc = "./libs")
+library(tidyr, lib.loc = "./libs")
+library(purrr, lib.loc = "./libs")
+library(broom, lib.loc = "./libs")
+library(pscl, lib.loc = "./libs")
 
 #-------------------------------------------------------------------------------
 # Safety functions to keep differentialOtusPvalues running even if certain 
