@@ -36,20 +36,20 @@ opt = parse_args(opt_parser);
 # pacman::p_load(ggplot2, ggthemes,                       # Plots
 #                dplyr, tibble, tidyr, purrr, broom, pscl)                 # Data frame manipulation 
 install.packages("ggplot2", repos = "http://cran.us.r-project.org", lib = "./libs")
-install.packages("ggthemes", repos = "http://cran.us.r-project.org", lib = "./libs")
-install.packages("dplyr", repos = "http://cran.us.r-project.org", lib = "./libs")
-install.packages("tibble", repos = "http://cran.us.r-project.org", lib = "./libs")
-install.packages("tidyr", repos = "http://cran.us.r-project.org", lib = "./libs")
-install.packages("purrr", repos = "http://cran.us.r-project.org", lib = "./libs")
-install.packages("broom", repos = "http://cran.us.r-project.org", lib = "./libs")
-install.packages("pscl", repos = "http://cran.us.r-project.org", lib = "./libs")
 library(ggplot2, lib.loc = "./libs")
+install.packages("ggthemes", repos = "http://cran.us.r-project.org", lib = "./libs")
 library(ggthemes, lib.loc = "./libs")
+install.packages("dplyr", repos = "http://cran.us.r-project.org", lib = "./libs")
 library(dplyr, lib.loc = "./libs")
+install.packages("tibble", repos = "http://cran.us.r-project.org", lib = "./libs")
 library(tibble, lib.loc = "./libs")
+install.packages("tidyr", repos = "http://cran.us.r-project.org", lib = "./libs")
 library(tidyr, lib.loc = "./libs")
+install.packages("purrr", repos = "http://cran.us.r-project.org", lib = "./libs")
 library(purrr, lib.loc = "./libs")
+install.packages("broom", repos = "http://cran.us.r-project.org", lib = "./libs")
 library(broom, lib.loc = "./libs")
+install.packages("pscl", repos = "http://cran.us.r-project.org", lib = "./libs")
 library(pscl, lib.loc = "./libs")
 
 #-------------------------------------------------------------------------------
