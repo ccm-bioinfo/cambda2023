@@ -1,7 +1,9 @@
 #!/usr/bin/env Rscript
-install.packages("optparse", repos = "http://cran.us.r-project.org", lib = "./")
-install.packages("pacman", repos = "http://cran.us.r-project.org", lib = "./")
-library("optparse", lib.loc = "./")
+install.packages("optparse", repos = "http://cran.us.r-project.org", lib = "./libs")
+install.packages("pacman", repos = "http://cran.us.r-project.org", lib = "./libs")
+library("optparse", lib.loc = "./libs")
+library("pacman", lib.loc = "./libs")
+
 option_list = list(
   make_option(c("-I", "--input_dir"), type = "character", default = "https://raw.githubusercontent.com/ccm-bioinfo/cambda2023/main/02_variable_selection/data/", 
               help = "input directory [default= %default]", metavar = "character"),
