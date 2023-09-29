@@ -1,12 +1,12 @@
 all_folds:
-	make 03_classification/generated_plots/results_fold4.txt
-	make 03_classification/generated_plots/results_fold3.txt
-	make 03_classification/generated_plots/results_fold2.txt
-	make 03_classification/generated_plots/results_fold1.txt
-	make 03_classification/generated_plots/results_fold0.txt
+	make Outputs/generated_plots/results_fold4.txt
+	make Outputs/generated_plots/results_fold3.txt
+	make Outputs/generated_plots/results_fold2.txt
+	make Outputs/generated_plots/results_fold1.txt
+	make Outputs/generated_plots/results_fold0.txt
 	@echo "All folds finished"
 
-03_classification/generated_plots/results_fold%.txt: fold%
+Outputs/generated_plots/results_fold%.txt: fold%
 	@echo "Fold $* completed"
 
 fold%: Scripts/data_classify_with_preselection.py .venv/bin/activate
@@ -15,7 +15,7 @@ fold%: Scripts/data_classify_with_preselection.py .venv/bin/activate
 	@echo "Starting variables selection"
 	bash Scripts/nb_with_training.sh
 	@echo "Starting model training"
-	rm -rf 03_classification/generated_plots/results_fold$*.txt
+	rm -rf Outputs/generated_plots/results_fold$*.txt || true
 	. .venv/bin/activate; export FOLD=$*; export PLOT=true; export METHOD=MLP; python Scripts/data_classify_with_preselection.py
 	. .venv/bin/activate; export FOLD=$*; export PLOT=true; export METHOD=SVC; python Scripts/data_classify_with_preselection.py
 	. .venv/bin/activate; export FOLD=$*; export PLOT=true; export METHOD=KNN; python Scripts/data_classify_with_preselection.py

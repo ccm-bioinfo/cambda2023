@@ -34,7 +34,7 @@ from sklearn.svm import SVC
 # constants
 FILENAME = "Outputs/Variable-selection/reads_kingdoms_nb_integrated_tv.csv"
 SELECTION = "Data/train_val.csv"
-IMG_PATH = "Data/generated_plots"
+IMG_PATH = "Outputs/generated_plots"
 SEED = 42
 
 # check if the environment variable is set to plot
