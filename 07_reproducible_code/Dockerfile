@@ -14,6 +14,14 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
   apt-get autoremove && \
   apt-get clean
 
+# Install R
+RUN export DEBIAN_FRONTEND=noninteractive && \
+  apt-get install -y --no-install-recommends \
+    r-base \
+    && \
+  apt-get autoremove && \
+  apt-get clean
+
 # Special system package required for RGI
 RUN cd ~ && \
   wget https://mirrors.kernel.org/ubuntu/pool/main/libf/libffi/libffi6_3.2.1-8_amd64.deb && \
