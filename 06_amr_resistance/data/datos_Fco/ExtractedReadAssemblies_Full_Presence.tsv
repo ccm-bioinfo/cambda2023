@@ -1,0 +1,163 @@
+Genus	ARO	Gene	BAL_En	BAL_Kl	DEN_Es	DEN_Kl	MIN_Kl	NYC_En	NYC_Es	NYC_Kl	SAC_En	SAC_Kl	SAN_Es
+Enterobacter	3001821	ACT-1	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3001842	ACT-21	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3001844	ACT-24	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3006239	ACT-44	0	0	0	0	0	0	0	0	1	0	0
+Enterobacter	3006268	ACT-74	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3001831	ACT-8	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3000502	AcrF	1	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3004480	Bifidobacterium adolescentis rpoB mutants conferring resistance to rifampicin	0	0	0	0	0	1	1	1	0	0	0
+Enterobacter	3000518	CRP	0	0	0	0	0	1	0	0	1	0	0
+Enterobacter	3003995	Clostridioides difficile gyrA conferring resistance to fluoroquinolones	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3004042	Enterobacter cloacae acrA	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3003369	Escherichia coli EF-Tu mutants conferring resistance to Pulvomycin	0	0	0	0	0	1	0	1	0	0	0
+Enterobacter	3003890	Escherichia coli UhpT with mutation conferring resistance to fosfomycin	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	Escherichia coli marR mutant conferring antibiotic resistance	Escherichia coli marR mutant conferring antibiotic resistance	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3001328	Escherichia coli mdfA	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3003316	Escherichia coli parE conferring resistance to fluoroquinolones	0	0	0	0	0	1	0	1	0	0	0
+Enterobacter	3003511	Escherichia coli soxS with mutation conferring antibiotic resistance	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3002804	FosA2	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3000676	H-NS	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3004446	Haemophilus influenzae PBP3 conferring resistance to beta-lactam antibiotics	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3004580	Klebsiella pneumoniae KpnE	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3004583	Klebsiella pneumoniae KpnF	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3003283	Mycobacterium tuberculosis rpoB mutants conferring resistance to rifampicin	0	0	0	0	0	1	0	1	0	0	0
+Enterobacter	3004832	Neisseria gonorrhoeae PBP2 conferring resistance to beta-lactam antibiotics	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3003578	PmrF	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3003901	Staphylococcus aureus GlpT with mutation conferring resistance to fosfomycin	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3003043	Streptococcus pneumoniae PBP2x conferring resistance to amoxicillin	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3002891	Streptomyces rimosus otr(A)	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3000216	acrB	1	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3000491	acrD	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3000777	adeF	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3002986	bacA	1	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3000828	baeR	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3000830	cpxA	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3000074	emrB	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3000516	emrR	1	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3000263	marA	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3000793	mdtB	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3000794	mdtC	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3001216	mdtH	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3004185	mecD	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3003950	msbA	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3003922	oqxA	1	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3003923	oqxB	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3005010	qacEdelta1	0	0	0	0	0	0	0	1	0	0	0
+Enterobacter	3000823	ramA	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3000501	rpoB2	0	0	0	0	0	1	1	1	0	0	0
+Enterobacter	3005069	rsmA	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3004361	sul4	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3000186	tet(M)	0	0	0	0	0	1	0	0	0	0	0
+Enterobacter	3007124	tet(W/32/O)	0	0	0	0	0	1	0	0	0	0	0
+Escherichia	3000502	AcrF	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3003302	Bartonella bacilliformis gyrB conferring resistance to aminocoumarin	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3004480	Bifidobacterium adolescentis rpoB mutants conferring resistance to rifampicin	0	0	0	0	0	0	0	1	0	0	0
+Escherichia	3003369	Escherichia coli EF-Tu mutants conferring resistance to Pulvomycin	0	0	0	0	0	0	0	1	0	0	0
+Escherichia	3001328	Escherichia coli mdfA	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3004446	Haemophilus influenzae PBP3 conferring resistance to beta-lactam antibiotics	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3003283	Mycobacterium tuberculosis rpoB mutants conferring resistance to rifampicin	0	0	0	0	0	0	1	1	0	0	0
+Escherichia	3000237	TolC	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3003952	YojI	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3002617	aadA17	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3000216	acrB	0	0	0	0	0	0	1	0	0	0	1
+Escherichia	3000491	acrD	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3002986	bacA	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3000829	baeS	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3000830	cpxA	1	0	0	0	0	0	1	0	0	0	0
+Escherichia	3000074	emrB	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3003576	eptA	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3005047	eptB	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3000833	evgS	0	0	0	0	0	0	0	0	0	0	1
+Escherichia	3002705	floR	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3003838	gadW	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3000508	gadX	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3003841	kdpE	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3000263	marA	0	0	0	0	0	0	0	0	0	0	1
+Escherichia	3000792	mdtA	0	0	0	0	0	0	1	0	0	0	1
+Escherichia	3000793	mdtB	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3000796	mdtF	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3001216	mdtH	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3001214	mdtM	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3003548	mdtN	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3003549	mdtO	0	0	0	0	0	0	1	0	0	0	1
+Escherichia	3003550	mdtP	0	0	0	0	0	0	1	0	0	0	1
+Escherichia	3003046	qacA	0	0	0	0	0	0	1	0	0	0	0
+Escherichia	3003992	rphB	0	0	0	0	0	0	0	0	0	0	1
+Escherichia	3000501	rpoB2	0	0	0	0	0	0	0	1	0	0	0
+Escherichia	3000410	sul1	0	0	1	0	0	0	0	0	0	0	0
+Escherichia	3004361	sul4	0	0	0	0	0	0	1	0	0	0	0
+Klebsiella	3002641	APH(3')-Ia	0	1	0	0	0	0	0	0	0	0	0
+Klebsiella	3000502	AcrF	0	1	0	1	0	0	0	1	0	0	0
+Klebsiella	3000656	AcrS	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3005053	ArnT	0	1	0	1	0	0	0	1	0	0	0
+Klebsiella	3004480	Bifidobacterium adolescentis rpoB mutants conferring resistance to rifampicin	0	0	0	1	0	1	1	1	0	1	0
+Klebsiella	3000518	CRP	0	1	0	1	0	0	0	1	0	0	0
+Klebsiella	3003995	Clostridioides difficile gyrA conferring resistance to fluoroquinolones	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3004562	Clostridioides difficile gyrB conferring resistance to fluoroquinolones	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3004042	Enterobacter cloacae acrA	0	0	0	0	0	1	0	1	0	0	0
+Klebsiella	3003369	Escherichia coli EF-Tu mutants conferring resistance to Pulvomycin	0	0	0	1	0	0	0	0	0	0	0
+Klebsiella	3003890	Escherichia coli UhpT with mutation conferring resistance to fosfomycin	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	Escherichia coli acrR with mutation conferring multidrug antibiotic resistance	Escherichia coli acrR with mutation conferring multidrug antibiotic resistance	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3004039	Escherichia coli emrE	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	Escherichia coli marR mutant conferring antibiotic resistance	Escherichia coli marR mutant conferring antibiotic resistance	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3003316	Escherichia coli parE conferring resistance to fluoroquinolones	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3003511	Escherichia coli soxS with mutation conferring antibiotic resistance	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3004111	FosA6	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3007371	FosA8	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3000676	H-NS	0	0	0	1	0	1	0	1	0	0	0
+Klebsiella	3004446	Haemophilus influenzae PBP3 conferring resistance to beta-lactam antibiotics	0	0	0	1	0	1	0	1	0	0	0
+Klebsiella	3004580	Klebsiella pneumoniae KpnE	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3004583	Klebsiella pneumoniae KpnF	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3004588	Klebsiella pneumoniae KpnG	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3004597	Klebsiella pneumoniae KpnH	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3004122	Klebsiella pneumoniae OmpK37	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3004041	Klebsiella pneumoniae acrA	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3003373	Klebsiella pneumoniae acrR with mutation conferring multidrug antibiotic resistance	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3005059	LptD	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3000378	MexB	0	0	0	1	0	0	0	0	0	0	0
+Klebsiella	3000814	MexT	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3003306	Morganella morganii gyrB conferring resistance to fluoroquinolones	0	0	0	1	0	0	0	0	0	0	0
+Klebsiella	3003459	Mycobacterium tuberculosis gyrB mutant conferring resistance to fluoroquinolones	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3003283	Mycobacterium tuberculosis rpoB mutants conferring resistance to rifampicin	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3004859	Neisseria gonorrhoeae gyrB conferring resistance to zoliflodacin	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3002399	OXY-2-4	0	0	0	1	0	0	0	0	0	0	0
+Klebsiella	3005044	OmpA	0	0	0	1	0	1	0	1	0	0	0
+Klebsiella	3004054	Pseudomonas aeruginosa CpxR	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3003735	Staphylococcus aureus fusA with mutation conferring resistance to fusidic acid	0	0	0	0	0	1	1	1	0	0	0
+Klebsiella	3003952	YojI	0	1	0	1	1	1	0	0	0	0	0
+Klebsiella	3000216	acrB	0	1	0	1	0	0	0	1	0	0	0
+Klebsiella	3000491	acrD	0	0	0	1	0	1	1	1	0	0	0
+Klebsiella	3000777	adeF	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3002986	bacA	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3000828	baeR	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3000829	baeS	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3000830	cpxA	0	1	0	1	0	0	0	1	0	0	0
+Klebsiella	3000074	emrB	0	1	0	1	0	0	0	1	0	0	0
+Klebsiella	3000516	emrR	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3000254	emrY	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3005047	eptB	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3003209	fosA5	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3003841	kdpE	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3003843	leuO	0	0	0	1	0	0	0	0	0	0	0
+Klebsiella	3000535	macB	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3000263	marA	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3000793	mdtB	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3000794	mdtC	0	1	0	1	0	1	0	1	0	0	0
+Klebsiella	3001216	mdtH	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3003440	mecB	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3004185	mecD	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3003950	msbA	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3003922	oqxA	0	1	0	1	0	0	0	1	0	0	0
+Klebsiella	3003923	oqxB	0	1	0	1	0	0	0	1	0	0	0
+Klebsiella	3007015	qacG	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3007014	qacJ	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3005098	qacL	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3000823	ramA	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3003992	rphB	0	0	0	1	0	0	0	1	0	0	0
+Klebsiella	3000826	sdiA	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3004361	sul4	0	0	0	1	0	0	0	0	0	0	0
+Klebsiella	3000186	tet(M)	0	0	0	0	0	1	0	1	0	0	0
+Klebsiella	3000193	tet(T)	0	0	0	0	0	1	0	1	0	0	0
+Klebsiella	3000194	tet(W)	0	0	0	0	0	0	0	1	0	0	0
+Klebsiella	3000195	tetB(P)	0	0	0	0	0	1	0	1	0	0	0
