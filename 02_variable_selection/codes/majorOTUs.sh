@@ -36,5 +36,5 @@ Rscript ./majorityOTUs.R -o FALSE -p 90
 Rscript ./majorityOTUs.R -o FALSE -a FALSE 
 Rscript ./majorityOTUs.R -o FALSE -a FALSE -p 99
 Rscript ./majorityOTUs.R -o FALSE -a FALSE -p 95
-Rscript ./majorityOTUs.R -o FALSE -a FALSE-p 90
+Rscript ./majorityOTUs.R -o FALSE -a FALSE -p 90
 

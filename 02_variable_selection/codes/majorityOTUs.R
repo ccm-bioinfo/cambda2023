@@ -71,7 +71,8 @@ OTUs_majority_samples <- function(perc, pre_path) {
             full_join(db1[majorityOTUs,], 
                       by = colnames(db1))
     }
-    return( db_all )
+    majorOtusOrder <- order(rowSums(db_all[,-1]), decreasing = TRUE)
+    return( db_all[majorOtusOrder, ] )
 }
 
 OTUs_majority_samples_taxa <- function(perc, pre_path, taxa) {
@@ -79,13 +80,45 @@ OTUs_majority_samples_taxa <- function(perc, pre_path, taxa) {
         mutate(X = paste0(X, "_", taxa)) %>%
         rename("ID" = "X")
     majorityOTUs <- which( rowSums(db1[,-1] > 0) / ncol(db1[,-1]) >= perc / 100 )
-    return( db1[majorityOTUs, ] )
+    dbMajor <- db1[majorityOTUs, ]
+    majorOtusOrder <- order(rowSums(dbMajor[,-1]), decreasing = TRUE)
+    return( dbMajor[majorOtusOrder, ] )
 }
 
 OTUs_majority_samples_selected <- function(perc, pre_path) {
     db1 <- read.csv(url(paste0(pre_path, "integrated.csv")))
     majorityOTUs <- which( rowSums(db1[,-1] > 0) / ncol(db1[,-1]) >= perc / 100 )
-    return( db1[majorityOTUs,] )
+    dbMajor <- db1[majorityOTUs, ]
+    majorOtusOrder <- order(rowSums(dbMajor[,-1]), decreasing = TRUE)
+    db1[majorityOTUs,]
+    return( dbMajor[majorOtusOrder, ] )
+}
+
+getOTUsNames <- function(db, prefix) {
+    namesDB <- tibble(
+        OTU = sub("([^_]*).*", "\\1", db$ID),
+        Level = sub(".*\\_", "", db$ID),
+        abundance = rowSums(db[,-1]), 
+        Kingdom = character(nrow(db)),
+        Phylum = character(nrow(db)),
+        Class = character(nrow(db)),
+        Order = character(nrow(db)),
+        Family = character(nrow(db)),
+        Genus = character(nrow(db))
+    )
+    taxLevels <- unique(namesDB$Level) 
+    url_to_dicts <- "https://raw.githubusercontent.com/ccm-bioinfo/cambda2023/main/02_variable_selection/data/"
+    for (tLevel in taxLevels) {
+        url_to_dict <- paste0(
+            url_to_dicts, prefix, "/", prefix, "_taxDict__", tLevel, ".csv"
+        )
+        dict <- read.csv(url(url_to_dict))
+        tIdxs <- which(namesDB$Level == tLevel)
+        IDsLevel <- namesDB$OTU[tIdxs]
+        dictIdx <- sapply(IDsLevel, function(idx) which(dict[,1] == idx))
+        namesDB[tIdxs, 4:9] <- dict[dictIdx, 2:7]
+    }
+    return(namesDB)
 }
 
 #-------------------------------------------------------------------------------
@@ -140,7 +173,9 @@ if (opt$original) {
     )
 }
 
-path_to_out <- paste0(
+majorOTUsNames <- getOTUsNames(majorOTUs, prefix0)
+
+path_to_out_counts <- paste0(
     opt$out_dir, 
     prefix0, "_", 
     ifelse(
@@ -151,4 +186,16 @@ path_to_out <- paste0(
     "_", opt$perc, ".csv"
 )
 
-write.csv(x = majorOTUs, file = path_to_out, row.names = FALSE)
+path_to_out_dict <- paste0(
+    opt$out_dir, 
+    prefix0, "_", 
+    ifelse(
+        opt$original, 
+        ifelse(opt$all, "original_all", paste0("original_", opt$taxa)), 
+        paste0("selected_", ifelse(opt$all, "", "kingdoms_"), opt$model)
+    ), 
+"_", opt$perc, "_taxDict.csv"
+)
+
+write.csv(x = majorOTUs, file = path_to_out_counts, row.names = FALSE)
+write.csv(x = majorOTUsNames, file = path_to_out_dict, row.names = FALSE)
