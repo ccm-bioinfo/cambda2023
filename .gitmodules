@@ -1,3 +1,3 @@
 [submodule "07_reproducible_code/Scripts/preprocessing/minpath"]
-	path = 07_reproducible_code/Scripts/preprocessing/minpath
+	path = 07_reproducible_code/Scripts/preprocessing/helpers/minpath
 	url = https://github.com/mgtools/MinPath
