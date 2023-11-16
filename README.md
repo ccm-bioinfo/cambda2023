@@ -7,7 +7,7 @@
 Here we need to fix the links! 
 Reads after trimming are stored by duplicate in Chihuil /botete/mvazquez/camda2023/trimmed/*.fastq.gz and Alnitak /data/camda2023/trimmed/*.fastq.gz  
 Taxonomical data tables  
-- [OTU table from reads](https://github.com/ccm-bioinfo/cambda2023/blob/main/preprocessing/taxonomy/read-biom.tsv.gz)
+- [OTU table from reads](https://github.com/ccm-bioinfo/cambda2023/blob/main/01_preprocessing/taxonomy/read-biom.tsv.gz)
   
 |   |Bacteria-Archaea | Virus   | Eukarya  | All   |  
 |---|---|---|---|---|  
@@ -17,7 +17,7 @@ Taxonomical data tables
 |Order   | [Bacteria-Order](./02_variable_selection/data/reads/readsAB_count__Order.csv)  | [Virus-Order](./02_variable_selection/data/reads/readsViruses_count__Order.csv)   | [Eukarya-Order](./02_variable_selection/data/reads/readsEukarya_count__Order.csv)  | [All-Order](./02_variable_selection/data/reads/reads_count__Order.csv)   |   
 |Genera   | [Bacteria-Genus](./02_variable_selection/data/reads/readsAB_count__Genus.csv)  | [Virus-Genus](./02_variable_selection/data/reads/readsViruses_count__Genus.csv)   | [Eukarya-Genus](./02_variable_selection/data/reads/readsEukarya_count__Genus.csv)  | [All-Genus](./02_variable_selection/data/reads/reads_count__Genus.csv)   |   
 
-- [OTU table with assemblies](https://github.com/ccm-bioinfo/cambda2023/blob/main/preprocessing/taxonomy/assembly-biom.tsv.gz)  
+- [OTU table with assemblies](https://github.com/ccm-bioinfo/cambda2023/blob/main/01_preprocessing/taxonomy/assembly-biom.tsv.gz)  
   
 |   |Bacteria-Archaea | Virus   | Eukarya  | All   |  
 |---|---|---|---|---|  
