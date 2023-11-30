@@ -10,6 +10,8 @@ The goal will be to explore metagenomic surveillance data from a selection of ab
 A focus should be placed especially on AMR markers and resistance groups identified in about 150 isolates from hospital in one of abovementioned US cities collected in similar time. Can you tell which one? As it was shown in the past CAMDA challenges an antibiotic resistance as functional biomarkers can accurately predict the origin of urban metagenomics samples.
 
 You are welcome to use your imagination to carry out any side analysis that you would like, using the provided datasets. That is why we do provide, in addition as a non-urban context, a selection of soil microbiome samples from EMP500 project can be used.
+## Authors
+Nelly Sélem, Shaday Guerrero, Haydee Peruyero, Anton Pashkov, Daniel Santana, Rafael Pérez, Leticia Ramírez, Mirna Vázquez, Miguel Nakamura, Víctor, Eugenio, Francisco, Fernndo Fontove, Mario, Imanol, José María Ibarra ..
 ## Data 
 Here we need to fix the links! 
 Reads after trimming are stored by duplicate in Chihuil /botete/mvazquez/camda2023/trimmed/*.fastq.gz and Alnitak /data/camda2023/trimmed/*.fastq.gz  
