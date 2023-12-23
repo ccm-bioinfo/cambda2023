@@ -7,9 +7,9 @@
 - Travel to [CAMDA 2023 Conference](https://www.iscb.org/ismbeccb2023) was supported by [CAMDA](http://camda2023.bioinf.jku.at/start) community of special interest and [CCM UNAM](https://www.matmor.unam.mx/es).  
 
 ## Anti-Microbial Resistance Prediction and Forensics Challenge
-The goal will be to explore metagenomic surveillance data from a selection of about 400 samples provided by MetaSUB International Consortium collected during global City Sampling Day 2016 and 2017 in several cities in US (Baltimore, Denver, Minneapolis, New York, Sacramento, San Antonio) and worldwide (Berlin, Bogota, Doha, Ilorin, Lisbon, Sao Paulo, Tokyo, Vienna, Zurich) to trace the AMR patterns.
+The goal will be to explore metagenomic surveillance data from a selection of about 400 samples provided by MetaSUB International Consortium collected during global City Sampling Day 2016 and 2017 in several cities in the US (Baltimore, Denver, Minneapolis, New York, Sacramento, San Antonio) and worldwide (Berlin, Bogota, Doha, Ilorin, Lisbon, Sao Paulo, Tokyo, Vienna, Zurich) to trace the AMR patterns.
 
-A focus should be placed primarily on AMR markers and resistance groups identified in about 150 isolates from hospitals in one of abovementioned US cities collected in similar time. Can you tell which one? As it was shown in the past CAMDA challenges antibiotic resistance as functional biomarkers can accurately predict the origin of urban metagenomics samples.
+A focus should be placed primarily on AMR markers and resistance groups identified in about 150 isolates from hospitals in one of the abovementioned US cities collected in a similar time. Can you tell me which one? As it was shown in the past CAMDA challenges antibiotic resistance as functional biomarkers can accurately predict the origin of urban metagenomics samples.
 
 You are welcome to use your imagination to carry out any side analysis that you would like using the provided datasets. That is why we provide a selection of soil microbiome samples from the EMP500 project that can be used in addition to a non-urban context.
 ## Authors 
