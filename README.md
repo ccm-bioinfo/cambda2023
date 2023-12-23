@@ -2,7 +2,7 @@
 - [Presentation Talk](https://docs.google.com/presentation/d/1AM7f3khAGLN8pXDnDs9BOYrUh56jCmPwoc2MRLTkfgg/edit#slide=id.g24bcac0919d_0_1109)  [Poster Presentation](https://docs.google.com/presentation/d/1y93GOJ49hvfOcMjYxObsL0WITbK4ZtDRAqbZ6paRE9c/edit#slide=id.g22edbecd1bc_12_40) [Poster File](https://docs.google.com/presentation/d/17jPeWFA5W74l-NPQVnPGYkuCVM2H4maemu8yY9zGknM/edit#slide=id.p) [Plan google sheet](https://docs.google.com/spreadsheets/d/1GRxtgu_4-9FCARIu2ke_AxGVEQxKd_TSnKtql4LroiU/edit#gid=622084973)
 
 ## Funding 
-- Development of algorithms of massive data anaylsis applied to microbiomes are supported by Conahcyt grant FOP16	Ciencia de Frontera: 320237	"MicroArgobioma, una plataforma para estudiar microbioma tradicional y cambio de hospedero en enfermedades de plantas de relevancia agrícola."
+- Development of algorithms of massive data analysis applied to microbiomes are supported by Conahcyt grant FOP16	Ciencia de Frontera: 320237	"MicroArgobioma, una plataforma para estudiar microbioma tradicional y cambio de hospedero en enfermedades de plantas de relevancia agrícola."
 - Hackaton was supported by The Mexican Mathematical Society [SMM](https://www.smm.org.mx/index.php) and the Center of Mathematical Sciences [CCM UNAM](https://www.matmor.unam.mx/es).
 - Travel to [CAMDA 2023 Conference](https://www.iscb.org/ismbeccb2023) was supported by [CAMDA](http://camda2023.bioinf.jku.at/start) community of special interest and [CCM UNAM](https://www.matmor.unam.mx/es).  
 
