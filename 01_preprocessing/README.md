@@ -77,24 +77,24 @@ of the USA between 2016 and 2017. It has four columns: `*`
 
 The following table contains detailed information on every sampled city.
 
-|ID_city|City           |Latitude	|Longitude   |Climate|Year  |
-|-------|---------------|-----------|------------|-------|------|
-|AKL	|Auckland       |-36.8508827| 174.7644881|Cfb    |2016  |
-|BAL	|Baltimore      | 39.2903848| -76.6121893|Cfa    |2017  |
-|BER	|Berlin         | 52.5200066|  13.404954 |Cfb    |2016  |
-|BOG	|Bogota         |  4.7109886| -74.072092 |Cfb    |2016  |
-|DEN	|Denver         | 39.7392358|-104.990251 |BSk    |2016-7|
-|DOH	|Doha           | 25.2854473|  51.5310398|BWh    |2016-7|
-|ILR	|Ilorin         |  8.5373356|   4.5443923|Aw     |2016-7|
-|LIS	|Lisbon         | 38.7222524|  -9.1393366|Csa    |2016  |
-|MIN	|Mineapolis     | 44.977753	| -93.2650108|Dfa    |2017  |
-|NYC	|New York City  | 40.7127753| -74.0059728|Cfa    |2016-7|
-|SAC	|Sacramento	    | 38.5815719|-121.4943996|Csa    |2016  |
-|SAN	|San Antonio	| 29.4251905| -98.4945922|Cfa    |2017  |
-|SAO	|Sao Paulo	    |-23.5557714| -46.6395571|Cfa    |2017  |
-|TOK	|Tokyo	        | 35.6761919| 139.6503106|Cfa    |2016-7|
-|VIE	|Vienna         | 48.2081743|  16.3738189|Cfb    |2017  |
-|ZRH    |Zurich	        | 47.3768866|   8.541694 |Cfb    |2017  |
+|ID_city|City           |Latitude	|Longitude   |Climate|Year  |Samples|
+|-------|---------------|-----------|------------|-------|------|-------|
+|AKL	|Auckland       |-36.8508827| 174.7644881|Cfb    |2016  |14     |
+|BAL	|Baltimore      | 39.2903848| -76.6121893|Cfa    |2017  |13     |
+|BER	|Berlin         | 52.5200066|  13.404954 |Cfb    |2016  |15     |
+|BOG	|Bogota         |  4.7109886| -74.072092 |Cfb    |2016  |15     |
+|DEN	|Denver         | 39.7392358|-104.990251 |BSk    |2016-7|44     |
+|DOH	|Doha           | 25.2854473|  51.5310398|BWh    |2016-7|27     |
+|ILR	|Ilorin         |  8.5373356|   4.5443923|Aw     |2016-7|33     |
+|LIS	|Lisbon         | 38.7222524|  -9.1393366|Csa    |2016  |14     |
+|MIN	|Mineapolis     | 44.977753	| -93.2650108|Dfa    |2017  |6      |
+|NYC	|New York City  | 40.7127753| -74.0059728|Cfa    |2016-7|46     |
+|SAC	|Sacramento	    | 38.5815719|-121.4943996|Csa    |2016  |16     |
+|SAN	|San Antonio	| 29.4251905| -98.4945922|Cfa    |2017  |16     |
+|SAO	|Sao Paulo	    |-23.5557714| -46.6395571|Cfa    |2017  |25     |
+|TOK	|Tokyo	        | 35.6761919| 139.6503106|Cfa    |2016-7|49     |
+|VIE	|Vienna         | 48.2081743|  16.3738189|Cfb    |2017  |16     |
+|ZRH    |Zurich	        | 47.3768866|   8.541694 |Cfb    |2017  |16     |
 
 ## Scripts documentation
 
